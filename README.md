@@ -1,4 +1,6 @@
-# INE5406
+# INE5406 - Sistemas Digitais
+
+> "Eu acredito que, às vezes, são as pessoas que ninguém espera nada que fazem as coisas que ninguém consegue imaginar." - **Alan Turing**
 
 ## Descrição:
 
