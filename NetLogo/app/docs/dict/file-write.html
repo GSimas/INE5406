@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: file-write</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="file-write"> 
+ <h3> <a>file-write<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">file-write <i>value</i></span> </h4> 
+ <p> This command will output <i>value</i>, which can be a number, string, list, boolean, or nobody to an opened file, <i>not</i> followed by a carriage return (unlike <a href="../dictionary.html#file-print">file-print</a> and <a href="../dictionary.html#file-show">file-show</a>). </p>
+ <p> This agent is <i>not</i> printed before the value, unlike <a href="../dictionary.html#file-show">file-show</a>. Its output also includes quotes around strings and is prepended with a space. It will output the value in such a manner that <a href="../dictionary.html#file-read">file-read</a> will be able to interpret it. </p>
+ <p> Note that this command is the file i/o equivalent of <a href="../dictionary.html#write">write</a>, and <a href="../dictionary.html#file-open">file-open</a> needs to be called before this command can be used. </p>
+ <pre>
+file-open "locations.txt"
+ask turtles
+  [ file-write xcor file-write ycor ]
+</pre> 
+ <p> See also <a href="../dictionary.html#file-print">file-print</a>, <a href="../dictionary.html#file-show">file-show</a>, and <a href="../dictionary.html#file-type">file-type</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

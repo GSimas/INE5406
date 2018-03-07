@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: patch-at</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="patch-at"> 
+ <h3> <a>patch-at<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">patch-at <i>dx</i> <i>dy</i></span> <img alt="Turtle Command" src="../images/turtle.gif"> <img alt="Patch Command" src="../images/patch.gif"> </h4> 
+ <p> Reports the patch at (dx, dy) from the caller, that is, the patch containing the point dx east and dy patches north of this agent. </p>
+ <p> Reports nobody if there is no such patch because that point is beyond a non-wrapping world boundary. </p>
+ <pre>
+ask patch-at 1 -1 [ set pcolor green ]
+;; if caller is a turtle or patch, turns the
+;;   patch just southeast of the caller green
+</pre> 
+ <p> See also <a href="../dictionary.html#patch">patch</a>, <a href="../dictionary.html#patch-ahead">patch-ahead</a>, <a href="../dictionary.html#patch-lr-and-ahead">patch-left-and-ahead</a>, <a href="../dictionary.html#patch-lr-and-ahead">patch-right-and-ahead</a>, <a href="../dictionary.html#patch-at-heading-and-distance">patch-at-heading-and-distance</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

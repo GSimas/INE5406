@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: uphill uphill4</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="uphill"> 
+ <h3> <a>uphill<span class="since">1.0</span></a> <a>uphill4<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">uphill <i>patch-variable</i></span> <span class="prim_example">uphill4 <i>patch-variable</i></span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> Moves the turtle to the neighboring patch with the highest value for <i>patch-variable</i>. If no neighboring patch has a higher value than the current patch, the turtle stays put. If there are multiple patches with the same highest value, the turtle picks one randomly. Non-numeric values are ignored. </p>
+ <p> uphill considers the eight neighboring patches; uphill4 only considers the four neighbors. </p>
+ <p> Equivalent to the following code (assumes variable values are numeric): </p>
+ <pre>
+move-to patch-here  ;; go to patch center
+let p max-one-of neighbors [<i>patch-variable</i>]  ;; or neighbors4
+if [<i>patch-variable</i>] of p &gt; <i>patch-variable</i> [
+  face p
+  move-to p
+]
+</pre> 
+ <p> Note that the turtle always ends up on a patch center and has a heading that is a multiple of 45 (uphill) or 90 (uphill4). </p>
+ <p> See also <a href="../dictionary.html#downhill">downhill</a>, <a href="../dictionary.html#downhill">downhill4</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: directed-link-breed</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="directed-link-breed"> 
+ <h3> <a>directed-link-breed</a> </h3> 
+ <h4> <span class="prim_example">directed-link-breed [<i>&lt;link-breeds&gt;</i> <i>&lt;link-breed&gt;</i>]</span> </h4> 
+ <p> This keyword, like the globals and breeds keywords, can only be used at the beginning of the Code tab, before any procedure definitions. It defines a directed link breed. Links of a particular breed are always all directed or all undirected The first input defines the name of the agentset associated with the link breed. The second input defines the name of a single member of the breed. Directed links can be created using <a href="../dictionary.html#create-link">create-link(s)-to</a>, and <a href="../dictionary.html#create-link">create-link(s)-from</a>, but not <code>create-link(s)-with</code> </p>
+ <p> Any link of the given link breed: </p>
+ <ul> 
+  <li>is part of the agentset named by the link breed name </li>
+  <li>has its built-in variable <code>breed</code> set to that agentset </li>
+  <li>is directed or undirected as declared by the keyword </li>
+ </ul> 
+ <p> Most often, the agentset is used in conjunction with ask to give commands to only the links of a particular breed. </p>
+ <pre>
+directed-link-breed [streets street]
+directed-link-breed [highways highway]
+to setup
+  clear-all
+  crt 2
+  ;; create a link from turtle 0 to turtle 1
+  ask turtle 0 [ create-street-to turtle 1 ]
+  ;; create a link from turtle 1 to turtle 0
+  ask turtle 0 [ create-highway-from turtle 1 ]
+end
+
+ask turtle 0 [ show one-of my-in-links ]
+;; prints (street 0 1)
+ask turtle 0 [ show one-of my-out-links ]
+;; prints (highway 1 0)
+</pre> 
+ <p> See also <a href="../dictionary.html#breed">breed</a>, <a href="../dictionary.html#undirected-link-breed">undirected-link-breed</a> </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

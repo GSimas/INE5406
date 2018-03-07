@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: hatch</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="hatch"> 
+ <h3> <a>hatch<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">hatch <i>number</i> [ <i>commands</i> ]</span> <span class="prim_example">hatch-<i>&lt;breeds&gt;</i> <i>number</i> [ <i>commands</i> ]</span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> This turtle creates <i>number</i> new turtles. Each new turtle inherits of all its variables, including its location, from its parent. (Exceptions: each new turtle will have a new <code>who</code> number, and it may be of a different breed than its parent if the <code>hatch-<i>&lt;breeds&gt;</i></code> form is used.) </p>
+ <p> The new turtles then run <i>commands</i>. You can use the commands to give the new turtles different colors, headings, locations, or whatever. (The new turtles are created all at once, then run one at a time, in random order.) </p>
+ <p> If the hatch-<i>&lt;breeds&gt;</i> form is used, the new turtles are created as members of the given breed. Otherwise, the new turtles are the same breed as their parent. </p>
+ <pre>
+hatch 1 [ lt 45 fd 1 ]
+;; this turtle creates one new turtle,
+;; and the child turns and moves away
+hatch-sheep 1 [ set color black ]
+;; this turtle creates a new turtle
+;; of the sheep breed
+</pre> 
+ <p> See also <a href="../dictionary.html#create-turtles">create-turtles</a>, <a href="../dictionary.html#sprout">sprout</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

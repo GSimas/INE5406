@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: random-exponential random-gamma random-normal random-poisson</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="random-reporters"> 
+ <h3> <a>random-exponential<span class="since">1.2.1</span></a> <a>random-gamma<span class="since">2.0</span></a> <a>random-normal<span class="since">1.2.1</span></a> <a>random-poisson<span class="since">1.2.1</span></a> </h3> 
+ <h4> <span class="prim_example">random-exponential <i>mean</i></span> <span class="prim_example">random-gamma <i>alpha lambda</i></span> <span class="prim_example">random-normal <i>mean standard-deviation</i></span> <span class="prim_example">random-poisson <i>mean</i></span> </h4> 
+ <p> Reports an accordingly distributed random number with the <i>mean</i> and, in the case of the normal distribution, the <i>standard-deviation</i>. (The standard deviation may not be negative.) </p>
+ <p> random-exponential reports an exponentially distributed random floating point number. It is equivalent to <code>(- <i>mean</i>) * ln random-float 1.0</code>. </p>
+ <p> random-gamma reports a gamma-distributed random floating point number as controlled by the floating point alpha and lambda parameters. Both inputs must be greater than zero. (Note: for results with a given mean and variance, use inputs as follows: alpha = mean * mean / variance; lambda = 1 / (variance / mean).) </p>
+ <p> random-normal reports a normally distributed random floating point number. </p>
+ <p> random-poisson reports a Poisson-distributed random integer. </p>
+ <pre>
+show random-exponential 2
+;; prints an exponentially distributed random floating
+;; point number with a mean of 2
+show random-normal 10.1 5.2
+;; prints a normally distributed random floating point
+;; number with a mean of 10.1 and a standard deviation
+;; of 5.2
+show random-poisson 3.4
+;; prints a Poisson-distributed random integer with a
+;; mean of 3.4
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

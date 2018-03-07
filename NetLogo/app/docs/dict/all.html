@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: all?</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="all"> 
+ <h3> <a>all?<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">all? <i>agentset</i> [<i>reporter</i>]</span> </h4> 
+ <p> Reports true if all of the agents in the agentset report true for the given reporter. Otherwise reports false as soon as a counterexample is found. </p>
+ <p> If the agentset is empty, reports true. </p>
+ <p> The reporter must report a boolean value for every agent (either true or false), otherwise an error occurs. </p>
+ <pre>
+if all? turtles [color = red]
+  [ show "every turtle is red!" ]
+</pre> 
+ <p> See also <a href="../dictionary.html#any">any?</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

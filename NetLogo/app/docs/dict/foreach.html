@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: foreach</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="foreach"> 
+ <h3> <a>foreach<span class="since">1.3</span></a> </h3> 
+ <h4> <span class="prim_example">foreach <i>list</i> <i>command</i></span> <span class="prim_example">(foreach <i>list1</i> ... <i>command</i>)</span> </h4> 
+ <p> With a single list, runs the command for each item of <i>list</i>. <i>command</i> may be the name of a command, or an anonymous command created with <a href="../dictionary.html#arrow">-&gt;</a>. </p>
+ <pre>
+foreach [1.1 2.2 2.6] show
+=&gt; 1.1
+=&gt; 2.2
+=&gt; 2.6
+foreach [1.1 2.2 2.6] [ x -&gt; show (word x " -&gt; " round x) ]
+=&gt; 1.1 -&gt; 1
+=&gt; 2.2 -&gt; 2
+=&gt; 2.6 -&gt; 3
+</pre> 
+ <p> With multiple lists, runs <i>command</i> for each group of items from each list. So, they are run once for the first items, once for the second items, and so on. All the lists must be the same length. </p>
+ <p> Some examples make this clearer: </p>
+ <pre>
+(foreach [1 2 3] [2 4 6]
+   [ [a b] -&gt; show word "the sum is: " (a + b) ])
+=&gt; "the sum is: 3"
+=&gt; "the sum is: 6"
+=&gt; "the sum is: 9"
+(foreach list (turtle 1) (turtle 2) [3 4]
+  [ [the-turtle num-steps] -&gt; ask the-turtle [ fd num-steps ] ])
+;; turtle 1 moves forward 3 patches
+;; turtle 2 moves forward 4 patches
+</pre> 
+ <p> See also <a href="../dictionary.html#map">map</a>, <a href="../dictionary.html#arrow">-&gt; (anonymous procedure)</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

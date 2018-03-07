@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: turtles-own</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="turtles-own"> 
+ <h3> <a>turtles-own</a> </h3> 
+ <h4> <span class="prim_example">turtles-own [<i>var1</i> ...]</span> <span class="prim_example"><i>&lt;breeds&gt;</i>-own [<i>var1</i> ...]</span> </h4> 
+ <p> The turtles-own keyword, like the globals, breed, <i>&lt;breeds&gt;</i>-own, and patches-own keywords, can only be used at the beginning of a program, before any function definitions. It defines the variables belonging to each turtle. </p>
+ <p> If you specify a breed instead of "turtles", only turtles of that breed have the listed variables. (More than one turtle breed may list the same variable.) </p>
+ <pre>
+breed [cats cat ]
+breed [dogs dog]
+breed [hamsters hamster]
+turtles-own [eyes legs]   ;; applies to all breeds
+cats-own [fur kittens]
+hamsters-own [fur cage]
+dogs-own [hair puppies]
+</pre> 
+ <p> See also <a href="../dictionary.html#globals">globals</a>, <a href="../dictionary.html#patches-own">patches-own</a>, <a href="../dictionary.html#breed">breed</a>, <a href="../dictionary.html#turtles-own"><i>&lt;breeds&gt;</i>-own</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

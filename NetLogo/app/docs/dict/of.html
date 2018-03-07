@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: of</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="of"> 
+ <h3> <a>of<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">[<i>reporter</i>] of <i>agent</i></span> <span class="prim_example">[<i>reporter</i>] of <i>agentset</i></span> </h4> 
+ <p> For an agent, reports the value of the reporter for that agent (turtle or patch). </p>
+ <pre>
+show [pxcor] of patch 3 5
+;; prints 3
+show [pxcor] of one-of patches
+;; prints the value of a random patch's pxcor variable
+show [who * who] of turtle 5
+=&gt; 25
+show [count turtles in-radius 3] of patch 0 0
+;; prints the number of turtles located within a
+;; three-patch radius of the origin
+</pre> 
+ <p> For an agentset, reports a list that contains the value of the reporter for each agent in the agentset (in random order). </p>
+ <pre>
+crt 4
+show sort [who] of turtles
+=&gt; [0 1 2 3]
+show sort [who * who] of turtles
+=&gt; [0 1 4 9]
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

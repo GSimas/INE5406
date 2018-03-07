@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: other-end</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="other-end"> 
+ <h3> <a>other-end<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">other-end</span> <img alt="Turtle Command" src="../images/turtle.gif"> <img alt="Link Command" src="../images/link.gif"> </h4> 
+ <p> If run by a turtle, reports the turtle at the other end of the asking link. </p>
+ <p> If run by a link, reports the turtle at the end of the link that isn't the asking turtle. </p>
+ <p> These definitions are difficult to understand in the abstract, but the following examples should help: </p>
+ <pre>
+ask turtle 0 [ create-link-with turtle 1 ]
+ask turtle 0 [ ask link 0 1 [ show other-end ] ] ;; prints turtle 1
+ask turtle 1 [ ask link 0 1 [ show other-end ] ] ;; prints turtle 0
+ask link 0 1 [ ask turtle 0 [ show other-end ] ] ;; prints turtle 1
+</pre> 
+ <p> As these examples hopefully make plain, the "other" end is the end that is neither asking nor being asked. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

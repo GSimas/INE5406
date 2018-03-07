@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: mouse-xcor mouse-ycor</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="mouse-cor"> 
+ <h3> <a>mouse-xcor<span class="since">1.0</span></a> <a>mouse-ycor<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">mouse-xcor</span> <span class="prim_example">mouse-ycor</span> </h4> 
+ <p> Reports the x or y coordinate of the mouse in the 2D view. The value is in terms of turtle coordinates, so it might not be an integer. If you want patch coordinates, use <code>round mouse-xcor</code> and <code>round mouse-ycor</code>. </p>
+ <p> Note: If the mouse is outside of the 2D view, reports the value from the last time it was inside. </p>
+ <pre>
+;; to make the mouse "draw" in red:
+if mouse-down?
+  [ ask patch mouse-xcor mouse-ycor [ set pcolor red ] ]
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

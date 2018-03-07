@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: diffuse</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="diffuse"> 
+ <h3> <a>diffuse<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">diffuse <i>patch-variable</i> <i>number</i></span> <img alt="Observer Command" src="../images/observer.gif"> </h4> 
+ <p> Tells each patch to give equal shares of (<i>number</i> * 100) percent of the value of <i>patch-variable</i> to its eight neighboring patches. <i>number</i> should be between 0 and 1. Regardless of topology the sum of <i>patch-variable</i> will be conserved across the world. (If a patch has fewer than eight neighbors, each neighbor still gets an eighth share; the patch keeps any leftover shares.) </p>
+ <p> Note that this is an observer command only, even though you might expect it to be a patch command. (The reason is that it acts on all the patches at once -- patch commands act on individual patches.) </p>
+ <pre>
+diffuse chemical 0.5
+;; each patch diffuses 50% of its variable
+;; chemical to its neighboring 8 patches. Thus,
+;; each patch gets 1/8 of 50% of the chemical
+;; from each neighboring patch.)
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

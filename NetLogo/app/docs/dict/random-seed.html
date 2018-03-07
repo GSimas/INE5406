@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: random-seed</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="random-seed"> 
+ <h3> <a>random-seed<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">random-seed <i>number</i></span> </h4> 
+ <p> Sets the seed of the pseudo-random number generator to the integer part of <i>number</i>. The seed must be in the range -2147483648 to 2147483647; note that this is smaller than the full range of integers supported by NetLogo (-9007199254740992 to 9007199254740992). </p>
+ <p> See the <a href="../programming.html#random">Random Numbers</a> section of the Programming Guide for more details. </p>
+ <pre>
+random-seed 47822
+show random 100
+=&gt; 50
+show random 100
+=&gt; 35
+random-seed 47822
+show random 100
+=&gt; 50
+show random 100
+=&gt; 35
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

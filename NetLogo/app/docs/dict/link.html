@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: link</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="link"> 
+ <h3> <a>link<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">link <i>end1</i> <i>end2</i></span> <span class="prim_example">&lt;breed&gt; <i>end1</i> <i>end2</i></span> </h4> 
+ <p> Given the who numbers of the endpoints, reports the link connecting the turtles. If there is no such link reports <code>nobody</code>. To refer to breeded links you must use the singular breed form with the endpoints. </p>
+ <pre>
+ask link 0 1 [ set color green ]
+;; unbreeded link connecting turtle 0 and turtle 1 will turn green
+ask directed-link 0 1 [ set color red ]
+;; directed link connecting turtle 0 and turtle 1 will turn red
+</pre> 
+ <p> See also <a href="../dictionary.html#patch-at">patch-at</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

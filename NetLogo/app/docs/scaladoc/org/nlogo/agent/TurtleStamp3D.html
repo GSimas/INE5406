@@ -1,0 +1,1590 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>NetLogo 6.0.2 - org.nlogo.agent.TurtleStamp3D</title>
+          <meta name="description" content="NetLogo 6.0.2 - org.nlogo.agent.TurtleStamp3D" />
+          <meta name="keywords" content="NetLogo 6.0.2 org.nlogo.agent.TurtleStamp3D" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">NetLogo<span id="doc-version">6.0.2</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html">
+              <span class="name">root</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="index.html#org" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html">
+              <span class="name">org</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.nlogo" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nlogo"></a><a id="nlogo:nlogo"></a>
+      <span class="permalink">
+      <a href="../org/index.html#nlogo" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html">
+              <span class="name">nlogo</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.nlogo.agent" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="agent"></a><a id="agent:agent"></a>
+      <span class="permalink">
+      <a href="../../org/nlogo/index.html#agent" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html">
+              <span class="name">agent</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.nlogo">nlogo</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <a class="object" href="AbstractExporter$.html" title=""></a>
+                        <a class="class" href="AbstractExporter.html" title=""></a>
+                        <a href="AbstractExporter.html" title="">
+                          AbstractExporter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Agent.html" title=""></a>
+                        <a href="Agent.html" title="">
+                          Agent
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Agent3D.html" title=""></a>
+                        <a href="Agent3D.html" title="">
+                          Agent3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="AgentBit$.html" title=""></a>
+                        <a href="AgentBit$.html" title="">
+                          AgentBit
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AgentColors.html" title=""></a>
+                        <a href="AgentColors.html" title="">
+                          AgentColors
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AgentIterator.html" title="This exists purely as a performance hack."></a>
+                        <a href="AgentIterator.html" title="This exists purely as a performance hack.">
+                          AgentIterator
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AgentManagement.html" title=""></a>
+                        <a href="AgentManagement.html" title="">
+                          AgentManagement
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="AgentParserCreator$.html" title=""></a>
+                        <a href="AgentParserCreator$.html" title="">
+                          AgentParserCreator
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="AgentSet$.html" title=""></a>
+                        <a class="class" href="AgentSet.html" title=""></a>
+                        <a href="AgentSet.html" title="">
+                          AgentSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="AgentSetBuilder.html" title=""></a>
+                        <a href="AgentSetBuilder.html" title="">
+                          AgentSetBuilder
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="AllStoredValues$.html" title=""></a>
+                        <a href="AllStoredValues$.html" title="">
+                          AllStoredValues
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ArrayAgentSet.html" title=""></a>
+                        <a href="ArrayAgentSet.html" title="">
+                          ArrayAgentSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="BooleanConstraint.html" title="Constraint suitable for Switch variables."></a>
+                        <a href="BooleanConstraint.html" title="Constraint suitable for Switch variables.">
+                          BooleanConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Box.html" title=""></a>
+                        <a href="Box.html" title="">
+                          Box
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="BreedShapes.html" title=""></a>
+                        <a href="BreedShapes.html" title="">
+                          BreedShapes
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ChooserConstraint.html" title=""></a>
+                        <a href="ChooserConstraint.html" title="">
+                          ChooserConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="CompilationManagement.html" title=""></a>
+                        <a href="CompilationManagement.html" title="">
+                          CompilationManagement
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ConstantSliderConstraint.html" title=""></a>
+                        <a href="ConstantSliderConstraint.html" title="">
+                          ConstantSliderConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Constraints.html" title=""></a>
+                        <a href="Constraints.html" title="">
+                          Constraints
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="CoreWorld.html" title=""></a>
+                        <a href="CoreWorld.html" title="">
+                          CoreWorld
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DimensionManagement.html" title=""></a>
+                        <a href="DimensionManagement.html" title="">
+                          DimensionManagement
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Directedness$.html" title=""></a>
+                        <a class="trait" href="Directedness.html" title=""></a>
+                        <a href="Directedness.html" title="">
+                          Directedness
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Drawing3D.html" title=""></a>
+                        <a href="Drawing3D.html" title="">
+                          Drawing3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DrawingLine3D.html" title=""></a>
+                        <a href="DrawingLine3D.html" title="">
+                          DrawingLine3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="DummyLink$.html" title=""></a>
+                        <a class="class" href="DummyLink.html" title=""></a>
+                        <a href="DummyLink.html" title="">
+                          DummyLink
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DynamicSliderConstraint.html" title="Constraint suitable for Slider variables."></a>
+                        <a href="DynamicSliderConstraint.html" title="Constraint suitable for Slider variables.">
+                          DynamicSliderConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Gamma.html" title="Gamma distribution; &lt;A HREF=&quot;http://wwwinfo.cern.ch/asdoc/shortwrupsdir/g106/top.html&quot;&gt; math definition&lt;/A&gt;,
+&lt;A HREF=&quot;http://www.cern.ch/RD11/rkb/AN16pp/node96.html#SECTION000960000000000000000&quot;&gt; definition of gamma function&lt;/A&gt;
+and &lt;A HREF=&quot;http://www.statsoft.com/textbook/glosf.html#Gamma Distribution&quot;&gt; animated definition&lt;/A&gt;."></a>
+                        <a href="Gamma.html" title="Gamma distribution; &lt;A HREF=&quot;http://wwwinfo.cern.ch/asdoc/shortwrupsdir/g106/top.html&quot;&gt; math definition&lt;/A&gt;,
+&lt;A HREF=&quot;http://www.cern.ch/RD11/rkb/AN16pp/node96.html#SECTION000960000000000000000&quot;&gt; definition of gamma function&lt;/A&gt;
+and &lt;A HREF=&quot;http://www.statsoft.com/textbook/glosf.html#Gamma Distribution&quot;&gt; animated definition&lt;/A&gt;.">
+                          Gamma
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="GrossWorldState.html" title=""></a>
+                        <a href="GrossWorldState.html" title="">
+                          GrossWorldState
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="HeadingSmoother.html" title=""></a>
+                        <a href="HeadingSmoother.html" title="">
+                          HeadingSmoother
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="HorizCylinder.html" title=""></a>
+                        <a href="HorizCylinder.html" title="">
+                          HorizCylinder
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ImportPatchColors.html" title=""></a>
+                        <a href="ImportPatchColors.html" title="">
+                          ImportPatchColors
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Importer.html" title=""></a>
+                        <a href="Importer.html" title="">
+                          Importer
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Importer3D.html" title=""></a>
+                        <a href="Importer3D.html" title="">
+                          Importer3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ImporterJ.html" title=""></a>
+                        <a href="ImporterJ.html" title="">
+                          ImporterJ
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="InRadiusOrCone.html" title=""></a>
+                        <a href="InRadiusOrCone.html" title="">
+                          InRadiusOrCone
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="InRadiusOrCone3D.html" title=""></a>
+                        <a href="InRadiusOrCone3D.html" title="">
+                          InRadiusOrCone3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="InRadiusSimple$.html" title=""></a>
+                        <a href="InRadiusSimple$.html" title="">
+                          InRadiusSimple
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="IndexedAgentSet.html" title=""></a>
+                        <a href="IndexedAgentSet.html" title="">
+                          IndexedAgentSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="InputBoxConstraint.html" title=""></a>
+                        <a href="InputBoxConstraint.html" title="">
+                          InputBoxConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Layouts.html" title=""></a>
+                        <a href="Layouts.html" title="">
+                          Layouts
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Link.html" title=""></a>
+                        <a href="Link.html" title="">
+                          Link
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Link3D.html" title=""></a>
+                        <a href="Link3D.html" title="">
+                          Link3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LinkFactory.html" title=""></a>
+                        <a href="LinkFactory.html" title="">
+                          LinkFactory
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="LinkManagement.html" title=""></a>
+                        <a href="LinkManagement.html" title="">
+                          LinkManagement
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="LinkManager$.html" title=""></a>
+                        <a class="trait" href="LinkManager.html" title=""></a>
+                        <a href="LinkManager.html" title="">
+                          LinkManager
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LinkManagerImpl.html" title=""></a>
+                        <a href="LinkManagerImpl.html" title="">
+                          LinkManagerImpl
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LinkStamp3D.html" title=""></a>
+                        <a href="LinkStamp3D.html" title="">
+                          LinkStamp3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LiteralAgentParser.html" title=""></a>
+                        <a href="LiteralAgentParser.html" title="">
+                          LiteralAgentParser
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Neighbors.html" title=""></a>
+                        <a href="Neighbors.html" title="">
+                          Neighbors
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="NumericConstraint.html" title="Constraint suitable for Slider variables."></a>
+                        <a href="NumericConstraint.html" title="Constraint suitable for Slider variables.">
+                          NumericConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Observer.html" title=""></a>
+                        <a href="Observer.html" title="">
+                          Observer
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Observer3D.html" title=""></a>
+                        <a href="Observer3D.html" title="">
+                          Observer3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ObserverManagement.html" title=""></a>
+                        <a href="ObserverManagement.html" title="">
+                          ObserverManagement
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="OrientatableObserver.html" title=""></a>
+                        <a href="OrientatableObserver.html" title="">
+                          OrientatableObserver
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="OutputObject.html" title=""></a>
+                        <a href="OutputObject.html" title="">
+                          OutputObject
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Patch.html" title=""></a>
+                        <a href="Patch.html" title="">
+                          Patch
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Patch3D.html" title=""></a>
+                        <a href="Patch3D.html" title="">
+                          Patch3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="PatchException.html" title=""></a>
+                        <a href="PatchException.html" title="">
+                          PatchException
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Protractor.html" title=""></a>
+                        <a href="Protractor.html" title="">
+                          Protractor
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Protractor3D.html" title=""></a>
+                        <a href="Protractor3D.html" title="">
+                          Protractor3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Realloc$.html" title=""></a>
+                        <a href="Realloc$.html" title="">
+                          Realloc
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="RootsTable.html" title=""></a>
+                        <a href="RootsTable.html" title="">
+                          RootsTable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Rotations3D$.html" title=""></a>
+                        <a href="Rotations3D$.html" title="">
+                          Rotations3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="SliderConstraint$.html" title=""></a>
+                        <a class="class" href="SliderConstraint.html" title=""></a>
+                        <a href="SliderConstraint.html" title="">
+                          SliderConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TickCounter.html" title=""></a>
+                        <a href="TickCounter.html" title="">
+                          TickCounter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TieManager.html" title=""></a>
+                        <a href="TieManager.html" title="">
+                          TieManager
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TieManager3D.html" title=""></a>
+                        <a href="TieManager3D.html" title="">
+                          TieManager3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Topology$.html" title=""></a>
+                        <a class="class" href="Topology.html" title=""></a>
+                        <a href="Topology.html" title="">
+                          Topology
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Topology3D.html" title=""></a>
+                        <a href="Topology3D.html" title="">
+                          Topology3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Torus.html" title=""></a>
+                        <a href="Torus.html" title="">
+                          Torus
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Torus3D.html" title=""></a>
+                        <a href="Torus3D.html" title="">
+                          Torus3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Trail.html" title=""></a>
+                        <a href="Trail.html" title="">
+                          Trail
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TreeAgentSet.html" title=""></a>
+                        <a href="TreeAgentSet.html" title="">
+                          TreeAgentSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="TrigTables$.html" title=""></a>
+                        <a href="TrigTables$.html" title="">
+                          TrigTables
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Turtle.html" title=""></a>
+                        <a href="Turtle.html" title="">
+                          Turtle
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Turtle2D.html" title=""></a>
+                        <a href="Turtle2D.html" title="">
+                          Turtle2D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Turtle3D.html" title=""></a>
+                        <a href="Turtle3D.html" title="">
+                          Turtle3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="TurtleManagement.html" title=""></a>
+                        <a href="TurtleManagement.html" title="">
+                          TurtleManagement
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">
+                          TurtleStamp3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="VertCylinder.html" title=""></a>
+                        <a href="VertCylinder.html" title="">
+                          VertCylinder
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="WatcherManagement.html" title=""></a>
+                        <a href="WatcherManagement.html" title="">
+                          WatcherManagement
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="World$.html" title=""></a>
+                        <a class="class" href="World.html" title=""></a>
+                        <a href="World.html" title="">
+                          World
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="World2D.html" title=""></a>
+                        <a href="World2D.html" title="">
+                          World2D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="World3D.html" title=""></a>
+                        <a href="World3D.html" title="">
+                          World3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="WorldKernel.html" title=""></a>
+                        <a href="WorldKernel.html" title="">
+                          WorldKernel
+                        </a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.nlogo">nlogo</a>.<a href="index.html" class="extype" name="org.nlogo.agent">agent</a></p>
+        <h1>TurtleStamp3D<span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TurtleStamp3D</span><span class="params">(<span name="shape">shape: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="xcor">xcor: <span class="extype" name="scala.Double">Double</span></span>, <span name="ycor">ycor: <span class="extype" name="scala.Double">Double</span></span>, <span name="zcor">zcor: <span class="extype" name="scala.Double">Double</span></span>, <span name="size">size: <span class="extype" name="scala.Double">Double</span></span>, <span name="heading">heading: <span class="extype" name="scala.Double">Double</span></span>, <span name="pitch">pitch: <span class="extype" name="scala.Double">Double</span></span>, <span name="roll">roll: <span class="extype" name="scala.Double">Double</span></span>, <span name="color">color: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="lineThickness">lineThickness: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result"> extends <a href="../api/TurtleStamp3D.html" class="extype" name="org.nlogo.api.TurtleStamp3D">api.TurtleStamp3D</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@strictfp</span><span class="args">()</span>
+              
+        </dd><dt>Source</dt><dd><a href="https://github.com/NetLogo/NetLogo/blob/6.0.2/netlogo-core/src/main/agent/TurtleStamp3D.scala" target="_blank">TurtleStamp3D.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../api/TurtleStamp3D.html" class="extype" name="org.nlogo.api.TurtleStamp3D">api.TurtleStamp3D</a>, <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">api.Turtle3D</a>, <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">api.Turtle</a>, <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">api.Agent</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.nlogo.agent.TurtleStamp3D"><span>TurtleStamp3D</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="org.nlogo.api.TurtleStamp3D"><span>TurtleStamp3D</span></li><li class="in" name="org.nlogo.api.Turtle3D"><span>Turtle3D</span></li><li class="in" name="org.nlogo.api.Turtle"><span>Turtle</span></li><li class="in" name="org.nlogo.api.Agent"><span>Agent</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.nlogo.agent.TurtleStamp3D#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(t:org.nlogo.agent.Turtle3D):org.nlogo.agent.TurtleStamp3D"></a><a id="&lt;init&gt;:TurtleStamp3D"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#&lt;init&gt;(t:org.nlogo.agent.Turtle3D):org.nlogo.agent.TurtleStamp3D" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TurtleStamp3D</span><span class="params">(<span name="t">t: <a href="Turtle3D.html" class="extype" name="org.nlogo.agent.Turtle3D">Turtle3D</a></span>)</span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.agent.TurtleStamp3D#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(shape:String,xcor:Double,ycor:Double,zcor:Double,size:Double,heading:Double,pitch:Double,roll:Double,color:AnyRef,lineThickness:Double):org.nlogo.agent.TurtleStamp3D"></a><a id="&lt;init&gt;:TurtleStamp3D"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#&lt;init&gt;(shape:String,xcor:Double,ycor:Double,zcor:Double,size:Double,heading:Double,pitch:Double,roll:Double,color:AnyRef,lineThickness:Double):org.nlogo.agent.TurtleStamp3D" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TurtleStamp3D</span><span class="params">(<span name="shape">shape: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="xcor">xcor: <span class="extype" name="scala.Double">Double</span></span>, <span name="ycor">ycor: <span class="extype" name="scala.Double">Double</span></span>, <span name="zcor">zcor: <span class="extype" name="scala.Double">Double</span></span>, <span name="size">size: <span class="extype" name="scala.Double">Double</span></span>, <span name="heading">heading: <span class="extype" name="scala.Double">Double</span></span>, <span name="pitch">pitch: <span class="extype" name="scala.Double">Double</span></span>, <span name="roll">roll: <span class="extype" name="scala.Double">Double</span></span>, <span name="color">color: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="lineThickness">lineThickness: <span class="extype" name="scala.Double">Double</span></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#alpha" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="alpha:Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#alpha:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">alpha</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">0-255, 0 = invisible, 255 = opaque
+</p><div class="fullcomment"><div class="comment cmt"><p>0-255, 0 = invisible, 255 = opaque
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#classDisplayName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="classDisplayName:String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#classDisplayName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">classDisplayName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns a displayable name of this type of agent (Turtle, Link, Patch, Observer)</p><div class="fullcomment"><div class="comment cmt"><p>Returns a displayable name of this type of agent (Turtle, Link, Patch, Observer)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#color" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="color:AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#color:AnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">color</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#dx" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dx:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#dx:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dx</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the x component of the forward vector</p><div class="fullcomment"><div class="comment cmt"><p>Returns the x component of the forward vector</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">Turtle3D</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#dy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dy:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#dy:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dy</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the y component of the forward vector</p><div class="fullcomment"><div class="comment cmt"><p>Returns the y component of the forward vector</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">Turtle3D</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#dz" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dz:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#dz:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dz</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the z component of the forward vector</p><div class="fullcomment"><div class="comment cmt"><p>Returns the z component of the forward vector</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">Turtle3D</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#getBreed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBreed:Nothing"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#getBreed:Nothing" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBreed</span><span class="result">: <span class="extype" name="scala.Nothing">Nothing</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the breed AgentSet of this turtle, all turtles if the turtle is unbreeded.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the breed AgentSet of this turtle, all turtles if the turtle is unbreeded.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#getBreedIndex" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBreedIndex:Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#getBreedIndex:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBreedIndex</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the index of this turtle's breed.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the index of this turtle's breed.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#getPatchHere" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPatchHere:Null"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#getPatchHere:Null" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPatchHere</span><span class="result">: <span class="extype" name="scala.Null">Null</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the patch that this turtle is on.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the patch that this turtle is on.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#getVariable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getVariable(vn:Int):Nothing"></a><a id="getVariable(Int):Nothing"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#getVariable(vn:Int):Nothing" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getVariable</span><span class="params">(<span name="vn">vn: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Nothing">Nothing</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the value of the variable in the given position of the agent variable array</p><div class="fullcomment"><div class="comment cmt"><p>Returns the value of the variable in the given position of the agent variable array</p></div><dl class="paramcmts block"><dt class="param">vn</dt><dd class="cmt"><p>the index into the agent variable array</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#hasLabel" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasLabel:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#hasLabel:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasLabel</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns true if the <code>label</code> variable has a non-empty string value.</p><div class="fullcomment"><div class="comment cmt"><p>Returns true if the <code>label</code> variable has a non-empty string value.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#heading" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="heading(d:Double):Unit"></a><a id="heading(Double):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#heading(d:Double):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">heading</span><span class="params">(<span name="d">d: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets the value of the <code>heading</code> variable
+</p><div class="fullcomment"><div class="comment cmt"><p>Sets the value of the <code>heading</code> variable
+</p></div><dl class="paramcmts block"><dt class="param">d</dt><dd class="cmt"><p>the new heading</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#heading" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="heading:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#heading:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">heading</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#hidden" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hidden:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#hidden:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hidden</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the value of the <code>hidden?</code> variable.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the value of the <code>hidden?</code> variable.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#id" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="id:Long"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#id:Long" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">id</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the id number of this agent.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the id number of this agent.  The who number in the case of a turtle, index into the array in the case of patches</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#jump" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jump(d:Double):Unit"></a><a id="jump(Double):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#jump(d:Double):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">jump</span><span class="params">(<span name="d">d: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Moves the turtle forward distance as if the command <code>jump</code> were used
+</p><div class="fullcomment"><div class="comment cmt"><p>Moves the turtle forward distance as if the command <code>jump</code> were used
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#kind" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="kind:org.nlogo.core.AgentKind.Turtle.type"></a><a id="kind:core.AgentKind.Turtle.type"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#kind:org.nlogo.core.AgentKind.Turtle.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kind</span><span class="result">: <span class="extype" name="org.nlogo.core.AgentKind.Turtle">core.AgentKind.Turtle</span>.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#labelColor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="labelColor:Null"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#labelColor:Null" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">labelColor</span><span class="result">: <span class="extype" name="scala.Null">Null</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the value of the <code>label-color</code> variable.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the value of the <code>label-color</code> variable.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#labelString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="labelString:String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#labelString:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">labelString</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the value of the <code>label</code> variable.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the value of the <code>label</code> variable.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#lineThickness" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lineThickness:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#lineThickness:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lineThickness</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#pitch" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pitch:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#pitch:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pitch</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">Turtle3D</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#roll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="roll:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#roll:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">roll</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">Turtle3D</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#setVariable" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setVariable(vn:Int,value:AnyRef):Nothing"></a><a id="setVariable(Int,AnyRef):Nothing"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#setVariable(vn:Int,value:AnyRef):Nothing" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setVariable</span><span class="params">(<span name="vn">vn: <span class="extype" name="scala.Int">Int</span></span>, <span name="value">value: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Nothing">Nothing</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Sets the variable in the position vn of the agent variable array to value</p><div class="fullcomment"><div class="comment cmt"><p>Sets the variable in the position vn of the agent variable array to value</p></div><dl class="paramcmts block"><dt class="param">vn</dt><dd class="cmt"><p>the index into the agent variable array</p></dd><dt class="param">value</dt><dd class="cmt"><p>the new value for the variable</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../api/AgentException.html" class="extype" name="org.nlogo.api.AgentException"><code>api.AgentException</code></a> If value is the wrong type for the given variable or if you try to change variables that cannot be changed</p></span><span class="cmt"></span></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#shape" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shape:String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#shape:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shape</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#size" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="size:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#size:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">size</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#variables" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="variables:Nothing"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#variables:Nothing" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">variables</span><span class="result">: <span class="extype" name="scala.Nothing">Nothing</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns raw array of all agent variables.</p><div class="fullcomment"><div class="comment cmt"><p>Returns raw array of all agent variables.  Warning: this method is liable to change return type
+in a future API version.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#world" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="world:Null"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#world:Null" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">world</span><span class="result">: <span class="extype" name="scala.Null">Null</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the world object associated with this agent</p><div class="fullcomment"><div class="comment cmt"><p>Returns the world object associated with this agent</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#xcor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="xcor:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#xcor:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xcor</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#ycor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ycor:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#ycor:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ycor</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">Turtle</a></dd></dl></div>
+    </li><li name="org.nlogo.agent.TurtleStamp3D#zcor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="zcor:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/agent/TurtleStamp3D.html#zcor:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zcor</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.agent.TurtleStamp3D">TurtleStamp3D</a> → <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">Turtle3D</a></dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="org.nlogo.api.TurtleStamp3D">
+              <h3>Inherited from <a href="../api/TurtleStamp3D.html" class="extype" name="org.nlogo.api.TurtleStamp3D">api.TurtleStamp3D</a></h3>
+            </div><div class="parent" name="org.nlogo.api.Turtle3D">
+              <h3>Inherited from <a href="../api/Turtle3D.html" class="extype" name="org.nlogo.api.Turtle3D">api.Turtle3D</a></h3>
+            </div><div class="parent" name="org.nlogo.api.Turtle">
+              <h3>Inherited from <a href="../api/Turtle.html" class="extype" name="org.nlogo.api.Turtle">api.Turtle</a></h3>
+            </div><div class="parent" name="org.nlogo.api.Agent">
+              <h3>Inherited from <a href="../api/Agent.html" class="extype" name="org.nlogo.api.Agent">api.Agent</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

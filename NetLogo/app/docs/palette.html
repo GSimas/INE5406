@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Palette Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Palette Extension</h1>
+<h2><a href="#using-the-palette-extension" id="using-the-palette-extension" class="section-anchor">Using the Palette Extension</a></h2>
+<p>The NetLogo palette extension allows to map values to colors. The colors go beyond NetLogo colors, including ColorBrewer color schemes or arbitrary RGB colors. Additionally, it provides a primitive to map to color gradients and a primitive to launch a ColorBrewer dialog for easy scheme selection.</p>
+<h2><a href="#getting-started" id="getting-started" class="section-anchor">Getting Started</a></h2>
+<p>To get started with palettes add to the top of your Code tab:</p>
+<pre><code>extensions [palette]
+</code></pre>
+<p>you can then call any of the primitives by adding <code>palette:</code> before the primitive:</p>
+<pre><code>palette:scale-gradient
+palette:scale-scheme
+
+palette:scheme-color
+palette:scheme-dialog
+</code></pre>
+<p>The palette extension primitives return a list containing RGB colors <code>[[r g b][r g b]...[r g b]]</code>, except for <code>palette:scheme-dialog</code> which opens a dialog.</p>
+<h3><a href="#what-colors-should-i-use-" id="what-colors-should-i-use-" class="section-anchor">What colors should I use ?</a></h3>
+<p>ColorBrewer has many colors where to start. ColorBrewer has three schemes Sequential, Divergent and Qualitative. The use of ColorBrewer for maps is discussed at length in this paper (Harrower, Brewer 2003). Choosing the right colors is a design problem, thus, there are many acceptable solution. However, these guidelines might be useful for choosing colors in Agent Based Models:</p>
+<ul>
+<li>Sequential colors are best for continuous natural phenomena models such as as heat diffusion in physics or fire in earth sciences.</li>
+<li>Divergent colors are useful for highlighting a middle value in a model. It can be also applied to the heat diffusion model if the goal is to highlight the middle temperature.</li>
+<li>Qualitative colors are best for choosing colors in models where color denotes category and not value.</li>
+<li>For agents that cover large areas avoid strong colors and try to use pastel colors. However, for a low number of small isolated agents try to use strong colors such as such a accent.</li>
+<li>The main goal is to avoid having a large area covered with agents with a bright color and or having small areas having a muted pastel color.</li>
+<li>If you are coloring both turtles and patches, make sure they have different ranges of hue, saturation and value. E.g. Use different hues of pastel for patches and accent for turtles</li>
+</ul>
+<h3><a href="#should-i-use-a-continuous-color-gradient-or-just-a-discrete-color-set-" id="should-i-use-a-continuous-color-gradient-or-just-a-discrete-color-set-" class="section-anchor">Should I use a continuous color gradient or just a discrete color set ?</a></h3>
+<p>The answer depends on the task that your will be asking from your user.</p>
+<p>For example, gradients are more aesthetic thus are more memorable than discrete colors. Consequently, a gradient can be a better choice for presentations where the main goal of the image is to be attractive and memorable. However, binning values in a discrete set of colors simplifies tasks such as estimation and counting by removing unnecessary detail to display the big picture. Thus, discrete colors can be a better choice for a paper where the user will have the time and interest to study the visualization.</p>
+<p>In order to see the difference you can turn on and off the gradient in the Heat Diffusion model. You can observe that turning gradient on makes the model more aesthetic, but it becomes harder to estimate the value of a patch at a given position.</p>
+<h3><a href="#example-models" id="example-models" class="section-anchor">Example Models</a></h3>
+<p>There is an example of using the palette primitives in the Code Examples section of the models library:</p>
+<ul>
+<li>Palette Example</li>
+</ul>
+<p>And one Sample Model that uses the extension:</p>
+<ul>
+<li>Heat Diffusion - Alternative Gradient</li>
+</ul>
+<h3><a href="#further-reading" id="further-reading" class="section-anchor">Further Reading</a></h3>
+<ul>
+<li>Be sure to check the <a href="http://colorbrewer2.org/" target="_blank">ColorBrewer web page</a></li>
+<li>To get a deeper understanding of how to use the color schemes read the ColorBrewer paper (Harrower, Brewer 2003)</li>
+</ul>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#palette:scale-gradient"><code>palette:scale-gradient</code></a>
+  <a href="#palette:scale-scheme"><code>palette:scale-scheme</code></a>
+  <a href="#palette:scheme-colors"><code>palette:scheme-colors</code></a>
+  <a href="#palette:scale-gradient"><code>palette:scale-gradient</code></a>
+</div>
+<div class="dict_entry" id="palette:scale-gradient">
+  <h3><a>palette:scale-gradient</a></h3>
+  <h4>
+    <span class="prim_example">palette:scale-gradient <i>rgb-color-list</i> <i>number</i> <i>range1</i> <i>range2</i></span>
+  </h4>
+<p>Reports an RGB color proportional to <em>number</em> using a gradient generated with <em>rgb-color-list</em>. An <em>rgb-color-list</em> consist of a list containing RGB list with three values between 0 and 255: [[r1 g1 b1] [r2 g2 b2] [r3 g3 b3] &hellip;]</p>
+<p>If <em>range1</em> is less than <em>range2</em>, the color will be directly mapped to gradient colors. While, if <em>range2</em> is less than <em>range1</em>, the color gradient is inverted.</p>
+<p>If <em>number</em> is less than <em>range1</em>, then the first color of is <em>RGB-color-list</em> is chosen.</p>
+<p>If <em>number</em> is grater than <em>range2</em>, then the last color of is <em>RGB-color-list</em> is chosen.</p>
+<p>Example:</p>
+<pre><code>ask patches
+[
+  set pcolor palette:scale-gradient [[255 0 0] [0 0 255]] pxcor min-pxcor max-pxcor
+]
+
+;; colors each patch with a color proportional to the gradient
+</code></pre>
+</div>
+<div class="dict_entry" id="palette:scale-scheme">
+  <h3><a>palette:scale-scheme</a></h3>
+  <h4>
+    <span class="prim_example">palette:scale-scheme <i>scheme-type</i> <i>scheme-color</i> <i>number-of-classes</i> <i>range1</i> <i>range2</i></span>
+  </h4>
+<p>Reports an RGB color proportional to <em>number</em> using the color brewer schemes. It takes six arguments the first three arguments define the ColorBrewer legend. Fir the user should select a scheme-type which can be &ldquo;Sequential&rdquo;, &ldquo;Divergent, Qualitative&rdquo;. Then it should select a variety of scheme-colors which depending on the scheme-color can have names such as &ldquo;Reds&rdquo;, &ldquo;Divergent&rdquo;, &ldquo;Set1&rdquo;. Finally the user should select the number of classes with a minimum of 3 and a maximum between 9 and 11. For more information go to <a href="http://www.colorbrewer.org">http://www.colorbrewer.org</a> or consult the scheme-dialog primitive.</p>
+<p>If <em>range1</em> is less than <em>range2</em>, the color will be directly mapped to scheme colors. While, if <em>range2</em> is less than <em>range1</em>, the color scheme selection is inverted.</p>
+<p>If <em>number</em> is less than <em>range1</em>, then the first color of the resulting ColorBrewer legend is chosen.</p>
+<p>If <em>number</em> is grater than <em>range2</em>, then the last color of the resulting ColorBrewer legend is chosen.</p>
+<p>Example:</p>
+<pre><code>ask patches
+[
+  set pcolor palette:scale-scheme [[255 0 0] [0 0 255]] pxcor min-pxcor max-pxcor
+]
+
+;; colors each patch with a color from the Color Brewer Schemes
+</code></pre>
+</div>
+<div class="dict_entry" id="palette:scheme-colors">
+  <h3><a>palette:scheme-colors</a></h3>
+  <h4>
+    <span class="prim_example">palette:scheme-colors <i>scheme-type</i> <i>scheme-color</i> <i>number-of-classes</i></span>
+  </h4>
+<p>report a list of RGB colors with the size specified in the a number of classes</p>
+<p>Example:</p>
+<pre><code>show palette:scheme-colors &quot;Divergent&quot; &quot;Spectral&quot; 3
+=&gt; [[252 141 89] [255 255 191] [153 213 148]]
+
+
+; The schemes-color primitive can be used with the scale-gradient primitive
+ask patches
+  [set pcolor palette:scale-gradient palette:scheme-colors &quot;Divergent&quot; &quot;Spectral&quot; 9 pxcor min-pxcor max-pxcor]
+</code></pre>
+</div>
+<div class="dict_entry" id="palette:scale-gradient">
+  <h3><a>palette:scale-gradient</a></h3>
+  <h4>
+    <span class="prim_example">palette:scale-gradient <i>rgb-color-list</i> <i>number</i> <i>range1</i> <i>range2</i></span>
+  </h4>
+<p>Reports an RGB color proportional to number using a gradient generated with <em>rgb-color-list</em>. An <em>rgb-color-list</em> consist of a list containing RGB list with three values between 0 and 255: [[r1 g1 b1] [r2 g2 b2] [r3 g3 b3] &hellip;]</p>
+<p>If <em>range1</em> is less than <em>range2</em>, the color will be directly mapped to gradient colors. While, if <em>range2</em> is less than <em>range1</em>, the color gradient is inverted.</p>
+<p>If <em>number</em> is less than <em>range1</em>, then the first color of is <em>RGB-color-list</em> is chosen.</p>
+<p>If <em>number</em> is grater than <em>range2</em>, then the last color of is <em>RGB-color-list</em> is chosen.</p>
+<p>Example:</p>
+<pre><code>ask patches
+[
+  set pcolor palette:scale-gradient [[255 0 0] [0 0 255]] pxcor min-pxcor max-pxcor
+]
+
+;; colors each patch with a color proportional to the gradient
+</code></pre>
+</div>
+<h2><a href="#references" id="references" class="section-anchor">References</a></h2>
+<p>ColorBrewer <a href="http://www.colorbrewer.org" target="_blank">www.colorbrewer.org</a></p>
+<p>HARROWER, M. and C. BREWER (2003). ColorBrewer: An online tool for selecting color schemes for maps. The Cartographic Journal 40(1): 27-37. )</p>
+<p>HEALEY, C G (2006) Perception in Visualization, (comprehensive review updated regularly).</p>
+<p>HEALEY, C G, BOOTH K S, and ENNS, J T (1995). Visualizing Real-Time Multivariate Data Using Preattentive Processing ACM Transactions on Modeling and Computer Simulation 5, 3, 190-221.</p>
+<p>TUFTE, E (1983) The Visual Display of Quantitative Information , Graphics Press.</p>
+<p>WARE, C (2004) Information Visualization, 2nd Ed., Morgan Kaufmann.
+Feedback</p>

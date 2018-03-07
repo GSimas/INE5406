@@ -1,0 +1,1771 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>NetLogo 6.0.2 - org.nlogo.editor.HighlightView</title>
+          <meta name="description" content="NetLogo 6.0.2 - org.nlogo.editor.HighlightView" />
+          <meta name="keywords" content="NetLogo 6.0.2 org.nlogo.editor.HighlightView" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">NetLogo<span id="doc-version">6.0.2</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html">
+              <span class="name">root</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="index.html#org" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html">
+              <span class="name">org</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.nlogo" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nlogo"></a><a id="nlogo:nlogo"></a>
+      <span class="permalink">
+      <a href="../org/index.html#nlogo" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html">
+              <span class="name">nlogo</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.nlogo.editor" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="editor"></a><a id="editor:editor"></a>
+      <span class="permalink">
+      <a href="../../org/nlogo/index.html#editor" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides classes associated with the NetLogo Editor" href="index.html">
+              <span class="name">editor</span>
+            </a>
+      </span>
+      
+      <p class="shortcomment cmt">Provides classes associated with the NetLogo Editor</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes associated with the NetLogo Editor</p><p>Shouldn't depend on any other netlogo packages besides <code>org.nlogo.core</code>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.nlogo">nlogo</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AbstractEditorArea.html" title=""></a>
+                        <a href="AbstractEditorArea.html" title="">
+                          AbstractEditorArea
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Actions$.html" title=""></a>
+                        <a href="Actions$.html" title="">
+                          Actions
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="AdvancedEditorArea.html" title=""></a>
+                        <a href="AdvancedEditorArea.html" title="">
+                          AdvancedEditorArea
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Colorizer.html" title=""></a>
+                        <a href="Colorizer.html" title="">
+                          Colorizer
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DocumentAction.html" title=""></a>
+                        <a href="DocumentAction.html" title="">
+                          DocumentAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="DocumentProperties$.html" title=""></a>
+                        <a href="DocumentProperties$.html" title="">
+                          DocumentProperties
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DumbIndenter.html" title=""></a>
+                        <a href="DumbIndenter.html" title="">
+                          DumbIndenter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="EditorArea$.html" title=""></a>
+                        <a class="class" href="EditorArea.html" title=""></a>
+                        <a href="EditorArea.html" title="">
+                          EditorArea
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EditorAwareAction.html" title=""></a>
+                        <a href="EditorAwareAction.html" title="">
+                          EditorAwareAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="EditorConfiguration$.html" title=""></a>
+                        <a class="class" href="EditorConfiguration.html" title=""></a>
+                        <a href="EditorConfiguration.html" title="">
+                          EditorConfiguration
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="EditorField.html" title=""></a>
+                        <a href="EditorField.html" title="">
+                          EditorField
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="EditorListener.html" title=""></a>
+                        <a href="EditorListener.html" title="">
+                          EditorListener
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EditorMenu.html" title=""></a>
+                        <a href="EditorMenu.html" title="">
+                          EditorMenu
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EditorScrollPane.html" title=""></a>
+                        <a href="EditorScrollPane.html" title="">
+                          EditorScrollPane
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="FocusTraversable.html" title=""></a>
+                        <a href="FocusTraversable.html" title="">
+                          FocusTraversable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="FocusTraversalListener.html" title=""></a>
+                        <a href="FocusTraversalListener.html" title="">
+                          FocusTraversalListener
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="HighlightEditorKit.html" title=""></a>
+                        <a href="HighlightEditorKit.html" title="">
+                          HighlightEditorKit
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">
+                          HighlightView
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Indenter.html" title=""></a>
+                        <a href="Indenter.html" title="">
+                          Indenter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="InstallableAction.html" title=""></a>
+                        <a href="InstallableAction.html" title="">
+                          InstallableAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="KeyBinding$.html" title=""></a>
+                        <a href="KeyBinding$.html" title="">
+                          KeyBinding
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LineNumberScrollPane.html" title=""></a>
+                        <a href="LineNumberScrollPane.html" title="">
+                          LineNumberScrollPane
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LineNumbersBar.html" title=""></a>
+                        <a href="LineNumbersBar.html" title="">
+                          LineNumbersBar
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LinePainter.html" title=""></a>
+                        <a href="LinePainter.html" title="">
+                          LinePainter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="MouseQuickHelpAction.html" title=""></a>
+                        <a href="MouseQuickHelpAction.html" title="">
+                          MouseQuickHelpAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="QuickHelpAction.html" title=""></a>
+                        <a href="QuickHelpAction.html" title="">
+                          QuickHelpAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="RichDocument$.html" title=""></a>
+                        <a href="RichDocument$.html" title="">
+                          RichDocument
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="SuspendCaretPopupListener.html" title="This class solves a very particular and peculiar problem."></a>
+                        <a href="SuspendCaretPopupListener.html" title="This class solves a very particular and peculiar problem.">
+                          SuspendCaretPopupListener
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ToggleFoldsAction.html" title=""></a>
+                        <a href="ToggleFoldsAction.html" title="">
+                          ToggleFoldsAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TransferFocusAction.html" title=""></a>
+                        <a href="TransferFocusAction.html" title="">
+                          TransferFocusAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TransferFocusBackwardAction.html" title=""></a>
+                        <a href="TransferFocusBackwardAction.html" title="">
+                          TransferFocusBackwardAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="UndoManager.html" title=""></a>
+                        <a href="UndoManager.html" title="">
+                          UndoManager
+                        </a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.nlogo">nlogo</a>.<a href="index.html" class="extype" name="org.nlogo.editor">editor</a></p>
+        <h1>HighlightView<span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HighlightView</span><span class="result"> extends <span class="extype" name="javax.swing.text.PlainView">PlainView</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/NetLogo/NetLogo/blob/6.0.2/netlogo-gui/src/main/editor/HighlightView.java" target="_blank">HighlightView.java</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="javax.swing.text.PlainView">PlainView</span>, <span class="extype" name="javax.swing.text.TabExpander">TabExpander</span>, <span class="extype" name="javax.swing.text.View">View</span>, <span class="extype" name="javax.swing.SwingConstants">SwingConstants</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="../ide/ShowUsageBox$BoldEditorKit$BoldView.html" class="extype" name="org.nlogo.ide.ShowUsageBox.BoldEditorKit.BoldView">BoldView</a></div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.nlogo.editor.HighlightView"><span>HighlightView</span></li><li class="in" name="javax.swing.text.PlainView"><span>PlainView</span></li><li class="in" name="javax.swing.text.TabExpander"><span>TabExpander</span></li><li class="in" name="javax.swing.text.View"><span>View</span></li><li class="in" name="javax.swing.SwingConstants"><span>SwingConstants</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.nlogo.editor.HighlightView#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(pane:javax.swing.JEditorPane,element:javax.swing.text.Element,colorizer:org.nlogo.editor.Colorizer):org.nlogo.editor.HighlightView"></a><a id="&lt;init&gt;:HighlightView"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#&lt;init&gt;(pane:javax.swing.JEditorPane,element:javax.swing.text.Element,colorizer:org.nlogo.editor.Colorizer):org.nlogo.editor.HighlightView" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HighlightView</span><span class="params">(<span name="pane">pane: <span class="extype" name="javax.swing.JEditorPane">JEditorPane</span></span>, <span name="element">element: <span class="extype" name="javax.swing.text.Element">Element</span></span>, <span name="colorizer">colorizer: <a href="Colorizer.html" class="extype" name="org.nlogo.editor.Colorizer">Colorizer</a></span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="javax.swing.text.View#append" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="append(x$1:javax.swing.text.View):Unit"></a><a id="append(View):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#append(x$1:javax.swing.text.View):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">append</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.text.View">View</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="javax.swing.text.View#breakView" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="breakView(x$1:Int,x$2:Int,x$3:Float,x$4:Float):javax.swing.text.View"></a><a id="breakView(Int,Int,Float,Float):View"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#breakView(x$1:Int,x$2:Int,x$3:Float,x$4:Float):javax.swing.text.View" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">breakView</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg3">arg3: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="javax.swing.text.View">View</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#changedUpdate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="changedUpdate(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit"></a><a id="changedUpdate(DocumentEvent,Shape,ViewFactory):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#changedUpdate(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">changedUpdate</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="javax.swing.text.View#createFragment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createFragment(x$1:Int,x$2:Int):javax.swing.text.View"></a><a id="createFragment(Int,Int):View"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#createFragment(x$1:Int,x$2:Int):javax.swing.text.View" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createFragment</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="javax.swing.text.View">View</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#damageLineRange" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="damageLineRange(x$1:Int,x$2:Int,x$3:java.awt.Shape,x$4:java.awt.Component):Unit"></a><a id="damageLineRange(Int,Int,Shape,Component):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#damageLineRange(x$1:Int,x$2:Int,x$3:java.awt.Shape,x$4:java.awt.Component):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">damageLineRange</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg3">arg3: <span class="extype" name="java.awt.Component">Component</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>PlainView</dd></dl></div>
+    </li><li name="org.nlogo.editor.HighlightView#drawLine" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drawLine(lineIndex:Int,g:java.awt.Graphics,x:Int,y:Int):Unit"></a><a id="drawLine(Int,Graphics,Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#drawLine(lineIndex:Int,g:java.awt.Graphics,x:Int,y:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drawLine</span><span class="params">(<span name="lineIndex">lineIndex: <span class="extype" name="scala.Int">Int</span></span>, <span name="g">g: <span class="extype" name="java.awt.Graphics">Graphics</span></span>, <span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.nlogo.editor">org.nlogo.editor</a>] </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.editor.HighlightView">HighlightView</a> → PlainView</dd></dl></div>
+    </li><li name="org.nlogo.editor.HighlightView#drawSelectedText" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drawSelectedText(g:java.awt.Graphics,x:Int,y:Int,p0:Int,p1:Int):Int"></a><a id="drawSelectedText(Graphics,Int,Int,Int,Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#drawSelectedText(g:java.awt.Graphics,x:Int,y:Int,p0:Int,p1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drawSelectedText</span><span class="params">(<span name="g">g: <span class="extype" name="java.awt.Graphics">Graphics</span></span>, <span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>, <span name="p0">p0: <span class="extype" name="scala.Int">Int</span></span>, <span name="p1">p1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.nlogo.editor">org.nlogo.editor</a>] </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.editor.HighlightView">HighlightView</a> → PlainView</dd></dl></div>
+    </li><li name="org.nlogo.editor.HighlightView#drawText" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drawText(g:java.awt.Graphics,x:Int,y:Int,p0:Int,p1:Int,isSelected:Boolean):Int"></a><a id="drawText(Graphics,Int,Int,Int,Int,Boolean):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#drawText(g:java.awt.Graphics,x:Int,y:Int,p0:Int,p1:Int,isSelected:Boolean):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drawText</span><span class="params">(<span name="g">g: <span class="extype" name="java.awt.Graphics">Graphics</span></span>, <span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>, <span name="p0">p0: <span class="extype" name="scala.Int">Int</span></span>, <span name="p1">p1: <span class="extype" name="scala.Int">Int</span></span>, <span name="isSelected">isSelected: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.nlogo.editor">org.nlogo.editor</a>] </dd></dl></div>
+    </li><li name="org.nlogo.editor.HighlightView#drawUnselectedText" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="drawUnselectedText(g:java.awt.Graphics,x:Int,y:Int,p0:Int,p1:Int):Int"></a><a id="drawUnselectedText(Graphics,Int,Int,Int,Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#drawUnselectedText(g:java.awt.Graphics,x:Int,y:Int,p0:Int,p1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drawUnselectedText</span><span class="params">(<span name="g">g: <span class="extype" name="java.awt.Graphics">Graphics</span></span>, <span name="x">x: <span class="extype" name="scala.Int">Int</span></span>, <span name="y">y: <span class="extype" name="scala.Int">Int</span></span>, <span name="p0">p0: <span class="extype" name="scala.Int">Int</span></span>, <span name="p1">p1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.nlogo.editor">org.nlogo.editor</a>] </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.editor.HighlightView">HighlightView</a> → PlainView</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="javax.swing.text.View#forwardUpdate" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forwardUpdate(x$1:javax.swing.event.DocumentEvent.ElementChange,x$2:javax.swing.event.DocumentEvent,x$3:java.awt.Shape,x$4:javax.swing.text.ViewFactory):Unit"></a><a id="forwardUpdate(ElementChange,DocumentEvent,Shape,ViewFactory):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#forwardUpdate(x$1:javax.swing.event.DocumentEvent.ElementChange,x$2:javax.swing.event.DocumentEvent,x$3:java.awt.Shape,x$4:javax.swing.text.ViewFactory):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forwardUpdate</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.event.DocumentEvent.ElementChange">ElementChange</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg3">arg3: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#forwardUpdateToView" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forwardUpdateToView(x$1:javax.swing.text.View,x$2:javax.swing.event.DocumentEvent,x$3:java.awt.Shape,x$4:javax.swing.text.ViewFactory):Unit"></a><a id="forwardUpdateToView(View,DocumentEvent,Shape,ViewFactory):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#forwardUpdateToView(x$1:javax.swing.text.View,x$2:javax.swing.event.DocumentEvent,x$3:java.awt.Shape,x$4:javax.swing.text.ViewFactory):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forwardUpdateToView</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.text.View">View</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg3">arg3: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getAlignment" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getAlignment(x$1:Int):Float"></a><a id="getAlignment(Int):Float"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getAlignment(x$1:Int):Float" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAlignment</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getAttributes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getAttributes():javax.swing.text.AttributeSet"></a><a id="getAttributes():AttributeSet"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getAttributes():javax.swing.text.AttributeSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAttributes</span><span class="params">()</span><span class="result">: <span class="extype" name="javax.swing.text.AttributeSet">AttributeSet</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getBreakWeight" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getBreakWeight(x$1:Int,x$2:Float,x$3:Float):Int"></a><a id="getBreakWeight(Int,Float,Float):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getBreakWeight(x$1:Int,x$2:Float,x$3:Float):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBreakWeight</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getChildAllocation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getChildAllocation(x$1:Int,x$2:java.awt.Shape):java.awt.Shape"></a><a id="getChildAllocation(Int,Shape):Shape"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getChildAllocation(x$1:Int,x$2:java.awt.Shape):java.awt.Shape" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getChildAllocation</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="java.awt.Shape">Shape</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="javax.swing.text.View#getContainer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getContainer():java.awt.Container"></a><a id="getContainer():Container"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getContainer():java.awt.Container" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getContainer</span><span class="params">()</span><span class="result">: <span class="extype" name="java.awt.Container">Container</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getDocument" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getDocument():javax.swing.text.Document"></a><a id="getDocument():Document"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getDocument():javax.swing.text.Document" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDocument</span><span class="params">()</span><span class="result">: <span class="extype" name="javax.swing.text.Document">Document</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getElement" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getElement():javax.swing.text.Element"></a><a id="getElement():Element"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getElement():javax.swing.text.Element" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getElement</span><span class="params">()</span><span class="result">: <span class="extype" name="javax.swing.text.Element">Element</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getEndOffset" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getEndOffset():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getEndOffset():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getEndOffset</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getGraphics" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getGraphics():java.awt.Graphics"></a><a id="getGraphics():Graphics"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getGraphics():java.awt.Graphics" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getGraphics</span><span class="params">()</span><span class="result">: <span class="extype" name="java.awt.Graphics">Graphics</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#getLineBuffer" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getLineBuffer():javax.swing.text.Segment"></a><a id="getLineBuffer():Segment"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getLineBuffer():javax.swing.text.Segment" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLineBuffer</span><span class="params">()</span><span class="result">: <span class="extype" name="javax.swing.text.Segment">Segment</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>PlainView</dd></dl></div>
+    </li><li name="javax.swing.text.View#getMaximumSpan" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMaximumSpan(x$1:Int):Float"></a><a id="getMaximumSpan(Int):Float"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getMaximumSpan(x$1:Int):Float" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMaximumSpan</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getMinimumSpan" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMinimumSpan(x$1:Int):Float"></a><a id="getMinimumSpan(Int):Float"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getMinimumSpan(x$1:Int):Float" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMinimumSpan</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getNextVisualPositionFrom" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getNextVisualPositionFrom(x$1:Int,x$2:javax.swing.text.Position.Bias,x$3:java.awt.Shape,x$4:Int,x$5:Array[javax.swing.text.Position.Bias]):Int"></a><a id="getNextVisualPositionFrom(Int,Bias,Shape,Int,Array[Bias]):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getNextVisualPositionFrom(x$1:Int,x$2:javax.swing.text.Position.Bias,x$3:java.awt.Shape,x$4:Int,x$5:Array[javax.swing.text.Position.Bias]):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNextVisualPositionFrom</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.text.Position.Bias">Bias</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg3">arg3: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg4">arg4: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="javax.swing.text.Position.Bias">Bias</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[javax.swing.text.BadLocationException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="javax.swing.text.View#getParent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getParent():javax.swing.text.View"></a><a id="getParent():View"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getParent():javax.swing.text.View" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getParent</span><span class="params">()</span><span class="result">: <span class="extype" name="javax.swing.text.View">View</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#getPreferredSpan" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPreferredSpan(x$1:Int):Float"></a><a id="getPreferredSpan(Int):Float"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getPreferredSpan(x$1:Int):Float" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPreferredSpan</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getResizeWeight" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getResizeWeight(x$1:Int):Int"></a><a id="getResizeWeight(Int):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getResizeWeight(x$1:Int):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getResizeWeight</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getStartOffset" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getStartOffset():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getStartOffset():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getStartOffset</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#getTabSize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTabSize():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getTabSize():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTabSize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>PlainView</dd></dl></div>
+    </li><li name="javax.swing.text.View#getToolTipText" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getToolTipText(x$1:Float,x$2:Float,x$3:java.awt.Shape):String"></a><a id="getToolTipText(Float,Float,Shape):String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getToolTipText(x$1:Float,x$2:Float,x$3:java.awt.Shape):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getToolTipText</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getView" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getView(x$1:Int):javax.swing.text.View"></a><a id="getView(Int):View"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getView(x$1:Int):javax.swing.text.View" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getView</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="javax.swing.text.View">View</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getViewCount" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getViewCount():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getViewCount():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getViewCount</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getViewFactory" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getViewFactory():javax.swing.text.ViewFactory"></a><a id="getViewFactory():ViewFactory"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getViewFactory():javax.swing.text.ViewFactory" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getViewFactory</span><span class="params">()</span><span class="result">: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getViewIndex" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getViewIndex(x$1:Float,x$2:Float,x$3:java.awt.Shape):Int"></a><a id="getViewIndex(Float,Float,Shape):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getViewIndex(x$1:Float,x$2:Float,x$3:java.awt.Shape):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getViewIndex</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#getViewIndex" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getViewIndex(x$1:Int,x$2:javax.swing.text.Position.Bias):Int"></a><a id="getViewIndex(Int,Bias):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#getViewIndex(x$1:Int,x$2:javax.swing.text.Position.Bias):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getViewIndex</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.text.Position.Bias">Bias</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="javax.swing.text.View#insert" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insert(x$1:Int,x$2:javax.swing.text.View):Unit"></a><a id="insert(Int,View):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#insert(x$1:Int,x$2:javax.swing.text.View):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">insert</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.text.View">View</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#insertUpdate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insertUpdate(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit"></a><a id="insertUpdate(DocumentEvent,Shape,ViewFactory):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#insertUpdate(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">insertUpdate</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="javax.swing.text.View#isVisible" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isVisible():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#isVisible():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isVisible</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#lineToRect" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lineToRect(x$1:java.awt.Shape,x$2:Int):java.awt.Rectangle"></a><a id="lineToRect(Shape,Int):Rectangle"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#lineToRect(x$1:java.awt.Shape,x$2:Int):java.awt.Rectangle" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lineToRect</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="java.awt.Rectangle">Rectangle</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>PlainView</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#modelToView" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modelToView(x$1:Int,x$2:java.awt.Shape,x$3:javax.swing.text.Position.Bias):java.awt.Shape"></a><a id="modelToView(Int,Shape,Bias):Shape"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#modelToView(x$1:Int,x$2:java.awt.Shape,x$3:javax.swing.text.Position.Bias):java.awt.Shape" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">modelToView</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.swing.text.Position.Bias">Bias</span></span>)</span><span class="result">: <span class="extype" name="java.awt.Shape">Shape</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[javax.swing.text.BadLocationException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="javax.swing.text.View#modelToView" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modelToView(x$1:Int,x$2:javax.swing.text.Position.Bias,x$3:Int,x$4:javax.swing.text.Position.Bias,x$5:java.awt.Shape):java.awt.Shape"></a><a id="modelToView(Int,Bias,Int,Bias,Shape):Shape"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#modelToView(x$1:Int,x$2:javax.swing.text.Position.Bias,x$3:Int,x$4:javax.swing.text.Position.Bias,x$5:java.awt.Shape):java.awt.Shape" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">modelToView</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.text.Position.Bias">Bias</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg3">arg3: <span class="extype" name="javax.swing.text.Position.Bias">Bias</span></span>, <span name="arg4">arg4: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="java.awt.Shape">Shape</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[javax.swing.text.BadLocationException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#nextTabStop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nextTabStop(x$1:Float,x$2:Int):Float"></a><a id="nextTabStop(Float,Int):Float"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#nextTabStop(x$1:Float,x$2:Int):Float" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nextTabStop</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → TabExpander</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#paint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="paint(x$1:java.awt.Graphics,x$2:java.awt.Shape):Unit"></a><a id="paint(Graphics,Shape):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#paint(x$1:java.awt.Graphics,x$2:java.awt.Shape):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paint</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.awt.Graphics">Graphics</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd></dl></div>
+    </li><li name="javax.swing.text.View#preferenceChanged" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="preferenceChanged(x$1:javax.swing.text.View,x$2:Boolean,x$3:Boolean):Unit"></a><a id="preferenceChanged(View,Boolean,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#preferenceChanged(x$1:javax.swing.text.View,x$2:Boolean,x$3:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">preferenceChanged</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.text.View">View</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#remove" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove(x$1:Int):Unit"></a><a id="remove(Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#remove(x$1:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">remove</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#removeAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#removeAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#removeUpdate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeUpdate(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit"></a><a id="removeUpdate(DocumentEvent,Shape,ViewFactory):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#removeUpdate(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeUpdate</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd></dl></div>
+    </li><li name="javax.swing.text.View#replace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="replace(x$1:Int,x$2:Int,x$3:Array[javax.swing.text.View]):Unit"></a><a id="replace(Int,Int,Array[View]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#replace(x$1:Int,x$2:Int,x$3:Array[javax.swing.text.View]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replace</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="javax.swing.text.View">View</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.View#setParent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setParent(x$1:javax.swing.text.View):Unit"></a><a id="setParent(View):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#setParent(x$1:javax.swing.text.View):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setParent</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.text.View">View</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#setSize" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setSize(x$1:Float,x$2:Float):Unit"></a><a id="setSize(Float,Float):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#setSize(x$1:Float,x$2:Float):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setSize</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd></dl></div>
+    </li><li name="org.nlogo.editor.HighlightView#studyLine" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="studyLine(lineIndex:Int):Unit"></a><a id="studyLine(Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#studyLine(lineIndex:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">studyLine</span><span class="params">(<span name="lineIndex">lineIndex: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="org.nlogo.editor">org.nlogo.editor</a>] </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="javax.swing.text.View#updateChildren" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateChildren(x$1:javax.swing.event.DocumentEvent.ElementChange,x$2:javax.swing.event.DocumentEvent,x$3:javax.swing.text.ViewFactory):Boolean"></a><a id="updateChildren(ElementChange,DocumentEvent,ViewFactory):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#updateChildren(x$1:javax.swing.event.DocumentEvent.ElementChange,x$2:javax.swing.event.DocumentEvent,x$3:javax.swing.text.ViewFactory):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateChildren</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.event.DocumentEvent.ElementChange">ElementChange</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#updateDamage" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateDamage(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit"></a><a id="updateDamage(DocumentEvent,Shape,ViewFactory):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#updateDamage(x$1:javax.swing.event.DocumentEvent,x$2:java.awt.Shape,x$3:javax.swing.text.ViewFactory):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateDamage</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg2">arg2: <span class="extype" name="javax.swing.text.ViewFactory">ViewFactory</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>PlainView</dd></dl></div>
+    </li><li name="javax.swing.text.View#updateLayout" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateLayout(x$1:javax.swing.event.DocumentEvent.ElementChange,x$2:javax.swing.event.DocumentEvent,x$3:java.awt.Shape):Unit"></a><a id="updateLayout(ElementChange,DocumentEvent,Shape):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#updateLayout(x$1:javax.swing.event.DocumentEvent.ElementChange,x$2:javax.swing.event.DocumentEvent,x$3:java.awt.Shape):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateLayout</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="javax.swing.event.DocumentEvent.ElementChange">ElementChange</span></span>, <span name="arg1">arg1: <span class="extype" name="javax.swing.event.DocumentEvent">DocumentEvent</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>View</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#updateMetrics" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updateMetrics():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#updateMetrics():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateMetrics</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../javax$swing$text.html" class="extype" name="javax.swing.text">javax.swing.text</a>] </dd><dt>Definition Classes</dt><dd>PlainView</dd></dl></div>
+    </li><li name="javax.swing.text.PlainView#viewToModel" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="viewToModel(x$1:Float,x$2:Float,x$3:java.awt.Shape,x$4:Array[javax.swing.text.Position.Bias]):Int"></a><a id="viewToModel(Float,Float,Shape,Array[Bias]):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#viewToModel(x$1:Float,x$2:Float,x$3:java.awt.Shape,x$4:Array[javax.swing.text.Position.Bias]):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">viewToModel</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>, <span name="arg3">arg3: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="javax.swing.text.Position.Bias">Bias</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PlainView → View</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="javax.swing.text.View#modelToView" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modelToView(x$1:Int,x$2:java.awt.Shape):java.awt.Shape"></a><a id="modelToView(Int,Shape):Shape"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#modelToView(x$1:Int,x$2:java.awt.Shape):java.awt.Shape" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version ) see corresponding Javadoc for more information.">modelToView</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Int">Int</span></span>, <span name="arg1">arg1: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="java.awt.Shape">Shape</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd><dt>Annotations</dt><dd>
+                <span class="name">@Deprecated</span>
+              
+                <span class="name">@deprecated</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[javax.swing.text.BadLocationException]">...</span>
+    </span>)</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version )</i> see corresponding Javadoc for more information.</p></dd></dl></div>
+    </li><li name="javax.swing.text.View#viewToModel" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="viewToModel(x$1:Float,x$2:Float,x$3:java.awt.Shape):Int"></a><a id="viewToModel(Float,Float,Shape):Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/editor/HighlightView.html#viewToModel(x$1:Float,x$2:Float,x$3:java.awt.Shape):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version ) see corresponding Javadoc for more information.">viewToModel</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Float">Float</span></span>, <span name="arg2">arg2: <span class="extype" name="java.awt.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>View</dd><dt>Annotations</dt><dd>
+                <span class="name">@Deprecated</span>
+              
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version )</i> see corresponding Javadoc for more information.</p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="javax.swing.text.PlainView">
+              <h3>Inherited from <span class="extype" name="javax.swing.text.PlainView">PlainView</span></h3>
+            </div><div class="parent" name="javax.swing.text.TabExpander">
+              <h3>Inherited from <span class="extype" name="javax.swing.text.TabExpander">TabExpander</span></h3>
+            </div><div class="parent" name="javax.swing.text.View">
+              <h3>Inherited from <span class="extype" name="javax.swing.text.View">View</span></h3>
+            </div><div class="parent" name="javax.swing.SwingConstants">
+              <h3>Inherited from <span class="extype" name="javax.swing.SwingConstants">SwingConstants</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

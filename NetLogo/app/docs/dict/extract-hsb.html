@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: extract-hsb</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="extract-hsb"> 
+ <h3> <a>extract-hsb<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">extract-hsb <i>color</i></span> </h4> 
+ <p> Reports a list of three values, the first (hue) in the range of 0 to 360, the second and third (brightness and saturation) in the range of 0 to 100. </p>
+ <p> The given <i>color</i> can either be a NetLogo color in the range 0 to 140, not including 140 itself, or an RGB list of three values in the range 0 to 255 representing the levels of red, green, and blue. </p>
+ <pre>
+show extract-hsb cyan
+=&gt; [180 57.143 76.863]
+show extract-hsb red
+=&gt; [3.103 80.93 84.314]
+show extract-hsb [255 0 0]
+=&gt; [0 100 100]
+</pre> 
+ <p> See also <a href="../dictionary.html#approximate-hsb">approximate-hsb</a>, <a href="../dictionary.html#approximate-rgb">approximate-rgb</a>, <a href="../dictionary.html#extract-rgb">extract-rgb</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

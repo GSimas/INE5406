@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: who</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="who"> 
+ <h3> <a>who</a> </h3> 
+ <h4> <span class="prim_example">who</span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> This is a built-in turtle variable. It holds the turtle's "who number" or ID number, an integer greater than or equal to zero. You cannot set this variable; a turtle's who number never changes. </p>
+ <p> Who numbers start at 0. A dead turtle's number will not be reassigned to a new turtle until you use the <a href="../dictionary.html#clear-turtles">clear-turtles</a> or <a href="../dictionary.html#clear-all">clear-all</a> commands, at which time who numbering starts over again at 0. </p>
+ <p> Example: </p>
+ <pre>
+show [who] of turtles with [color = red]
+;; prints a list of the who numbers of all red turtles
+;; in the Command Center, in random order
+crt 100
+  [ ifelse who &lt; 50
+      [ set color red ]
+      [ set color blue ] ]
+;; turtles 0 through 49 are red, turtles 50
+;; through 99 are blue
+</pre> 
+ <p> You can use the turtle reporter to retrieve a turtle with a given who number. See also <a href="../dictionary.html#turtle">turtle</a>. </p>
+ <p> Note that who numbers aren't breed-specific. No two turtles can have the same who number, even if they are different breeds: </p>
+ <pre>
+clear-turtles
+create-frogs 1
+create-mice 1
+ask turtles [ print who ]
+;; prints (in some random order):
+;; (frog 0): 0
+;; (mouse 1): 1
+</pre> 
+ <p> Even though we only have one mouse, it is <code>mouse 1</code> not <code>mouse 0</code>, because the who number 0 was already taken by the frog. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

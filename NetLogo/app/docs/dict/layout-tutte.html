@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: layout-tutte</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="layout-tutte"> 
+ <h3> <a>layout-tutte<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">layout-tutte <i>turtle-set</i> <i>link-set</i> <i>radius</i></span> </h4> 
+ <p> The turtles that are connected by links in <i>link-set</i> but not included in <i>turtle-set</i> are placed in a circle layout with the given <i>radius</i>. There should be at least 3 agents in this agentset. </p>
+ <p> The turtles in <i>turtle-set</i> are then laid out in the following manner: Each turtle is placed at centroid (or barycenter) of the polygon formed by its linked neighbors. (The centroid is like a 2-dimensional average of the coordinates of the neighbors.) </p>
+ <p> (The purpose of the circle of "anchor agents" is to prevent all the turtles from collapsing down to one point.) </p>
+ <p> After a few iterations of this, the layout will stabilize. </p>
+ <p> This layout is named after the mathematician William Thomas Tutte, who proposed it as a method for graph layout. </p>
+ <pre>
+to make-a-tree
+  set-default-shape turtles "circle"
+  crt 6
+  ask turtle 0 [
+    create-link-with turtle 1
+    create-link-with turtle 2
+    create-link-with turtle 3
+  ]
+  ask turtle 1 [
+    create-link-with turtle 4
+    create-link-with turtle 5
+  ]
+  ; place all the turtles with just one
+  ; neighbor on the perimeter of a circle
+  ; and then place the remaining turtles inside
+  ; this circle, spread between their neighbors.
+  repeat 10 [ layout-tutte (turtles with [link-neighbors = 1]) links 12 ]
+end
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

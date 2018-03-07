@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Bitmap Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Bitmap Extension</h1>
+<h2><a href="#using" id="using" class="section-anchor">Using</a></h2>
+<p>The bitmap extension is pre-installed in NetLogo. For instructions on using it, or for more information about NetLogo extensions, see the NetLogo User Manual.</p>
+<h3><a href="#what-does-the-bitmap-extension-do" id="what-does-the-bitmap-extension-do" class="section-anchor">What does the Bitmap Extension do?</a></h3>
+<p>The Bitmap Extension allows you to manipulate and import images into
+the drawing and patches. It offers features not provided by the
+NetLogo core primitives, such as: scaling, manipulation of different
+color channels, and width and height reporters.</p>
+<h3><a href="#getting-started" id="getting-started" class="section-anchor">Getting started</a></h3>
+<p>To import and manipulate images you will need to include the bitmap
+extension in your NetLogo model.</p>
+<pre><code class="language-NetLogo">extensions[ bitmap ]
+</code></pre>
+<p>The image file formats supported are determined by your Java virtual
+machine&rsquo;s imageio library. Typically this is PNG, JPG, GIF, and
+BMP. PNG is a good, standard choice that is likely to work
+everywhere.</p>
+<p>If the image format supports transparency (alpha), that information
+will be imported as well.</p>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#bitmap:average-color"><code>bitmap:average-color</code></a>
+  <a href="#bitmap:channel"><code>bitmap:channel</code></a>
+  <a href="#bitmap:copy-to-drawing"><code>bitmap:copy-to-drawing</code></a>
+  <a href="#bitmap:copy-to-pcolors"><code>bitmap:copy-to-pcolors</code></a>
+  <a href="#bitmap:difference-rgb"><code>bitmap:difference-rgb</code></a>
+  <a href="#bitmap:export"><code>bitmap:export</code></a>
+  <a href="#bitmap:from-view"><code>bitmap:from-view</code></a>
+  <a href="#bitmap:to-grayscale"><code>bitmap:to-grayscale</code></a>
+  <a href="#bitmap:height"><code>bitmap:height</code></a>
+  <a href="#bitmap:import"><code>bitmap:import</code></a>
+  <a href="#bitmap:scaled"><code>bitmap:scaled</code></a>
+  <a href="#bitmap:width"><code>bitmap:width</code></a>
+</div>
+<div class="dict_entry" id="bitmap:average-color">
+  <h3><a>bitmap:average-color</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:average-color <i>image</i></span>
+  </h4>
+<p>Reports a 3-element list describing the amount of R, G, and B in
+<em>image</em>, by summing across all pixels, and normalizing each
+component by the number of pixels in the image, so each component
+ranges from 0 to 255.</p>
+</div>
+<div class="dict_entry" id="bitmap:channel">
+  <h3><a>bitmap:channel</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:channel <i>image</i> <i>channel</i></span>
+  </h4>
+<p>Extracts either the alpha, red, green, or blue channel from an image.
+The input <em>channel</em> should be an integer 0-3 indicating the
+channel to remove (alpha=0, red=1, green=2, blue=3). The resulting
+image is a grayscale image representing specified channel.</p>
+</div>
+<div class="dict_entry" id="bitmap:copy-to-drawing">
+  <h3><a>bitmap:copy-to-drawing</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:copy-to-drawing <i>image</i> <i>x</i> <i>y</i></span>
+  </h4>
+<p>Imports the given image into the drawing without scaling the image at
+the given pixel coordinates.</p>
+</div>
+<div class="dict_entry" id="bitmap:copy-to-pcolors">
+  <h3><a>bitmap:copy-to-pcolors</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:copy-to-pcolors <i>image</i> <i>boolean</i></span>
+  </h4>
+<p>Imports the given image into the pcolors, scaled to fit the world.
+The second input indicates whether the colors should be interpreted
+as NetLogo colors or left as RGB colors. <code>false</code> means RGB
+colors.</p>
+</div>
+<div class="dict_entry" id="bitmap:difference-rgb">
+  <h3><a>bitmap:difference-rgb</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:difference-rgb <i>image1</i> <i>image2</i></span>
+  </h4>
+<p>Reports an image that is the absolute value of the pixel-wise RGB
+difference between two images. Note that image1 and image2 MUST be
+the same width and height as each other, or errors will ensue.</p>
+</div>
+<div class="dict_entry" id="bitmap:export">
+  <h3><a>bitmap:export</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:export <i>image</i> <i>filename</i></span>
+  </h4>
+<p>Writes <em>image</em> to <em>filename</em>.</p>
+</div>
+<div class="dict_entry" id="bitmap:from-view">
+  <h3><a>bitmap:from-view</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:from-view</span>
+  </h4>
+<p>Reports an image of the current view.</p>
+</div>
+<div class="dict_entry" id="bitmap:to-grayscale">
+  <h3><a>bitmap:to-grayscale</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:to-grayscale <i>image</i></span>
+  </h4>
+<p>Converts the given image to grayscale.</p>
+</div>
+<div class="dict_entry" id="bitmap:height">
+  <h3><a>bitmap:height</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:height <i>image</i></span>
+  </h4>
+<p>Reports the height of given <em>image</em></p>
+</div>
+<div class="dict_entry" id="bitmap:import">
+  <h3><a>bitmap:import</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:import <i>filename</i></span>
+  </h4>
+<p>Reports a LogoBitmap containing the image at <em>filename</em>.</p>
+</div>
+<div class="dict_entry" id="bitmap:scaled">
+  <h3><a>bitmap:scaled</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:scaled <i>image</i> <i>width</i> <i>height</i></span>
+  </h4>
+<p>Reports a new image that is <em>image</em> scaled to the given <em>width</em> and <em>height</em></p>
+</div>
+<div class="dict_entry" id="bitmap:width">
+  <h3><a>bitmap:width</a></h3>
+  <h4>
+    <span class="prim_example">bitmap:width <i>image</i></span>
+  </h4>
+<p>Reports the width of the given <em>image</em></p>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: sort-on</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="sort-on"> 
+ <h3> <a>sort-on<span class="since">5.0</span></a> </h3> 
+ <h4> <span class="prim_example">sort-on [<i>reporter</i>] <i>agentset</i></span> </h4> 
+ <p> Reports a list of agents, sorted according to each agent's value for <i>reporter</i>. Ties are broken randomly. </p>
+ <p> The values must be all numbers, all strings, or all agents of the same type. </p>
+ <pre>
+crt 3
+show sort-on [who] turtles
+=&gt; [(turtle 0) (turtle 1) (turtle 2)]
+show sort-on [(- who)] turtles
+=&gt; [(turtle 2) (turtle 1) (turtle 0)]
+foreach sort-on [size] turtles
+  [ the-turtle -&gt; ask the-turtle [ do-something ] ]
+;; turtles run "do-something" one at a time, in
+;; ascending order by size
+</pre> 
+ <p> See also <a href="../dictionary.html#sort">sort</a>, <a href="../dictionary.html#sort-by">sort-by</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

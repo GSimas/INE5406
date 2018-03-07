@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: View2.5d Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo View2.5d Extension</h1>
+<p>The View2.5D extension offers visualization for Patch and Turtle reporters, in real time, in a simulation&rsquo;s context.</p>
+<h2><a href="#how-to-use" id="how-to-use" class="section-anchor">How to Use</a></h2>
+<p>The view2.5d extension is pre-installed in NetLogo.</p>
+<p>To use the view2.5d extension in your model, add a line to the top of your Code tab:</p>
+<pre><code>extensions [view2.5d]
+</code></pre>
+<p>If your model already uses other extensions, then it already has an
+<code>extensions</code> line in it, so just add <code>view2.5d</code> to the list.</p>
+<p>For more information on using NetLogo extensions,
+see the <a href="extensions.html">Extensions Guide</a></p>
+<h3><a href="#incorporating-into-models" id="incorporating-into-models" class="section-anchor">Incorporating Into Models</a></h3>
+<p>open a window using either the <code>view2.5d:patch-view</code> or <code>view2.5d:turtle-view</code> commands
+(it can be a good idea to put these in your &lsquo;SETUP&rsquo; procedure or a separate button).</p>
+<p>update your window&rsquo;s view using one of the update commands (put these in your &lsquo;GO&rsquo; procedure).</p>
+<p>See the View2.5d Code Examples in the NetLogo models library.</p>
+<h3><a href="#feedback" id="feedback" class="section-anchor">Feedback</a></h3>
+<p>Send comments, bugs, or other feedback to <a href="mailto:ccl-feedback@ccl.northwestern.edu">CCL Feedback</a> and/or <a href="mailto:cbrady@northwestern.edu">Corey Brady</a>.</p>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#view2.5d:patch-view"><code>view2.5d:patch-view</code></a>
+  <a href="#view2.5d:decorate-patch-view"><code>view2.5d:decorate-patch-view</code></a>
+  <a href="#view2.5d:undecorate-patch-view"><code>view2.5d:undecorate-patch-view</code></a>
+  <a href="#view2.5d:turtle-view"><code>view2.5d:turtle-view</code></a>
+  <a href="#view2.5d:update-all-patch-views"><code>view2.5d:update-all-patch-views</code></a>
+  <a href="#view2.5d:update-patch-view"><code>view2.5d:update-patch-view</code></a>
+  <a href="#view2.5d:update-turtle-view"><code>view2.5d:update-turtle-view</code></a>
+  <a href="#view2.5d:get-z-scale"><code>view2.5d:get-z-scale</code></a>
+  <a href="#view2.5d:set-z-scale"><code>view2.5d:set-z-scale</code></a>
+  <a href="#view2.5d:set-turtle-stem-thickness"><code>view2.5d:set-turtle-stem-thickness</code></a>
+  <a href="#view2.5d:get-observer-angles"><code>view2.5d:get-observer-angles</code></a>
+  <a href="#view2.5d:set-observer-angles"><code>view2.5d:set-observer-angles</code></a>
+  <a href="#view2.5d:get-observer-xy-focus"><code>view2.5d:get-observer-xy-focus</code></a>
+  <a href="#view2.5d:set-observer-xy-focus"><code>view2.5d:set-observer-xy-focus</code></a>
+  <a href="#view2.5d:get-observer-distance"><code>view2.5d:get-observer-distance</code></a>
+  <a href="#view2.5d:set-observer-distance"><code>view2.5d:set-observer-distance</code></a>
+  <a href="#view2.5d:remove-patch-view"><code>view2.5d:remove-patch-view</code></a>
+  <a href="#view2.5d:remove-turtle-view"><code>view2.5d:remove-turtle-view</code></a>
+  <a href="#view2.5d:remove-all-patch-views"><code>view2.5d:remove-all-patch-views</code></a>
+  <a href="#view2.5d:remove-all-turtle-views"><code>view2.5d:remove-all-turtle-views</code></a>
+  <a href="#view2.5d:count-windows"><code>view2.5d:count-windows</code></a>
+</div>
+<div class="dict_entry" id="view2.5d:patch-view">
+  <h3><a>view2.5d:patch-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:patch-view <i>Title</i> <i>Reporter</i></span>
+  </h4>
+<p>This command must be called from the Observer context.  (Attempting to call from another context causes an error)
+The Title is a string, which will be used to label the new Window and to call for subsequent updates and modifications.
+Specification of the Reporter uses the NetLogo anonymous procedure syntax, from the Observer perspective.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">view2.5d:patch-view &quot;Test&quot; [ [the-turtle] -&gt; [pxcor] of the-turtle]
+</code></pre>
+</div>
+<div class="dict_entry" id="view2.5d:decorate-patch-view">
+  <h3><a>view2.5d:decorate-patch-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:decorate-patch-view <i>Title</i></span>
+  </h4>
+<p>This command must be called from the Observer context.  (Attempting to call from another context causes an error)
+The Title is a string, the label of an existing Patch View Window.
+Effect:  draws the turtles of the model at their current location, on top of the Patch view display</p>
+<blockquote>
+<p>NOTE: only has an effect in the &ldquo;structures&rdquo; patch view (in the others, the patch value is inclined based on neighbors &amp; gradient)</p>
+<p>NOTE: for negative patch values, the turtle shapes are drawn below (orbit underneath to see them)</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="language-NetLogo">view2.5d:decorate-patch-view &quot;Test&quot;
+</code></pre>
+</div>
+<div class="dict_entry" id="view2.5d:undecorate-patch-view">
+  <h3><a>view2.5d:undecorate-patch-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:undecorate-patch-view <i>Title</i></span>
+  </h4>
+<p>This command must be called from the Observer context.  (Attempting to call from another context causes an error)</p>
+<p>The Title is a string, the label of an existing Patch View Window.
+Effect:  STOPS drawing the turtles of the model at their current location, on top of the Patch view display</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">view2.5d:undecorate-patch-view &quot;Test&quot;
+</code></pre>
+</div>
+<div class="dict_entry" id="view2.5d:turtle-view">
+  <h3><a>view2.5d:turtle-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:turtle-view <i>Title</i> <i>Agents</i> <i>Reporter</i></span>
+  </h4>
+<p>This command must be called from the Observer context.  (Attempting to call from another context causes an error)
+The Title is a string, which will be used to label the new Window and to call for subsequent updates.
+The turtle-set is any selector for turtles.
+Specification of the Reporter uses the NetLogo task syntax, from the Observer perspective.</p>
+<p>Example:</p>
+<pre><code>view2.5d:turtle-view &quot;Test&quot; turtles with [color = red] [[energy] of ?1]
+; This would create a new 2.5d window, plotting the ENERGY value of all turtles that are red.
+</code></pre>
+</div>
+<div class="dict_entry" id="view2.5d:update-all-patch-views">
+  <h3><a>view2.5d:update-all-patch-views</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:update-all-patch-views</span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates all existing patch-view windows according to the latest values.</p>
+</div>
+<div class="dict_entry" id="view2.5d:update-patch-view">
+  <h3><a>view2.5d:update-patch-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:update-patch-view <i>Title</i></span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates only the patch-view window with the specified title (if any).</p>
+</div>
+<div class="dict_entry" id="view2.5d:update-turtle-view">
+  <h3><a>view2.5d:update-turtle-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:update-turtle-view <i>Title</i> <i>Agents</i></span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates only the turtle-view window with the specified title (if any).
+The turtle-set selector must be supplied to refresh the set of turtles.</p>
+</div>
+<div class="dict_entry" id="view2.5d:get-z-scale">
+  <h3><a>view2.5d:get-z-scale</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:get-z-scale <i>title</i></span>
+  </h4>
+<p>This reporter must be called from the Observer context.
+Returns the current z-scale of the turtle-view or patch-view window with the specified title (if any).</p>
+</div>
+<div class="dict_entry" id="view2.5d:set-z-scale">
+  <h3><a>view2.5d:set-z-scale</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:set-z-scale <i>Title</i> <i>new-z-scale</i></span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates only the turtle-view or patch-view window with the specified title (if any).
+The view is now displayed with the new z-scale.</p>
+</div>
+<div class="dict_entry" id="view2.5d:set-turtle-stem-thickness">
+  <h3><a>view2.5d:set-turtle-stem-thickness</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:set-turtle-stem-thickness <i>Title</i> <i>thickness</i></span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates only the turtle-view window with the specified title (if any).
+Turtles are now drawn with &ldquo;pins&rdquo; or &ldquo;stems&rdquo; that have the specified thickness (instead of the hairline default)</p>
+</div>
+<div class="dict_entry" id="view2.5d:get-observer-angles">
+  <h3><a>view2.5d:get-observer-angles</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:get-observer-angles <i>Title</i></span>
+  </h4>
+<p>This reporter must be called from the Observer context.
+Returns a list reflecting the observer&rsquo;s angular perspective { heading pitch } (the place on an imaginary sphere at the zoom distance is updated to obey heading &amp; pitch given)</p>
+</div>
+<div class="dict_entry" id="view2.5d:set-observer-angles">
+  <h3><a>view2.5d:set-observer-angles</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:set-observer-angles <i>Title</i> <i>heading</i> <i>pitch</i></span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates only the turtle-view window with the specified title (if any).
+Sets the observer&rsquo;s angular perspective (the place on an imaginary sphere at the zoom distance is updated to obey heading &amp; pitch given)</p>
+</div>
+<div class="dict_entry" id="view2.5d:get-observer-xy-focus">
+  <h3><a>view2.5d:get-observer-xy-focus</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:get-observer-xy-focus <i>Title</i></span>
+  </h4>
+<p>This reporter must be called from the Observer context.
+Returns a list reflecting the x and y coordinates the observer is &ldquo;looking at&rdquo; in the patch plane.</p>
+</div>
+<div class="dict_entry" id="view2.5d:set-observer-xy-focus">
+  <h3><a>view2.5d:set-observer-xy-focus</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:set-observer-xy-focus <i>Title</i> <i>number</i> <i>ycor</i></span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates only the turtle-view window with the specified title (if any).
+Sets the x and y coordinates the observer that is &ldquo;looking at&rdquo; in the patch plane.</p>
+</div>
+<div class="dict_entry" id="view2.5d:get-observer-distance">
+  <h3><a>view2.5d:get-observer-distance</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:get-observer-distance <i>Title</i></span>
+  </h4>
+<p>This reporter must be called from the Observer context.
+Returns the observer&rsquo;s distance from its &ldquo;focus point&rdquo;</p>
+</div>
+<div class="dict_entry" id="view2.5d:set-observer-distance">
+  <h3><a>view2.5d:set-observer-distance</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:set-observer-distance <i>Title</i> <i>new-distance</i></span>
+  </h4>
+<p>This command must be called from the Observer context.
+Updates only the turtle-view window with the specified title (if any).
+Sets the observer&rsquo;s distance from its &ldquo;focus point&rdquo;</p>
+</div>
+<div class="dict_entry" id="view2.5d:remove-patch-view">
+  <h3><a>view2.5d:remove-patch-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:remove-patch-view <i>Title</i></span>
+  </h4>
+<p>This command closes and removes the specified patch view programmatically (equivalent to closing the window manually).</p>
+</div>
+<div class="dict_entry" id="view2.5d:remove-turtle-view">
+  <h3><a>view2.5d:remove-turtle-view</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:remove-turtle-view <i>Title</i></span>
+  </h4>
+<p>This command closes and removes the specified turtle view programmatically (equivalent to closing the window manually).</p>
+</div>
+<div class="dict_entry" id="view2.5d:remove-all-patch-views">
+  <h3><a>view2.5d:remove-all-patch-views</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:remove-all-patch-views</span>
+  </h4>
+<p>This command closes and removes all patch views programmatically (equivalent to closing the windows manually).</p>
+</div>
+<div class="dict_entry" id="view2.5d:remove-all-turtle-views">
+  <h3><a>view2.5d:remove-all-turtle-views</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:remove-all-turtle-views</span>
+  </h4>
+<p>This command closes and removes all turtle views programmatically (equivalent to closing the windows manually).</p>
+</div>
+<div class="dict_entry" id="view2.5d:count-windows">
+  <h3><a>view2.5d:count-windows</a></h3>
+  <h4>
+    <span class="prim_example">view2.5d:count-windows</span>
+  </h4>
+<p>This reporter returns the number of turtle and patch views that are currently active.</p>
+</div>

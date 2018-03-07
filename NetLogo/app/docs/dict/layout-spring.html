@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: layout-spring</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="layout-spring"> 
+ <h3> <a>layout-spring<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">layout-spring <i>turtle-set</i> <i>link-set</i> <i>spring-constant</i> <i>spring-length</i> <i>repulsion-constant</i></span> </h4> 
+ <p> Arranges the turtles in <i>turtle-set</i>, as if the links in <i>link-set</i> are springs and the turtles are repelling each other. Turtles that are connected by links in <i>link-set</i> but not included in <i>turtle-set</i> are treated as anchors and are not moved. </p>
+ <p> <i>spring-constant</i> is a measure of the "tautness" of the spring. It is the "resistance" to change in their length. spring-constant is the force the spring would exert if it's length were changed by 1 unit. </p>
+ <p> spring-length is the "zero-force" length or the natural length of the springs. This is the length which all springs try to achieve either by pushing out their nodes or pulling them in. </p>
+ <p> repulsion-constant is a measure of repulsion between the nodes. It is the force that 2 nodes at a distance of 1 unit will exert on each other. </p>
+ <p> The repulsion effect tries to get the nodes as far as possible from each other, in order to avoid crowding and the spring effect tries to keep them at "about" a certain distance from the nodes they are connected to. The result is the laying out of the whole network in a way which highlights relationships among the nodes and at the same time is crowded less and is visually pleasing. </p>
+ <p> The layout algorithm is based on the Fruchterman-Reingold layout algorithm. More information about this algorithm can be obtained <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.13.8444" target="_blank">here</a>. </p>
+ <pre>
+to make-a-triangle
+  set-default-shape turtles "circle"
+  crt 3
+  ask turtle 0
+  [
+    create-links-with other turtles
+  ]
+  ask turtle 1
+  [
+    create-link-with turtle 2
+  ]
+  repeat 30 [ layout-spring turtles links 0.2 5 1 ] ;; lays the nodes in a triangle
+end
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

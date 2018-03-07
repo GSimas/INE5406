@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: setxy</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="setxy"> 
+ <h3> <a>setxy<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">setxy <i>x y</i></span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> The turtle sets its x-coordinate to <i>x</i> and its y-coordinate to <i>y</i>. </p>
+ <p> Equivalent to <code>set xcor x set ycor y</code>, except it happens in one time step instead of two. </p>
+ <p> If <i>x</i> or <i>y</i> is outside the world, NetLogo will throw a runtime error, unless wrapping is turned on in the relevant dimensions. For example, with wrapping turned on in both dimensions and the default world size where <code>min-pxcor = -16</code>, <code>max-pxcor = 16</code>, <code>min-pycor = -16</code> and <code>max-pycor = 16</code>, asking a turtle to <code>setxy 17 17</code> will move it to the center of patch (-16, -16). </p>
+ <pre>
+setxy 0 0
+;; turtle moves to the middle of the center patch
+setxy random-xcor random-ycor
+;; turtle moves to a random point
+setxy random-pxcor random-pycor
+;; turtle moves to the center of a random patch
+</pre> 
+ <p> See also <a href="../dictionary.html#move-to">move-to</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

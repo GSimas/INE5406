@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: histogram</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="histogram"> 
+ <h3> <a>histogram<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">histogram <i>list</i></span> </h4> 
+ <p> Histograms the values in the given list </p>
+ <p> Draws a histogram showing the frequency distribution of the values in the list. The heights of the bars in the histogram represent the numbers of values in each subrange. </p>
+ <p> Before the histogram is drawn, first any previous points drawn by the current plot pen are removed. </p>
+ <p> Any non-numeric values in the list are ignored. </p>
+ <p> The histogram is drawn on the current plot using the current plot pen and pen color. Auto scaling does not affect a histogram's horizontal range, so set-plot-x-range should be used to control the range, and the pen interval can then be set (either directly with set-plot-pen-interval, or indirectly via set-histogram-num-bars) to control how many bars that range is split up into. </p>
+ <p> Be sure that if you want the histogram drawn with bars that the current pen is in bar mode (mode 1). </p>
+ <p> For histogramming purposes the plot's X range is not considered to include the maximum X value. Values equal to the maximum X will fall outside of the histogram's range. </p>
+ <pre>
+histogram [color] of turtles
+;; draws a histogram showing how many turtles there are
+;; of each color
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

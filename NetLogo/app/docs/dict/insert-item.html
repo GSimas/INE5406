@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: insert-item</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="insert-item"> 
+ <h3> <a>insert-item<span class="since">6.0.2</span></a> </h3> 
+ <h4> <span class="prim_example">insert-item <i>index list value</i></span> <span class="prim_example">insert-item <i>index string1 string2</i></span> </h4> 
+ <p> On a list, inserts an item in that list. <i>index</i> is the index where the item will be inserted. The first item has an index of 0. (The 6th item in a list would have an index of 5.) </p>
+ <p> Likewise for a string, but all characters in a multiple-character <i>string2</i> are inserted at <i>index</i>. </p>
+ <pre>
+show insert-item 2 [2 7 4 5] 15
+=&gt; [2 7 15 4 5]
+show insert-item 2 "cat" "re"
+=&gt; "caret"
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

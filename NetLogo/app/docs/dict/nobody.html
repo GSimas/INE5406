@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: nobody</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="nobody"> 
+ <h3> <a>nobody</a> </h3> 
+ <h4> <span class="prim_example">nobody</span> </h4> 
+ <p> This is a special value which some primitives such as turtle, one-of, max-one-of, etc. report to indicate that no agent was found. Also, when a turtle dies, it becomes equal to nobody. </p>
+ <p> Note: Empty agentsets are not equal to nobody. If you want to test for an empty agentset, use <a href="../dictionary.html#any">any?</a>. You only get nobody back in situations where you were expecting a single agent, not a whole agentset. </p>
+ <pre>
+set target one-of other turtles-here
+if target != nobody
+  [ ask target [ set color red ] ]
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

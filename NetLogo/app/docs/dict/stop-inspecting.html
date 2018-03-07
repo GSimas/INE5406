@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: stop-inspecting</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="stop-inspecting"> 
+ <h3> <a>stop-inspecting<span class="since">5.2</span></a> </h3> 
+ <h4> <span class="prim_example">stop-inspecting <i>agent</i></span> </h4> 
+ <p> Closes the agent monitor for the given agent (turtle or patch). In the case that no agent monitor is open, <code>stop-inspecting</code> does nothing. </p>
+ <pre>
+stop-inspecting patch 2 4
+;; the agent monitor for that patch closes
+ask sheep [ stop-inspecting self ]
+;; close all agent monitors for sheep
+</pre> 
+ <p> See <a href="../dictionary.html#inspect">inspect</a> and <a href="../dictionary.html#stop-inspecting-dead-agents">stop-inspecting-dead-agents</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

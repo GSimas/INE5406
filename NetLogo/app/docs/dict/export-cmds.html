@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: export-view export-interface export-output export-plot export-all-plots export-world</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="export-cmds"> 
+ <h3> <a>export-view<span class="since">3.0</span></a> <a>export-interface<span class="since">2.0</span></a> <a>export-output<span class="since">1.0</span></a> <a>export-plot<span class="since">1.0</span></a> <a>export-all-plots<span class="since">1.2.1</span></a> <a>export-world<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">export-view <i>filename</i></span> <span class="prim_example">export-interface <i>filename</i></span> <span class="prim_example">export-output <i>filename</i></span> <span class="prim_example">export-plot <i>plotname</i> <i>filename</i></span> <span class="prim_example">export-all-plots <i>filename</i></span> <span class="prim_example">export-world <i>filename</i></span> </h4> 
+ <p> export-view writes the current contents of the current view to an external file given by the string <i>filename</i>. The file is saved in PNG (Portable Network Graphics) format, so it is recommended to supply a filename ending in ".png". </p>
+ <p> export-interface is similar, but for the whole interface tab. </p>
+ <p> Note that export-view still works when running NetLogo in headless mode, but export-interface doesn't. </p>
+ <p> export-output writes the contents of the model's output area to an external file given by the string <i>filename</i>. (If the model does not have a separate output area, the output portion of the Command Center is used.) </p>
+ <p> export-plot writes the x and y values of all points plotted by all the plot pens in the plot given by the string <i>plotname</i> to an external file given by the string <i>filename</i>. If a pen is in bar mode (mode 0) and the y value of the point plotted is greater than 0, the upper-left corner point of the bar will be exported. If the y value is less than 0, then the lower-left corner point of the bar will be exported. </p>
+ <p> export-all-plots writes every plot in the current model to an external file given by the string <i>filename</i>. Each plot is identical in format to the output of export-plot. </p>
+ <p> export-world writes the values of all variables, both built-in and user-defined, including all observer, turtle, and patch variables, the drawing, the contents of the output area if one exists, the contents of any plots and the state of the random number generator, to an external file given by the string <i>filename</i>. (The result file can be read back into NetLogo with the <a href="../dictionary.html#import-world">import-world</a> primitive.) export-world does not save the state of open files. </p>
+ <p> export-plot, export-all-plots and export-world save files in in plain-text, "comma-separated values" (<code>.csv</code>) format. CSV files can be read by most popular spreadsheet and database programs as well as any text editor. </p>
+ <p> If you wish to export to a file in a location other than the model's location, you should include the full path to the file you wish to export. (Use the forward-slash "/" as the folder separator.) </p>
+ <p> Note that the functionality of these primitives is also available directly from NetLogo's File menu. </p>
+ <pre>
+export-world "fire.csv"
+;; exports the state of the model to the file fire.csv
+;; located in the NetLogo folder
+export-plot "Temperature" "c:/My Documents/plot.csv"
+;; exports the plot named
+;; "Temperature" to the file plot.csv located in
+;; the C:\My Documents folder
+export-all-plots "c:/My Documents/plots.csv"
+;; exports all plots to the file plots.csv
+;; located in the C:\My Documents folder
+</pre> 
+ <p> If the file already exists, it is overwritten. To avoid this you may wish to use some method of generating fresh names. Examples: </p>
+ <pre>
+export-world user-new-file
+export-world (word "results " date-and-time ".csv") ;; Colon characters in the time cause errors on Windows
+export-world (word "results " random-float 1.0 ".csv")
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

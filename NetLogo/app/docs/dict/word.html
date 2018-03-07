@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: word</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="word"> 
+ <h3> <a>word<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">word <i>value1</i> <i>value2</i></span> <span class="prim_example">(word <i>value1</i> ...)</span> </h4> 
+ <p> Concatenates the inputs together and reports the result as a string. </p>
+ <pre>
+show word "tur" "tle"
+=&gt; "turtle"
+word "a" 6
+=&gt; "a6"
+set directory "c:\\foo\\fish\\"
+show word directory "bar.txt"
+=&gt; "c:\foo\fish\bar.txt"
+show word [1 54 8] "fishy"
+=&gt; "[1 54 8]fishy"
+show (word 3)
+=&gt; "3"
+show (word "a" "b" "c" 1 23)
+=&gt; "abc123"
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

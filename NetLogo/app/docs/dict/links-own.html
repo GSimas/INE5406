@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: links-own list ln log loop lput</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="links-own"> 
+ <h3> <a>links-own</a> </h3> 
+ <h4> <span class="prim_example">links-own [<i>var1</i> ...]</span> <span class="prim_example"><i>&lt;link-breeds&gt;</i>-own [<i>var1</i> ...]</span> </h4> 
+ <p> The links-own keyword, like the globals, breed, <i>&lt;breeds&gt;</i>-own, turtles-own, and patches-own keywords, can only be used at the beginning of a program, before any function definitions. It defines the variables belonging to each link. </p>
+ <p> If you specify a breed instead of "links", only links of that breed have the listed variables. (More than one link breed may list the same variable.) </p>
+ <pre>
+undirected-link-breed [sidewalks sidewalk]
+directed-link-breed [streets street]
+links-own [traffic]   ;; applies to all breeds
+sidewalks-own [pedestrians]
+streets-own [cars bikes]
+</pre> 
+ <div class="dict_entry" id="list"> 
+  <h3> <a>list<span class="since">1.0</span></a> </h3> 
+  <h4> <span class="prim_example">list <i>value1</i> <i>value2</i></span> <span class="prim_example">(list <i>value1</i> ...)</span> </h4> 
+  <p> Reports a list containing the given items. The items can be of any type, produced by any kind of reporter. </p>
+  <pre>
+show list (random 10) (random 10)
+=&gt; [4 9]  ;; or similar list
+show (list 5)
+=&gt; [5]
+show (list (random 10) 1 2 3 (random 10))
+=&gt; [4 1 2 3 9]  ;; or similar list
+</pre> 
+ </div> 
+ <div class="dict_entry" id="ln"> 
+  <h3> <a>ln<span class="since">1.0</span></a> </h3> 
+  <h4> <span class="prim_example">ln <i>number</i></span> </h4> 
+  <p> Reports the natural logarithm of <i>number</i>, that is, the logarithm to the base e (2.71828...). </p>
+  <p> See also <a href="../dictionary.html#num-e">e</a>, <a href="../dictionary.html#log">log</a>. </p>
+ </div> 
+ <div class="dict_entry" id="log"> 
+  <h3> <a>log<span class="since">1.0</span></a> </h3> 
+  <h4> <span class="prim_example">log <i>number</i> <i>base</i></span> </h4> 
+  <p> Reports the logarithm of <i>number</i> in base <i>base</i>. </p>
+  <pre>
+show log 64 2
+=&gt; 6
+</pre> 
+  <p> See also <a href="../dictionary.html#ln">ln</a>. </p>
+ </div> 
+ <div class="dict_entry" id="loop"> 
+  <h3> <a>loop<span class="since">1.0</span></a> </h3> 
+  <h4> <span class="prim_example">loop [ <i>commands</i> ]</span> </h4> 
+  <p> Repeats the commands forever, or until the enclosing procedure exits through use of the <a href="../dictionary.html#stop">stop</a> or <a href="../dictionary.html#report">report</a> commands. </p>
+  <pre>to move-to-world-edge  ;; turtle procedure
+  loop [
+    if not can-move? 1 [ stop ]
+    fd 1
+  ]
+end</pre> 
+  <p>In this example, <code>stop</code> exits not just the loop, but the entire procedure. </p>
+  <p> Note: in many circumstances, it is more appropriate to use a forever button to repeat something indefinitely. See <a href="../programming.html#buttons">Buttons</a> in the Programming Guide. </p>
+ </div> 
+ <div class="dict_entry" id="lput"> 
+  <h3> <a>lput<span class="since">1.0</span></a> </h3> 
+  <h4> <span class="prim_example">lput <i>value list</i></span> </h4> 
+  <p> Adds <i>value</i> to the end of a list and reports the new list. </p>
+  <pre>
+;; suppose mylist is [2 7 10 "Bob"]
+set mylist lput 42 mylist
+;; mylist now is [2 7 10 "Bob" 42]
+</pre> 
+ </div>
+ <!-- ======================================== --> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

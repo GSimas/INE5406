@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: create-turtles crt</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="create-turtles"> 
+ <h3> <a>create-turtles<span class="since">1.0</span></a> <a>crt<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">create-turtles <i>number</i></span> <span class="prim_example">create-turtles <i>number</i> [ <i>commands</i> ]</span> <span class="prim_example">create-<i>&lt;breeds&gt;</i> <i>number</i></span> <span class="prim_example">create-<i>&lt;breeds&gt;</i> <i>number</i> [ <i>commands</i> ]</span> <img alt="Observer Command" src="../images/observer.gif"> </h4> 
+ <p> Creates <i>number</i> new turtles at the origin. New turtles have random integer headings and the color is randomly selected from the 14 primary colors. </p>
+ <p> If the create-<i>&lt;breeds&gt;</i> form is used, the new turtles are created as members of the given breed. </p>
+ <p> If <i>commands</i> are supplied, the new turtles immediately run them. This is useful for giving the new turtles a different color, heading, or whatever. (The new turtles are created all at once then run one at a time, in random order.) </p>
+ <pre>
+crt 100 [ fd 10 ]     ;; makes a randomly spaced circle
+</pre> 
+ <pre>
+breed [canaries canary]
+breed [snakes snake]
+to setup
+  clear-all
+  create-canaries 50 [ set color yellow ]
+  create-snakes 50 [ set color green ]
+end
+</pre> 
+ <p> See also <a href="../dictionary.html#hatch">hatch</a>, <a href="../dictionary.html#sprout">sprout</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

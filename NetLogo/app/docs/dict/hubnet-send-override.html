@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: hubnet-send-override</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="hubnet-send-override"> 
+ <h3> <a>hubnet-send-override<span class="since">4.1</span></a> </h3> 
+ <h4> <span class="prim_example">hubnet-send-override <i>client-name agent-or-set variable-name</i></span> <span class="prim_example">[ <i>reporter</i> ]</span> </h4> 
+ <p> Evaluates <i>reporter</i> for the agent or agentset indicated then sends the values to the client to "override" the value of <i>variable-name</i> only on <i>client-name</i>. This is used to change the appearance of agents in the client view, hence, only built-in variables that affect the appearance of the agent may be selected. For example, you can override the color variable of a turtle: </p>
+ <pre>
+ask turtles [ hubnet-send-override client-name self "color" [ red ] ]
+</pre> 
+ <p> In this example assume that there is a turtles-own variable client-name which is associated with a logged in client, and all the turtles are blue. This code makes the turtle associated with each client appear red in his or her own view but not on anyone else's or on the server. </p>
+ <p> See also: <a href="../dictionary.html#hubnet-clear-override">hubnet-clear-overrides</a> </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

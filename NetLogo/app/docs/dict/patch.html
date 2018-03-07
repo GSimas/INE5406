@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: patch</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="patch"> 
+ <h3> <a>patch<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">patch <i>xcor</i> <i>ycor</i></span> </h4> 
+ <p> Given the x and y coordinates of a point, reports the patch containing that point. (The coordinates are absolute coordinates; they are not computed relative to this agent, as with patch-at.) </p>
+ <p> If x and y are integers, the point is the center of a patch. If x or y is not an integer, rounding to the nearest integer is used to determine which patch contains the point. </p>
+ <p> If wrapping is allowed by the topology, the given coordinates will be wrapped to be within the world. If wrapping is not allowed and the given coordinates are outside the world, reports nobody. </p>
+ <pre>
+ask patch 3 -4 [ set pcolor green ]
+;; patch with pxcor of 3 and pycor of -4 turns green
+show patch 1.2 3.7
+;; prints (patch 1 4); note rounding
+show patch 18 19
+;; supposing min-pxcor and min-pycor are -17
+;; and max-pxcor and max-pycor are 17,
+;; in a wrapping topology, prints (patch -17 -16);
+;; in a non-wrapping topology, prints nobody
+</pre> 
+ <p> See also <a href="../dictionary.html#patch-at">patch-at</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

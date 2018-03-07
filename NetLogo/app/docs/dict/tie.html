@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: tie</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="tie"> 
+ <h3> <a>tie<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">tie</span> <img alt="Link Command" src="../images/link.gif"> </h4> 
+ <p> Ties <i>end1</i> and <i>end2</i> of the link together. If the link is a directed link <i>end1</i> is the <i>root turtle</i> and <i>end2</i> is the <i>leaf turtle</i>. The movement of the <i>root turtle</i> affects the location and heading of the <i>leaf turtle</i>. If the link is undirected the tie is reciprocal so both turtles can be considered <i>root turtles</i> and <i>leaf turtles</i>. Movement or change in heading of either turtle affects the location and heading of the other turtle. </p>
+ <p> When the root turtle moves, the leaf turtles moves the same distance, in the same direction. The heading of the leaf turtle is not affected. This works with forward, jump, and setting the xcor or ycor of the root turtle. </p>
+ <p> When the root turtle turns right or left, the leaf turtle is rotated around the root turtle the same amount. The heading of the leaf turtle is also changed by the same amount. </p>
+ <p> If the link dies, the tie relation is removed. </p>
+ <pre>
+      crt 2 [ fd 3 ]
+      ;; creates a link and ties turtle 1 to turtle 0
+      ask turtle 0 [ create-link-to turtle 1 [ tie ] ]
+</pre> 
+ <p> See also <a href="../dictionary.html#untie">untie</a> </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

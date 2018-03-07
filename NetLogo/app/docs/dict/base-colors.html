@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: base-colors</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="base-colors"> 
+ <h3> <a>base-colors<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">base-colors</span> </h4> 
+ <p> Reports a list of the 14 basic NetLogo hues. </p>
+ <pre>
+print base-colors
+=&gt; [5 15 25 35 45 55 65 75 85 95 105 115 125 135]
+ask turtles [ set color one-of base-colors ]
+;; each turtle turns a random base color
+ask turtles [ set color one-of remove gray base-colors ]
+;; each turtle turns a random base color except for gray
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

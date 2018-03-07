@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: atan</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="atan"> 
+ <h3> <a>atan<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">atan <i>x y</i></span> </h4> 
+ <p> Converts x and y offsets to a turtle heading in degrees (from 0 to 360). </p>
+ <p> Note that this version of atan is designed to conform to the geometry of the NetLogo world, where a heading of 0 is straight up, 90 is to the right, and so on clockwise around the circle. (Normally in geometry an angle of 0 is right, 90 is up, and so on, counterclockwise around the circle, and atan would be defined accordingly.) </p>
+ <p> When y is 0: if x is positive, it reports 90; if x is negative, it reports 270; if x is zero, you get an error. </p>
+ <pre>
+show atan 1 -1
+=&gt; 135
+show atan -1 1
+=&gt; 315
+crt 1 [ set heading 30  fd 1  print atan xcor ycor ]
+=&gt; 30
+</pre> 
+ <p> In the final example, note that the result of <code>atan</code> equals the turtle's heading. </p>
+ <p> If you ever need to convert a turtle heading (obtained with atan or otherwise) to a normal mathematical angle, the following should be helpful: </p>
+ <pre>
+to-report heading-to-angle [ h ]
+  report (90 - h) mod 360
+end
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

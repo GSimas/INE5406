@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: sort-by</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="sort-by"> 
+ <h3> <a>sort-by<span class="since">1.3</span></a> </h3> 
+ <h4> <span class="prim_example">sort-by <i>reporter</i> <i>list</i></span> <span class="prim_example">sort-by <i>reporter</i> <i>agentset</i></span> </h4> 
+ <p> If the input is a list, reports a new list containing the same items as the input list, in a sorted order defined by the boolean reporter. <i>reporter</i> may be an anonymous reporter or the name of a reporter. </p>
+ <p> The two inputs to <i>reporter</i> are the values being compared. The reporter should report true if the first argument comes strictly before the second in the desired sort order, and false otherwise. </p>
+ <p> If the input is an agentset or a list of agents, reports a list (never an agentset) of agents. </p>
+ <p> If the input is a list, the sort is stable, that is, the order of items considered equal by the reporter is not disturbed. If the input is an agentset, ties are broken randomly. </p>
+ <pre>
+show sort-by &lt; [3 1 4 2]
+=&gt; [1 2 3 4]
+show sort-by &gt; [3 1 4 2]
+=&gt; [4 3 2 1]
+show sort-by [ [string1 string2] -&gt; length string1 &lt; length string2 ] ["Grumpy" "Doc" "Happy"]
+=&gt; ["Doc" "Happy" "Grumpy"]
+</pre> 
+ <p> See also <a href="../dictionary.html#sort">sort</a>, <a href="../dictionary.html#sort-on">sort-on</a>, <a href="../dictionary.html#arrow">-&gt; (anonymous procedure)</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

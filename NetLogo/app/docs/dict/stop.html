@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: stop</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="stop"> 
+ <h3> <a>stop<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">stop</span> </h4> 
+ <p> This agent exits immediately from the enclosing procedure, ask, or ask-like construct (e.g. crt, hatch, sprout). Only the enclosing procedure or construct stops, not all execution for the agent. </p>
+ <pre>
+if not any? turtles [ stop ]
+;; exits if there are no more turtles
+</pre> 
+ <p> Note: <code>stop</code> can also be used to stop a forever button. See <a href="../programming.html#buttons">Buttons</a> in the Programming Guide for details. </p>
+ <p> <code>stop</code> can also be used to stop a BehaviorSpace model run. If the go commands directly call a procedure, then when that procedure calls <i>stop</i>, the run ends. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

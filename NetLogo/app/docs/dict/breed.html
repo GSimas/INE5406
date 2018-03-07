@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: breed</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="breed"> 
+ <h3> <a>breed</a> </h3> 
+ <h4> <span class="prim_example">breed [<i>&lt;breeds&gt;</i> <i>&lt;breed&gt;</i>]</span> </h4> 
+ <p> This keyword, like the globals, turtles-own, and patches-own keywords, can only be used at the beginning of the Code tab, before any procedure definitions. It defines a breed. The first input defines the name of the agentset associated with the breed. The second input defines the name of a single member of the breed. </p>
+ <p> Any turtle of the given breed: </p>
+ <ul> 
+  <li>is part of the agentset named by the breed name </li>
+  <li>has its breed built-in variable set to that agentset </li>
+ </ul> 
+ <p> Most often, the agentset is used in conjunction with ask to give commands to only the turtles of a particular breed. </p>
+ <pre>
+breed [mice mouse]
+breed [frogs frog]
+to setup
+  clear-all
+  create-mice 50
+  ask mice [ set color white ]
+  create-frogs 50
+  ask frogs [ set color green ]
+  show [breed] of one-of mice    ;; prints mice
+  show [breed] of one-of frogs   ;; prints frogs
+end
+
+show mouse 1
+;; prints (mouse 1)
+show frog 51
+;; prints (frog 51)
+show turtle 51
+;; prints (frog 51)
+</pre> 
+ <p> See also <a href="../dictionary.html#globals">globals</a>, <a href="../dictionary.html#patches-own">patches-own</a>, <a href="../dictionary.html#turtles-own">turtles-own</a>, <a href="../dictionary.html#turtles-own"><i>&lt;breeds&gt;</i>-own</a>, <a href="../dictionary.html#create-turtles">create-<i>&lt;breeds&gt;</i></a>, <a href="../dictionary.html#turtles-at"><i>&lt;breeds&gt;</i>-at</a>, <a href="../dictionary.html#turtles-here"><i>&lt;breeds&gt;</i>-here</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

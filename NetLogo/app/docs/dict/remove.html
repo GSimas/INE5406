@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: remove</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="remove"> 
+ <h3> <a>remove<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">remove <i>item</i> <i>list</i></span> <span class="prim_example">remove <i>string1</i> <i>string2</i></span> </h4> 
+ <p> For a list, reports a copy of <i>list</i> with all instances of <i>item</i> removed. </p>
+ <p> For strings, reports a copy of <i>string2</i> with all the appearances of <i>string1</i> as a substring removed. </p>
+ <pre>
+set mylist [2 7 4 7 "Bob"]
+set mylist remove 7 mylist
+;; mylist is now [2 4 "Bob"]
+show remove "to" "phototonic"
+=&gt; "phonic"
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

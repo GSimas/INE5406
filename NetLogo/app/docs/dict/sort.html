@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: sort</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="sort"> 
+ <h3> <a>sort<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">sort <i>list</i></span> <span class="prim_example">sort <i>agentset</i></span> </h4> 
+ <p> Reports a sorted list of numbers, strings, or agents. </p>
+ <p> If the input contains no numbers, strings, or agents, the result is the empty list. </p>
+ <p> If the input contains at least one number, the numbers in the list are sorted in ascending order and a new list reported; non-numbers are ignored. </p>
+ <p> Or, if the input contains at least one string, the strings in the list are sorted in ascending order and a new list reported; non-strings are ignored. </p>
+ <p> Or, if the input is an agentset or a list containing at least one agent, a sorted list of agents (never an agentset) is reported; non-agents are ignored. Agents are sorted in the same order the &lt; operator uses. (Patches are sorted with the top left-most patch first and the bottom right-most patch last, turtles are sorted by <code>who</code> number). </p>
+ <pre>
+show sort [3 1 4 2]
+=&gt; [1 2 3 4]
+show sort [2 1 "a"]
+=&gt; [1 2]
+show sort (list "a" "c" "b" (patch 0 0))
+=&gt; ["a" "b" "c"]
+show sort (list (patch 0 0) (patch 0 1) (patch 1 0))
+=&gt; [(patch 0 1) (patch 0 0) (patch 1 0)]
+
+;; label patches with numbers in left-to-right, top-to-bottom order
+let n 0
+foreach sort patches [ the-patch -&gt;
+  ask the-patch [
+    set plabel n
+    set n n + 1
+  ]
+]
+
+;; some additional examples to clarify behavior in strange cases
+show sort (list patch 0 0 patch 0 1 patch 1 0 turtle 0 turtle 1) ; turtles are always sorted lower than patches
+=&gt; [(turtle 0) (turtle 1) (patch 0 1) (patch 0 0) (patch 1 0)]
+show sort (list nobody false true) ; booleans and nobody cannot be sorted
+=&gt; []
+show sort (list [1 2 3] turtles) ; lists and agentsets are not included if they are inside a list passed to sort
+=&gt; []
+</pre> 
+ <p> See also <a href="../dictionary.html#sort-by">sort-by</a>, <a href="../dictionary.html#sort-on">sort-on</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

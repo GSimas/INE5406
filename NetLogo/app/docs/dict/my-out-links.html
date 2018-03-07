@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: my-out-&lt;breeds&gt; my-out-links</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="my-out-links"> 
+ <h3> <a>my-out-&lt;breeds&gt;</a> <a>my-out-links<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">my-out-&lt;breeds&gt;</span> <span class="prim_example">my-out-links</span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> Reports an agentset of all the directed links going out from the caller to other nodes as well as undirected links connected to the caller. You can think of this as "all links you can use to travel <i>from</i> this node". </p>
+ <pre>
+crt 5
+ask turtle 0
+[
+  create-links-to other turtles
+  show my-out-links ;; shows agentset containing all the links
+]
+ask turtle 1
+[
+  show my-out-links ;; shows an empty agentset
+]
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

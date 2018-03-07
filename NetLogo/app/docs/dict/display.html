@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: display</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="display"> 
+ <h3> <a>display<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">display</span> </h4> 
+ <p> Causes the view to be updated immediately. (Exception: if the user is using the speed slider to fast-forward the model, then the update may be skipped.) </p>
+ <p> Also undoes the effect of the no-display command, so that if view updates were suspended by that command, they will resume. </p>
+ <pre>
+no-display
+ask turtles [ jump 10 set color blue set size 5 ]
+display
+;; turtles move, change color, and grow, with none of
+;; their intermediate states visible to the user, only
+;; their final state
+</pre> 
+ <p> Even if no-display was not used, "display" can still be useful, because ordinarily NetLogo is free to skip some view updates, so that fewer total updates take place, so that models run faster. This command lets you force a view update, so whatever changes have taken place in the world are visible to the user. </p>
+ <pre>
+ask turtles [ set color red ]
+display
+ask turtles [ set color blue]
+;; turtles turn red, then blue; use of "display" forces
+;; red turtles to appear briefly
+</pre> 
+ <p> Note that display and no-display operate independently of the switch in the view control strip that freezes the view. </p>
+ <p> See also <a href="../dictionary.html#no-display">no-display</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

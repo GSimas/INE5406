@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: distancexyz distancexyz-nowrap</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="distance-3d"> 
+ <h3> <a>distancexyz<span class="since">4.1</span></a> <a>distancexyz-nowrap<span class="since">4.1</span></a> </h3> 
+ <h4> <span class="prim_example">distancexyz <i>xcor</i> <i>ycor</i> <i>zcor</i></span> <span class="prim_example">distancexyz-nowrap <i>xcor</i> <i>ycor</i> <i>zcor</i></span> <img alt="Turtle Command" src="../images/turtle.gif"> <img alt="Patch Command" src="../images/patch.gif"> </h4> 
+ <p> 3D versions of <a href="../dictionary.html#distancexy">distancexy</a>. </p>
+ <p> Reports the distance from this agent to the point (<i>xcor</i>, <i>ycor</i>, <i>zcor</i>). </p>
+ <p> The distance from a patch is measured from the center of the patch. </p>
+ <p> distancexyz-nowrap always reports the in world distance, never a distance that would require wrapping around the edges of the world. With distancexyz the wrapped distance (around the edges of the world) is used if that distance is shorter than the in world distance. </p>
+ <pre>
+if (distancexyz 0 0 0) &lt; 10
+  [ set color green ]
+;; all turtles less than 10 units from
+;; the center of the screen turn green.
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

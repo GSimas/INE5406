@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: die</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="die"> 
+ <h3> <a>die<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">die</span> <img alt="Turtle Command" src="../images/turtle.gif"> <img alt="Link Command" src="../images/link.gif"> </h4> 
+ <p> The turtle or link dies. </p>
+ <pre>
+if xcor &gt; 20 [ die ]
+;; all turtles with xcor greater than 20 die
+ask links with [color = blue] [ die ]
+;; all the blue links will die
+</pre> 
+ <p> A dead agent ceases to exist. The effects of this include: </p>
+ <ul> 
+  <li>The agent will not execute any further code. So if you write <code>ask turtles [ die print "last words?" ]</code>, no last words will be printed, because the turtles are already dead before they have a chance to print anything. </li>
+  <li>The agent will disappear from any agentsets it was in, reducing the size of those agentsets by one. </li>
+  <li>Any variable that was storing the agent will now instead have <code>nobody</code> in it. So for example <code>let x one-of turtles ask x [ die ] print x</code> prints <code>nobody</code>. </li>
+  <li>If the dead agent was a turtle, every link connected to it also dies. </li>
+  <li>If the observer was watching or following the agent, the observer's perspective resets, as if <code>reset-perspective</code> had been run. </li>
+ </ul> 
+ <p> See also: <a href="../dictionary.html#clear-turtles">clear-turtles</a> <a href="../dictionary.html#clear-links">clear-links</a> </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: read-from-string</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="read-from-string"> 
+ <h3> <a>read-from-string<span class="since">1.1</span></a> </h3> 
+ <h4> <span class="prim_example">read-from-string <i>string</i></span> </h4> 
+ <p> Interprets the given string as if it had been typed in the Command Center, and reports the resulting value. The result may be a number, list, string, or boolean value, or the special value "nobody". </p>
+ <p> Useful in conjunction with the <a href="../dictionary.html#user-input">user-input</a> primitive for converting the user's input into usable form. </p>
+ <pre>
+show read-from-string "3" + read-from-string "5"
+=&gt; 8
+show length read-from-string "[1 2 3]"
+=&gt; 3
+crt read-from-string user-input "Make how many turtles?"
+;; the number of turtles input by the user
+;; are created
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: with-local-randomness</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="with-local-randomness"> 
+ <h3> <a>with-local-randomness<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">with-local-randomness [ <i>commands</i> ]</span> </h4> 
+ <p> The commands are run without affecting subsequent random events. This is useful for performing extra operations (such as output) without changing the outcome of a model. </p>
+ <p> Example: </p>
+ <pre>
+;; Run #1:
+random-seed 50 setup repeat 10 [ go ]
+;; Run #2:
+random-seed 50 setup
+with-local-randomness [ watch one-of turtles ]
+repeat 10 [ go ]
+</pre> 
+ <p> Since <code>one-of</code> is used inside <code>with-local-randomness</code>, both runs will be identical. </p>
+ <p> Specifically how it works is, the state of the random number generator is remembered before the commands run, then restored afterwards. (If you want to run the commands with a fresh random state instead of the same random state that will be restored later, you can begin the commands with <code>random-seed new-seed</code>.) </p>
+ <p> The following example demonstrates that the random number generator state is the same both before the commands run and afterwards. </p>
+ <pre>
+random-seed 10
+with-local-randomness [ print n-values 10 [random 10] ]
+;; prints [8 9 8 4 2 4 5 4 7 9]
+print n-values 10 [random 10]
+;; prints [8 9 8 4 2 4 5 4 7 9]
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

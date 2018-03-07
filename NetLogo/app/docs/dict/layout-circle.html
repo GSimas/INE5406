@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: layout-circle</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="layout-circle"> 
+ <h3> <a>layout-circle<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">layout-circle <i>agentset</i> <i>radius</i></span> <span class="prim_example">layout-circle <i>list-of-turtles</i> <i>radius</i></span> </h4> 
+ <p> Arranges the given turtles in a circle centered on the patch at the center of the world with the given radius. (If the world has an even size the center of the circle is rounded down to the nearest patch.) The turtles point outwards. </p>
+ <p> If the first input is an agentset, the turtles are arranged in random order. </p>
+ <p> If the first input is a list, the turtles are arranged clockwise in the given order, starting at the top of the circle. (Any non-turtles in the list are ignored.) </p>
+ <pre>
+;; in random order
+layout-circle turtles 10
+;; in order by who number
+layout-circle sort turtles 10
+;; in order by size
+layout-circle sort-by [ [a b] -&gt; [size] of a &lt; [size] of b ] turtles 10
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

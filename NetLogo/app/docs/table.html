@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Table Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Table Extension</h1>
+<h2><a href="#using" id="using" class="section-anchor">Using</a></h2>
+<p>The table extension is pre-installed in NetLogo.</p>
+<p>To use the table extension in your model, add a line to the top of your Code tab:</p>
+<pre><code>extensions [table]
+</code></pre>
+<p>If your model already uses other extensions, then it already has an
+<code>extensions</code> line in it, so just add <code>table</code> to the list.</p>
+<p>For more information on using NetLogo extensions,
+see the <a href="extensions.html">Extensions Guide</a></p>
+<h3><a href="#when-to-use" id="when-to-use" class="section-anchor">When to Use</a></h3>
+<p>In general, anything you can do with an table in NetLogo, you could
+also just use a list for. But you may want to consider using an table
+instead for speed reasons. Lists and tables have different performance
+characteristics, so you may be able to make your model run faster by
+selecting the appropriate data structure.</p>
+<p>Tables are useful when you need to do associate values with other
+values. For example, you might make a table of words and their
+definitions. Then you can look up the definition of any word. Here,
+the words are the &quot;keys&quot;. You can easily retrieve the value
+for any key in the table, but not vice versa.</p>
+<p>Unlike NetLogo&rsquo;s lists and strings, tables are
+&ldquo;mutable&rdquo;. That means that you can actually modify them
+directly, rather than constructing an altered copy as with lists. If
+the table is used in more than one place in your code, any
+changes you make will show up everywhere. It&rsquo;s tricky to write
+code involving mutable structures and it&rsquo;s easy to make subtle
+errors or get surprising results, so we suggest sticking with lists
+and strings unless you&rsquo;re certain you want and need mutability.</p>
+<h3><a href="#example" id="example" class="section-anchor">Example</a></h3>
+<pre><code class="language-NetLogo">let dict table:make
+table:put dict &quot;turtle&quot; &quot;cute&quot;
+table:put dict &quot;bunny&quot; &quot;cutest&quot;
+print dict
+=&gt; {{table: &quot;turtle&quot; -&gt; &quot;cute&quot;, &quot;bunny&quot; -&gt; &quot;cutest&quot; }}
+print table:length dict
+=&gt; 2
+print table:get dict &quot;turtle&quot;
+=&gt; &quot;cute&quot;
+print table:get dict &quot;leopard&quot;
+=&gt; (error)
+print table:keys dict
+=&gt; [&quot;turtle&quot; &quot;bunny&quot;]
+</code></pre>
+<h3><a href="#manipulating-tables" id="manipulating-tables" class="section-anchor">Manipulating Tables</a></h3>
+<p>If the same key is used with <code>table:put</code> more than once for the same table, the value provided to <em>last</em> call of <code>table:put</code> will be the value shown when <code>table:get</code> is used.
+Here is an example:</p>
+<pre><code class="language-NetLogo">let dict table:make
+table:put dict &quot;a&quot; 5
+table:put dict &quot;a&quot; 3
+print table:get dict &quot;a&quot;
+=&gt; 3
+</code></pre>
+<p>Because tables are mutable, manipulating existing values should be done by calling <code>table:get</code> or <code>table:get-or-default</code> on a key, transforming the returned value, and then calling <code>table:put</code> to update the transformed value in the table.
+Here is an example procedure which increments a value in a table at a given key.
+If the key doesn&rsquo;t exist, it puts a 1 at that key instead.</p>
+<pre><code class="language-NetLogo">to increment-table-value [ dict key ]
+  let i table:get-or-default dict key 0
+  table:put dict key i + 1
+end
+</code></pre>
+<h3><a href="#key-restrictions" id="key-restrictions" class="section-anchor">Key Restrictions</a></h3>
+<p>Table keys are limited to the following NetLogo types:</p>
+<ul>
+<li>Numbers</li>
+<li>Strings</li>
+<li>Booleans</li>
+<li>Lists containing only elements which are themselves valid keys</li>
+</ul>
+<p>If you attempt to use an illegal value, the table extension will raise an exception, as shown in the following example.</p>
+<pre><code class="language-NetLogo">crt 1
+let dict table:make
+table:put dict (one-of turtles) 10
+;; Errors with the following message:
+;; (turtle 0) is not a valid table key (a table key may only be a number, a string, true or false, or a list whose items are valid keys)
+</code></pre>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#table:clear"><code>table:clear</code></a>
+  <a href="#table:counts"><code>table:counts</code></a>
+  <a href="#table:group-agents"><code>table:group-agents</code></a>
+  <a href="#table:group-items"><code>table:group-items</code></a>
+  <a href="#table:from-list"><code>table:from-list</code></a>
+  <a href="#table:get"><code>table:get</code></a>
+  <a href="#table:get-or-default"><code>table:get-or-default</code></a>
+  <a href="#table:has-key?"><code>table:has-key?</code></a>
+  <a href="#table:keys"><code>table:keys</code></a>
+  <a href="#table:length"><code>table:length</code></a>
+  <a href="#table:make"><code>table:make</code></a>
+  <a href="#table:put"><code>table:put</code></a>
+  <a href="#table:remove"><code>table:remove</code></a>
+  <a href="#table:to-list"><code>table:to-list</code></a>
+  <a href="#table:values"><code>table:values</code></a>
+</div>
+<div class="dict_entry" id="table:clear">
+  <h3><a>table:clear</a></h3>
+  <h4>
+    <span class="prim_example">table:clear <i>table</i></span>
+  </h4>
+<p>Removes all key-value pairs from <em>table</em>.</p>
+</div>
+<div class="dict_entry" id="table:counts">
+  <h3><a>table:counts</a></h3>
+  <h4>
+    <span class="prim_example">table:counts <i>list</i></span>
+  </h4>
+<p>Counts the occurrences of each element of the given list and reports the counts in a table.</p>
+</div>
+<div class="dict_entry" id="table:group-agents">
+  <h3><a>table:group-agents</a></h3>
+  <h4>
+    <span class="prim_example">table:group-agents <i>agentset</i> <i>anonymous reporter</i></span>
+  </h4>
+<p>Groups the agents in the agentset based on the given reporter.
+Agents that report the same thing for reporter will be grouped together.
+The results of the reporter will be used as the keys in the resulting table and the groups will be agentsets.</p>
+<p>For example:</p>
+<pre><code>observer&gt; create-turtles 100 [ set color one-of [ red green blue ] ]
+observer&gt; show table:group-by turtles [ color ]
+observer: {{table: [[105 (agentset, 38 turtles)] [55 (agentset, 32 turtles)] [15 (agentset, 30 turtles)]]}}
+</code></pre>
+</div>
+<div class="dict_entry" id="table:group-items">
+  <h3><a>table:group-items</a></h3>
+  <h4>
+    <span class="prim_example">table:group-items <i>list</i> <i>anonymous-reporter</i></span>
+  </h4>
+<p>Groups the items of the list bsaed on the given reporter.
+The reporter should take a single argument, which will be the items of the list.
+Items that report the same thing when passed to the reporter will be grouped together.
+The results of the reporter will be used as the keys in the resulting table and the groups will be lists.</p>
+<p>For example:</p>
+<pre><code>observer&gt; show table:group-by range 10 [ num -&gt; num mod 3 ]
+observer: {{table: [[0 [0 3 6 9]] [1 [1 4 7]] [2 [2 5 8]]]}}
+</code></pre>
+</div>
+<div class="dict_entry" id="table:from-list">
+  <h3><a>table:from-list</a></h3>
+  <h4>
+    <span class="prim_example">table:from-list <i>list</i></span>
+  </h4>
+<p>Reports a new table with the contents of <em>list</em>.
+<em>list</em> must be a list of two element lists, or pairs.
+The first element in the pair is the key and the second element is the value.</p>
+</div>
+<div class="dict_entry" id="table:get">
+  <h3><a>table:get</a></h3>
+  <h4>
+    <span class="prim_example">table:get <i>table</i> <i>key</i></span>
+  </h4>
+<p>Reports the value that <em>key</em> is mapped to in the table. Causes an error if there is no entry for the key.</p>
+</div>
+<div class="dict_entry" id="table:get-or-default">
+  <h3><a>table:get-or-default</a></h3>
+  <h4>
+    <span class="prim_example">table:get-or-default <i>table</i> <i>key</i> <i>default-value</i></span>
+  </h4>
+<p>Reports the value that <em>key</em> is mapped to in the table. Reports the default-value if there is no entry for the key.</p>
+</div>
+<div class="dict_entry" id="table:has-key?">
+  <h3><a>table:has-key?</a></h3>
+  <h4>
+    <span class="prim_example">table:has-key? <i>table</i> <i>key</i></span>
+  </h4>
+<p>Reports true if <em>key</em> has an entry in <em>table</em>.</p>
+</div>
+<div class="dict_entry" id="table:keys">
+  <h3><a>table:keys</a></h3>
+  <h4>
+    <span class="prim_example">table:keys <i>table</i></span>
+  </h4>
+<p>Reports a list of all the keys in <em>table</em>, in the same order the keys were inserted.</p>
+</div>
+<div class="dict_entry" id="table:length">
+  <h3><a>table:length</a></h3>
+  <h4>
+    <span class="prim_example">table:length <i>table</i></span>
+  </h4>
+<p>Reports the number of entries in <em>table</em>.</p>
+</div>
+<div class="dict_entry" id="table:make">
+  <h3><a>table:make</a></h3>
+  <h4>
+    <span class="prim_example">table:make</span>
+  </h4>
+<p>Reports a new, empty table.</p>
+</div>
+<div class="dict_entry" id="table:put">
+  <h3><a>table:put</a></h3>
+  <h4>
+    <span class="prim_example">table:put <i>table</i> <i>key</i> <i>value</i></span>
+  </h4>
+<p>Maps <em>key</em> to <em>value</em> in <em>table</em>. If an entry already exists in the table for the given key, it is replaced.</p>
+</div>
+<div class="dict_entry" id="table:remove">
+  <h3><a>table:remove</a></h3>
+  <h4>
+    <span class="prim_example">table:remove <i>table</i> <i>key</i></span>
+  </h4>
+<p>Removes the mapping in <em>table</em> for <em>key</em>.</p>
+</div>
+<div class="dict_entry" id="table:to-list">
+  <h3><a>table:to-list</a></h3>
+  <h4>
+    <span class="prim_example">table:to-list <i>table</i></span>
+  </h4>
+<p>Reports a list with the content of <i>table</i>. The list will be a
+list of two element lists, or pairs. The first element in the pair is
+the key and the second element is the value. The keys appear in the
+same order they were inserted.</p>
+</div>
+<div class="dict_entry" id="table:values">
+  <h3><a>table:values</a></h3>
+  <h4>
+    <span class="prim_example">table:values <i>table</i></span>
+  </h4>
+<p>Reports a list with the entries of <i>table</i>. The entries will appear
+in the same order they were inserted, with duplicates included.</p>
+</div>

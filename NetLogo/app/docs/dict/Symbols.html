@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: Arithmetic Operators + * - / ^ &lt; &gt; &#61; !&#61; &lt;&#61; &gt;&#61;</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="Symbols"> 
+ <h3> <a>Arithmetic Operators</a> <a>+<span class="since">1.0</span></a> <a>*<span class="since">1.0</span></a> <a>-<span class="since">1.0</span></a> <a>/<span class="since">1.0</span></a> <a>^<span class="since">1.0</span></a> <a>&lt;<span class="since">1.0</span></a> <a>&gt;<span class="since">1.0</span></a> <a>=<span class="since">1.0</span></a> <a>!=<span class="since">1.0</span></a> <a>&lt;=<span class="since">1.0</span></a> <a>&gt;=<span class="since">1.0</span></a> </h3> 
+ <p> All of these operators take two inputs, and all act as "infix operators" (going between the two inputs, as in standard mathematical use). NetLogo correctly supports order of operations for infix operators. </p>
+ <p> The operators work as follows: + is addition, * is multiplication, - is subtraction, / is division, ^ is exponentiation, &lt; is less than, &gt; is greater than, = is equal to, != is not equal to, &lt;= is less than or equal, &gt;= is greater than or equal. </p>
+ <p> Note that the subtraction operator (-) always takes two inputs unless you put parentheses around it, in which case it can take one input. For example, to take the negative of x, write (- x), with the parentheses. </p>
+ <p> All of the comparison operators also work on strings. </p>
+ <p> All of the comparison operators work on agents. Turtles are compared by who number. Patches are compared top to bottom left to right, so patch 0 10 is less than patch 0 9 and patch 9 0 is less than patch 10 0. Links are ordered by end points and in case of a tie by breed. So link 0 9 is before link 1 10 as the end1 is smaller, and link 0 8 is less than link 0 9. If there are multiple breeds of links unbreeded links will come before breeded links of the same end points and breeded links will be sorted in the order they are declared in the Code tab. </p>
+ <p> Agentsets can be tested for equality or inequality. Two agentsets are equal if they are the same type (turtle or patch) and contain the same agents. </p>
+ <p> If you are not sure how NetLogo will interpret your code, you should add parentheses. </p>
+ <pre>
+show 5 * 6 + 6 / 3
+=&gt; 32
+show 5 * (6 + 6) / 3
+=&gt; 20
+</pre> 
+ <p> Many extension objects may be tested for equality and inequality using = and !=. For instance, the array, matrix, and table objects returned by their respective extensions may be compared for equality / inequality. Extension objects may not be tested using &lt;, &gt;, &lt;=, or &gt;=. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

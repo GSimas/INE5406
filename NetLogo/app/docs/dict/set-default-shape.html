@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: set-default-shape</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="set-default-shape"> 
+ <h3> <a>set-default-shape<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">set-default-shape turtles <i>string</i></span> <span class="prim_example">set-default-shape links <i>string</i></span> <span class="prim_example">set-default-shape <i>breed</i> <i>string</i></span> <img alt="Observer Command" src="../images/observer.gif"> </h4> 
+ <p> Specifies a default initial shape for all turtles or links, or for a particular breed of turtles or links. When a turtle or link is created, or it changes breeds, it shape is set to the given shape. </p>
+ <p> This command doesn't affect existing agents, only agents you create afterwards. </p>
+ <p> The given breed must be either turtles, links, or the name of a breed. The given string must be the name of a currently defined shape. </p>
+ <p> In new models, the default shape for all turtles is "default". </p>
+ <p> Note that specifying a default shape does not prevent you from changing an agent's shape later. Agents don't have to be stuck with their breed's default shape. </p>
+ <pre>
+create-turtles 1 ;; new turtle's shape is "default"
+create-cats 1    ;; new turtle's shape is "default"
+
+set-default-shape turtles "circle"
+create-turtles 1 ;; new turtle's shape is "circle"
+create-cats 1    ;; new turtle's shape is "circle"
+
+set-default-shape cats "cat"
+set-default-shape dogs "dog"
+create-cats 1   ;; new turtle's shape is "cat"
+ask cats [ set breed dogs ]
+  ;; all cats become dogs, and automatically
+  ;; change their shape to "dog"
+</pre> 
+ <p> See also <a href="../dictionary.html#shape">shape</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

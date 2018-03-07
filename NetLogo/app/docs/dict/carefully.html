@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: carefully</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="carefully"> 
+ <h3> <a>carefully<span class="since">2.1</span></a> </h3> 
+ <h4> <span class="prim_example">carefully [ <i>commands1</i> ] [ <i>commands2</i> ]</span> </h4> 
+ <p> Runs <i>commands1</i>. If a runtime error occurs inside <i>commands1</i>, NetLogo won't stop and alert the user that an error occurred. It will suppress the error and run <i>commands2</i> instead. </p>
+ <p> The error-message reporter can be used in <i>commands2</i> to find out what error was suppressed in <i>commands1</i>. See <a href="../dictionary.html#error-message">error-message</a>. </p>
+ <pre>
+carefully [ print one-of [1 2 3] ] [ print error-message ]
+=&gt; 3
+observer&gt; carefully [ print one-of [] ] [ print error-message ]
+=&gt; ONE-OF got an empty list as input.
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: myself</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="myself"> 
+ <h3> <a>myself<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">myself</span> <img alt="Turtle Command" src="../images/turtle.gif"> <img alt="Patch Command" src="../images/patch.gif"> <img alt="Link Command" src="../images/link.gif"> </h4> 
+ <p> "self" and "myself" are very different. "self" is simple; it means "me". "myself" means "the turtle, patch or link who asked me to do what I'm doing right now." </p>
+ <p> When an agent has been asked to run some code, using myself in that code reports the agent (turtle, patch or link) that did the asking. </p>
+ <p> myself is most often used in conjunction with <code>of</code> to read or set variables in the asking agent. </p>
+ <p> myself can be used within blocks of code not just in the ask command, but also hatch, sprout, of, with, all?, with-min, with-max, min-one-of, max-one-of, min-n-of, max-n-of. </p>
+ <pre>
+ask turtles
+  [ ask patches in-radius 3
+      [ set pcolor [color] of myself ] ]
+;; each turtle makes a colored "splotch" around itself
+</pre> 
+ <p> See the "Myself Example" code example for more examples. </p>
+ <p> See also <a href="../dictionary.html#self">self</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

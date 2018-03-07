@@ -1,0 +1,2226 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     76666,       2218]
+NotebookOptionsPosition[     66190,       1871]
+NotebookOutlinePosition[     68810,       1956]
+CellTagsIndexPosition[     68614,       1948]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ StyleBox["NetLogo-",
+  FontWeight->"Bold"],
+ StyleBox["Mathematica",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[" Link\[LineSeparator]",
+  FontWeight->"Bold"],
+ StyleBox["Tutorials and Examples", "Subsubtitle",
+  FontWeight->"Plain"]
+}], "Title",
+ CellFrame->True,
+ CellChangeTimes->{{3.396108953925385*^9, 3.39610895489642*^9}, {
+  3.396109154888516*^9, 3.396109205364633*^9}, {3.3961127582735567`*^9, 
+  3.396112759546694*^9}, {3.396135821265427*^9, 3.396135827341074*^9}},
+ Background->RGBColor[0.956364, 0.856878, 0.636696]],
+
+Cell[TextData[{
+ "This document will show how to use the NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " add-on to application interface.  The notebook has examples that make use \
+of sample models included with NetLogo.  Click the right-most bracket of each \
+cell to collapse a section."
+}], "Text",
+ CellChangeTimes->{{3.379268197719895*^9, 3.3792682289026937`*^9}, {
+  3.395788167600391*^9, 3.395788205335956*^9}, {3.396109525181209*^9, 
+  3.396109529696267*^9}, {3.39610957304434*^9, 3.3961095914168167`*^9}, {
+  3.3961124357197523`*^9, 3.396112436020528*^9}, {3.3961808256316423`*^9, 
+  3.396180914574497*^9}}],
+
+Cell[TextData[{
+ StyleBox["Warning: It is important that you follow the procedure described \
+in ",
+  FontSize->14],
+ StyleBox["Installing NetLogo-Mathematica",
+  FontSlant->"Italic"],
+ StyleBox[" ",
+  FontSize->14],
+ StyleBox["Link",
+  FontSize->14,
+  FontSlant->"Italic"],
+ StyleBox[" and execute the code in ",
+  FontSize->14],
+ StyleBox["Starting NetLogo",
+  FontSize->14,
+  FontSlant->"Italic"],
+ StyleBox[" before continuing with the tutorial.  You may skip around \
+sections, but within each section, you must start from the top and execute \
+each consecutive command.  Sections will ",
+  FontSize->14],
+ StyleBox["not work properly",
+  FontSize->14,
+  FontSlant->"Italic"],
+ StyleBox[" if you do not follow the instructions step-by-step. If you follow \
+the directions in order and find you are getting errors, please see the ",
+  FontSize->14],
+ StyleBox[ButtonBox["troubleshooting",
+  BaseStyle->"Hyperlink",
+  ButtonData->"troubleshooting"],
+  FontSize->14],
+ StyleBox[" section.",
+  FontSize->14]
+}], "Text",
+ CellChangeTimes->{{3.396180411581019*^9, 3.396180510400729*^9}, {
+  3.396180542523769*^9, 3.3961806270103703`*^9}, {3.3962279099080687`*^9, 
+  3.396227913624112*^9}, {3.661532063665539*^9, 3.661532123673815*^9}, {
+  3.704209037273026*^9, 3.704209050319108*^9}, {3.70421053181789*^9, 
+  3.704210547467452*^9}},
+ FontWeight->"Bold"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Installing NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Link"
+}], "Section",
+ CellChangeTimes->{{3.379267175343656*^9, 3.379267178452536*^9}, {
+  3.396099257580571*^9, 3.396099263891943*^9}, {3.661532117953534*^9, 
+  3.661532118313595*^9}},
+ CellTags->"installing"],
+
+Cell[TextData[{
+ "To install the NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " link, go to the menu bar in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", click on ",
+ StyleBox["File",
+  FontSlant->"Italic"],
+ " and select ",
+ StyleBox["Install...",
+  FontSlant->"Italic"],
+ "  In the Install ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Item dialog, select ",
+ StyleBox["Package",
+  FontSlant->"Italic"],
+ " for ",
+ StyleBox["Type of item to install",
+  FontSlant->"Italic"],
+ ", click Source, and select ",
+ StyleBox["From file...",
+  FontSlant->"Italic"],
+ "  In the file browser, go to the location of your NetLogo installation, \
+click on the Mathematica Link subfolder, and select NetLogo.m.  For ",
+ StyleBox["Install Name",
+  FontSlant->"Italic"],
+ ", enter ",
+ StyleBox["NetLogo",
+  FontSlant->"Italic"],
+ ".  You can either install the NetLogo link in your user base directory or \
+in the system-wide directory.  If the NetLogo link is installed in the user \
+base directory, other users on the system must also go through the NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " link installation process to use it.  This option might be preferable if \
+you do not have permission to modify files outside of your home directory.   \
+Otherwise, you can install NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " link in the system-wide ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " base directory."
+}], "Text",
+ CellChangeTimes->{{3.379267184507855*^9, 3.379267321058403*^9}, {
+  3.379267371845751*^9, 3.379267462950327*^9}, {3.395769300808814*^9, 
+  3.3957693401425467`*^9}, {3.395769429059865*^9, 3.395769452922413*^9}, {
+  3.3957696295780773`*^9, 3.395769698850263*^9}, {3.395769847225362*^9, 
+  3.395770218940879*^9}, {3.396099344700583*^9, 3.396099361163451*^9}, {
+  3.39610960430308*^9, 3.396109618130539*^9}, {3.396227493157465*^9, 
+  3.396227530986553*^9}, {3.396227800527182*^9, 3.3962278577081223`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Starting NetLogo", "Section",
+ CellChangeTimes->{{3.37926690887947*^9, 3.379266912212112*^9}, {
+  3.396107855489249*^9, 3.396107856533155*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Once installed, the NetLogo package can be loaded at any time with the \
+following command:\
+\>", "Text",
+ CellChangeTimes->{{3.379267500655287*^9, 3.37926752304792*^9}, {
+   3.396141872152175*^9, 3.39614187532401*^9}, 3.396227561920313*^9}],
+
+Cell[BoxData[
+ RowBox[{"<<", "NetLogo`"}]], "Input",
+ CellChangeTimes->{{3.395770226463278*^9, 3.395770232062625*^9}, {
+  3.3960992528444567`*^9, 3.396099254004483*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+To start NetLogo simply type the following command, and use the file browser \
+to locate the NetLogo parent directory, typically located in \
+\"/Applications/NetLogo 6.0.2\" or \"C:\\Program Files\\NetLogo 6.0.2\", on \
+Macintosh and Windows systems, respectively.\
+\>", "Text",
+ CellChangeTimes->{{3.37925209162411*^9, 3.379252174789466*^9}, {
+   3.379266451851063*^9, 3.379266462782384*^9}, {3.379267547349929*^9, 
+   3.379267548691347*^9}, 3.396227574876734*^9, {3.3967585502242002`*^9, 
+   3.396758608251115*^9}, {3.3967588419795647`*^9, 3.3967589061331987`*^9}, {
+   3.6929733808314047`*^9, 3.6929733850353527`*^9}, {3.704208363472691*^9, 
+   3.7042083683903837`*^9}, {3.711102617423896*^9, 3.7111026180234756`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLStart", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.396758562981241*^9, 3.3967585646029787`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "The NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Link will store this path in",
+ StyleBox[" $NLHome",
+  FontFamily->"Courier",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.3967586156477003`*^9, 3.396758657381135*^9}}],
+
+Cell[BoxData["$NLHome"], "Input",
+ CellChangeTimes->{{3.396758658363719*^9, 3.3967586604780817`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "One can also manually specify the ",
+ StyleBox["$NLHome",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " directory by hard coding in your NetLogo installation directory.  This is \
+preferable in many real-world scenarios when one uses the NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Link often."
+}], "Text",
+ CellChangeTimes->{{3.3967586761771507`*^9, 3.3967588246025677`*^9}, {
+  3.3967589184958363`*^9, 3.396758918902239*^9}, {3.3967591812758217`*^9, 
+  3.396759238536141*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$NLHome", " ", "=", " ", "\"\</Applications/NetLogo 6.0.2/\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "$NLHome", " ", "=", " ", "\"\<C:\\\\Program Files\\\\NetLogo 6.0.2\>\""}], 
+  ";"}]}], "Code",
+ Evaluatable->False,
+ CellChangeTimes->{
+  3.392740837255293*^9, {3.396758946336493*^9, 3.3967589810336313`*^9}, {
+   3.396759047742971*^9, 3.396759050331758*^9}, {3.661531942289324*^9, 
+   3.6615319490693207`*^9}, {3.692973389571623*^9, 3.69297339476723*^9}, {
+   3.704208395225827*^9, 3.7042083980574636`*^9}, {3.7111025915495663`*^9, 
+   3.711102594277955*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Once again, to start NetLogo using the default path (now specified by \
+$NLHome) enter\
+\>", "Text",
+ CellChangeTimes->{{3.3967590615715313`*^9, 3.396759108052608*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLStart", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.39675908567559*^9, 3.396759087371797*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "An Overview of the NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " Link using Fire"
+}], "Section",
+ CellChangeTimes->{{3.396142017135027*^9, 3.396142050232482*^9}, {
+  3.396180783744823*^9, 3.396180807396174*^9}, {3.39622041966368*^9, 
+  3.396220474589232*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Loading a NetLogo model", "Subsubsection",
+ CellChangeTimes->{{3.3957867307429028`*^9, 3.3957867326573963`*^9}, {
+  3.395787476101246*^9, 3.395787477337536*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Use ",
+  FontSize->13],
+ StyleBox["NLLoadModel[]",
+  FontFamily->"Courier",
+  FontSize->13,
+  FontWeight->"Bold"],
+ StyleBox[" to load the Fire example from the models library.",
+  FontSize->13]
+}], "Text",
+ CellChangeTimes->{{3.3957706583196783`*^9, 3.395770711777224*^9}, {
+  3.395786590689625*^9, 3.39578661537565*^9}, {3.3962257508964043`*^9, 
+  3.396225866892043*^9}, {3.396226057307824*^9, 3.39622605967979*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLLoadModel", "[", 
+   RowBox[{"ToFileName", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "$NLHome", ",", "\"\<models\>\"", ",", "\"\<Sample Models\>\"", ",", 
+       "\"\<Earth Science\>\""}], "}"}], ",", "\"\<Fire.nlogo\>\""}], "]"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.395167874574985*^9, 3.395167900460574*^9}, {
+   3.395167945582859*^9, 3.3951679743408813`*^9}, {3.3962259645541067`*^9, 
+   3.39622599610633*^9}, 3.396226038654255*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Executing NetLogo commands", "Subsubsection",
+ CellChangeTimes->{{3.395786744448927*^9, 3.39578674760189*^9}, {
+  3.395787472141404*^9, 3.3957874734573603`*^9}, {3.396226094208852*^9, 
+  3.3962260955372*^9}}],
+
+Cell[TextData[{
+ StyleBox["The ",
+  FontSize->13],
+ StyleBox["NLCommand[]",
+  FontFamily->"Courier",
+  FontSize->13,
+  FontWeight->"Bold"],
+ StyleBox[" function lets you execute any NetLogo command as if you were \
+typing from the command center.",
+  FontSize->13]
+}], "Text",
+ CellChangeTimes->{{3.3957867561085157`*^9, 3.395786783627163*^9}, 
+   3.396760992447802*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLCommand", "[", "\"\<setup\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.36940654733116*^9, 3.36940657441532*^9}, {
+   3.372441346579666*^9, 3.372441355986367*^9}, 3.395770499893862*^9, {
+   3.3961437400327587`*^9, 3.396143743318277*^9}, {3.396220690414427*^9, 
+   3.396220690652315*^9}, {3.3962207907747393`*^9, 3.3962207916466017`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLCommand", "[", "\"\<set density 25\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.396220781340898*^9, 3.3962207888785677`*^9}}],
+
+Cell[TextData[{
+ "The function ",
+ StyleBox["NLCommand[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " automatically splices expression into NetLogo strings, making it easy to \
+pass sequences of strings, numbers, lists, and colors into NetLogo without \
+having to manually convert data types and join strings."
+}], "Text",
+ CellChangeTimes->{{3.395787126151724*^9, 3.395787329525072*^9}, {
+  3.396181525528531*^9, 3.396181599041587*^9}, {3.3961817740530863`*^9, 
+  3.396181777047739*^9}, {3.396220815820211*^9, 3.396220833344388*^9}, {
+  3.396760957768324*^9, 3.396760963860832*^9}, {3.396761101014472*^9, 
+  3.3967611022270813`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLCommand", "[", 
+   RowBox[{"\"\<set density\>\"", ",", "50"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.3957872466771183`*^9, 3.3957872554512987`*^9}, {
+  3.395787403987403*^9, 3.395787404128523*^9}, {3.3961437287031717`*^9, 
+  3.396143736990491*^9}, {3.3962206827590427`*^9, 3.396220682972501*^9}, {
+  3.396220847482654*^9, 3.396220847555604*^9}}],
+
+Cell[TextData[{
+ "Splicing can be very useful for setting NetLogo sliders using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " variables"
+}], "Text",
+ CellChangeTimes->{{3.396220897771734*^9, 3.396220922011002*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"d", "=", "65"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLCommand", "[", 
+   RowBox[{"\"\<set density\>\"", ",", "d"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.396220835414693*^9, 3.396220865456481*^9}, {
+  3.396220998103653*^9, 3.396221003055592*^9}, {3.396221069059395*^9, 
+  3.3962210863218946`*^9}}],
+
+Cell[TextData[{
+ "It is also possible to specify several command sequences using a single",
+ StyleBox[" NLCommand[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.3962209422159243`*^9, 3.3962209737964983`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLCommand", "[", 
+   RowBox[{"\"\<set density\>\"", ",", 
+    RowBox[{"d", "-", "10"}], ",", "\"\<show density\>\"", ",", 
+    "\"\<setup\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.396220975868457*^9, 3.396221041776741*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Repeatedly executing NetLogo commands", "Subsubsection",
+ CellChangeTimes->{{3.395770587930881*^9, 3.395770602054427*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "This loop calls ",
+ StyleBox["NLCommand[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " 10 times."
+}], "Text",
+ CellChangeTimes->{{3.396224649308527*^9, 3.396224649388089*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Do", "[", 
+   RowBox[{
+    RowBox[{"NLCommand", "[", "\"\<go\>\"", "]"}], ",", 
+    RowBox[{"{", "10", "}"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.36940654733116*^9, 3.36940657441532*^9}, {
+   3.372441346579666*^9, 3.372441357346382*^9}, 3.395770514878862*^9, {
+   3.395770612815825*^9, 3.3957706469135113`*^9}, {3.396105874829711*^9, 
+   3.3961058786449833`*^9}, {3.396106008563079*^9, 3.396106009775708*^9}, 
+   3.396109758873501*^9, {3.396181439128929*^9, 3.39618144159147*^9}, {
+   3.396221111784404*^9, 3.396221144412883*^9}, {3.396224645287643*^9, 
+   3.3962246509494553`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["The command",
+  FontSize->13],
+ StyleBox[" NLDoCommand[] ",
+  FontFamily->"Courier",
+  FontSize->13,
+  FontWeight->"Bold"],
+ StyleBox["is an easier and efficient way to execute a command repeatedly.",
+  FontSize->13]
+}], "Text",
+ CellChangeTimes->{{3.3957868042724953`*^9, 3.395786876134574*^9}, {
+   3.395786984353009*^9, 3.39578702807438*^9}, {3.395787441524115*^9, 
+   3.395787445632443*^9}, {3.396224669757291*^9, 3.396224685126092*^9}, 
+   3.396760880348172*^9, {3.396760917556632*^9, 3.3967609487321568`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NLDoCommand", "[", 
+   RowBox[{"\"\<go\>\"", ",", "10"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.396105886712628*^9, 3.3961058908052177`*^9}, 
+   3.396106012816347*^9, 3.396109760880282*^9, {3.396181444721654*^9, 
+   3.396181447191556*^9}, {3.3962211382240963`*^9, 3.396221142798656*^9}, {
+   3.396224652462543*^9, 3.396224656045616*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reporting data from NetLogo", "Subsubsection",
+ CellChangeTimes->{{3.395787508970413*^9, 3.395787517250642*^9}, {
+   3.396142137077729*^9, 3.396142146330214*^9}, 3.396142183548461*^9}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["You can retrieve data from NetLogo using",
+  FontSize->13],
+ StyleBox[" NLReport[]",
+  FontFamily->"Courier",
+  FontSize->13,
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.395787536812422*^9, 3.395787554435635*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLReport", "[", "\"\<count turtles\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.395787558396426*^9, 3.395787563733197*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Repeat reports ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " times"
+}], "Subsubsection",
+ CellChangeTimes->{{3.395787508970413*^9, 3.395787517250642*^9}, {
+   3.396142137077729*^9, 3.396142146330214*^9}, 3.396142183548461*^9, {
+   3.396142276383976*^9, 3.3961422881506968`*^9}, {3.39614246218495*^9, 
+   3.396142469126095*^9}, {3.396226111894239*^9, 3.3962261746675873`*^9}}],
+
+Cell[TextData[{
+ "One of the simplest uses of the NetLogo-",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " link is to repeat a command and report information after each successive \
+command."
+}], "Text",
+ CellChangeTimes->{{3.395787536812422*^9, 3.395787554435635*^9}, {
+   3.396142314177737*^9, 3.396142318959796*^9}, 3.396225334490507*^9, {
+   3.396225403157055*^9, 3.396225529534943*^9}, {3.396225573578827*^9, 
+   3.396225601632896*^9}, {3.39622618888653*^9, 3.39622618984551*^9}, 
+   3.396226367295566*^9}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A way carry out these kinds of repetitive tasks is to use ",
+ StyleBox["NLCommand[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["NLReport[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " in combination with ",
+ StyleBox["Table[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.395787536812422*^9, 3.395787554435635*^9}, {
+   3.396142314177737*^9, 3.396142318959796*^9}, 3.396225334490507*^9, {
+   3.396225403157055*^9, 3.396225529534943*^9}, {3.396225573578827*^9, 
+   3.396225601632896*^9}, {3.39622618888653*^9, 3.39622618984551*^9}, {
+   3.396226367295566*^9, 3.396226413915408*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NLCommand", "[", "\"\<go\>\"", "]"}], ";", 
+    RowBox[{
+    "NLReport", "[", "\"\<(burned-trees / initial-trees) * 100\>\"", "]"}]}], 
+   ",", 
+   RowBox[{"{", "20", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.396225534126436*^9, 3.39622555762532*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Tasks like these can be more easily and efficiently executed with ",
+ StyleBox["NLDoReport[]",
+  FontFamily->"Courier",
+  FontSize->13,
+  FontWeight->"Bold"],
+ ", which will successively execute a command and return a reporter ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " times."
+}], "Text",
+ CellChangeTimes->{{3.395787536812422*^9, 3.395787554435635*^9}, {
+   3.396142314177737*^9, 3.396142318959796*^9}, 3.396225334490507*^9, {
+   3.396225403157055*^9, 3.396225529534943*^9}, {3.396225609292789*^9, 
+   3.39622569205997*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLDoReport", "[", 
+  RowBox[{
+  "\"\<go\>\"", ",", "\"\<(burned-trees / initial-trees) * 100\>\"", ",", 
+   "20"}], "]"}]], "Input",
+ CellChangeTimes->{{3.396142299122642*^9, 3.396142299914708*^9}, {
+  3.3961423392228737`*^9, 3.396142346859209*^9}, {3.396143367644505*^9, 
+  3.3961433680270967`*^9}, {3.396143523656822*^9, 3.3961435450989933`*^9}, {
+  3.396224986716126*^9, 3.396224987672153*^9}, {3.3962256967009974`*^9, 
+  3.39622570459059*^9}, {3.396226425738071*^9, 3.396226426301919*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Repeat reports until a condition is met", "Subsubsection",
+ CellChangeTimes->{{3.395787508970413*^9, 3.395787517250642*^9}, {
+   3.396142137077729*^9, 3.396142146330214*^9}, 3.396142183548461*^9, {
+   3.396142276383976*^9, 3.3961422881506968`*^9}, {3.396142474766588*^9, 
+   3.3961424809586067`*^9}, {3.396226180179728*^9, 3.396226180435758*^9}}],
+
+Cell[TextData[{
+ StyleBox["NLDoReportWhile[]",
+  FontFamily->"Courier",
+  FontSize->13,
+  FontWeight->"Bold"],
+ StyleBox[" ",
+  FontSize->13,
+  FontWeight->"Bold"],
+ StyleBox["is similar to ",
+  FontSize->13],
+ StyleBox["NLDoReport[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ StyleBox[", but rather than executing n times, it executes until a condition \
+is [not] met.",
+  FontSize->13]
+}], "Text",
+ CellChangeTimes->{{3.395787536812422*^9, 3.395787554435635*^9}, {
+  3.396142314177737*^9, 3.396142318959796*^9}, {3.396142488377985*^9, 
+  3.39614249695912*^9}, {3.396223885512533*^9, 3.396223888256866*^9}, {
+  3.396224538731619*^9, 3.3962245471622353`*^9}, {3.39622621287775*^9, 
+  3.396226313505357*^9}, {3.3962263547582083`*^9, 3.396226356297778*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "The following executes \"",
+ StyleBox["go",
+  FontFamily->"Courier"],
+ "\" and reports back the % of trees burned until there are no turtles \
+(embers) left."
+}], "Text",
+ CellChangeTimes->{{3.396226322846943*^9, 3.3962263502340803`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"NLCommand", "[", 
+   RowBox[{"\"\<Setup\>\"", ",", "\"\<set density\>\"", ",", "55"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"NLDoReportWhile", "[", 
+  RowBox[{
+  "\"\<go\>\"", ",", "\"\<(burned-trees / initial-trees) * 100\>\"", ",", 
+   "\"\<any? turtles\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.396142303723988*^9, 3.396142304474843*^9}, {
+   3.396143373288826*^9, 3.396143452088661*^9}, {3.3961435473339148`*^9, 
+   3.396143549666856*^9}, {3.3962239063240643`*^9, 3.396223910868032*^9}, 
+   3.3962245306555243`*^9, {3.3962249898491*^9, 3.396224990008513*^9}, 
+   3.396226318325453*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Defining a simple experiment", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.3957870874618053`*^9, 3.395787098493081*^9}, {
+  3.395787484654142*^9, 3.3957874887778788`*^9}, {3.3961425092685537`*^9, 
+  3.396142515119495*^9}, {3.3961435989080257`*^9, 3.396143615235107*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+An interesting phenomena in the Forest Fire model is the abrupt change that \
+occurs in size of forest fires as the density increases.  In this example, we \
+will write a short function which sets up the model and returns a list of the \
+percentage of trees burned at each time step, until all embers have burned \
+out.\
+\>", "Text",
+ CellChangeTimes->{
+  3.3962253296029177`*^9, {3.396226773301379*^9, 3.396226880922888*^9}, {
+   3.396274076728718*^9, 3.396274084018578*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"FireTimeSeries", "[", "density_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"NLCommand", "[", 
+       RowBox[{
+       "\"\<set density \>\"", ",", "density", ",", " ", "\"\<setup\>\""}], 
+       "]"}], " ", ";", "\[IndentingNewLine]", 
+      RowBox[{"NLDoReportWhile", "[", 
+       RowBox[{
+       "\"\<go\>\"", ",", "\"\<(burned-trees / initial-trees) * 100\>\"", 
+        ",", "\"\<any? turtles\>\""}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.372447046083118*^9, 3.3724470516348267`*^9}, {
+   3.386523593622555*^9, 3.386523595982008*^9}, {3.3927410595476313`*^9, 
+   3.392741091493318*^9}, {3.396142566699893*^9, 3.3961425675078*^9}, 
+   3.396142603622685*^9, {3.3962211970839653`*^9, 3.3962212028091707`*^9}, 
+   3.3962244685878773`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Generate a list of densities to run the model with, ranging from 50 to 70 in \
+increments of 2\
+\>", "Text",
+ CellChangeTimes->{{3.3962243749134283`*^9, 3.396224414044606*^9}, 
+   3.3962276413312387`*^9}],
+
+Cell[BoxData[
+ RowBox[{"densities", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{"density", ",", 
+    RowBox[{"{", 
+     RowBox[{"density", ",", "50", ",", "70", ",", "2"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.396224415017231*^9, 3.39622443047917*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Carry out the ",
+ StyleBox["FireTimeSeries[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " function with each density"
+}], "Text",
+ CellChangeTimes->{{3.3962244427115183`*^9, 3.396224461909689*^9}, {
+  3.396226917912079*^9, 3.396226942164394*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"NLCommand", "[", "\"\<no-display\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fireData", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"FireTimeSeries", ",", "densities"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.372447046083118*^9, 3.3724470516348267`*^9}, {
+   3.386523593622555*^9, 3.386523595982008*^9}, {3.3927410595476313`*^9, 
+   3.392741091493318*^9}, {3.396142566699893*^9, 3.3961425675078*^9}, 
+   3.396142603622685*^9, 3.396143648650927*^9, {3.396224351730033*^9, 
+   3.3962243678047113`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Plot time dynamics of each run", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.396142623326745*^9, 3.396142640883491*^9}, 
+   3.396180316861408*^9}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Now that we have recorded the time dynamics of each configuration, let's take \
+a look at how the fire spreads in first configuration (density = 70)\
+\>", "Text",
+ CellChangeTimes->{{3.3737352623597593`*^9, 3.3737352743996162`*^9}, {
+  3.396221551127593*^9, 3.3962215581811657`*^9}, {3.3962239718373117`*^9, 
+  3.396223990947464*^9}, {3.3962240352321177`*^9, 3.3962240516299686`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"First", "[", "fireData", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Time\>\"", ",", "\"\<% Burned\>\""}], "}"}]}], ",", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", " ", 
+    "\"\<Burn time series at density = 50\>\""}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.396223648947673*^9, 3.396223663016728*^9}, {
+  3.396223693430265*^9, 3.396223797656892*^9}, {3.396223993129858*^9, 
+  3.396224013463269*^9}, {3.396224306144826*^9, 3.396224306715382*^9}, {
+  3.396224339825659*^9, 3.3962243399086933`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+With a little bit more work, we can plot all the time series data \
+simultaneously.\
+\>", "Text",
+ CellChangeTimes->{{3.396224127856937*^9, 3.396224211397675*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "create", " ", "a", " ", "color", " ", "for", " ", "each", " ", 
+    "density"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"numColors", "=", 
+     RowBox[{"Length", "[", "densities", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"densityColors", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Blend", "[", 
+        RowBox[{
+         RowBox[{"{", " ", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"1", ",", "Yellow"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"numColors", ",", "Red"}], "}"}]}], "}"}], ",", "n"}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "numColors"}], "}"}]}], "]"}]}], ";"}], " ", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"makes", " ", "each", " ", "run", " ", "equal", " ", "length"}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"maxSteps", "=", 
+     RowBox[{"Max", "[", 
+      RowBox[{"Length", "/@", "fireData"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"completedData", "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"PadRight", "[", 
+         RowBox[{"#", ",", "maxSteps", ",", 
+          RowBox[{"Last", "[", "#", "]"}]}], "]"}], "&"}], ")"}], "/@", 
+      "fireData"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"ListLinePlot", "[", 
+    RowBox[{
+     RowBox[{"Thread", "[", 
+      RowBox[{"Tooltip", "[", 
+       RowBox[{"completedData", ",", "densities"}], "]"}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "densityColors"}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Time\>\"", ",", "\"\<% Burned\>\""}], "}"}]}], ",", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", " ", 
+      "\"\<Burn time series with varying tree densities\>\""}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.3724415964345818`*^9, 3.3724416190430803`*^9}, {
+   3.392741267126142*^9, 3.3927413199337387`*^9}, {3.392741351102785*^9, 
+   3.3927413848336563`*^9}, 3.3927414295371733`*^9, {3.39274146601645*^9, 
+   3.392741615664998*^9}, {3.392741911014789*^9, 3.3927420086459637`*^9}, {
+   3.396133230420497*^9, 3.396133233246003*^9}, {3.39613337804006*^9, 
+   3.396133381158099*^9}, {3.396181090127962*^9, 3.39618118458204*^9}, {
+   3.396221227691143*^9, 3.396221239331773*^9}}],
+
+Cell["\<\
+Each line represents the time dynamics of the Forest Fire model run with a \
+different density.  Lines are colored by density, ranging from low (yellow) \
+to high (red).  Put your mouse over a line to see a tooltip of the density \
+used in each run.\
+\>", "Text",
+ CellChangeTimes->{{3.3962215651528063`*^9, 3.3962216230072403`*^9}, {
+  3.396223396768732*^9, 3.396223405088797*^9}, {3.396223535199917*^9, 
+  3.396223626480432*^9}, {3.396224220403159*^9, 3.396224279632144*^9}, {
+  3.396274086404023*^9, 3.396274088618862*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Plot the phase transition by plotting how (final states) % burned vary with \
+density\
+\>", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.3961426543817177`*^9, 3.3961426875169888`*^9}, {
+  3.396180340274786*^9, 3.39618037311681*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "pair", " ", "each", " ", "density", " ", "with", " ", "the", " ", "final",
+     " ", "%", " ", "burned", " ", "from", " ", "each", " ", "run"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"finalStates", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{"Last", ",", "fireData"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"densityBurnedPairs", "=", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{"densities", ",", "finalStates"}], "}"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"densityBurnedPairs", ",", 
+     RowBox[{"AxesLabel", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Density\>\"", ",", "\"\<Final % Burned\>\""}], "}"}]}], 
+     ",", 
+     RowBox[{"PlotRange", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "100"}], "}"}]}], ",", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", " ", 
+      "\"\<Phase transition in the forest fire model\>\""}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.372441545799267*^9, 3.372441560762669*^9}, {
+  3.372441641719913*^9, 3.3724417193805523`*^9}, {3.3724471214570312`*^9, 
+  3.372447126176771*^9}, {3.3737352074021482`*^9, 3.373735211985059*^9}, {
+  3.3927409140826387`*^9, 3.392740917497984*^9}, {3.392741178144747*^9, 
+  3.392741239319141*^9}, {3.392742013534223*^9, 3.39274210366293*^9}, {
+  3.3961812039944773`*^9, 3.396181228773465*^9}, {3.396221294884495*^9, 
+  3.396221340069619*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Comparing Empirical and Analytic Distributions in GasLab", "Section",
+ CellChangeTimes->{{3.396107921281371*^9, 3.3961079408664217`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Use the Histograms package", "Text",
+ CellChangeTimes->{{3.396112457329637*^9, 3.396112467605391*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<Histograms`\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.396143782524233*^9, 3.396143792488459*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Load GasLab Free Gas, set it up with 100 particles, and let it run for a \
+little while\
+\>", "Text",
+ CellChangeTimes->{{3.396110297155974*^9, 3.396110297408245*^9}, {
+  3.3962265399938707`*^9, 3.396226555119564*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"NLLoadModel", "[", "\[IndentingNewLine]", 
+    RowBox[{"ToFileName", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "$NLHome", ",", "\"\<models\>\"", ",", "\"\<Sample Models\>\"", ",", 
+        "\"\<Chemistry & Physics\>\"", ",", "\"\<GasLab\>\""}], "}"}], ",", 
+      "\"\<GasLab Free Gas.nlogo\>\""}], "]"}], "\[IndentingNewLine]", "]"}], 
+   ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLCommand", "[", 
+   RowBox[{
+   "\"\<set number-of-particles 100\>\"", ",", "\"\<no-display\>\"", ",", 
+    "\"\<setup\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLDoCommandWhile", "[", 
+   RowBox[{"\"\<go\>\"", ",", "\"\<ticks < 20\>\""}], "]"}], ";"}]}], "Input",\
+
+ CellChangeTimes->{{3.3951680303648453`*^9, 3.395168044513707*^9}, {
+  3.396110303963766*^9, 3.3961103251571093`*^9}, {3.396114419471628*^9, 
+  3.396114447565287*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reporting lists of values from NetLogo", "Subsubsection",
+ CellChangeTimes->{{3.396110522237137*^9, 3.396110523807201*^9}, {
+  3.396110580705538*^9, 3.396110601922619*^9}}],
+
+Cell[TextData[{
+ StyleBox["The NetLogo-Mathematica link automatically converts NetLogo lists \
+into Mathematica lists.\n",
+  FontSize->13],
+ "This is can be useful for examining distributions.  Here, we execute the \
+model for 20 \"ticks\" and report back the speed of each particle"
+}], "Text",
+ CellChangeTimes->{{3.396110341959248*^9, 3.396110370354539*^9}, {
+  3.39611047972845*^9, 3.396110509911014*^9}, {3.396110546379774*^9, 
+  3.396110577170083*^9}, {3.396760667756997*^9, 3.3967606685502663`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLReport", "[", "\"\<[speed] of particles\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.379267988860709*^9, 3.379267994704566*^9}, {
+  3.396110445922349*^9, 3.3961104759676743`*^9}, {3.396114416845778*^9, 
+  3.396114417569456*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Symbolic computing and NetLogo: validating the Maxwell-Boltzmann distribution\
+\
+\>", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.396110691980526*^9, 3.396110747696163*^9}, {
+  3.396143314570972*^9, 3.396143320173112*^9}, {3.39622709658848*^9, 
+  3.3962271107708807`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Set up the model with 500 particles and collect 40 readings of each \
+particle's speed, every 50 steps. \
+\>", "Text",
+ CellChangeTimes->{{3.396110652567731*^9, 3.396110684541054*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"NLCommand", "[", 
+    RowBox[{
+    "\"\<set number-of-particles 500\>\"", ",", "\"\<no-display\>\"", ",", 
+     "\"\<setup\>\""}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"speeds", "=", 
+   RowBox[{"Flatten", "[", " ", 
+    RowBox[{"NLDoReport", "[", 
+     RowBox[{
+     "\"\<repeat 50 [go]\>\"", ",", "\"\<[speed] of particles\>\"", ",", 
+      "40"}], "]"}], " ", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.379268047038845*^9, 3.379268056723612*^9}, {
+  3.396110380480146*^9, 3.396110382374926*^9}, {3.396110638401329*^9, 
+  3.39611063872645*^9}, {3.396114450725711*^9, 3.3961144559242887`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Compare distribution of speeds with the theoretical Maxwell-Boltzmann \
+distribution for a 2D gas, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"B", "(", "v", ")"}], "=", 
+    RowBox[{"v", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"-", "m"}], " ", 
+        SuperscriptBox["v", "2"]}], 
+       RowBox[{"2", " ", "k", " ", "T"}]]]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{
+  3.3957777625958757`*^9, {3.3961108260961113`*^9, 3.396110841730488*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"k", ",", "m", ",", "T"}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", 
+     RowBox[{"NLReport", "[", "\"\<mean [energy] of particles\>\"", "]"}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.36043477564152*^9, 3.36043477915644*^9}, 
+   3.373737411565402*^9, {3.379268113294259*^9, 3.379268117938326*^9}, {
+   3.379268172752152*^9, 3.3792681841984663`*^9}, {3.392741702656081*^9, 
+   3.3927417172929907`*^9}, {3.392741752892951*^9, 3.392741794127122*^9}, {
+   3.392741833058958*^9, 3.392741892364025*^9}, 3.396099646142276*^9, {
+   3.3961101697582808`*^9, 3.396110172741024*^9}, {3.396110266244479*^9, 
+   3.396110266552348*^9}, {3.396112384310367*^9, 3.396112386956141*^9}, {
+   3.3961359595606003`*^9, 3.396135964258638*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"B", "[", "v_", "]"}], ":=", 
+   RowBox[{"v", " ", 
+    SuperscriptBox["E", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"-", "m"}], " ", 
+       SuperscriptBox["v", "2"]}], 
+      RowBox[{"2", "k", " ", "T"}]]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"normalizer", "=", " ", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+    RowBox[{
+     RowBox[{"B", "[", "v", "]"}], 
+     RowBox[{"\[DifferentialD]", "v"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"theoretical", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"B", "[", "v", "]"}], "normalizer"], ",", 
+     RowBox[{"{", 
+      RowBox[{"v", ",", "0", ",", 
+       RowBox[{"Max", "[", "speeds", "]"}]}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Darker", "[", "Red", "]"}], ",", 
+        RowBox[{"Thickness", "[", "0.008", "]"}]}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"empirical", "=", 
+    RowBox[{"Histogram", "[", 
+     RowBox[{"speeds", ",", 
+      RowBox[{"HistogramScale", "\[Rule]", " ", "1"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"empirical", ",", "theoretical", ",", 
+   RowBox[{
+   "PlotLabel", "\[Rule]", " ", 
+    "\"\<GasLab energy distribution and the Maxwell\[Dash]Boltzmann \
+distribution\>\""}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.36043477564152*^9, 3.36043477915644*^9}, 
+   3.373737411565402*^9, {3.379268113294259*^9, 3.379268117938326*^9}, {
+   3.379268172752152*^9, 3.3792681841984663`*^9}, {3.392741702656081*^9, 
+   3.3927417172929907`*^9}, {3.392741752892951*^9, 3.392741794127122*^9}, {
+   3.392741833058958*^9, 3.392741892364025*^9}, 3.396099646142276*^9, {
+   3.3961101697582808`*^9, 3.396110172741024*^9}, {3.396110266244479*^9, 
+   3.396110266552348*^9}, {3.396112384310367*^9, 3.396112386956141*^9}, {
+   3.3961359595606003`*^9, 3.396135964258638*^9}, 3.396143334903572*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Screenshot Sequences with Termites", "Section",
+ CellChangeTimes->{{3.395788123593336*^9, 3.395788129069022*^9}, {
+   3.396108216457284*^9, 3.3961082309724607`*^9}, 3.396180758502833*^9, {
+   3.3962205354740877`*^9, 3.3962205622064734`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"NLLoadModel", "[", 
+   RowBox[{"ToFileName", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "$NLHome", ",", "\"\<models\>\"", ",", "\"\<Sample Models\>\"", ",", 
+       "\"\<Biology\>\""}], "}"}], ",", "\"\<Termites.nlogo\>\""}], "]"}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLCommand", "[", 
+   RowBox[{"\"\<setup\>\"", ",", "\"\<no-display\>\""}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.3951681368278418`*^9, 3.395168142180542*^9}, {
+  3.3961108562093487`*^9, 3.3961108584350357`*^9}, {3.396143809421916*^9, 
+  3.396143815484503*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Capturing NetLogo patch colors", "Subsubsection",
+ CellChangeTimes->{{3.3961108684114027`*^9, 3.396110883235055*^9}}],
+
+Cell[TextData[{
+ StyleBox["One can use ",
+  FontSize->13],
+ StyleBox["NLGetPatches[] ",
+  FontFamily->"Courier",
+  FontSize->13,
+  FontWeight->"Bold"],
+ StyleBox["to get values from patches.",
+  FontSize->13],
+ "\nIn this case we are reporting back NetLogo patch colors."
+}], "Text",
+ CellChangeTimes->{{3.396110913172263*^9, 3.39611095554125*^9}, {
+  3.396111265168193*^9, 3.396111267637093*^9}, {3.396111557464848*^9, 
+  3.396111570086865*^9}, {3.396181302454051*^9, 3.3961813049974623`*^9}, {
+  3.396760627210186*^9, 3.396760628785536*^9}, {3.3967612267387667`*^9, 
+  3.3967612271019783`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{
+   RowBox[{"NLGetPatches", "[", "\"\<pcolor\>\"", "]"}], ",", 
+   RowBox[{"ColorRules", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.", "\[Rule]", " ", "Black"}], ",", 
+      RowBox[{"45.", "\[Rule]", " ", "Yellow"}]}], "}"}]}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.386524206052829*^9, 3.386524213176352*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Collecting multiple \"screenshots\"", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.396111698132924*^9, 3.396111715124728*^9}, {
+  3.396112223003499*^9, 3.396112235422488*^9}, {3.39614315399354*^9, 
+  3.396143155164239*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["CaptureTermiteProgress[] ",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ "asks the turtles to ",
+ StyleBox["\"go\"",
+  FontFamily->"Courier"],
+ " 20 times and take a \"screenshot\" using ",
+ StyleBox["NLGetPatches[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.392742349283717*^9, 3.39274235003467*^9}, {
+  3.3927424075512753`*^9, 3.392742412989387*^9}, {3.392742511496426*^9, 
+  3.392742557385543*^9}, {3.396111758233015*^9, 3.396111789048123*^9}, {
+  3.396226627958653*^9, 3.396226628898368*^9}, {3.396760403906468*^9, 
+  3.3967604048185787`*^9}, {3.396760605732288*^9, 3.396760612617296*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"CaptureTermiteProgress", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"NLDoCommand", "[", 
+       RowBox[{"\"\<ask turtles [go]\>\"", ",", "20"}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"NLGetPatches", "[", "\"\<pcolor\>\"", "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.373734209937935*^9, 3.373734258929878*^9}, {
+   3.392742378550687*^9, 3.392742392245348*^9}, 3.396111611228149*^9, {
+   3.3961116587089453`*^9, 3.3961116726442633`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Set up the model, and repeat ",
+ StyleBox["CaptureTermiteProgress[] ",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ "six times to capture several \"screen shots\"."
+}], "Text",
+ CellChangeTimes->{{3.396226644869935*^9, 3.396226679308428*^9}, {
+  3.3967604206437893`*^9, 3.3967604219150763`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"NLCommand", "[", "\"\<setup\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"patchShots", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"CaptureTermiteProgress", "[", "]"}], ",", 
+     RowBox[{"{", "6", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"renderedShots", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Rasterize", "[", 
+       RowBox[{"ArrayPlot", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"ColorRules", "\[Rule]", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"0.", "\[Rule]", " ", "Black"}], ",", 
+            RowBox[{"45.", "\[Rule]", " ", "Yellow"}]}], "}"}]}]}], "]"}], 
+       "]"}], "&"}], ",", "patchShots"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.373734282518489*^9, 3.3737343004493017`*^9}, {
+   3.373734450313445*^9, 3.37373445211784*^9}, {3.392742374942038*^9, 
+   3.392742375326643*^9}, 3.396111676233756*^9, {3.396111895074296*^9, 
+   3.396111909888338*^9}, {3.3961120549043207`*^9, 3.3961120599233627`*^9}, {
+   3.39622668376633*^9, 3.396226684744618*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Display screenshot simultaneously in a grid", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.396111698132924*^9, 3.396111715124728*^9}, {
+  3.396112223003499*^9, 3.396112235422488*^9}, {3.39614315399354*^9, 
+  3.396143188181542*^9}}],
+
+Cell["Display each consecutive screenshot simultaneously in a grid", "Text",
+ CellChangeTimes->{{3.3961119268588877`*^9, 3.396111948484036*^9}}],
+
+Cell[BoxData[
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{
+   RowBox[{"Partition", "[", 
+    RowBox[{"renderedShots", ",", "3"}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", " ", "500"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.373734353515912*^9, 3.373734399413227*^9}, {
+   3.373734454919944*^9, 3.373734464559782*^9}, {3.373734512851533*^9, 
+   3.3737345147459393`*^9}, 3.37373455863293*^9, {3.3927424641964684`*^9, 
+   3.3927424803115587`*^9}, 3.39611191284937*^9, {3.3961121384452*^9, 
+   3.396112146812389*^9}, 3.396760213897159*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Animate screenshots", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.396111698132924*^9, 3.396111715124728*^9}, {
+  3.396112223003499*^9, 3.396112235422488*^9}, {3.39614315399354*^9, 
+  3.396143155164239*^9}, {3.396143197737247*^9, 3.396143204981821*^9}}],
+
+Cell["\<\
+Animate the screenshots and replay the model backwards and forwards\
+\>", "Text",
+ CellChangeTimes->{{3.396111953321178*^9, 3.3961119691249332`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ListAnimate", "[", "renderedShots", "]"}]], "Input",
+ CellChangeTimes->{{3.3961118600269213`*^9, 3.3961118625225677`*^9}, {
+   3.3961119988624973`*^9, 3.396112016527835*^9}, 3.396112185610132*^9, {
+   3.396760202267214*^9, 3.3967602028826637`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Plotting Terrain in 3D", "Section",
+ CellChangeTimes->{{3.396180812395071*^9, 3.3961808126593027`*^9}}],
+
+Cell["Load the erosion model and set it up", "Text",
+ CellChangeTimes->{{3.396142924957655*^9, 3.3961429283566628`*^9}, 
+   3.3961429700308313`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"NLLoadModel", "[", 
+  RowBox[{"ToFileName", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "$NLHome", ",", "\"\<models\>\"", ",", "\"\<Sample Models\>\"", ",", 
+      "\"\<Earth Science\>\""}], "}"}], ",", "\"\<Erosion.nlogo\>\""}], "]"}],
+   "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NLCommand", "[", 
+  RowBox[{
+  "\"\<set terrain-smoothness 15\>\"", ",", "\"\<set rainfall 0.30\>\"", ",", 
+   "\"\<set soil-hardness 0.8\>\"", ",", " ", "\"\<no-display\>\"", ",", 
+   "\"\<setup\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NLDoCommand", "[", 
+  RowBox[{"\"\<go\>\"", ",", "120"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.3961317209028587`*^9, 3.396131723366119*^9}, {
+  3.3961429632977858`*^9, 3.396142967219677*^9}, {3.396181323257717*^9, 
+  3.396181343328477*^9}, {3.396760250251439*^9, 3.3967602503454113`*^9}}],
+
+Cell["Execute with the new setup", "Text"],
+
+Cell["Plotting elevation information in 3D", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.396111698132924*^9, 3.396111715124728*^9}, {
+  3.396112223003499*^9, 3.396112235422488*^9}, {3.39614294818438*^9, 
+  3.3961429565419083`*^9}}],
+
+Cell[TextData[{
+ StyleBox["NLGetPatches[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " can report any kind of patch data, not just colors.  For example, one can \
+plot the patch variable ",
+ StyleBox["elevation",
+  FontSlant->"Italic"],
+ " to construct a 3D terrain plot."
+}], "Text",
+ CellChangeTimes->{{3.396114505563499*^9, 3.396114580340993*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"elevations", "=", 
+    RowBox[{"NLGetPatches", "[", "\"\<elevation\>\"", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"ListPlot3D", "[", 
+  RowBox[{"elevations", ",", 
+   RowBox[{"Mesh", "\[Rule]", " ", "None"}], ",", 
+   RowBox[{"ColorFunction", "\[Rule]", "\"\<Topographic\>\""}], ",", 
+   RowBox[{"Mesh", "\[Rule]", " ", "None"}], ",", 
+   RowBox[{"Axes", "\[Rule]", " ", "None"}], ",", 
+   RowBox[{"Boxed", "\[Rule]", " ", "False"}], ",", 
+   RowBox[{"ViewPoint", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0.8", ",", 
+      RowBox[{"-", "1.5"}], ",", "2.9"}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.3927439156625967`*^9, 3.392743933542281*^9}, 
+   3.394478305472227*^9, {3.396142984588194*^9, 3.3961429867618523`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Plotting Networks with Preferential Attachment", "Section",
+ CellChangeTimes->{{3.36051111157344*^9, 3.36051112495524*^9}, {
+  3.396180767101864*^9, 3.396180774121359*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Load the Preferential Attachment model", "Text",
+ CellChangeTimes->{{3.36051131546008*^9, 3.36051133028997*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLLoadModel", "[", 
+  RowBox[{"ToFileName", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "$NLHome", ",", "\"\<models\>\"", ",", "\"\<Sample Models\>\"", ",", 
+      "\"\<Networks\>\""}], "}"}], ",", 
+    "\"\<Preferential Attachment.nlogo\>\""}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.3951682416989393`*^9, 3.395168254827293*^9}}],
+
+Cell["Set up the model and generate about 2000 nodes.", "Text",
+ CellChangeTimes->{{3.396114610766127*^9, 3.396114621918466*^9}, {
+  3.396136756041065*^9, 3.396136766800248*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "NLCommand", "[", 
+   "\"\<setup set layout? false set plot? false no-display\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NLDoCommand", "[", 
+   RowBox[{"\"\<go\>\"", ",", "2000"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.3605111438509*^9, 3.36051114633301*^9}, {
+  3.36051118816163*^9, 3.36051119169433*^9}, {3.36051140091979*^9, 
+  3.36051140433519*^9}, {3.36051146280069*^9, 3.36051146373706*^9}, {
+  3.3737350009525146`*^9, 3.3737350050885677`*^9}, {3.373735531090149*^9, 
+  3.3737355335698843`*^9}, {3.3737374622173853`*^9, 3.373737470518716*^9}, {
+  3.396114606088084*^9, 3.396114607033658*^9}, {3.3961367494546967`*^9, 
+  3.396136771538135*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Capturing Graphs in NetLogo", "Subsubsection",
+ CellChangeTimes->{{3.396114644917355*^9, 3.396114677320225*^9}, {
+   3.396114778511674*^9, 3.396114780963026*^9}, {3.3961400935699778`*^9, 
+   3.396140099303857*^9}, 3.396140577695508*^9}],
+
+Cell[TextData[{
+ StyleBox["Capture the network with",
+  FontSize->13],
+ " ",
+ StyleBox["NLGetGraph[]",
+  FontFamily->"Courier",
+  FontSize->14,
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.392744029550304*^9, 3.392744055639029*^9}, {
+   3.396114746172495*^9, 3.396114750505921*^9}, {3.396140111777721*^9, 
+   3.396140120432976*^9}, 3.3961405776957817`*^9, 3.3962276751733313`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"network", "=", 
+   RowBox[{"NLGetGraph", "[", "\"\<links\>\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.36051115190955*^9, 3.36051115219736*^9}, {
+   3.36051138464014*^9, 3.36051138490074*^9}, {3.3605114244651*^9, 
+   3.36051142600582*^9}, {3.392744007190115*^9, 3.392744009575431*^9}, {
+   3.396099540729026*^9, 3.396099544318714*^9}, {3.396114603937306*^9, 
+   3.3961146289440413`*^9}, 3.396136778618438*^9, {3.396140027964641*^9, 
+   3.3961400286265707`*^9}, 3.3961405776961946`*^9}],
+
+Cell[TextData[{
+ "By default, ",
+ StyleBox["NLGetGraph[] ",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ "uses the generic link breed, ",
+ StyleBox["links",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.3961401066377983`*^9, 3.396140137953661*^9}, 
+   3.3961405776979933`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"network", "=", 
+   RowBox[{"NLGetGraph", "[", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.3961401436758423`*^9, 3.396140149741847*^9}, 
+   3.396140577698303*^9}],
+
+Cell[TextData[{
+ StyleBox["NLGetGraph[] ",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ "returns a list of rules of the form ",
+ StyleBox["outNode\[Rule] inNode, ",
+  FontSlant->"Italic"],
+ "which can be used by NetLogo's visualization functions, where ",
+ StyleBox["outNode and inNode ",
+  FontSlant->"Italic"],
+ "are the who numbers of agents in the network."
+}], "Text",
+ CellChangeTimes->{{3.3961394079897537`*^9, 3.396139479599832*^9}, {
+   3.396140066903664*^9, 3.3961400866877127`*^9}, 3.396140577699924*^9, {
+   3.396140634148568*^9, 3.396140689801903*^9}, 3.396274106814314*^9}],
+
+Cell[BoxData[
+ RowBox[{"Short", "[", "network", "]"}]], "Input",
+ CellChangeTimes->{{3.3961367907485847`*^9, 3.396136792977703*^9}, {
+   3.3961400435584393`*^9, 3.39614004601884*^9}, 3.3961405777002296`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Visualizing NetLogo graphs", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.3961402501662188`*^9, 3.396140267808736*^9}, 
+   3.39614057770438*^9}],
+
+Cell[TextData[{
+ "Let ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " automatically pick a layout."
+}], "Text",
+ CellChangeTimes->{{3.36051123278595*^9, 3.36051129045675*^9}, {
+   3.392744016470289*^9, 3.392744016877804*^9}, {3.39274406347952*^9, 
+   3.3927440908962317`*^9}, {3.396136925665863*^9, 3.396136940821527*^9}, 
+   3.3961405777045727`*^9}],
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", "network", "]"}]], "Input",
+ CellChangeTimes->{{3.36051127187267*^9, 3.36051130249795*^9}, {
+   3.36051136930371*^9, 3.36051138044128*^9}, {3.36051241838748*^9, 
+   3.36051242883335*^9}, {3.373735025252874*^9, 3.3737350366178827`*^9}, {
+   3.373735548992836*^9, 3.373735592030375*^9}, {3.392744006061533*^9, 
+   3.392744014199319*^9}, 3.395830598574294*^9, {3.396099566991637*^9, 
+   3.396099567614917*^9}, {3.396140211388867*^9, 3.396140212164154*^9}, 
+   3.396140577704924*^9}],
+
+Cell["Or choose your own layout", "Text",
+ CellChangeTimes->{{3.39274409505231*^9, 3.392744098672556*^9}, 
+   3.396140577715411*^9}],
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{"network", ",", 
+   RowBox[{"Method", "\[Rule]", " ", "\"\<SpringElectricalEmbedding\>\""}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.373735599959284*^9, 3.3737356080030947`*^9}, {
+   3.396099571992097*^9, 3.396099572645857*^9}, {3.39614021832726*^9, 
+   3.39614021901005*^9}, 3.396140577715699*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sparse matrix representation of NetLogo graphs", "Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.39613933202522*^9, 3.3961393828286543`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<GraphUtilities`\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.396139228745968*^9, 3.396139247164282*^9}, {
+  3.3961402952584763`*^9, 3.396140310080078*^9}}],
+
+Cell[TextData[{
+ "Rule-based network specifications, like the ones returned by ",
+ StyleBox["NLGetGraph[]",
+  FontFamily->"Courier",
+  FontWeight->"Bold"],
+ " can easily be converted into sparse matrices"
+}], "Text",
+ CellChangeTimes->{{3.396139251533133*^9, 3.396139265816544*^9}, {
+   3.396139491186124*^9, 3.396139503056478*^9}, {3.3961403481537247`*^9, 
+   3.396140390561335*^9}, 3.396227688308981*^9}],
+
+Cell[BoxData[
+ RowBox[{"netMatrix", "=", 
+  RowBox[{"AdjacencyMatrix", "[", "network", "]"}]}]], "Input",
+ CellChangeTimes->{{3.396139271560814*^9, 3.3961392735471687`*^9}, {
+  3.396140317849527*^9, 3.396140321280302*^9}}],
+
+Cell["Plot the adjacency matrix", "Text",
+ CellChangeTimes->{{3.3961392808426123`*^9, 3.396139285273981*^9}}],
+
+Cell[BoxData[
+ RowBox[{"MatrixPlot", "[", "netMatrix", "]"}]], "Input",
+ CellChangeTimes->{{3.396137182142939*^9, 3.39613718485977*^9}, {
+  3.396140327555563*^9, 3.396140328992268*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Comparing binning methods to find power laws in networks", \
+"Subsubsection",
+ CellDingbat->"\[FilledSmallCircle]",
+ CellChangeTimes->{{3.396140397473156*^9, 3.396140424586383*^9}}],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " can operate on sparse matrices to find power laws in networks and other \
+related phenomena"
+}], "Text",
+ CellChangeTimes->{{3.3961404878095512`*^9, 3.396140524260408*^9}, 
+   3.396227689756404*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"linearBinPlot", "=", 
+   RowBox[{"ListLogLogPlot", "[", 
+    RowBox[{
+     RowBox[{"BinCounts", "[", 
+      RowBox[{"Total", "/@", "netMatrix"}], "]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", 
+      RowBox[{"PointSize", "[", "0.019", "]"}]}], ",", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", " ", 
+      "\"\<Preferential Attachment with linear binning\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bins", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     SuperscriptBox["2", "i"], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "8"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"expBinPlot", "=", 
+    RowBox[{"ListLogLogPlot", "[", 
+     RowBox[{
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"bins", ",", 
+         RowBox[{"PadRight", "[", 
+          RowBox[{
+           RowBox[{"BinCounts", "[", 
+            RowBox[{
+             RowBox[{"Total", "/@", "netMatrix"}], ",", 
+             RowBox[{"{", "bins", "}"}]}], "]"}], ",", "8"}], "]"}]}], "}"}], 
+       "]"}], ",", 
+      RowBox[{"PlotStyle", "\[Rule]", " ", 
+       RowBox[{"PointSize", "[", "0.019", "]"}]}], ",", 
+      RowBox[{
+      "PlotLabel", "\[Rule]", " ", 
+       "\"\<Preferential Attachment with expoential binning\>\""}]}], "]"}]}],
+    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"linearBinPlot", ",", "expBinPlot"}], "}"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", " ", "600"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.3961374150934772`*^9, 3.396137428364057*^9}, {
+   3.396138097434504*^9, 3.396138119530472*^9}, {3.396138982621381*^9, 
+   3.396139038608863*^9}, {3.396140427741434*^9, 3.396140466953677*^9}, 
+   3.396227193973851*^9, {3.396760228126617*^9, 3.396760228393236*^9}, {
+   3.396761275762184*^9, 3.3967612941656322`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Advanced Features: Headless Mode", "Section",
+ CellChangeTimes->{{3.395787919563747*^9, 3.395787923230283*^9}, {
+  3.396114839426405*^9, 3.3961148456052513`*^9}}],
+
+Cell[TextData[{
+ StyleBox["To begin in headless mode, use option",
+  FontSize->13],
+ " ",
+ StyleBox["Headless\[VeryThinSpace]\[Rule]\[ThinSpace]True",
+  FontFamily->"Courier",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{
+  3.379252057619041*^9, {3.3967604904157267`*^9, 3.3967605121257477`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NLStart", "[", 
+  RowBox[{"$NLHome", ",", 
+   RowBox[{"Headless", "\[Rule]", " ", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.3792676276472588`*^9, 3.379267631148417*^9}, 
+   3.392740806213889*^9, 3.392740843276425*^9}],
+
+Cell["\<\
+This mode is preferable for situations in which you do not need to interact \
+directly with the NetLogo graphical interface.\
+\>", "Text",
+ CellChangeTimes->{{3.396108264193264*^9, 3.396108293998686*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Troubleshooting", "Section",
+ CellChangeTimes->{{3.704208502039298*^9, 3.7042085298648977`*^9}},
+ CellTags->"troubleshooting"],
+
+Cell[TextData[{
+ "Sometimes, things go wrong with Mathematica Link. Not to fear, we have some \
+helpful tools to assist in debugging. If you\[CloseCurlyQuote]re having \
+problems and you\[CloseCurlyQuote]ve never used Mathematica Link before, see ",
+ ButtonBox["general troubleshooting",
+  BaseStyle->"Hyperlink",
+  ButtonData->"general-troubleshooting"],
+ ". If you have used Mathematica Link before, see ",
+ ButtonBox["clearing cached versions",
+  BaseStyle->"Hyperlink",
+  ButtonData->"clearing-cached-versions"],
+ " first, then ",
+ ButtonBox["general troubleshooting",
+  BaseStyle->"Hyperlink",
+  ButtonData->"general-troubleshooting"],
+ " if that doesn\[CloseCurlyQuote]t resolve your problems."
+}], "Text",
+ CellChangeTimes->{{3.704208536044156*^9, 3.704208748393077*^9}, {
+  3.704208906549464*^9, 3.7042089357466516`*^9}, {3.7042091062505703`*^9, 
+  3.7042092411054573`*^9}, {3.70420928183891*^9, 3.704209282483639*^9}, {
+  3.7042104589702*^9, 3.704210512922271*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["General Troubleshooting", "Subsubsection",
+ CellChangeTimes->{{3.704209252923634*^9, 3.704209257347364*^9}, {
+  3.704209369181203*^9, 3.704209374107252*^9}},
+ CellTags->"general-troubleshooting"],
+
+Cell["\<\
+The most common error when starting Mathematica Link is being unable to find \
+the appropriate NetLogo jars. You can check the locations that NetLogo is \
+looking for jars by using NLDiagnostics. The path to NetLogo 6.0.2 on a Mac \
+is used below, Windows users will want to adapt this example for their \
+NetLogo installation:\
+\>", "Text",
+ CellChangeTimes->{{3.704209378263135*^9, 3.704209496567993*^9}, {
+  3.704210302437591*^9, 3.704210319763315*^9}, {3.704210380937344*^9, 
+  3.704210421843747*^9}, {3.7111026036231213`*^9, 3.711102603733569*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NLDiagnostics", "[", "\"\</Applications/NetLogo 6.0.2\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.704209501092416*^9, 3.7042095585660543`*^9}, {
+   3.70421033406502*^9, 3.7042103386310663`*^9}, 3.711102610273225*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{
+   "\"\<providedPath\>\"", "\[Rule]", "\"\</Applications/NetLogo 6.0.2\>\""}],
+    ",", 
+   RowBox[{"\"\<jarLookupPaths\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\</Applications/NetLogo 6.0.2/Java/netlogo-6.0.2.jar\>\"", ",", 
+      "\"\</Applications/NetLogo 6.0.2/Mathematica \
+Link/mathematica-link.jar\>\""}], "}"}]}], ",", 
+   RowBox[{"\"\<foundJars\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\</Applications/NetLogo 6.0.2/Java/netlogo-6.0.2.jar\>\"", ",", 
+      "\"\</Applications/NetLogo 6.0.2/Mathematica \
+Link/mathematica-link.jar\>\""}], "}"}]}], ",", 
+   RowBox[{"\"\<missingJars\>\"", "\[Rule]", 
+    RowBox[{"{", "}"}]}]}], "\[RightAssociation]"}]], "Input",
+ CellChangeTimes->{{3.7111026116542253`*^9, 3.711102615301227*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "This will return a key-value associative array listing several items values \
+which can help diagnose a problem. If the value at the key \
+\[OpenCurlyDoubleQuote]missingJars\[CloseCurlyDoubleQuote] is empty, \
+Mathematica Link has found the necessary jars. If it ",
+ StyleBox["isn\[CloseCurlyQuote]t",
+  FontSlant->"Italic"],
+ " empty, check that the path at provided is correct and that no files have \
+accidentally been removed from your NetLogo installation."
+}], "Text",
+ CellChangeTimes->{{3.704209575234748*^9, 3.7042095848087606`*^9}, {
+  3.704209639440988*^9, 3.704209718740284*^9}, {3.7042103576195927`*^9, 
+  3.7042103700456257`*^9}}],
+
+Cell["\<\
+Assuming everything looks good with NLDiagnostics and you are still having \
+problems opening Mathematica Link, you can check \
+Mathematica\[CloseCurlyQuote]s Java configuration with:\
+\>", "Text",
+ CellChangeTimes->{{3.704209828304311*^9, 3.704209867858671*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NLJavaDiagnostics", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.7042098740951147`*^9, 3.704209877795979*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"javaVersion\"\>", "\[Rule]", "\<\"1.8.0_92\"\>"}], ",", 
+   RowBox[{"\<\"javaArchitecture\"\>", "\[Rule]", "\<\"64\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.704209883637909*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "The precise \[OpenCurlyDoubleQuote]javaVersion\[CloseCurlyDoubleQuote] \
+doesn\[CloseCurlyQuote]t need to be identical, but should start with \
+\[OpenCurlyDoubleQuote]1.8.0\[CloseCurlyDoubleQuote]. If it doesn\
+\[CloseCurlyQuote]t, you may need to install java 8 or adjust your Java \
+configuration (the ",
+ ButtonBox["options available for InstallJava",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://reference.wolfram.com/language/JLink/ref/InstallJava.html"], 
+    None},
+  ButtonNote->
+   "https://reference.wolfram.com/language/JLink/ref/InstallJava.html"],
+ " can be passed to NLStart)."
+}], "Text",
+ CellChangeTimes->{{3.7042098958516407`*^9, 3.704209999842455*^9}, {
+  3.7042101495188217`*^9, 3.7042101776827707`*^9}}],
+
+Cell[TextData[{
+ "If you continue to have problems, please contact ",
+ ButtonBox["bugs@ccl.northwestern.edu",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["mailto:bugs@ccl.northwestern.edu"], None},
+  ButtonNote->"mailto:bugs@ccl.northwestern.edu"],
+ " for further assistance. If you contact us, please include information on \
+your operating system, Mathematica Version, NetLogo Version, and the output \
+of the NLDiagnostics and NLJavaDiagnostics commands."
+}], "Text",
+ CellChangeTimes->{{3.704209979847088*^9, 3.7042099871508512`*^9}, {
+  3.704210182765356*^9, 3.704210254291533*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Clearing Cached Versions", "Subsubsection",
+ CellChangeTimes->{{3.7042092716949997`*^9, 3.70420927957448*^9}},
+ CellTags->"clearing-cached-versions"],
+
+Cell["\<\
+If you've worked with Mathematica link in an old version of NetLogo, you may \
+have an old \"NetLogo.m\" package cached in your system which will prevent \
+loading of the most recent Mathematica Link package. Mathematica stores these \
+files in one or both of the following locations:\
+\>", "Text",
+ CellChangeTimes->{{3.704208536044156*^9, 3.704208748393077*^9}, {
+  3.704208906549464*^9, 3.7042089357466516`*^9}, {3.7042091062505703`*^9, 
+  3.7042091204438972`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "$BaseDirectory", ",", " ", "\"\<Applications\>\"", ",", " ", 
+    "\"\<NetLogo.m\>\""}], "}"}], "]"}], "\n", 
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "$UserBaseDirectory", ",", " ", "\"\<Applications\>\"", ",", " ", 
+    "\"\<NetLogo.m\>\""}], "}"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.704208795001275*^9, 3.704208846533988*^9}, 
+   3.704208876559905*^9},
+ FormatType->"InputForm"],
+
+Cell[TextData[{
+ "Check both locations. If you find a file in either, delete it and reinstall \
+the NetLogo packages (per directions in ",
+ ButtonBox["installing",
+  BaseStyle->"Hyperlink",
+  ButtonData->"installing"],
+ ")."
+}], "Text",
+ CellChangeTimes->{{3.704208948687892*^9, 3.70420897613317*^9}, {
+  3.7042090200576687`*^9, 3.704209020060487*^9}, {3.704209061466508*^9, 
+  3.7042090955435038`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+WindowToolbars->"EditBar",
+CellGrouping->Manual,
+WindowSize->{953, 735},
+WindowMargins->{{151, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+PageHeaders->{{
+   Cell[
+    TextData[{
+      Cell[
+       TextData[{
+         CounterBox["Page"]}], "PageNumber"], " ", 
+      Cell[
+      " ", "Header", CellFrame -> {{0.5, 0}, {0, 0}}, CellFrameMargins -> 4], 
+      
+      Cell[
+       TextData[{
+         ValueBox["FileName"]}], "Header"]}], 
+    CellMargins -> {{0, Inherited}, {Inherited, Inherited}}], None, None}, {
+  None, None, None}},
+PrintingOptions->{"FacingPages"->False,
+"FirstPageHeader"->True,
+"PaperOrientation"->"Portrait",
+"PrintCellBrackets"->False,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->False,
+"PrintingMargins"->36},
+ShowSelection->True,
+CellLabelAutoDelete->True,
+ShowCellTags->True,
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Section"], FontSize -> 22, FontWeight -> Bold, FontColor -> 
+    RGBColor[0.712923, 0.178409, 0.0498421]], 
+   Cell[
+    StyleData["Subsection"], FontSize -> 18, FontWeight -> Bold, FontColor -> 
+    RGBColor[0.641154, 0.223011, 0.0623026]], 
+   Cell[
+    StyleData["Subsubsection"], FontSize -> 14, FontWeight -> Bold, FontColor -> 
+    RGBColor[0.641154, 0.223011, 0.0623026]], 
+   Cell[
+    StyleData["Title"], FontSize -> 36, FontWeight -> Bold, FontColor -> 
+    RGBColor[0.712923, 0.178409, 0.0498421]], 
+   Cell[
+    StyleData[All]], 
+   Cell[
+    StyleData["Input"]], 
+   Cell[
+    StyleData["Output"]]}, Visible -> False, FrontEndVersion -> 
+  "11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 21, 2016)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "installing"->{
+  Cell[3117, 93, 301, 9, 69, "Section",
+   CellTags->"installing"]},
+ "troubleshooting"->{
+  Cell[58821, 1682, 132, 2, 69, "Section",
+   CellTags->"troubleshooting"]},
+ "general-troubleshooting"->{
+  Cell[59955, 1710, 201, 3, 40, "Subsubsection",
+   CellTags->"general-troubleshooting"]},
+ "clearing-cached-versions"->{
+  Cell[64631, 1828, 155, 2, 40, "Subsubsection",
+   CellTags->"clearing-cached-versions"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"installing", 68179, 1933},
+ {"troubleshooting", 68270, 1936},
+ {"general-troubleshooting", 68377, 1939},
+ {"clearing-cached-versions", 68499, 1942}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 558, 15, 122, "Title"],
+Cell[1106, 37, 631, 12, 49, "Text"],
+Cell[1740, 51, 1352, 38, 87, "Text"],
+Cell[CellGroupData[{
+Cell[3117, 93, 301, 9, 69, "Section",
+ CellTags->"installing"],
+Cell[3421, 104, 1989, 53, 144, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5447, 162, 149, 2, 58, "Section"],
+Cell[CellGroupData[{
+Cell[5621, 168, 251, 5, 30, "Text"],
+Cell[5875, 175, 169, 3, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6081, 183, 731, 11, 49, "Text"],
+Cell[6815, 196, 123, 2, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6975, 203, 264, 9, 31, "Text"],
+Cell[7242, 214, 101, 1, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7380, 220, 520, 13, 50, "Text"],
+Cell[7903, 235, 620, 14, 56, "Code",
+ Evaluatable->False],
+Cell[CellGroupData[{
+Cell[8548, 253, 178, 4, 30, "Text"],
+Cell[8729, 259, 120, 2, 32, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8910, 268, 294, 8, 58, "Section"],
+Cell[CellGroupData[{
+Cell[9229, 280, 167, 2, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[9421, 286, 445, 12, 30, "Text"],
+Cell[9869, 300, 504, 12, 32, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10422, 318, 214, 3, 29, "Subsubsection"],
+Cell[10639, 323, 370, 12, 30, "Text"],
+Cell[11012, 337, 380, 6, 32, "Input"],
+Cell[11395, 345, 169, 3, 32, "Input"],
+Cell[11567, 350, 642, 13, 50, "Text"],
+Cell[12212, 365, 390, 7, 32, "Input"],
+Cell[12605, 374, 223, 6, 30, "Text"],
+Cell[12831, 382, 359, 8, 54, "Input"],
+Cell[13193, 392, 246, 6, 31, "Text"],
+Cell[13442, 400, 270, 6, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13749, 411, 128, 1, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[13902, 416, 201, 7, 31, "Text"],
+Cell[14106, 425, 629, 12, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14772, 442, 542, 13, 30, "Text"],
+Cell[15317, 457, 380, 7, 32, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15746, 470, 190, 2, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[15961, 476, 252, 8, 30, "Text"],
+Cell[16216, 486, 147, 2, 32, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16412, 494, 392, 9, 29, "Subsubsection"],
+Cell[16807, 505, 517, 11, 49, "Text"],
+Cell[CellGroupData[{
+Cell[17349, 520, 677, 19, 31, "Text"],
+Cell[18029, 541, 331, 9, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18397, 555, 546, 14, 50, "Text"],
+Cell[18946, 571, 517, 9, 32, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19512, 586, 352, 4, 29, "Subsubsection"],
+Cell[19867, 592, 763, 21, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20667, 618, 256, 7, 31, "Text"],
+Cell[20926, 627, 644, 13, 54, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21607, 645, 309, 4, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[21941, 653, 486, 9, 68, "Text"],
+Cell[22430, 664, 928, 21, 96, "Input"],
+Cell[CellGroupData[{
+Cell[23383, 689, 214, 5, 30, "Text"],
+Cell[23600, 696, 267, 7, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23904, 708, 272, 8, 31, "Text"],
+Cell[24179, 718, 568, 12, 54, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24808, 737, 185, 3, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[25018, 744, 394, 6, 49, "Text"],
+Cell[25415, 752, 673, 14, 96, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26125, 771, 173, 4, 30, "Text"],
+Cell[26301, 777, 2433, 62, 222, "Input"],
+Cell[28737, 841, 536, 9, 49, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29322, 856, 274, 6, 29, "Subsubsection"],
+Cell[29599, 864, 1568, 38, 138, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31216, 908, 143, 1, 58, "Section"],
+Cell[CellGroupData[{
+Cell[31384, 913, 108, 1, 30, "Text"],
+Cell[31495, 916, 160, 3, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31692, 924, 228, 5, 30, "Text"],
+Cell[31923, 931, 946, 23, 159, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32906, 959, 178, 2, 29, "Subsubsection"],
+Cell[33087, 963, 506, 9, 48, "Text"],
+Cell[33596, 974, 254, 4, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33887, 983, 315, 7, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[34227, 994, 194, 4, 30, "Text"],
+Cell[34424, 1000, 697, 17, 75, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35158, 1022, 540, 16, 42, "Text"],
+Cell[CellGroupData[{
+Cell[35723, 1042, 819, 16, 32, "Input"],
+Cell[36545, 1060, 2087, 53, 207, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38705, 1121, 247, 3, 58, "Section"],
+Cell[38955, 1126, 620, 16, 54, "Input"],
+Cell[CellGroupData[{
+Cell[39600, 1146, 123, 1, 29, "Subsubsection"],
+Cell[39726, 1149, 596, 15, 49, "Text"],
+Cell[40325, 1166, 389, 10, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40751, 1181, 261, 4, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[41037, 1189, 670, 17, 31, "Text"],
+Cell[41710, 1208, 642, 15, 96, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42389, 1228, 317, 8, 31, "Text"],
+Cell[42709, 1238, 1119, 26, 75, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43865, 1269, 269, 4, 29, "Subsubsection"],
+Cell[44137, 1275, 144, 1, 30, "Text"],
+Cell[44284, 1278, 541, 10, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44862, 1293, 291, 4, 29, "Subsubsection"],
+Cell[45156, 1299, 159, 3, 30, "Text"],
+Cell[45318, 1304, 272, 4, 32, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45651, 1315, 109, 1, 58, "Section"],
+Cell[45763, 1318, 148, 2, 30, "Text"],
+Cell[45914, 1322, 853, 18, 75, "Input"],
+Cell[46770, 1342, 42, 0, 30, "Text"],
+Cell[46815, 1344, 264, 4, 29, "Subsubsection"],
+Cell[47082, 1350, 358, 10, 47, "Text"],
+Cell[47443, 1362, 816, 18, 96, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48296, 1385, 178, 2, 58, "Section"],
+Cell[CellGroupData[{
+Cell[48499, 1391, 118, 1, 30, "Text"],
+Cell[48620, 1394, 372, 9, 32, "Input"],
+Cell[48995, 1405, 178, 2, 30, "Text"],
+Cell[49176, 1409, 721, 15, 54, "Input"],
+Cell[CellGroupData[{
+Cell[49922, 1428, 242, 3, 29, "Subsubsection"],
+Cell[50167, 1433, 391, 11, 31, "Text"],
+Cell[50561, 1446, 528, 9, 32, "Input"],
+Cell[51092, 1457, 291, 10, 31, "Text"],
+Cell[51386, 1469, 200, 5, 32, "Input"],
+Cell[51589, 1476, 591, 14, 50, "Text"],
+Cell[52183, 1492, 207, 3, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52427, 1500, 182, 3, 29, "Subsubsection"],
+Cell[52612, 1505, 357, 9, 30, "Text"],
+Cell[52972, 1516, 520, 8, 32, "Input"],
+Cell[53495, 1526, 132, 2, 30, "Text"],
+Cell[53630, 1530, 354, 7, 32, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54033, 1543, 176, 2, 29, "Subsubsection"],
+Cell[54212, 1547, 215, 4, 32, "Input"],
+Cell[54430, 1553, 406, 9, 31, "Text"],
+Cell[54839, 1564, 222, 4, 32, "Input"],
+Cell[55064, 1570, 109, 1, 30, "Text"],
+Cell[55176, 1573, 185, 3, 32, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55398, 1581, 187, 3, 29, "Subsubsection"],
+Cell[55588, 1586, 266, 7, 30, "Text"],
+Cell[55857, 1595, 1933, 50, 161, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57839, 1651, 168, 2, 58, "Section"],
+Cell[58010, 1655, 304, 9, 31, "Text"],
+Cell[58317, 1666, 250, 5, 32, "Input"],
+Cell[58570, 1673, 214, 4, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58821, 1682, 132, 2, 69, "Section",
+ CellTags->"troubleshooting"],
+Cell[58956, 1686, 974, 20, 68, "Text"],
+Cell[CellGroupData[{
+Cell[59955, 1710, 201, 3, 40, "Subsubsection",
+ CellTags->"general-troubleshooting"],
+Cell[60159, 1715, 563, 9, 68, "Text"],
+Cell[CellGroupData[{
+Cell[60747, 1728, 244, 4, 32, "Input"],
+Cell[60994, 1734, 841, 20, 117, InheritFromParent]
+}, Open  ]],
+Cell[61850, 1757, 662, 12, 68, "Text"],
+Cell[62515, 1771, 273, 5, 49, "Text"],
+Cell[CellGroupData[{
+Cell[62813, 1780, 133, 2, 32, "Input"],
+Cell[62949, 1784, 278, 6, 35, "Output"]
+}, Open  ]],
+Cell[63242, 1793, 756, 16, 49, "Text"],
+Cell[64001, 1811, 593, 12, 68, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64631, 1828, 155, 2, 40, "Subsubsection",
+ CellTags->"clearing-cached-versions"],
+Cell[64789, 1832, 478, 8, 68, "Text"],
+Cell[65270, 1842, 486, 13, 54, "Input"],
+Cell[65759, 1857, 403, 10, 30, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

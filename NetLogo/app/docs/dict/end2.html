@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: end2</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="end2"> 
+ <h3> <a>end2<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">end2</span> <img alt="Link Command" src="../images/link.gif"> </h4> 
+ <p> This is a built-in link variable. It indicates the second endpoint (turtle) of a link. For directed links this will always be the destination for undirected links it will always be the turtle with the higher who number. You cannot set end2. </p>
+ <pre>
+crt 2
+ask turtle 1
+[ create-link-with turtle 0 ]
+ask links
+[ show end2 ] ;; shows turtle 1
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

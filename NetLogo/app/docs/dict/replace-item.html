@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: replace-item</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="replace-item"> 
+ <h3> <a>replace-item<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">replace-item <i>index list value</i></span> <span class="prim_example">replace-item <i>index string1 string2</i></span> </h4> 
+ <p> On a list, replaces an item in that list. <i>index</i> is the index of the item to be replaced, starting with 0. (The 6th item in a list would have an index of 5.) Note that "replace-item" is used in conjunction with "set" to change a list. </p>
+ <p> Likewise for a string, but the given character of <i>string1</i> removed and the contents of <i>string2</i> spliced in instead. </p>
+ <pre>
+show replace-item 2 [2 7 4 5] 15
+=&gt; [2 7 15 5]
+show replace-item 1 "cat" "are"
+=&gt; "caret"
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

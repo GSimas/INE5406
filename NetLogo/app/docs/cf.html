@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Cf Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Cf Extension</h1>
+<h2><a href="#using" id="using" class="section-anchor">Using</a></h2>
+<p>The CF extension currently includes primitives that allow you to do things similar to <code>if</code>-<code>else if</code>-<code>else</code> chains you see in other languages, as well as things similar to <code>switch</code>es in other languages. However, it does it in a more flexible way than many languages. A few quick examples to get you started:</p>
+<pre><code>let x 5
+let y 7
+cf:when
+cf:case [ x &gt; y ] [ print &quot;x is bigger than y!&quot; ]
+cf:case [ x &lt; y ] [ print &quot;x is less than y!&quot; ]
+cf:else           [ print &quot;x is the same as y!&quot; ]
+</code></pre>
+<pre><code>let my-awesome-number 5
+cf:match my-awesome-number
+cf:case [ [n] -&gt; n &gt; 7 ] [ print &quot;The number is greater than 7!&quot; ]
+cf:case [ [n] -&gt; n &lt; 3 ] [ print &quot;The number is less than 3!&quot; ]
+cf:else                  [ print &quot;The number is somewhere in between 3 and 7!&quot; ]
+</code></pre>
+<h2><a href="#cases" id="cases" class="section-anchor">Cases</a></h2>
+<p>Central to this extension is the concept of a case. A case is simply a list of two elements, where the first element is a reporter and the second element is either a reporter or a command. The first element, called the condition, <em>must</em> report either <code>true</code> or <code>false</code>. The second argument is called the consequent. If you&rsquo;re curious about how CF works, keep reading this section. Otherwise, feel free to skip to the list of primitives; you don&rsquo;t need to understand the internals to start using CF.</p>
+<p>Almost all primitives in the CF extension take a list of cases as an argument. Typically, they go through the cases, looking for a true condition. When they find one, they then run the consequent. Although CF provides primitives that make constructing a list of cases easy, you could actually just build such a list with primitives already in NetLogo, like so:</p>
+<pre><code>let x 5
+let y 7
+let list-of-cases (list
+  (list task [ x &gt; y ] task [ print &quot;x is greater than y!&quot; ])
+  (list task [ x &lt; y ] task [ print &quot;x is less than y!&quot; ])
+  (list task [ true  ] task [ print &quot;x is the same as y!&quot; ])
+)
+</code></pre>
+<p>However, this is not very nice looking. With CF, you can write it like this instead:</p>
+<pre><code>let x 5
+let y 7
+
+let list-of-cases
+cf:case [ x &gt; y ] [ print &quot;x is greater than y!&quot; ]
+cf:case [ x &lt; y ] [ print &quot;x is less than y!&quot; ]
+cf:else           [ print &quot;x is the same as y!&quot; ]
+</code></pre>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#cf:when"><code>cf:when</code></a>
+  <a href="#cf:select"><code>cf:select</code></a>
+  <a href="#cf:match"><code>cf:match</code></a>
+  <a href="#cf:matching"><code>cf:matching</code></a>
+  <a href="#cf:case"><code>cf:case</code></a>
+  <a href="#cf:case-is"><code>cf:case-is</code></a>
+  <a href="#cf:else"><code>cf:else</code></a>
+</div>
+<div class="dict_entry" id="cf:when">
+  <h3><a>cf:when</a></h3>
+  <h4>
+    <span class="prim_example">cf:when <i>list-of-cases</i></span>
+  </h4>
+<p>Runs the command task from the first case in the list with a true condition. For instance:</p>
+<pre><code class="language-NetLogo">let x 3
+cf:when
+cf:case [ x &lt; 2 ] [ print &quot;x is less than 2!&quot; ]
+cf:case [ x &lt; 4 ] [ print &quot;x is less than 4!&quot; ]
+cf:case [ x &lt; 6 ] [ print &quot;x is less than 6!&quot; ]
+cf:else           [ print &quot;x is greater than or equal to 6!&quot; ]
+</code></pre>
+<p>The above code will print out <code>x is less than 4!</code> since that&rsquo;s the first case with a true condition.</p>
+<p>If no true case is found, and no <code>cf:else</code> given, <code>cf:when</code> will error with a suggestion for a fix.</p>
+</div>
+<div class="dict_entry" id="cf:select">
+  <h3><a>cf:select</a></h3>
+  <h4>
+    <span class="prim_example">cf:select <i>list-of-cases</i></span>
+  </h4>
+<p>Picks the first case in the list with a true condition and reports the result of its consequent. The consequents of the cases in a <code>cf:select</code> must be reporter tasks. Thus, <code>cf:select</code> is exactly like <code>cf:when</code>, except that it reports the value from the true case, rather than just running it. For example:</p>
+<pre><code class="language-NetLogo">let x 3
+print cf:select
+cf:case [ x &lt; 2 ] [ &quot;x is less than 2!&quot; ]
+cf:case [ x &lt; 4 ] [ &quot;x is less than 4!&quot; ]
+cf:case [ x &lt; 6 ] [ &quot;x is less than 6!&quot; ]
+cf:else           [ &quot;x is greater than or equal to 6!&quot; ]
+</code></pre>
+<p>The above code will print out <code>x is less than 4!</code> since that&rsquo;s the first case with a true condition.</p>
+<p>If no true case is found, and no <code>cf:else</code> given, <code>cf:select</code> will error with a suggestion for a fix.</p>
+</div>
+<div class="dict_entry" id="cf:match">
+  <h3><a>cf:match</a></h3>
+  <h4>
+    <span class="prim_example">cf:match <i>value</i> <i>list-of-cases</i></span>
+  </h4>
+<p><code>cf:match</code> is like <code>cf:when</code>, except that it applies the conditions in its cases to the given value. For instance:</p>
+<pre><code class="language-NetLogo">ask patch 0 0 [ set pcolor red ]
+cf:match ([ pcolor ] of patch 0 0)
+cf:case [ [c] -&gt; c = green ] [ print &quot;The center patch is green!&quot; ]
+cf:case [ [c] -&gt; c = red  ] [ print &quot;The center patch is red!&quot; ]
+cf:case [ [c] -&gt; c = blue  ] [ print &quot;The center patch is blue!&quot; ]
+cf:else           [ print &quot;I don't know what color the center patch is!&quot; ]
+</code></pre>
+<p>The above code will print out <code>The center patch is green!</code> since that&rsquo;s the first case with a true condition.</p>
+<p>The value is also passed to the consequent of the case. For instance:</p>
+<pre><code class="language-NetLogo">cf:match one-of turtles
+cf:case [ [t] -&gt; [color] of t = red  ] [ [t] -&gt; ask t [ show &quot;I'm red!&quot; ] ]
+cf:case [ [t] -&gt; [color] of t = blue ] [ [t] -&gt; ask t [ show &quot;I'm blue!&quot; ] ]
+cf:else                         [ [t] -&gt; ask t [ show &quot;I'm some other color!&quot; ] ]
+</code></pre>
+<p>If no matching case is found, <code>cf:match</code> will error with a suggestion for a fix.</p>
+</div>
+<div class="dict_entry" id="cf:matching">
+  <h3><a>cf:matching</a></h3>
+  <h4>
+    <span class="prim_example"><i>value</i> cf:matching <i>list-of-cases</i></span>
+  </h4>
+<p><code>cf:matching</code> is like <code>cf:match</code>, except that it reports the result of the matching case. <code>cf:matching</code> is to <code>cf:match</code> as <code>cf:select</code> is to <code>cf:when</code>. For instance:</p>
+<pre><code class="language-NetLogo">let my-awesome-number 3
+print my-awesome-number cf:matching
+cf:case [ [num] -&gt; num &lt; 2 ] [ &quot;The number is less than 2!&quot; ]
+cf:case [ [num] -&gt; num &lt; 4 ] [ &quot;The number is less than 4!&quot; ]
+cf:case [ [num] -&gt; num &lt; 6 ] [ &quot;The number is less than 6!&quot; ]
+cf:else           [ &quot;The number is greater than or equal to 6!&quot; ]
+</code></pre>
+<p>The above code will print out <code>The number is less than 4!</code> since that&rsquo;s the first case with a true condition.
+<code>cf:matching</code> also applies the consequent of the matching case to the given value, just like <code>cf:match</code>:</p>
+<pre><code class="language-NetLogo">print (one-of turtles) cf:matching
+cf:case [ [t] -&gt; [color] of t = red  ] [ [t] -&gt; [ &quot;I'm red!&quot; ] of t ]
+cf:case [ [t] -&gt; [color] of t = blue ] [ [t] -&gt; [ &quot;I'm blue!&quot; ] of t ]
+cf:else                                [ [t] -&gt; [ &quot;I'm some other color!&quot; ] of t ]
+</code></pre>
+<p>If no matching case is found, <code>cf:matching</code> will error with a suggestion for a fix.</p>
+</div>
+<div class="dict_entry" id="cf:case">
+  <h3><a>cf:case</a></h3>
+  <h4>
+    <span class="prim_example">cf:case <i>condition</i> <i>consequent</i> <i>list-of-remaining-cases</i></span>
+  </h4>
+<p><code>cf:case</code> allows you to construct a list of cases that the other primitives will then pick from. It constructs a new case from the the two given tasks and adds it to the front of the list of remaining cases. Thus, you can chain it together with other instances of <code>cf:case</code> to create an arbitrarily long list of cases.</p>
+<p>Note that because the condition in a case is just an anonymous reporter, you can check for many common conditions in a very concise manner. For instance, if we want to do something depending on the breed of a turtle, you can do:</p>
+<pre><code class="language-NetLogo">cf:match my-turtle
+cf:case is-wolf? [ show &quot;Growl!&quot; ]
+cf:case is-a-sheep? [ show &quot;Baah!&quot; ]
+cf:case is-dog? [ show &quot;Bark!&quot; ]
+cf:case is-cat? [ show &quot;Meow!&quot; ]
+cf:else [ show &quot;I'm not sure what sound to make...&quot; ]
+</code></pre>
+</div>
+<div class="dict_entry" id="cf:case-is">
+  <h3><a>cf:case-is</a></h3>
+  <h4>
+    <span class="prim_example">cf:case-is <i>relationship</i> <i>consequent</i> <i>list-of-remaining-cases</i></span>
+  </h4>
+<p><code>cf:case-is</code> allows you to write some common uses of <code>cf:case</code> in <code>cf:match</code> or <code>cf:matching</code> in a more concise, readable way. The given reporter should be a relationship such as <code>=</code>, <code>&lt;</code>, or <code>member?</code>. <code>cf:case-is</code> then fills in the second argument of the reporter with the given value. This is much easier to understand in an example:</p>
+<pre><code>let x 5
+print x cf:matching
+cf:case-is = 0 [ &quot;x is 0!&quot; ]
+cf:case-is = 1 [ &quot;x is 1!&quot; ]
+cf:case-is &gt; 2 [ &quot;x is greater than 2!&quot; ]
+cf:case-is member? [ -1 -2 -3] [ &quot;x is either -1, -2, or -3&quot; ]
+cf:else [ &quot;x is something else&quot; ]
+</code></pre>
+<p>Thus, <code>cf:case-is</code> allows you to do something quite similar to <code>switch</code> in some other languages, but is also much more flexible.</p>
+</div>
+<div class="dict_entry" id="cf:else">
+  <h3><a>cf:else</a></h3>
+  <h4>
+    <span class="prim_example">cf:else <i>command/reporter</i></span>
+  </h4>
+<p><code>cf:else</code> creates a case where the condition is always true. Thus, it allows you to create a case that will be run if all the other cases fail. You should almost always finish up a chain of cases with <code>cf:else</code>. However, if you&rsquo;d prefer to error rather than have a default case, you can replace <code>cf:else</code> with <code>[]</code>, like so:</p>
+<pre><code class="language-NetLogo">let x -5
+cf:when
+cf:case [ 0 &lt; x and x &lt; 10 ] [ print &quot;x is between 0 and 10!&quot; ]
+cf:case [ x &lt; 100 ] [ print &quot;x is less than 100!&quot; ]
+[]
+</code></pre>
+<p>The above code will error, since no matching case will be found.</p>
+</div>

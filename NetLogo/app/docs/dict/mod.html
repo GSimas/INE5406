@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: mod</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="mod"> 
+ <h3> <a>mod<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example"><i>number1</i> mod <i>number2</i></span> </h4> 
+ <p> Reports <i>number1</i> modulo <i>number2</i>: that is, the residue of <i>number1</i> (mod <i>number2</i>). mod is is equivalent to the following NetLogo code: </p>
+ <pre>
+<i>number1</i> - (floor (<i>number1</i> / <i>number2</i>)) * <i>number2</i>
+</pre> 
+ <p> Note that mod is "infix", that is, it comes between its two inputs. </p>
+ <pre>
+show 62 mod 5
+=&gt; 2
+show -8 mod 3
+=&gt; 1
+</pre> 
+ <p> See also <a href="../dictionary.html#remainder">remainder</a>. mod and remainder behave the same for positive numbers, but differently for negative numbers. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

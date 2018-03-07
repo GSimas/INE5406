@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Rnd Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Rnd Extension</h1>
+<p>This extension adds the ability to do <a href="https://en.wikipedia.org/wiki/Fitness_proportionate_selection" target="_blank">roulette wheel selection</a> in NetLogo. It provides a simpler way to accomplish the same thing as the <a href="https://github.com/NetLogo/models/blob/master/Code%20Examples/Lottery%20Example.nlogo" target="_blank">Lottery Example</a> from the NetLogo Models Library.</p>
+<h2><a href="#usage" id="usage" class="section-anchor">Usage</a></h2>
+<p>Which primitive to use depends on whether you want to select an item from a list or from an agenset. It also depends on whether you want one or many items and, if you want many, if repeats are allowed or not. The following table summarizes the situation:</p>
+<table>
+<thead>
+<tr><th></th><th>From an AgentSet</th><th>From a List</th></tr>
+</thead>
+<tbody>
+<tr><td>One item</td><td><a href="#rnd:weighted-one-of"><code>rnd:weighted-one-of</code></a></td><td><a href="#rnd:weighted-one-of-list"><code>rnd:weighted-one-of-list</code></a></td></tr>
+<tr><td>Many items, without repeats</td><td><a href="#rnd:weighted-n-of-size"><code>rnd:weighted-n-of</code></a></td><td><a href="#rnd:weighted-n-of-list-size"><code>rnd:weighted-n-of-list</code></a></td></tr>
+<tr><td>Many items, with repeats</td><td><a href="#rnd:weighted-n-of-with-repeats"><code>rnd:weighted-n-of-with-repeats</code></a></td><td><a href="#rnd:weighted-n-of-list-with-repeats"><code>rnd:weighted-n-of-list-with-repeats</code></a></td></tr>
+</tbody>
+</table>
+<p>(<strong>Note:</strong> the initial version of the extension had a single set of primitives for both lists and agentsets, but it turned out to be confusing, so we changed it. If you were using the old version of the extension, you will need to modify your code to use the new primitives.)</p>
+<p>In all cases, you will need to provide two things to the primitive:</p>
+<ul>
+<li>The &ldquo;candidates&rdquo;: the items that the primitive will select from.</li>
+<li>The &ldquo;weight&rdquo;: how likely it is for each candidate to be selected.</li>
+</ul>
+<p>If you want to select more than one items, you will also need to tell it:</p>
+<ul>
+<li>How many items to select.</li>
+</ul>
+<h2><a href="#a-note-about-performance" id="a-note-about-performance" class="section-anchor">A note about performance</a></h2>
+<p>The extension uses Keith Schwarz&rsquo;s implementation of Vose&rsquo;s Alias Method (see Schwarz&rsquo;s <a href="http://www.keithschwarz.com/darts-dice-coins/" target="_blank">Darts, Dice, and Coins</a> page). Assuming you are choosing <em>n</em> candidates for a collection of size <em>m</em> <strong>with repeats</strong>, this method has an initialization cost of <em>O(m)</em> followed by a cost of <em>O(1)</em> for each item you pick, so <em>O(m + n)</em> overall.</p>
+<p>For example, in the following code:</p>
+<pre><code>let candidates n-values 500 [ [n] -&gt; n ]
+rnd:weighted-n-of-list-with-repeats 100 candidates [ [w] -&gt; w ]
+n-values 100 [ rnd:weighted-one-of-list candidates [ [w] -&gt; w ] ]
+</code></pre>
+<p>&hellip;the line using <code>rnd:weighted-n-of-list-with-repeats</code> will likely run 100 times faster than the line using a combination of <code>n-values</code> and <code>rnd:weighted-one-of-list</code>. This is because <code>rnd:weighted-n-of-list-with-repeats</code> only initializes the algorithm once and <code>rnd:weighted-one-of</code> does it each time it is called.</p>
+<p>(Note that composing <code>n-values</code> with <code>rnd:weighted-one-of-list</code> does not preserve the order of the original candidate list, while <code>rnd:weighted-n-of-list-with-repeats</code> does.)</p>
+<p>Things are a bit more complicated if you are choosing <strong>without repeats</strong>, however. In this case, the algorithm may have to discard some picks because the candidates have already been selected. When this starts happening too often (maybe because some weights are much bigger than others), the extension re-initializes the algorithm with the already-picked candidates excluded. This should not happen too often, however, so while picking without repeats has an upper bound of <em>O(m * n)</em> in theory, it should usually not be much more than <em>O(m + n)</em> in practice.</p>
+<p>The previous remarks apply to agentset primitives as much as they apply to list primitives.</p>
+<h2>Primitives</h2>
+<h3>AgentSet Primitives</h3>
+<div id="agentset">
+  <a href="#rnd:weighted-one-of"><code>rnd:weighted-one-of</code></a>
+  <a href="#rnd:weighted-n-of"><code>rnd:weighted-n-of</code></a>
+  <a href="#rnd:weighted-n-of-with-repeats"><code>rnd:weighted-n-of-with-repeats</code></a>
+</div>
+<h3>List Primitives</h3>
+<div id="list">
+  <a href="#rnd:weighted-one-of-list"><code>rnd:weighted-one-of-list</code></a>
+  <a href="#rnd:weighted-n-of-list"><code>rnd:weighted-n-of-list</code></a>
+  <a href="#rnd:weighted-n-of-list-with-repeats"><code>rnd:weighted-n-of-list-with-repeats</code></a>
+</div>
+<div class="dict_entry" id="rnd:weighted-one-of">
+  <h3><a>rnd:weighted-one-of</a></h3>
+  <h4>
+    <span class="prim_example">rnd:weighted-one-of <i>agentset</i> <i>reporter</i></span>
+  </h4>
+<p>Reports a random agent from <tt><i>agentset</i></tt>.</p>
+<p>The probability of each agent being picked is proportional to the weight given by the <tt><i>reporter</i></tt> for that agent. The weights must not be negative.</p>
+<p>If the agentset is empty, it reports <a href="dictionary.html#nobody"><code>nobody</code></a>.</p>
+<p>Here is a full rewrite of the <strong>Lottery Example</strong> model using the <code>rnd:weighted-one-of</code> primitive:</p>
+<pre><code>extensions [ rnd ]
+
+to setup
+  clear-all
+  ; create a turtle on every fifth patch
+  ask patches with [ pxcor mod 5 = 0 and pycor mod 5 = 0 ] [
+    sprout 1 [
+      set size 2 + random 6 ; vary the size of the turtles
+      set label 0           ; start them out with no wins
+      set color color - 2   ; make turtles darker so the labels stand out
+    ]
+  ]
+  reset-ticks
+end
+
+to go
+  ask rnd:weighted-one-of turtles [ size ] [
+    set label label + 1
+  ]
+  tick
+end
+</code></pre>
+</div>
+<div class="dict_entry" id="rnd:weighted-n-of">
+  <h3><a>rnd:weighted-n-of</a></h3>
+  <h4>
+    <span class="prim_example">rnd:weighted-n-of <i>size</i> <i>agentset</i> <i>[ reporter ]</i></span>
+  </h4>
+<p>Reports an agentset of the given <tt><i>size</i></tt> randomly chosen from the <tt><i>agentset</i></tt>, with no repeats.</p>
+<p>The probability of each agent being picked is proportional to the weight given by the <tt><i>reporter</i></tt> for that agent. The weights must be non-negative numbers.</p>
+<p>It is an error for <tt><i>size</i></tt> to be greater than the size of the <tt><i>agentset</i></tt>.</p>
+<p>If, at some point during the selection, there remains only candidates with a weight of <code>0.0</code>, they all have an equal probability of getting picked.</p>
+</div>
+<div class="dict_entry" id="rnd:weighted-n-of-with-repeats">
+  <h3><a>rnd:weighted-n-of-with-repeats</a></h3>
+  <h4>
+    <span class="prim_example">rnd:weighted-n-of-with-repeats <i>size</i> <i>agentset</i> <i>[ reporter ]</i></span>
+  </h4>
+<p>Reports a <strong>list</strong> of the given <tt><i>size</i></tt> randomly chosen from the <tt><i>agentset</i></tt>, with repeats. (Why a list instead of an agentset? Because an agentset cannot contain the same agent more than once.)</p>
+<p>The probability of each agent being picked is proportional to the weight given by the <tt><i>reporter</i></tt> for that agent. The weights must be non-negative numbers.</p>
+<p>It is <strong>not</strong> an error for <tt><i>size</i></tt> to be greater than the size of the <tt><i>agentset</i></tt>, but there has to be at least one candidate.</p>
+<p>If, at some point during the selection, there remains only candidates with a weight of <code>0.0</code>, they all have an equal probability of getting picked.</p>
+<p>If all weights are <code>0.0</code>, each candidate has an equal probability of being picked.</p>
+</div>
+<div class="dict_entry" id="rnd:weighted-one-of-list">
+  <h3><a>rnd:weighted-one-of-list</a></h3>
+  <h4>
+    <span class="prim_example">rnd:weighted-one-of-list <i>list</i> <i>anonymous-reporter</i></span>
+  </h4>
+<p>Reports a random item from <tt><i>list</i></tt>.</p>
+<p>The probability of each item being picked is proportional to the weight given by the <tt><i>anonymous-reporter</i></tt> for that item. The weights must not be negative. The first argument passed to the anonymous procedure refers to the list item. (See the <a href="programming.html#anonymous-procedures">Anonymous Procedures section</a> of the Programming Guide for more details.)</p>
+<p>It is an error for the list to be empty.</p>
+<p>A common way to use the primitive is to have a list of lists, where the first item of each sublist is the thing you want to choose and the second item is the weight. Here is a short example:</p>
+<pre><code>let pairs [ [ &quot;A&quot; 0.2 ] [ &quot;B&quot; 0.8 ] ]
+repeat 25 [
+  ; report the first item of the pair selected using
+  ; the second item (i.e., `last p`) as the weight
+  type first rnd:weighted-one-of-list pairs [ [p] -&gt; last p ]
+]
+</code></pre>
+<p>This should print <code>B</code> roughly four times more often than it prints <code>A</code>.</p>
+<p>If you happen to have your items and your weights in two separate lists, you can combine them into pairs by using a combination of <a href="dictionary.html#map"><code>map</code></a> and <a href="dictionary.html#list"><code>list</code></a>:</p>
+<pre><code>let items [ &quot;A&quot; &quot;B&quot; &quot;C&quot; ]
+let weights [ 0.1 0.2 0.7 ]
+let pairs (map list items weights)
+</code></pre>
+<p>Since we apply <a href="dictionary.html#map"><code>map</code></a> to both the <code>items</code> list and the <code>weights</code> list, the parentheses are needed in <code>(map list items weights)</code>. We also use the concise anonymous procedure syntax (see the <a href="programming.html#anonymous-procedures">programming guide</a>) to pass <a href="dictionary.html#list"><code>list</code></a> as the reporter for <a href="dictionary.html#map"><code>map</code></a>. The same thing could have been written <code>(map [ [a b] -&gt; list a b ] items weights)</code>.</p>
+</div>
+<div class="dict_entry" id="rnd:weighted-n-of-list">
+  <h3><a>rnd:weighted-n-of-list</a></h3>
+  <h4>
+    <span class="prim_example">rnd:weighted-n-of-list <i>size</i> <i>list</i> <i>anonymous-reporter</i></span>
+  </h4>
+<p>Reports a list of the given <tt><i>size</i></tt> randomly chosen from the <tt><i>list</i></tt> of candidates, with no repeats.</p>
+<p>The probability of each item being picked is proportional to the weight given by the <tt><i>anonymous-reporter</i></tt> for that item. The weights must not be negative. The first argument passed to the anonymous procedure refers to the list item. (See the <a href="programming.html#anonymous-procedures">Anonymous Procedures section</a> of the Programming Guide for more details.)</p>
+<p>It is an error for <tt><i>size</i></tt> to be greater than the size of the <tt><i>list</i> of candidates</tt>.</p>
+<p>If, at some point during the selection, there remains only candidates with a weight of <code>0.0</code>, they all have an equal probability of getting picked.</p>
+<p>The items in the resulting list appear in the same order that they appeared in the list of candidates. (If you want them in random order, use <a href="dictionary.html#shuffle"><code>shuffle</code></a> on the result).</p>
+<p>Example:</p>
+<pre><code>let candidates n-values 8 [ [n] -&gt; 2 ^ (n + 1) ] ; make a list with the powers of two
+print rnd:weighted-n-of-list 4 candidates [ [w] -&gt; w ]
+</code></pre>
+<p>This should print a list of four numbers, where the bigger numbers (32, 64, 128, 256) have a much better chance to show up than the smaller ones (2, 4, 8, 16).</p>
+</div>
+<div class="dict_entry" id="rnd:weighted-n-of-list-with-repeats">
+  <h3><a>rnd:weighted-n-of-list-with-repeats</a></h3>
+  <h4>
+    <span class="prim_example">rnd:weighted-n-of-list-with-repeats <i>size</i> <i>list</i> <i>anonymous-reporter</i></span>
+  </h4>
+<p>Reports a list of the given <tt><i>size</i></tt> randomly chosen from the <tt><i>list</i></tt> of candidates, with repeats.</p>
+<p>The probability of each item being picked is proportional to the weight given by the <tt><i>anonymous-reporter</i></tt> for that item. The weights must not be negative. The first argument passed to the anonymous procedure refers to the list item. (See the <a href="programming.html#anonymous-procedures">Anonymous Procedures section</a> of the Programming Guide for more details.)</p>
+<p>It is <strong>not</strong> an error for <tt><i>size</i></tt> to be greater than the size of the <tt><i>list</i></tt> of candidates, but there has to be at least one candidate.</p>
+<p>If, at some point during the selection, there remains only candidates with a weight of <code>0.0</code>, they all have an equal probability of getting picked.</p>
+<p>If all weights are <code>0.0</code>, each candidate has an equal probability of being picked.</p>
+<p>The items in the resulting list appear in the same order that they appeared in the list of candidates. (If you want them in random order, use <a href="dictionary.html#shuffle"><code>shuffle</code></a> on the result).</p>
+<p>Example:</p>
+<pre><code>let pairs [ [ &quot;A&quot; 0.2 ] [ &quot;B&quot; 0.8 ] ]
+print map first rnd:weighted-n-of-list-with-repeats 25 pairs [ [p] -&gt; last p ]
+</code></pre>
+<p>This should print a list of 25 <code>A</code>s and <code>B</code>s, with roughly four times as many <code>B</code>s than <code>A</code>s.</p>
+</div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: my-&lt;breeds&gt; my-links</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="my-links"> 
+ <h3> <a>my-&lt;breeds&gt;</a> <a>my-links<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">my-&lt;breeds&gt;</span> <span class="prim_example">my-links</span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> Reports an agentset of all links connected to the caller of the corresponding breed, regardless of directedness. Generally, you might consider using <a href="../dictionary.html#my-out-links"><code>my-out-links</code></a> instead of this primitive, as it works well for either directed or undirected networks (since it excludes directed, incoming links). </p>
+ <pre>
+crt 5
+ask turtle 0
+[
+  create-links-with other turtles
+  show my-links ;; prints the agentset containing all links
+                ;; (since all the links we created were with turtle 0 )
+]
+ask turtle 1
+[
+  show my-links ;; shows an agentset containing the link 0 1
+]
+end
+</pre> If you only want the undirected links connected to a node, you can do 
+ <code>my-links with [ not is-directed-link? self ]</code>. 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

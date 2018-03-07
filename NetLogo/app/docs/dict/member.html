@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: member?</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="member"> 
+ <h3> <a>member?<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">member? <i>value list</i></span> <span class="prim_example">member? <i>string1 string2</i></span> <span class="prim_example">member? <i>agent agentset</i></span> </h4> 
+ <p> For a list, reports true if the given value appears in the given list, otherwise reports false. </p>
+ <p> For a string, reports true or false depending on whether <i>string1</i> appears anywhere inside <i>string2</i> as a substring. </p>
+ <p> For an agentset, reports true if the given agent is appears in the given agentset, otherwise reports false. </p>
+ <pre>
+show member? 2 [1 2 3]
+=&gt; true
+show member? 4 [1 2 3]
+=&gt; false
+show member? "bat" "abate"
+=&gt; true
+show member? turtle 0 turtles
+=&gt; true
+show member? turtle 0 patches
+=&gt; false
+</pre> 
+ <p> See also <a href="../dictionary.html#position">position</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: min-one-of</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="min-one-of"> 
+ <h3> <a>min-one-of<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">min-one-of <i>agentset</i> [<i>reporter</i>]</span> </h4> 
+ <p> Reports a random agent in the agentset that reports the lowest value for the given reporter. If there is a tie, this command reports one random agent that meets the condition. If you want all such agents use with-min instead. </p>
+ <pre>
+show min-one-of turtles [xcor + ycor]
+;; reports the first turtle with the smallest sum of
+;; coordinates
+</pre> 
+ <p> See also <a href="../dictionary.html#with-min">with-min</a>, <a href="../dictionary.html#min-n-of">min-n-of</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

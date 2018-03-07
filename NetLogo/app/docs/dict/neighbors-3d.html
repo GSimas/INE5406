@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: neighbors neighbors6</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="neighbors-3d"> 
+ <h3> <a>neighbors<span class="since">4.1</span></a> <a>neighbors6<span class="since">4.1</span></a> </h3> 
+ <h4> <span class="prim_example">neighbors</span> <span class="prim_example">neighbors6</span> <img alt="Turtle Command" src="../images/turtle.gif"> <img alt="Patch Command" src="../images/patch.gif"> </h4> 
+ <p> 3D versions of <a href="../dictionary.html#neighbors">neighbors</a> and <a href="../dictionary.html#neighbors">neighbors4</a>. </p>
+ <p> Reports an agentset containing the 26 surrounding patches (neighbors) or 6 surrounding patches (neighbors6). </p>
+ <pre>
+show sum values-from neighbors [count turtles-here]
+  ;; prints the total number of turtles on the twenty-six
+  ;; patches around this turtle or patch
+ask neighbors6 [ set pcolor red ]
+  ;; turns the six neighboring patches red
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

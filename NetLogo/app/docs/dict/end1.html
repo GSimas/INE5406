@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: end1</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="end1"> 
+ <h3> <a>end1<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">end1</span> <img alt="Link Command" src="../images/link.gif"> </h4> 
+ <p> This is a built-in link variable. It indicates the first endpoint (turtle) of a link. For directed links this will always be the source for undirected links it will always be the turtle with the lower who number. You cannot set end1. </p>
+ <pre>
+crt 2
+ask turtle 0
+[ create-link-to turtle 1 ]
+ask links
+[ show end1 ] ;; shows turtle 0
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

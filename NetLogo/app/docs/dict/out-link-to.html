@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: out-&lt;breed&gt;-to out-link-to</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="out-link-to"> 
+ <h3> <a>out-&lt;breed&gt;-to</a> <a>out-link-to<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">out-&lt;breed&gt;-to <i>turtle</i></span> <span class="prim_example">out-link-to <i>turtle</i></span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> Reports a directed link from the caller to <i>turtle</i> or an undirected link connecting the two. If no link exists then it reports nobody. If more than one such link exists, reports a random one. You can think of this as "give me a link that I can use to travel from the caller to <i>turtle</i>." </p>
+ <pre>
+crt 2
+ask turtle 0 [
+  create-link-to turtle 1
+  show out-link-to turtle 1 ;; shows link 0 1
+]
+ask turtle 1
+[
+  show out-link-to turtle 0 ;; shows nobody
+]
+</pre> 
+ <p> See also: <a href="../dictionary.html#in-link-from">in-link-from</a> <a href="../dictionary.html#link-with">link-with</a> </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

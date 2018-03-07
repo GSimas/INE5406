@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: file-read-line</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="file-read-line"> 
+ <h3> <a>file-read-line<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">file-read-line</span> </h4> 
+ <p> Reads the next line in the file and reports it as a string. It determines the end of the file by a carriage return, an end of file character or both in a row. It does not return the line terminator characters. </p>
+ <p> Also note that the <a href="../dictionary.html#file-open">file-open</a> command must be called before this reporter can be used, and there must be data remaining in the file. Use the reporter <a href="../dictionary.html#file-at-end">file-at-end?</a> to determine if you are at the end of the file. </p>
+ <pre>
+file-open "my-file.txt"
+print file-read-line
+=&gt; Hello World
+</pre> 
+ <p> See also <a href="../dictionary.html#file-open">file-open</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

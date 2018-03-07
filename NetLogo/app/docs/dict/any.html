@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: any?</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="any"> 
+ <h3> <a>any?<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">any? <i>agentset</i></span> </h4> 
+ <p> Reports true if the given agentset is non-empty, false otherwise. </p>
+ <p> Equivalent to "count <i>agentset</i> &gt; 0", but more efficient (and arguably more readable). </p>
+ <pre>
+if any? turtles with [color = red]
+  [ show "at least one turtle is red!" ]
+</pre> 
+ <p> Note: nobody is not an agentset. You only get nobody back in situations where you were expecting a single agent, not a whole agentset. If any? gets nobody as input, an error results. </p>
+ <p> See also <a href="../dictionary.html#all">all?</a>, <a href="../dictionary.html#nobody">nobody</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

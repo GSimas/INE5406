@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: file-read-characters</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="file-read-characters"> 
+ <h3> <a>file-read-characters<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">file-read-characters <i>number</i></span> </h4> 
+ <p> Reports the given <i>number</i> of characters from an opened file as a string. If there are fewer than that many characters left, it will report all of the remaining characters. </p>
+ <p> Note that it will return every character including newlines and spaces. </p>
+ <p> Also note that the <a href="../dictionary.html#file-open">file-open</a> command must be called before this reporter can be used, and there must be data remaining in the file. Use the reporter <a href="../dictionary.html#file-at-end">file-at-end?</a> to determine if you are at the end of the file. </p>
+ <pre>
+file-open "my-file.txt"
+print file-read-characters 5
+;; Current line in file is "Hello World"
+=&gt; Hello
+</pre> 
+ <p> See also <a href="../dictionary.html#file-open">file-open</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

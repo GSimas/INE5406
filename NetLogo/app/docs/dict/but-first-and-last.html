@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: but-first butfirst bf but-last butlast bl</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="but-first-and-last"> 
+ <h3> <a>but-first<span class="since">1.0</span></a> <a>butfirst<span class="since">1.0</span></a> <a>bf<span class="since">1.0</span></a> <a>but-last<span class="since">1.0</span></a> <a>butlast<span class="since">1.0</span></a> <a>bl<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">but-first <i>list</i></span> <span class="prim_example">but-first <i>string</i></span> <span class="prim_example">but-last <i>list</i></span> <span class="prim_example">but-last <i>string</i></span> </h4> 
+ <p> When used on a list, but-first reports all of the list items of <i>list</i> except the first, and but-last reports all of the list items of <i>list</i> except the last. </p>
+ <p> On strings, but-first and but-last report a shorter string omitting the first or last character of the original string. </p>
+ <pre>
+;; mylist is [2 4 6 5 8 12]
+set mylist but-first mylist
+;; mylist is now [4 6 5 8 12]
+set mylist but-last mylist
+;; mylist is now [4 6 5 8]
+show but-first "string"
+;; prints "tring"
+show but-last "string"
+;; prints "strin"
+</pre>
+ <!-- ======================================== --> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

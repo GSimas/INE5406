@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: max-n-of</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="max-n-of"> 
+ <h3> <a>max-n-of<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">max-n-of <i>number</i> <i>agentset</i> [<i>reporter</i>]</span> </h4> 
+ <p> Reports an agentset containing <i>number</i> agents from <i>agentset</i> with the highest values of <i>reporter</i>. The agentset is built by finding all the agents with the highest value of <i>reporter</i>, if there are not <i>number</i> agents with that value then agents with the second highest value are found, and so on. At the end, if there is a tie that would make the resulting agentset too large, the tie is broken randomly. </p>
+ <pre>
+;; assume the world is 11 x 11
+show max-n-of 5 patches [pxcor]
+;; shows 5 patches with pxcor = max-pxcor
+show max-n-of 5 patches with [pycor = 0] [pxcor]
+;; shows an agentset containing:
+;; (patch 1 0) (patch 2 0) (patch 3 0) (patch 4 0) (patch 5 0)
+</pre> 
+ <p> See also <a href="../dictionary.html#max-one-of">max-one-of</a>, <a href="../dictionary.html#with-max">with-max</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

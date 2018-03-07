@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: distance</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="distance"> 
+ <h3> <a>distance<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">distance <i>agent</i></span> <img alt="Turtle Command" src="../images/turtle.gif"> <img alt="Patch Command" src="../images/patch.gif"> </h4> 
+ <p> Reports the distance from this agent to the given turtle or patch. </p>
+ <p> The distance to or a from a patch is measured from the center of the patch. Turtles and patches use the wrapped distance (around the edges of the world) if wrapping is allowed by the topology and the wrapped distance is shorter. </p>
+ <pre>
+ask turtles [ show max-one-of turtles [distance myself] ]
+;; each turtle prints the turtle farthest from itself
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

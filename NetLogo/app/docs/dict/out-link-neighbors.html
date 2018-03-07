@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: out-&lt;breed&gt;-neighbors out-link-neighbors</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="out-link-neighbors"> 
+ <h3> <a>out-&lt;breed&gt;-neighbors</a> <a>out-link-neighbors<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">out-&lt;breed&gt;-neighbors</span> <span class="prim_example">out-link-neighbors</span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> Reports the agentset of all the turtles that have directed links from the caller, or undirected links with the caller. You can think of this as "who can I get to from the caller using a link?" </p>
+ <pre>
+crt 4
+ask turtle 0
+[
+  create-links-to other turtles
+  ask out-link-neighbors [ set color pink ] ;; turtles 1-3 turn pink
+]
+ask turtle 1
+[
+  ask out-link-neighbors [ set color orange ]  ;; no turtles change colors
+                                               ;; since turtle 1 only has in-links
+]
+end
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

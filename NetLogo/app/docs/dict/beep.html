@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: beep</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="beep"> 
+ <h3> <a>beep<span class="since">2.1</span></a> </h3> 
+ <h4> <span class="prim_example">beep</span> </h4> 
+ <p> Emits a beep. Note that the beep sounds immediately, so several beep commands in close succession may produce only one audible sound. </p>
+ <p> Example: </p>
+ <pre>
+beep                       ;; emits one beep
+repeat 3 [ beep ]          ;; emits 3 beeps at once,
+                           ;; so you only hear one sound
+repeat 3 [ beep wait 0.1 ] ;; produces 3 beeps in succession,
+                           ;; separated by 1/10th of a second
+</pre> 
+ <p> When running headless, this command has no effect. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

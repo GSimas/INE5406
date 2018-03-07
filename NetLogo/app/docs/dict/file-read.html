@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: file-read</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="file-read"> 
+ <h3> <a>file-read<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">file-read</span> </h4> 
+ <p> This reporter will read in the next constant from the opened file and interpret it as if it had been typed in the Command Center. It reports the resulting value. The result may be a number, list, string, boolean, or the special value nobody. </p>
+ <p> Whitespace separates the constants. Each call to file-read will skip past both leading and trailing whitespace. </p>
+ <p> Note that strings need to have quotes around them. Use the command <a href="../dictionary.html#file-write">file-write</a> to have quotes included. </p>
+ <p> Also note that the <a href="../dictionary.html#file-open">file-open</a> command must be called before this reporter can be used, and there must be data remaining in the file. Use the reporter <a href="../dictionary.html#file-at-end">file-at-end?</a> to determine if you are at the end of the file. </p>
+ <pre>
+file-open "my-file.data"
+print file-read + 5
+;; Next value is the number 1
+=&gt; 6
+print length file-read
+;; Next value is the list [1 2 3 4]
+=&gt; 4
+</pre> 
+ <p> See also <a href="../dictionary.html#file-open">file-open</a> and <a href="../dictionary.html#file-write">file-write</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

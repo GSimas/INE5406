@@ -1,0 +1,2858 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>NetLogo 6.0.2 - org.nlogo.api.HubNetInterface</title>
+          <meta name="description" content="NetLogo 6.0.2 - org.nlogo.api.HubNetInterface" />
+          <meta name="keywords" content="NetLogo 6.0.2 org.nlogo.api.HubNetInterface" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">NetLogo<span id="doc-version">6.0.2</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html">
+              <span class="name">root</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="index.html#org" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html">
+              <span class="name">org</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.nlogo" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nlogo"></a><a id="nlogo:nlogo"></a>
+      <span class="permalink">
+      <a href="../org/index.html#nlogo" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html">
+              <span class="name">nlogo</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.nlogo.api" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="api"></a><a id="api:api"></a>
+      <span class="permalink">
+      <a href="../../org/nlogo/index.html#api" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides classes associated with the NetLogo Extensions API and
+Controlling API." href="index.html">
+              <span class="name">api</span>
+            </a>
+      </span>
+      
+      <p class="shortcomment cmt">Provides classes associated with the NetLogo Extensions API and
+Controlling API.</p><div class="fullcomment"><div class="comment cmt"><p>Provides classes associated with the NetLogo Extensions API and
+Controlling API.</p><p>For discussion and sample code, please see the NetLogo User Manual.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.nlogo">nlogo</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="APIVersion$.html" title=""></a>
+                        <a href="APIVersion$.html" title="">
+                          APIVersion
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Action.html" title=""></a>
+                        <a href="Action.html" title="">
+                          Action
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ActionBroker.html" title=""></a>
+                        <a href="ActionBroker.html" title="">
+                          ActionBroker
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ActionBuffer.html" title="An ActionBuffer logs all actions generated by the supplied
+ActionBroker."></a>
+                        <a href="ActionBuffer.html" title="An ActionBuffer logs all actions generated by the supplied
+ActionBroker.">
+                          ActionBuffer
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ActionRunner.html" title=""></a>
+                        <a href="ActionRunner.html" title="">
+                          ActionRunner
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Activation.html" title="A representation of the currently executing procedure
+"></a>
+                        <a href="Activation.html" title="A representation of the currently executing procedure
+">
+                          Activation
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Agent.html" title="NetLogo agents include turtles, patches, links and the observer."></a>
+                        <a href="Agent.html" title="NetLogo agents include turtles, patches, links and the observer.">
+                          Agent
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="AgentException.html" title=""></a>
+                        <a href="AgentException.html" title="">
+                          AgentException
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AgentFollowingPerspective.html" title=""></a>
+                        <a href="AgentFollowingPerspective.html" title="">
+                          AgentFollowingPerspective
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AgentSet.html" title="Interface provides access to NetLogo agentsets."></a>
+                        <a href="AgentSet.html" title="Interface provides access to NetLogo agentsets.">
+                          AgentSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="AgentVariableNumbers.html" title=""></a>
+                        <a href="AgentVariableNumbers.html" title="">
+                          AgentVariableNumbers
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="AgentVariables$.html" title=""></a>
+                        <a href="AgentVariables$.html" title="">
+                          AgentVariables
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AggregateManagerInterface.html" title=""></a>
+                        <a href="AggregateManagerInterface.html" title="">
+                          AggregateManagerInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AnonymousCommand.html" title=""></a>
+                        <a href="AnonymousCommand.html" title="">
+                          AnonymousCommand
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AnonymousProcedure.html" title=""></a>
+                        <a href="AnonymousProcedure.html" title="">
+                          AnonymousProcedure
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AnonymousReporter.html" title=""></a>
+                        <a href="AnonymousReporter.html" title="">
+                          AnonymousReporter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Approximate$.html" title=""></a>
+                        <a href="Approximate$.html" title="">
+                          Approximate
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Argument.html" title="Interface provides access to arguments passed to the perform or report
+methods of a primitive at run-time."></a>
+                        <a href="Argument.html" title="Interface provides access to arguments passed to the perform or report
+methods of a primitive at run-time.">
+                          Argument
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AutoConvertable.html" title=""></a>
+                        <a href="AutoConvertable.html" title="">
+                          AutoConvertable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AutoConverter.html" title=""></a>
+                        <a href="AutoConverter.html" title="">
+                          AutoConverter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="BaseValueSet.html" title=""></a>
+                        <a href="BaseValueSet.html" title="">
+                          BaseValueSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="CSV.html" title=""></a>
+                        <a href="CSV.html" title="">
+                          CSV
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ClassManager.html" title=""></a>
+                        <a href="ClassManager.html" title="">
+                          ClassManager
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Color$.html" title=""></a>
+                        <a href="Color$.html" title="">
+                          Color
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Command.html" title="Interface for NetLogo extension commands."></a>
+                        <a href="Command.html" title="Interface for NetLogo extension commands.">
+                          Command
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="CommandLogoThunk.html" title=""></a>
+                        <a href="CommandLogoThunk.html" title="">
+                          CommandLogoThunk
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="CommandRunnable.html" title=""></a>
+                        <a href="CommandRunnable.html" title="">
+                          CommandRunnable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="CompilerServices.html" title=""></a>
+                        <a href="CompilerServices.html" title="">
+                          CompilerServices
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ComponentSerialization.html" title=""></a>
+                        <a href="ComponentSerialization.html" title="">
+                          ComponentSerialization
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ConfigurableModelLoader.html" title=""></a>
+                        <a href="ConfigurableModelLoader.html" title="">
+                          ConfigurableModelLoader
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Constants$.html" title=""></a>
+                        <a href="Constants$.html" title="">
+                          Constants
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Context.html" title="Provides access to the current execution environment."></a>
+                        <a href="Context.html" title="Provides access to the current execution environment.">
+                          Context
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ControlSet.html" title="ControlSet is an abstraction over the various runtime-only parts of model
+ state."></a>
+                        <a href="ControlSet.html" title="ControlSet is an abstraction over the various runtime-only parts of model
+ state.">
+                          ControlSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Controllable.html" title="Interface provides access to the NetLogo controlling API's report and command methods found in
+methods independent of App.app and headless.HeadlessWorkspace."></a>
+                        <a href="Controllable.html" title="Interface provides access to the NetLogo controlling API's report and command methods found in
+methods independent of App.app and headless.HeadlessWorkspace.">
+                          Controllable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DefaultClassManager.html" title=""></a>
+                        <a href="DefaultClassManager.html" title="">
+                          DefaultClassManager
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DelegatingMapper.html" title=""></a>
+                        <a href="DelegatingMapper.html" title="">
+                          DelegatingMapper
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DoubleRange.html" title=""></a>
+                        <a href="DoubleRange.html" title="">
+                          DoubleRange
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Drawing3D.html" title=""></a>
+                        <a href="Drawing3D.html" title="">
+                          Drawing3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DrawingInterface.html" title=""></a>
+                        <a href="DrawingInterface.html" title="">
+                          DrawingInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DrawingLine3D.html" title=""></a>
+                        <a href="DrawingLine3D.html" title="">
+                          DrawingLine3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DummyCompilerServices.html" title=""></a>
+                        <a href="DummyCompilerServices.html" title="">
+                          DummyCompilerServices
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DummyEditable.html" title=""></a>
+                        <a href="DummyEditable.html" title="">
+                          DummyEditable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DummyErrorHandler.html" title=""></a>
+                        <a href="DummyErrorHandler.html" title="">
+                          DummyErrorHandler
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DummyExtensionManager.html" title=""></a>
+                        <a href="DummyExtensionManager.html" title="">
+                          DummyExtensionManager
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DummyLogoThunkFactory.html" title=""></a>
+                        <a href="DummyLogoThunkFactory.html" title="">
+                          DummyLogoThunkFactory
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Dump$.html" title=""></a>
+                        <a href="Dump$.html" title="">
+                          Dump
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Editable.html" title=""></a>
+                        <a href="Editable.html" title="">
+                          Editable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EditorAreaInterface.html" title=""></a>
+                        <a href="EditorAreaInterface.html" title="">
+                          EditorAreaInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="EnumeratedValueSet.html" title=""></a>
+                        <a href="EnumeratedValueSet.html" title="">
+                          EnumeratedValueSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Equality$.html" title=""></a>
+                        <a href="Equality$.html" title="">
+                          Equality
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Exceptions$.html" title=""></a>
+                        <a href="Exceptions$.html" title="">
+                          Exceptions
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ExtensionException.html" title="Wrapper class for exceptions thrown by NetLogo extensions."></a>
+                        <a href="ExtensionException.html" title="Wrapper class for exceptions thrown by NetLogo extensions.">
+                          ExtensionException
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ExtensionManager.html" title="ExtensionManager provides some methods that can be used in runOnce
+"></a>
+                        <a href="ExtensionManager.html" title="ExtensionManager provides some methods that can be used in runOnce
+">
+                          ExtensionManager
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="FileIO$.html" title=""></a>
+                        <a href="FileIO$.html" title="">
+                          FileIO
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="FormatterPair.html" title=""></a>
+                        <a href="FormatterPair.html" title="">
+                          FormatterPair
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Graphics2DWrapper.html" title=""></a>
+                        <a href="Graphics2DWrapper.html" title="">
+                          Graphics2DWrapper
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="GraphicsInterface.html" title=""></a>
+                        <a href="GraphicsInterface.html" title="">
+                          GraphicsInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="HaltSignal.html" title=""></a>
+                        <a href="HaltSignal.html" title="">
+                          HaltSignal
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="HexString$.html" title=""></a>
+                        <a href="HexString$.html" title="">
+                          HexString
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="HubNetInterface$.html" title=""></a>
+                        <a class="trait" href="" title=""></a>
+                        <a href="" title="">
+                          HubNetInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="HubNetWorkspaceInterface.html" title=""></a>
+                        <a href="HubNetWorkspaceInterface.html" title="">
+                          HubNetWorkspaceInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="I18NJava.html" title="The Scala compiler won't generate a Java varargs forwarder for a Scala varargs
+method unless the method comes from a Java class or interface."></a>
+                        <a href="I18NJava.html" title="The Scala compiler won't generate a Java varargs forwarder for a Scala varargs
+method unless the method comes from a Java class or interface.">
+                          I18NJava
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ImportErrorHandler.html" title=""></a>
+                        <a href="ImportErrorHandler.html" title="">
+                          ImportErrorHandler
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ImporterUser.html" title=""></a>
+                        <a href="ImporterUser.html" title="">
+                          ImporterUser
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="JavaLibraryPath$.html" title="This code came from http://forum.java.sun.com/thread.jspa?threadID=627890&amp;start=15"></a>
+                        <a href="JavaLibraryPath$.html" title="This code came from http://forum.java.sun.com/thread.jspa?threadID=627890&amp;start=15">
+                          JavaLibraryPath
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="JobOwner.html" title="Like source owners, job owners are usually parts of the UI."></a>
+                        <a href="JobOwner.html" title="Like source owners, job owners are usually parts of the UI.">
+                          JobOwner
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LabProtocol.html" title=""></a>
+                        <a href="LabProtocol.html" title="">
+                          LabProtocol
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Link.html" title="Interface provides access to NetLogo links."></a>
+                        <a href="Link.html" title="Interface provides access to NetLogo links.">
+                          Link
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Link3D.html" title=""></a>
+                        <a href="Link3D.html" title="">
+                          Link3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="LinkStamp3D.html" title=""></a>
+                        <a href="LinkStamp3D.html" title="">
+                          LinkStamp3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LocalFile.html" title=""></a>
+                        <a href="LocalFile.html" title="">
+                          LocalFile
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Logger.html" title=""></a>
+                        <a href="Logger.html" title="">
+                          Logger
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LogoException.html" title="A runtime error that has occurred in NetLogo code."></a>
+                        <a href="LogoException.html" title="A runtime error that has occurred in NetLogo code.">
+                          LogoException
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="LogoHashObject$.html" title=""></a>
+                        <a class="class" href="LogoHashObject.html" title=""></a>
+                        <a href="LogoHashObject.html" title="">
+                          LogoHashObject
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="LogoListBuilder.html" title=""></a>
+                        <a href="LogoListBuilder.html" title="">
+                          LogoListBuilder
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="LogoThunkFactory.html" title=""></a>
+                        <a href="LogoThunkFactory.html" title="">
+                          LogoThunkFactory
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Matrix3D.html" title="A fairly conventional 3D matrix object that can transform sets of
+3D points and perform a variety of manipulations on the transform
+"></a>
+                        <a href="Matrix3D.html" title="A fairly conventional 3D matrix object that can transform sets of
+3D points and perform a variety of manipulations on the transform
+">
+                          Matrix3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="MersenneTwisterFast.html" title="Version 9, based on version MT199937(99/10/29)
+of the Mersenne Twister algorithm found at
+
+The Mersenne Twister Home Page, with the initialization
+improved using the new 2002/1/26 initialization algorithm
+By Sean Luke, October 2004."></a>
+                        <a href="MersenneTwisterFast.html" title="Version 9, based on version MT199937(99/10/29)
+of the Mersenne Twister algorithm found at
+
+The Mersenne Twister Home Page, with the initialization
+improved using the new 2002/1/26 initialization algorithm
+By Sean Luke, October 2004.">
+                          MersenneTwisterFast
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ModelFormat.html" title=""></a>
+                        <a href="ModelFormat.html" title="">
+                          ModelFormat
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="ModelLoader$.html" title=""></a>
+                        <a class="trait" href="ModelLoader.html" title=""></a>
+                        <a href="ModelLoader.html" title="">
+                          ModelLoader
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ModelReader$.html" title=""></a>
+                        <a href="ModelReader$.html" title="">
+                          ModelReader
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ModelRun.html" title=""></a>
+                        <a href="ModelRun.html" title="">
+                          ModelRun
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="ModelSection$.html" title=""></a>
+                        <a class="trait" href="ModelSection.html" title=""></a>
+                        <a href="ModelSection.html" title="">
+                          ModelSection
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ModelSectionJ$.html" title=""></a>
+                        <a href="ModelSectionJ$.html" title="">
+                          ModelSectionJ
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ModelSettings.html" title=""></a>
+                        <a href="ModelSettings.html" title="">
+                          ModelSettings
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="ModelType$.html" title=""></a>
+                        <a class="trait" href="ModelType.html" title="how a model was loaded."></a>
+                        <a href="ModelType.html" title="how a model was loaded.">
+                          ModelType
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ModelTypeJ$.html" title=""></a>
+                        <a href="ModelTypeJ$.html" title="">
+                          ModelTypeJ
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ModelingCommonsInterface.html" title=""></a>
+                        <a href="ModelingCommonsInterface.html" title="">
+                          ModelingCommonsInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MultiErrorHandler.html" title=""></a>
+                        <a href="MultiErrorHandler.html" title="">
+                          MultiErrorHandler
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="NetLogoAdapter.html" title="Implements NetLogoListener with empty methods, which can be overriden
+in subclasses."></a>
+                        <a href="NetLogoAdapter.html" title="Implements NetLogoListener with empty methods, which can be overriden
+in subclasses.">
+                          NetLogoAdapter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="NetLogoLegacyDialect$.html" title=""></a>
+                        <a href="NetLogoLegacyDialect$.html" title="">
+                          NetLogoLegacyDialect
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="NetLogoLegacyDialectTokenMapper$.html" title=""></a>
+                        <a href="NetLogoLegacyDialectTokenMapper$.html" title="">
+                          NetLogoLegacyDialectTokenMapper
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="NetLogoListener.html" title="A host application should implement this interface in order to be notified of events occurring
+within NetLogo."></a>
+                        <a href="NetLogoListener.html" title="A host application should implement this interface in order to be notified of events occurring
+within NetLogo.">
+                          NetLogoListener
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="NetLogoThreeDDialect$.html" title=""></a>
+                        <a href="NetLogoThreeDDialect$.html" title="">
+                          NetLogoThreeDDialect
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Numbers$.html" title=""></a>
+                        <a href="Numbers$.html" title="">
+                          Numbers
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Observer.html" title=""></a>
+                        <a href="Observer.html" title="">
+                          Observer
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ObserverOrientation.html" title=""></a>
+                        <a href="ObserverOrientation.html" title="">
+                          ObserverOrientation
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Options.html" title=""></a>
+                        <a href="Options.html" title="">
+                          Options
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="OutputDestination$.html" title=""></a>
+                        <a class="trait" href="OutputDestination.html" title=""></a>
+                        <a href="OutputDestination.html" title="">
+                          OutputDestination
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="OutputDestinationJ$.html" title="Java can't (I don't think) access Scala inner objects without reflection, so we provide these
+convenience vals for use from Java."></a>
+                        <a href="OutputDestinationJ$.html" title="Java can't (I don't think) access Scala inner objects without reflection, so we provide these
+convenience vals for use from Java.">
+                          OutputDestinationJ
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Patch.html" title="Provides access to NetLogo patches."></a>
+                        <a href="Patch.html" title="Provides access to NetLogo patches.">
+                          Patch
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Patch3D.html" title=""></a>
+                        <a href="Patch3D.html" title="">
+                          Patch3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="PeriodicUpdateDelay$.html" title=""></a>
+                        <a href="PeriodicUpdateDelay$.html" title="">
+                          PeriodicUpdateDelay
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Perspective$.html" title=""></a>
+                        <a class="class" href="Perspective.html" title=""></a>
+                        <a href="Perspective.html" title="">
+                          Perspective
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="PerspectiveJ.html" title=""></a>
+                        <a href="PerspectiveJ.html" title="">
+                          PerspectiveJ
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="PlotAction$.html" title=""></a>
+                        <a class="trait" href="PlotAction.html" title=""></a>
+                        <a href="PlotAction.html" title="">
+                          PlotAction
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="PlotInterface.html" title=""></a>
+                        <a href="PlotInterface.html" title="">
+                          PlotInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="PlotManagerInterface.html" title=""></a>
+                        <a href="PlotManagerInterface.html" title="">
+                          PlotManagerInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="PlotState.html" title=""></a>
+                        <a href="PlotState.html" title="">
+                          PlotState
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="PreviewCommands$.html" title=""></a>
+                        <a class="trait" href="PreviewCommands.html" title="A model's &quot;preview commands&quot; are the commands that are used to
+generate the preview that appears in the Models Library dialog,
+the NetLogo website (http://ccl.northwestern.edu/netlogo/models/),
+the Modeling Commons (http://www.modelingcommons.org/) and potentially
+other places."></a>
+                        <a href="PreviewCommands.html" title="A model's &quot;preview commands&quot; are the commands that are used to
+generate the preview that appears in the Models Library dialog,
+the NetLogo website (http://ccl.northwestern.edu/netlogo/models/),
+the Modeling Commons (http://www.modelingcommons.org/) and potentially
+other places.">
+                          PreviewCommands
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="PrimitiveManager.html" title="Ships extension primitives and associated names to NetLogo."></a>
+                        <a href="PrimitiveManager.html" title="Ships extension primitives and associated names to NetLogo.">
+                          PrimitiveManager
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Property$.html" title=""></a>
+                        <a class="class" href="Property.html" title=""></a>
+                        <a href="Property.html" title="">
+                          Property
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Protractor.html" title=""></a>
+                        <a href="Protractor.html" title="">
+                          Protractor
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Protractor3D.html" title=""></a>
+                        <a href="Protractor3D.html" title="">
+                          Protractor3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="RandomSeedGenerator$.html" title=""></a>
+                        <a href="RandomSeedGenerator$.html" title="">
+                          RandomSeedGenerator
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="RandomServices.html" title=""></a>
+                        <a href="RandomServices.html" title="">
+                          RandomServices
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="RefEnumeratedValueSet.html" title=""></a>
+                        <a href="RefEnumeratedValueSet.html" title="">
+                          RefEnumeratedValueSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="RefValueSet.html" title=""></a>
+                        <a href="RefValueSet.html" title="">
+                          RefValueSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Refreshable.html" title="Marker trait used to indicate that the value in this class may be stale and in need of refresh"></a>
+                        <a href="Refreshable.html" title="Marker trait used to indicate that the value in this class may be stale and in need of refresh">
+                          Refreshable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="RemoteFile$.html" title=""></a>
+                        <a class="class" href="RemoteFile.html" title=""></a>
+                        <a href="RemoteFile.html" title="">
+                          RemoteFile
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="RendererInterface.html" title=""></a>
+                        <a href="RendererInterface.html" title="">
+                          RendererInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Reporter.html" title="Interface for NetLogo reporters."></a>
+                        <a href="Reporter.html" title="Interface for NetLogo reporters.">
+                          Reporter
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ReporterLogoThunk.html" title="This is used by SliderConstraint."></a>
+                        <a href="ReporterLogoThunk.html" title="This is used by SliderConstraint.">
+                          ReporterLogoThunk
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ReporterRunnable.html" title=""></a>
+                        <a href="ReporterRunnable.html" title="">
+                          ReporterRunnable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ScalaConversions$.html" title=""></a>
+                        <a href="ScalaConversions$.html" title="">
+                          ScalaConversions
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="SimpleChangeEvent$.html" title=""></a>
+                        <a href="SimpleChangeEvent$.html" title="">
+                          SimpleChangeEvent
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleChangeEventPublisher.html" title="A most basic event publisher only warning subscribers that &quot;something has changed&quot;
+ Currently used by TreeAgentSet to allow the nw extension to listen for changes
+ and update its graph context accordingly."></a>
+                        <a href="SimpleChangeEventPublisher.html" title="A most basic event publisher only warning subscribers that &quot;something has changed&quot;
+ Currently used by TreeAgentSet to allow the nw extension to listen for changes
+ and update its graph context accordingly.">
+                          SimpleChangeEventPublisher
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="SimpleJobOwner.html" title=""></a>
+                        <a href="SimpleJobOwner.html" title="">
+                          SimpleJobOwner
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="SingleErrorHandler.html" title=""></a>
+                        <a href="SingleErrorHandler.html" title="">
+                          SingleErrorHandler
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="SourceOwner.html" title="Source owners are usually parts of the UI."></a>
+                        <a href="SourceOwner.html" title="Source owners are usually parts of the UI.">
+                          SourceOwner
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="SteppedValueSet.html" title=""></a>
+                        <a href="SteppedValueSet.html" title="">
+                          SteppedValueSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="StringUtils$.html" title=""></a>
+                        <a href="StringUtils$.html" title="">
+                          StringUtils
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ThreeDTokenMapper$.html" title=""></a>
+                        <a href="ThreeDTokenMapper$.html" title="">
+                          ThreeDTokenMapper
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Timer.html" title=""></a>
+                        <a href="Timer.html" title="">
+                          Timer
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="TokenHolder.html" title=""></a>
+                        <a href="TokenHolder.html" title="">
+                          TokenHolder
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="TokenizerInterface.html" title=""></a>
+                        <a href="TokenizerInterface.html" title="">
+                          TokenizerInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="TrailDrawerInterface.html" title=""></a>
+                        <a href="TrailDrawerInterface.html" title="">
+                          TrailDrawerInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Turtle.html" title="Interface provides access to NetLogo turtles."></a>
+                        <a href="Turtle.html" title="Interface provides access to NetLogo turtles.">
+                          Turtle
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Turtle3D.html" title=""></a>
+                        <a href="Turtle3D.html" title="">
+                          Turtle3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="TurtleStamp3D.html" title=""></a>
+                        <a href="TurtleStamp3D.html" title="">
+                          TurtleStamp3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="TypeNames$.html" title=""></a>
+                        <a href="TypeNames$.html" title="">
+                          TypeNames
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="ValueConstraint$.html" title=""></a>
+                        <a class="trait" href="ValueConstraint.html" title="Interface for objects which provide constraints for values"></a>
+                        <a href="ValueConstraint.html" title="Interface for objects which provide constraints for values">
+                          ValueConstraint
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ValueSet.html" title=""></a>
+                        <a href="ValueSet.html" title="">
+                          ValueSet
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Vect$.html" title=""></a>
+                        <a class="class" href="Vect.html" title=""></a>
+                        <a href="Vect.html" title="">
+                          Vect
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Version$.html" title=""></a>
+                        <a class="trait" href="Version.html" title=""></a>
+                        <a href="Version.html" title="">
+                          Version
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="VersionHistory$.html" title=""></a>
+                        <a href="VersionHistory$.html" title="">
+                          VersionHistory
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ViewInterface.html" title=""></a>
+                        <a href="ViewInterface.html" title="">
+                          ViewInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ViewSettings.html" title=""></a>
+                        <a href="ViewSettings.html" title="">
+                          ViewSettings
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Workspace.html" title=""></a>
+                        <a href="Workspace.html" title="">
+                          Workspace
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="World.html" title=""></a>
+                        <a href="World.html" title="">
+                          World
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="World3D.html" title=""></a>
+                        <a href="World3D.html" title="">
+                          World3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="WorldDimensionException.html" title=""></a>
+                        <a href="WorldDimensionException.html" title="">
+                          WorldDimensionException
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="WorldDimensions3D$.html" title="for wrapping up dimensions to resize the world using WorldResizer
+ This class is shared between NetLogo and NetLogo-Headless."></a>
+                        <a class="class" href="WorldDimensions3D.html" title=""></a>
+                        <a href="WorldDimensions3D.html" title="">
+                          WorldDimensions3D
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="WorldPropertiesInterface.html" title=""></a>
+                        <a href="WorldPropertiesInterface.html" title="">
+                          WorldPropertiesInterface
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="WorldRenderable.html" title=""></a>
+                        <a href="WorldRenderable.html" title="">
+                          WorldRenderable
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="WorldResizer.html" title="used by Importer for resizing the world during an import."></a>
+                        <a href="WorldResizer.html" title="used by Importer for resizing the world during an import.">
+                          WorldResizer
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="WorldWithWorldRenderable.html" title=""></a>
+                        <a href="WorldWithWorldRenderable.html" title="">
+                          WorldWithWorldRenderable
+                        </a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="trait type">
+      <div id="definition">
+        <a href="HubNetInterface$.html" title="See companion object"><div class="big-circle trait-companion-object">t</div></a>
+        <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.nlogo">nlogo</a>.<a href="index.html" class="extype" name="org.nlogo.api">api</a></p>
+        <h1><a href="HubNetInterface$.html" title="See companion object">HubNetInterface</a><span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"><div>
+            Companion <a href="HubNetInterface$.html" title="See companion object">object HubNetInterface</a>
+          </div></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HubNetInterface</span><span class="result"> extends <a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a> with <span class="extype" name="org.nlogo.api.ModelSections.ModelSaveable">ModelSaveable</span></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/NetLogo/NetLogo/blob/6.0.2/netlogo-core/src/main/api/HubNetInterface.scala" target="_blank">HubNetInterface.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.nlogo.api.ModelSections.ModelSaveable">ModelSaveable</span>, <a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.nlogo.api.HubNetInterface"><span>HubNetInterface</span></li><li class="in" name="org.nlogo.api.ModelSections.ModelSaveable"><span>ModelSaveable</span></li><li class="in" name="org.nlogo.api.ViewInterface"><span>ViewInterface</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="org.nlogo.api.HubNetInterface#addNarrowcastPlot" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="addNarrowcastPlot(plotName:String):Boolean"></a><a id="addNarrowcastPlot(String):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#addNarrowcastPlot(plotName:String):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addNarrowcastPlot</span><span class="params">(<span name="plotName">plotName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ViewInterface#applyNewFontSize" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="applyNewFontSize(fontSize:Int,zoom:Int):Unit"></a><a id="applyNewFontSize(Int,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#applyNewFontSize(fontSize:Int,zoom:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">applyNewFontSize</span><span class="params">(<span name="fontSize">fontSize: <span class="extype" name="scala.Int">Int</span></span>, <span name="zoom">zoom: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#broadcast" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="broadcast(data:Any):Unit"></a><a id="broadcast(Any):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#broadcast(data:Any):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">broadcast</span><span class="params">(<span name="data">data: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#broadcast" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="broadcast(variableName:String,data:Any):Unit"></a><a id="broadcast(String,Any):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#broadcast(variableName:String,data:Any):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">broadcast</span><span class="params">(<span name="variableName">variableName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="data">data: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Send a message to all clients
+</p><div class="fullcomment"><div class="comment cmt"><p>Send a message to all clients
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#broadcastClearText" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="broadcastClearText():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#broadcastClearText():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">broadcastClearText</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#broadcastUserMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="broadcastUserMessage(text:String):Unit"></a><a id="broadcastUserMessage(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#broadcastUserMessage(text:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">broadcastUserMessage</span><span class="params">(<span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#calculatorInterface" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="calculatorInterface(activity:String,tags:Seq[String]):org.nlogo.api.HubNetInterface.ClientInterface"></a><a id="calculatorInterface(String,Seq[String]):ClientInterface"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#calculatorInterface(activity:String,tags:Seq[String]):org.nlogo.api.HubNetInterface.ClientInterface" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">calculatorInterface</span><span class="params">(<span name="activity">activity: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tags">tags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="HubNetInterface$$ClientInterface.html" class="extype" name="org.nlogo.api.HubNetInterface.ClientInterface">ClientInterface</a></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#clearOverride" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="clearOverride(client:String,agentType:org.nlogo.core.AgentKind,varName:String,overrides:Seq[Long]):Unit"></a><a id="clearOverride(String,AgentKind,String,Seq[Long]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#clearOverride(client:String,agentType:org.nlogo.core.AgentKind,varName:String,overrides:Seq[Long]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearOverride</span><span class="params">(<span name="client">client: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="agentType">agentType: <span class="extype" name="org.nlogo.core.AgentKind">AgentKind</span></span>, <span name="varName">varName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="overrides">overrides: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="java.lang.Long">Long</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#clearOverrideLists" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="clearOverrideLists(client:String):Unit"></a><a id="clearOverrideLists(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#clearOverrideLists(client:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearOverrideLists</span><span class="params">(<span name="client">client: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#clearPlot" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="clearPlot(clientId:String):Unit"></a><a id="clearPlot(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#clearPlot(clientId:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearPlot</span><span class="params">(<span name="clientId">clientId: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#clearText" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="clearText(nodes:Seq[String]):Unit"></a><a id="clearText(Seq[String]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#clearText(nodes:Seq[String]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearText</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#clientEditor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="clientEditor:AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#clientEditor:AnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clientEditor</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#clients" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="clients:Iterable[String]"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#clients:Iterable[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clients</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#closeClientEditor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="closeClientEditor():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#closeClientEditor():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">closeClientEditor</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#currentlyActiveInterface" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="currentlyActiveInterface:org.nlogo.api.HubNetInterface.ClientInterface"></a><a id="currentlyActiveInterface:ClientInterface"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#currentlyActiveInterface:org.nlogo.api.HubNetInterface.ClientInterface" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">currentlyActiveInterface</span><span class="result">: <a href="HubNetInterface$$ClientInterface.html" class="extype" name="org.nlogo.api.HubNetInterface.ClientInterface">ClientInterface</a></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#disconnect" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="disconnect():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#disconnect():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">disconnect</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#enterMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="enterMessage:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#enterMessage:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">enterMessage</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#exitMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="exitMessage:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#exitMessage:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exitMessage</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#fetchMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="fetchMessage():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#fetchMessage():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fetchMessage</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#fileInterface" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="fileInterface(path:String):Option[org.nlogo.api.HubNetInterface.ClientInterface]"></a><a id="fileInterface(String):Option[ClientInterface]"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#fileInterface(path:String):Option[org.nlogo.api.HubNetInterface.ClientInterface]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fileInterface</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="HubNetInterface$$ClientInterface.html" class="extype" name="org.nlogo.api.HubNetInterface.ClientInterface">ClientInterface</a>]</span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ViewInterface#framesSkipped" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="framesSkipped():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#framesSkipped():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">framesSkipped</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#getInQueueSize" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="getInQueueSize:Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getInQueueSize:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInQueueSize</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#getInterfaceHeight" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="getInterfaceHeight:Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getInterfaceHeight:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInterfaceHeight</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#getInterfaceWidth" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="getInterfaceWidth:Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getInterfaceWidth:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getInterfaceWidth</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#getMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getMessage:AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getMessage:AnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMessage</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#getMessageSource" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getMessageSource:String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getMessageSource:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMessageSource</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#getMessageTag" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="getMessageTag:String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getMessageTag:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMessageTag</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#getOutQueueSize" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="getOutQueueSize:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getOutQueueSize:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOutQueueSize</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#importClientInterface" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="importClientInterface(model:org.nlogo.core.Model,client:Boolean):Unit"></a><a id="importClientInterface(Model,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#importClientInterface(model:org.nlogo.core.Model,client:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">importClientInterface</span><span class="params">(<span name="model">model: <span class="extype" name="org.nlogo.core.Model">Model</span></span>, <span name="client">client: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.io.IOException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#incrementalUpdateFromEventThread" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="incrementalUpdateFromEventThread():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#incrementalUpdateFromEventThread():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">incrementalUpdateFromEventThread</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.nlogo.api.HubNetInterface">HubNetInterface</a> → <a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#interfaceWidgets" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="interfaceWidgets:Seq[org.nlogo.core.Widget]"></a><a id="interfaceWidgets:Seq[Widget]"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#interfaceWidgets:Seq[org.nlogo.core.Widget]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interfaceWidgets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.nlogo.core.Widget">Widget</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ViewInterface#isDead" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="isDead:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#isDead:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDead</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#isOverridable" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="isOverridable(agentType:org.nlogo.core.AgentKind,varName:String):Boolean"></a><a id="isOverridable(AgentKind,String):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#isOverridable(agentType:org.nlogo.core.AgentKind,varName:String):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isOverridable</span><span class="params">(<span name="agentType">agentType: <span class="extype" name="org.nlogo.core.AgentKind">AgentKind</span></span>, <span name="varName">varName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#kick" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="kick(clientName:String):Unit"></a><a id="kick(String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#kick(clientName:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kick</span><span class="params">(<span name="clientName">clientName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#kickAll" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="kickAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#kickAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kickAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#load" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="load(m:org.nlogo.core.Model):Unit"></a><a id="load(Model):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#load(m:org.nlogo.core.Model):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">load</span><span class="params">(<span name="m">m: <span class="extype" name="org.nlogo.core.Model">Model</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#messageWaiting" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="messageWaiting:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#messageWaiting:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">messageWaiting</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.ViewInterface#mouseDown" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mouseDown:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#mouseDown:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mouseDown</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.ViewInterface#mouseInside" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mouseInside:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#mouseInside:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mouseInside</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.ViewInterface#mouseXCor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mouseXCor:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#mouseXCor:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mouseXCor</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.ViewInterface#mouseYCor" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="mouseYCor:Double"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#mouseYCor:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mouseYCor</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#newClient" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="newClient(isRobo:Boolean,waitTime:Int):Unit"></a><a id="newClient(Boolean,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#newClient(isRobo:Boolean,waitTime:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">newClient</span><span class="params">(<span name="isRobo">isRobo: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="waitTime">waitTime: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#numberOfMessagesWaiting" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="numberOfMessagesWaiting:Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#numberOfMessagesWaiting:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numberOfMessagesWaiting</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#openClientEditor" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="openClientEditor():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#openClientEditor():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">openClientEditor</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ViewInterface#paintImmediately" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="paintImmediately(force:Boolean):Unit"></a><a id="paintImmediately(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#paintImmediately(force:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paintImmediately</span><span class="params">(<span name="force">force: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#plot" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="plot(clientId:String,x:Double,y:Double):Unit"></a><a id="plot(String,Double,Double):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#plot(clientId:String,x:Double,y:Double):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">plot</span><span class="params">(<span name="clientId">clientId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="x">x: <span class="extype" name="scala.Double">Double</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#plot" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="plot(clientId:String,y:Double):Unit"></a><a id="plot(String,Double):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#plot(clientId:String,y:Double):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">plot</span><span class="params">(<span name="clientId">clientId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="y">y: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#plotPenDown" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="plotPenDown(clientId:String,penDown:Boolean):Unit"></a><a id="plotPenDown(String,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#plotPenDown(clientId:String,penDown:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">plotPenDown</span><span class="params">(<span name="clientId">clientId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="penDown">penDown: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ViewInterface#repaint" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="repaint():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#repaint():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repaint</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#reset" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="reset():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#reset():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reset</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ViewInterface#resetMouseCors" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="resetMouseCors():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#resetMouseCors():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">resetMouseCors</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#send" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="send(node:String,tag:String,message:java.io.Serializable):Boolean"></a><a id="send(String,String,Serializable):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#send(node:String,tag:String,message:java.io.Serializable):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">send</span><span class="params">(<span name="node">node: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tag">tag: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="message">message: <span class="extype" name="java.io.Serializable">Serializable</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Send message to a single client for the given tag
+</p><div class="fullcomment"><div class="comment cmt"><p>Send message to a single client for the given tag
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#send" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="send(nodes:Seq[String],tag:String,message:java.io.Serializable):Unit"></a><a id="send(Seq[String],String,Serializable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#send(nodes:Seq[String],tag:String,message:java.io.Serializable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">send</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tag">tag: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="message">message: <span class="extype" name="java.io.Serializable">Serializable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Send a message to each node (client) in the list for the given tag
+</p><div class="fullcomment"><div class="comment cmt"><p>Send a message to each node (client) in the list for the given tag
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#sendAgentPerspective" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendAgentPerspective(client:String,perspective:Int,agentType:org.nlogo.core.AgentKind,id:Long,radius:Double,serverMode:Boolean):Unit"></a><a id="sendAgentPerspective(String,Int,AgentKind,Long,Double,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendAgentPerspective(client:String,perspective:Int,agentType:org.nlogo.core.AgentKind,id:Long,radius:Double,serverMode:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendAgentPerspective</span><span class="params">(<span name="client">client: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="perspective">perspective: <span class="extype" name="scala.Int">Int</span></span>, <span name="agentType">agentType: <span class="extype" name="org.nlogo.core.AgentKind">AgentKind</span></span>, <span name="id">id: <span class="extype" name="scala.Long">Long</span></span>, <span name="radius">radius: <span class="extype" name="scala.Double">Double</span></span>, <span name="serverMode">serverMode: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#sendClear" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendClear():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendClear():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendClear</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#sendFromLocalClient" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendFromLocalClient(clientName:String,tag:String,content:AnyRef):Option[String]"></a><a id="sendFromLocalClient(String,String,AnyRef):Option[String]"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendFromLocalClient(clientName:String,tag:String,content:AnyRef):Option[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendFromLocalClient</span><span class="params">(<span name="clientName">clientName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tag">tag: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="content">content: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#sendLine" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendLine(x0:Double,y0:Double,x1:Double,y1:Double,color:Any,size:Double,mode:String):Unit"></a><a id="sendLine(Double,Double,Double,Double,Any,Double,String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendLine(x0:Double,y0:Double,x1:Double,y1:Double,color:Any,size:Double,mode:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendLine</span><span class="params">(<span name="x0">x0: <span class="extype" name="scala.Double">Double</span></span>, <span name="y0">y0: <span class="extype" name="scala.Double">Double</span></span>, <span name="x1">x1: <span class="extype" name="scala.Double">Double</span></span>, <span name="y1">y1: <span class="extype" name="scala.Double">Double</span></span>, <span name="color">color: <span class="extype" name="scala.Any">Any</span></span>, <span name="size">size: <span class="extype" name="scala.Double">Double</span></span>, <span name="mode">mode: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#sendOverrideList" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendOverrideList(client:String,agentType:org.nlogo.core.AgentKind,varName:String,overrides:Map[Long,AnyRef]):Unit"></a><a id="sendOverrideList(String,AgentKind,String,Map[Long,AnyRef]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendOverrideList(client:String,agentType:org.nlogo.core.AgentKind,varName:String,overrides:Map[Long,AnyRef]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendOverrideList</span><span class="params">(<span name="client">client: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="agentType">agentType: <span class="extype" name="org.nlogo.core.AgentKind">AgentKind</span></span>, <span name="varName">varName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="overrides">overrides: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="java.lang.Long">Long</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#sendStamp" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendStamp(agent:org.nlogo.api.Agent,erase:Boolean):Unit"></a><a id="sendStamp(Agent,Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendStamp(agent:org.nlogo.api.Agent,erase:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendStamp</span><span class="params">(<span name="agent">agent: <a href="Agent.html" class="extype" name="org.nlogo.api.Agent">Agent</a></span>, <span name="erase">erase: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#sendText" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendText(nodes:Seq[String],text:String):Unit"></a><a id="sendText(Seq[String],String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendText(nodes:Seq[String],text:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendText</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#sendUserMessage" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="sendUserMessage(nodes:Seq[String],text:String):Unit"></a><a id="sendUserMessage(Seq[String],String):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#sendUserMessage(nodes:Seq[String],text:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendUserMessage</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="text">text: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#setClientInterface" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="setClientInterface(clientType:String,clientInterface:Iterable[org.nlogo.api.HubNetInterface.ClientInterface]):Unit"></a><a id="setClientInterface(String,Iterable[ClientInterface]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#setClientInterface(clientType:String,clientInterface:Iterable[org.nlogo.api.HubNetInterface.ClientInterface]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setClientInterface</span><span class="params">(<span name="clientType">clientType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="clientInterface">clientInterface: <span class="extype" name="scala.Iterable">Iterable</span>[<a href="HubNetInterface$$ClientInterface.html" class="extype" name="org.nlogo.api.HubNetInterface.ClientInterface">ClientInterface</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[LogoException]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#setHistogramNumBars" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="setHistogramNumBars(clientId:String,num:Int):Unit"></a><a id="setHistogramNumBars(String,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#setHistogramNumBars(clientId:String,num:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setHistogramNumBars</span><span class="params">(<span name="clientId">clientId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="num">num: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#setPlotMirroring" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="setPlotMirroring(on:Boolean):Unit"></a><a id="setPlotMirroring(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#setPlotMirroring(on:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPlotMirroring</span><span class="params">(<span name="on">on: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#setPlotPenInterval" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="setPlotPenInterval(clientId:String,interval:Double):Unit"></a><a id="setPlotPenInterval(String,Double):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#setPlotPenInterval(clientId:String,interval:Double):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPlotPenInterval</span><span class="params">(<span name="clientId">clientId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="interval">interval: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#setPlotPenMode" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="setPlotPenMode(clientId:String,plotPenMode:Int):Unit"></a><a id="setPlotPenMode(String,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#setPlotPenMode(clientId:String,plotPenMode:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPlotPenMode</span><span class="params">(<span name="clientId">clientId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="plotPenMode">plotPenMode: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#setTitle" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="setTitle(title:String,directory:String,modelType:org.nlogo.api.ModelType):Unit"></a><a id="setTitle(String,String,ModelType):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#setTitle(title:String,directory:String,modelType:org.nlogo.api.ModelType):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTitle</span><span class="params">(<span name="title">title: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="directory">directory: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="modelType">modelType: <a href="ModelType.html" class="extype" name="org.nlogo.api.ModelType">ModelType</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#setViewMirroring" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="setViewMirroring(on:Boolean):Unit"></a><a id="setViewMirroring(Boolean):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#setViewMirroring(on:Boolean):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setViewMirroring</span><span class="params">(<span name="on">on: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ViewInterface#shapeChanged" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="shapeChanged(shape:org.nlogo.core.Shape):Unit"></a><a id="shapeChanged(Shape):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#shapeChanged(shape:org.nlogo.core.Shape):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">shapeChanged</span><span class="params">(<span name="shape">shape: <span class="extype" name="org.nlogo.core.Shape">Shape</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#showControlCenter" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="showControlCenter():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#showControlCenter():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">showControlCenter</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.ModelSections.ModelSaveable#updateModel" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="updateModel(m:org.nlogo.core.Model):org.nlogo.core.Model"></a><a id="updateModel(Model):Model"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#updateModel(m:org.nlogo.core.Model):org.nlogo.core.Model" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateModel</span><span class="params">(<span name="m">m: <span class="extype" name="org.nlogo.core.Model">Model</span></span>)</span><span class="result">: <span class="extype" name="org.nlogo.core.Model">Model</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ModelSaveable</dd></dl></div>
+    </li><li name="org.nlogo.api.ViewInterface#viewIsVisible" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="viewIsVisible:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#viewIsVisible:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">viewIsVisible</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></dd></dl></div>
+    </li><li name="org.nlogo.api.HubNetInterface#waitForClients" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="waitForClients(numClientsToWaitFor:Int,timeoutMillis:Long):(Boolean,Int)"></a><a id="waitForClients(Int,Long):(Boolean,Int)"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#waitForClients(numClientsToWaitFor:Int,timeoutMillis:Long):(Boolean,Int)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">waitForClients</span><span class="params">(<span name="numClientsToWaitFor">numClientsToWaitFor: <span class="extype" name="scala.Int">Int</span></span>, <span name="timeoutMillis">timeoutMillis: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: (<span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      
+      
+    </li><li name="org.nlogo.api.HubNetInterface#waitForMessages" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="waitForMessages(numMessagesToWaitFor:Int,timeoutMillis:Long):(Boolean,Int)"></a><a id="waitForMessages(Int,Long):(Boolean,Int)"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#waitForMessages(numMessagesToWaitFor:Int,timeoutMillis:Long):(Boolean,Int)" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">waitForMessages</span><span class="params">(<span name="numMessagesToWaitFor">numMessagesToWaitFor: <span class="extype" name="scala.Int">Int</span></span>, <span name="timeoutMillis">timeoutMillis: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: (<span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/nlogo/api/HubNetInterface.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.nlogo.api.ModelSections.ModelSaveable">
+              <h3>Inherited from <span class="extype" name="org.nlogo.api.ModelSections.ModelSaveable">ModelSaveable</span></h3>
+            </div><div class="parent" name="org.nlogo.api.ViewInterface">
+              <h3>Inherited from <a href="ViewInterface.html" class="extype" name="org.nlogo.api.ViewInterface">ViewInterface</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

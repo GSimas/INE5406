@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: every</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="every"> 
+ <h3> <a>every<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">every <i>number</i> [ <i>commands</i> ]</span> </h4> 
+ <p> Runs the given commands only if it's been more than <i>number</i> seconds since the last time this agent ran them in this context. Otherwise, the commands are skipped. </p>
+ <p> By itself, every doesn't make commands run over and over again. You need to use every inside a loop, or inside a forever button, if you want the commands run over and over again. every only limits how often the commands run. </p>
+ <p> Above, "in this context" means during the same ask (or button press or command typed in the Command Center). So it doesn't make sense to write <code>ask turtles [ every 0.5 [ ... ] ]</code>, because when the ask finishes the turtles will all discard their timers for the "every". The correct usage is shown below. </p>
+ <pre>
+every 0.5 [ ask turtles [ fd 1 ] ]
+;; twice a second the turtles will move forward 1
+every 2 [ set index index + 1 ]
+;; every 2 seconds index is incremented
+</pre> 
+ <p> See also <a href="../dictionary.html#wait">wait</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

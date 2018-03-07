@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: ifelse-value</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="ifelse-value"> 
+ <h3> <a>ifelse-value<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">ifelse-value <i>reporter</i> [<i>reporter1</i>] [<i>reporter2</i>]</span> </h4> 
+ <p> Reporter must report a boolean (true or false) value. </p>
+ <p> If <i>reporter</i> reports true, the result is the value of <i>reporter1</i>. </p>
+ <p> If <i>reporter</i> reports false, the result is the value of <i>reporter2</i>. </p>
+ <p> This can be used when a conditional is needed in the context of a reporter, where commands (such as <a href="../dictionary.html#ifelse">ifelse</a>) are not allowed. </p>
+ <pre>
+ask patches [
+  set pcolor ifelse-value (pxcor &gt; 0) [blue] [red]
+]
+;; the left half of the world turns red and
+;; the right half turns blue
+show n-values 10 [ifelse-value (? &lt; 5) [0] [1]]
+=&gt; [0 0 0 0 0 1 1 1 1 1]
+show reduce [ [a b] -&gt; ifelse-value (a &gt; b) [a] [b] ]
+  [1 3 2 5 3 8 3 2 1]
+=&gt; 8
+</pre> 
+ <p> See also <a href="../dictionary.html#if">if</a>, <a href="../dictionary.html#ifelse">ifelse</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

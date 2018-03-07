@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Csv Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Csv Extension</h1>
+<h2><a href="#common-use-cases-and-examples" id="common-use-cases-and-examples" class="section-anchor">Common use cases and examples</a></h2>
+<h3><a href="#read-a-file-all-at-once" id="read-a-file-all-at-once" class="section-anchor">Read a file all at once</a></h3>
+<p>Just use <code>csv:from-file &quot;/path/to/myfile.csv&quot;</code>! See <a href="#csv:from-file">from-file</a> for more information.</p>
+<h3><a href="#read-a-file-one-line-at-a-time" id="read-a-file-one-line-at-a-time" class="section-anchor">Read a file one line at a time</a></h3>
+<p>For really big files, you may not want to store the entire file in memory, but rather just process it a line at a time. For instance, if you want to sum each of the columns of a numeric CSV file, you can do:</p>
+<pre><code class="language-NetLogo">to-report sum-columns [ file ]
+  file-open file
+  set result csv:from-row file-read-line
+  while [ not file-at-end? ] [
+    let row csv:from-row file-read-line
+    set result (map [?1 + ?2] result row)
+  ]
+  file-close
+  report result
+end
+</code></pre>
+<p>You can also use this technique to&hellip;</p>
+<h3><a href="#read-a-file-one-line-per-tick" id="read-a-file-one-line-per-tick" class="section-anchor">Read a file one line per tick</a></h3>
+<p>Here&rsquo;s an example model that reads in a file one line per tick:</p>
+<pre><code class="language-NetLogo">globals [ data ]
+
+to setup
+  clear-all
+  file-close-all % Close any files open from last run
+  file-open &quot;data.csv&quot;
+  % other setup goes here
+  reset-ticks
+end
+
+to go
+  if file-at-end? [ stop ]
+  set data csv:from-row file-read-line
+  % model update goes here
+  tick
+end
+</code></pre>
+<h3><a href="#write-a-file" id="write-a-file" class="section-anchor">Write a file</a></h3>
+<p>Just use <code>csv:to-file &quot;/path/to/myfile.csv&quot; my-data</code>! See <a href="#csv:to-file">to-file</a> for more information.</p>
+<h2>Primitives</h2>
+<h3>Formatting NetLogo data as CSV</h3>
+<div id="writing">
+  <a href="#csv:to-row"><code>csv:to-row</code></a>
+  <a href="#csv:to-string"><code>csv:to-string</code></a>
+  <a href="#csv:to-file"><code>csv:to-file</code></a>
+</div>
+<h3>Parsing CSV input to NetLogo data</h3>
+<div id="parsing">
+  <a href="#csv:from-row"><code>csv:from-row</code></a>
+  <a href="#csv:from-string"><code>csv:from-string</code></a>
+  <a href="#csv:from-file"><code>csv:from-file</code></a>
+</div>
+<div class="dict_entry" id="csv:from-row">
+  <h3><a>csv:from-row</a></h3>
+  <h4>
+    <span class="prim_example">csv:from-row <i>string</i></span>
+    <span class="prim_example">csv:from-row <i>string</i> <i>delimiter</i></span>
+  </h4>
+<p>Parses the given string as though it were a row from a CSV file and returns it as a list of values. For example:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:from-row &quot;one,two,three&quot;
+observer: [&quot;one&quot; &quot;two&quot; &quot;three&quot;]
+</code></pre>
+<p>Quotes can be used when items contain commas:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:from-row &quot;there's,a,comma,\&quot;in,here\&quot;&quot;
+observer: [&quot;there's&quot; &quot;a&quot; &quot;comma&quot; &quot;in,here&quot;]
+</code></pre>
+<p>You can put two quotes in a row to put an actual quote in an entry. If the entry is not quoted, you can just use one quote:</p>
+<pre><code class="language-NetLogo">observer&gt; foreach (csv:from-row &quot;he said \&quot;hi there\&quot;,\&quot;afterwards, she said \&quot;\&quot;hello\&quot;\&quot;\&quot;&quot;) print
+he said &quot;hi there&quot;
+afterwards, she said &quot;hello&quot;
+</code></pre>
+<p>Number-like-entries will be parsed as numbers:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:from-row &quot;1,-2.5,1e3&quot;
+observer: [1 -2.5 1000]
+</code></pre>
+<p><code>true</code> and <code>false</code> with any capitalization will be parsed as booleans:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:from-row &quot;true,TRUE,False,falsE&quot;
+observer: [true true false false]
+</code></pre>
+<p>To use a different delimiter, you can specify a second, optional argument. Only single character delimiters are supported:</p>
+<pre><code class="language-NetLogo">observer&gt; show (csv:from-row &quot;1;2;3&quot; &quot;;&quot;)
+observer: [1 2 3]
+</code></pre>
+<p>Different types of values can be mixed freely:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:from-row &quot;one,2,true&quot;
+observer: [&quot;one&quot; 2 true]
+</code></pre>
+</div>
+<div class="dict_entry" id="csv:from-string">
+  <h3><a>csv:from-string</a></h3>
+  <h4>
+    <span class="prim_example">csv:from-string <i>string</i></span>
+    <span class="prim_example">csv:from-string <i>string</i> <i>delimiter</i></span>
+  </h4>
+<p>Parses a string representation of one or more CSV rows and returns it as a list of lists of values. For example:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:from-string &quot;1,two,3\nfour,5,true&quot;
+observer: [[1 &quot;two&quot; 3] [&quot;four&quot; 5 true]]
+</code></pre>
+</div>
+<div class="dict_entry" id="csv:from-file">
+  <h3><a>csv:from-file</a></h3>
+  <h4>
+    <span class="prim_example">csv:from-file <i>csv-file</i></span>
+    <span class="prim_example">csv:from-file <i>csv-file</i> <i>delimiter</i></span>
+  </h4>
+<p>Parses an entire CSV file to a list of lists of values. For example, if we have a file <code>example.csv</code> that contains:</p>
+<pre><code>1,2,3
+4,5,6
+7,8,9
+10,11,12
+</code></pre>
+<p>Then, we get:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:from-file &quot;example.csv&quot;
+observer: [[1 2 3] [4 5 6] [7 8 9] [10 11 12]]
+</code></pre>
+<p>The parser doesn&rsquo;t care if the rows have different numbers of items on them. The number of items in the rows list
+will always be <code>&lt;number of delimiters&gt; + 1</code>, though blank lines are skipped. This makes handling files with headers
+quite easy. For instance, if we have <code>header.csv</code> that contains:</p>
+<pre><code>My Data
+2/1/2015
+
+Parameters:
+start,stop,resolution,population,birth?
+0,4,1,100,true
+
+Data:
+time,x,y
+0,0,0
+1,1,1
+2,4,8
+3,9,27
+</code></pre>
+<p>This gives:</p>
+<pre><code class="language-NetLogo">observer&gt; foreach csv:from-file &quot;header.csv&quot; show
+observer: [&quot;My Data&quot;]
+observer: [&quot;2/1/2015&quot;]
+observer: [&quot;Parameters:&quot;]
+observer: [&quot;start&quot; &quot;stop&quot; &quot;resolution&quot; &quot;population&quot; &quot;birth?&quot;]
+observer: [0 4 1 100 true]
+observer: [&quot;Data:&quot;]
+observer: [&quot;time&quot; &quot;x&quot; &quot;y&quot;]
+observer: [0 0 0]
+observer: [1 1 1]
+observer: [2 4 8]
+observer: [3 9 27]
+</code></pre>
+</div>
+<div class="dict_entry" id="csv:to-row">
+  <h3><a>csv:to-row</a></h3>
+  <h4>
+    <span class="prim_example">csv:to-row <i>list</i></span>
+    <span class="prim_example">csv:to-row <i>list</i> <i>delimiter</i></span>
+  </h4>
+<p>Reports the given list as a CSV row. For example:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:to-row [&quot;one&quot; 2 true]
+observer: &quot;one,2,true&quot;
+</code></pre>
+</div>
+<div class="dict_entry" id="csv:to-string">
+  <h3><a>csv:to-string</a></h3>
+  <h4>
+    <span class="prim_example">csv:to-string <i>list</i></span>
+    <span class="prim_example">csv:to-string <i>list</i> <i>delimiter</i></span>
+  </h4>
+<p>Reports the given list of lists as a CSV string. For example:</p>
+<pre><code class="language-NetLogo">observer&gt; show csv:to-string [[1 &quot;two&quot; 3] [4 5]]
+observer: &quot;1,two,3\n4,5&quot;
+</code></pre>
+</div>
+<div class="dict_entry" id="csv:to-file">
+  <h3><a>csv:to-file</a></h3>
+  <h4>
+    <span class="prim_example">csv:to-file <i>csv-file</i> <i>list</i></span>
+    <span class="prim_example">csv:to-file <i>csv-file</i> <i>list</i> <i>delimiter</i></span>
+  </h4>
+<p>Writes the given list of lists to a new CSV file. For example:</p>
+<pre><code class="language-NetLogo">observer&gt; csv:to-file &quot;myfile.csv&quot; [[1 &quot;two&quot; 3] [4 5]]
+</code></pre>
+<p>will result in a file <code>myfile.csv</code> containing:</p>
+<pre><code>1,two,3
+4,5
+</code></pre>
+</div>

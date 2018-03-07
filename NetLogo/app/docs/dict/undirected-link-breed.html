@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: undirected-link-breed</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="undirected-link-breed"> 
+ <h3> <a>undirected-link-breed</a> </h3> 
+ <h4> <span class="prim_example">undirected-link-breed [<i>&lt;link-breeds&gt;</i> <i>&lt;link-breed&gt;</i>]</span> </h4> 
+ <p> This keyword, like the globals and breeds keywords, can only be used at the beginning of the Code tab, before any procedure definitions. It defines an undirected link breed. Links of a particular breed are always either all directed or all undirected. The first input defines the name of the agentset associated with the link breed. The second input defines the name of a single member of the breed. </p>
+ <p> Any link of the given link breed: </p>
+ <ul> 
+  <li>is part of the agentset named by the link breed name </li>
+  <li>has its built-in variable <code>breed</code> set to that agentset </li>
+  <li>is directed or undirected as declared by the keyword </li>
+ </ul> 
+ <p> Most often, the agentset is used in conjunction with ask to give commands to only the links of a particular breed. </p>
+ <pre>
+undirected-link-breed [streets street]
+undirected-link-breed [highways highway]
+to setup
+  clear-all
+  crt 2
+  ask turtle 0 [ create-street-with turtle 1 ]
+  ask turtle 0 [ create-highway-with turtle 1 ]
+end
+
+ask turtle 0 [ show sort my-links ]
+;; prints [(street 0 1) (highway 0 1)]
+</pre> 
+ <p> See also <a href="../dictionary.html#breed">breed</a>, <a href="../dictionary.html#directed-link-breed">directed-link-breed</a> </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

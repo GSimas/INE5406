@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: round</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="round"> 
+ <h3> <a>round<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">round <i>number</i></span> </h4> 
+ <p> Reports the integer nearest to <i>number</i>. </p>
+ <p> If the decimal portion of <i>number</i> is exactly .5, the number is rounded in the <b>positive</b> direction. </p>
+ <p> Note that rounding in the positive direction is not always how rounding is done in other software programs. (In particular, it does not match the behavior of StarLogoT, which always rounded numbers ending in 0.5 to the nearest even integer.) The rationale for this behavior is that it matches how turtle coordinates relate to patch coordinates in NetLogo. For example, if a turtle's xcor is -4.5, then it is on the boundary between a patch whose pxcor is -4 and a patch whose pxcor is -5, but the turtle must be considered to be in one patch or the other, so the turtle is considered to be in the patch whose pxcor is -4, because we round towards the positive numbers. </p>
+ <pre>
+show round 4.2
+=&gt; 4
+show round 4.5
+=&gt; 5
+show round -4.5
+=&gt; -4
+</pre> 
+ <p> See also <a href="../dictionary.html#precision">precision</a>, <a href="../dictionary.html#ceiling">ceiling</a>, <a href="../dictionary.html#floor">floor</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

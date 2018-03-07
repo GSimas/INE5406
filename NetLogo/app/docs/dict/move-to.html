@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: move-to</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="move-to"> 
+ <h3> <a>move-to<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">move-to <i>agent</i></span> <img alt="Turtle Command" src="../images/turtle.gif"> </h4> 
+ <p> The turtle sets its x and y coordinates to be the same as the given agent's. </p>
+ <p> (If that agent is a patch, the effect is to move the turtle to the center of that patch.) </p>
+ <pre>
+move-to turtle 5
+;; turtle moves to same point as turtle 5
+move-to one-of patches
+;; turtle moves to the center of a random patch
+move-to max-one-of turtles [size]
+;; turtle moves to same point as biggest turtle
+</pre> 
+ <p> Note that the turtle's heading is unaltered. You may want to use the <a href="../dictionary.html#face">face</a> command first to orient the turtle in the direction of motion. </p>
+ <p> See also <a href="../dictionary.html#setxy">setxy</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

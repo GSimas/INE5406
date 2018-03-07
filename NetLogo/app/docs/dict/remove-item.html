@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: remove-item</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="remove-item"> 
+ <h3> <a>remove-item<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">remove-item <i>index</i> <i>list</i></span> <span class="prim_example">remove-item <i>index</i> <i>string</i></span> </h4> 
+ <p> For a list, reports a copy of <i>list</i> with the item at the given index removed. </p>
+ <p> For strings, reports a copy of <i>string</i> with the character at the given index removed. </p>
+ <p> Note that the indices begin from 0, not 1. (The first item is item 0, the second item is item 1, and so on.) </p>
+ <pre>
+set mylist [2 7 4 7 "Bob"]
+set mylist remove-item 2 mylist
+;; mylist is now [2 7 7 "Bob"]
+show remove-item 2 "string"
+=&gt; "sting"
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

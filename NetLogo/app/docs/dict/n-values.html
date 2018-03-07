@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: n-values</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="n-values"> 
+ <h3> <a>n-values<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">n-values <i>size</i> <i>reporter</i></span> </h4> 
+ <p> Reports a list of length <i>size</i> containing values computed by repeatedly running the reporter. <i>reporter</i> may be an anonymous reporter or the name of a reporter. </p>
+ <p> If the reporter accepts inputs, the input will be the number of the item currently being computed, starting from zero. </p>
+ <pre>
+show n-values 5 [1]
+=&gt; [1 1 1 1 1]
+show n-values 5 [ i -&gt; i ]
+=&gt; [0 1 2 3 4]
+show n-values 3 turtle
+=&gt; [(turtle 0) (turtle 1) (turtle 2)]
+show n-values 5 [ x -&gt; x * x ]
+=&gt; [0 1 4 9 16]
+</pre> 
+ <p> See also <a href="../dictionary.html#reduce">reduce</a>, <a href="../dictionary.html#filter">filter</a>, <a href="../dictionary.html#ques">-&gt; (anonymous procedure)</a>, <a href="../dictionary.html#range">range</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

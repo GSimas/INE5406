@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: subtract-headings</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="subtract-headings"> 
+ <h3> <a>subtract-headings<span class="since">2.1</span></a> </h3> 
+ <h4> <span class="prim_example">subtract-headings <i>heading1 heading2</i></span> </h4> 
+ <p> Computes the difference between the given headings, that is, the number of degrees in the smallest angle by which heading2 could be rotated to produce heading1. A positive answer means a clockwise rotation, a negative answer counterclockwise. The result is always in the range -180 to 180, but is never exactly -180. </p>
+ <p> Note that simply subtracting the two headings using the - (minus) operator wouldn't work. Just subtracting corresponds to always rotating clockwise from heading2 to heading1; but sometimes the counterclockwise rotation is shorter. For example, the difference between 5 degrees and 355 degrees is 10 degrees, not -350 degrees. </p>
+ <pre>
+show subtract-headings 80 60
+=&gt; 20
+show subtract-headings 60 80
+=&gt; -20
+show subtract-headings 5 355
+=&gt; 10
+show subtract-headings 355 5
+=&gt; -10
+show subtract-headings 180 0
+=&gt; 180
+show subtract-headings 0 180
+=&gt; 180
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

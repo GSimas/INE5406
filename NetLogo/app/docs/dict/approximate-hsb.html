@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: approximate-hsb</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="approximate-hsb"> 
+ <h3> <a>approximate-hsb<span class="since">4.0</span></a> </h3> 
+ <h4> <span class="prim_example">approximate-hsb <i>hue saturation brightness</i></span> </h4> 
+ <p> Reports a number in the range 0 to 140, not including 140 itself, that represents the given color, specified in the HSB spectrum, in NetLogo's color space. </p>
+ <p> The first value (hue) should be in the range of 0 to 360, the second and third (saturation and brightness) in the range between 0 and 100. </p>
+ <p> The color reported may be only an approximation, since the NetLogo color space does not include all possible colors. </p>
+ <pre>
+show approximate-hsb 0 0 0
+=&gt; 0  ;; (black)
+show approximate-hsb 180 57.143 76.863
+=&gt; 85 ;; (cyan)
+</pre> 
+ <p> See also <a href="../dictionary.html#extract-hsb">extract-hsb</a>, <a href="../dictionary.html#approximate-rgb">approximate-rgb</a>, <a href="../dictionary.html#extract-rgb">extract-rgb</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: wait</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="wait"> 
+ <h3> <a>wait<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">wait <i>number</i></span> </h4> 
+ <p> Wait the given number of seconds. (This needn't be an integer; you can specify fractions of seconds.) Note that you can't expect complete precision; the agent will never wait less than the given amount, but might wait slightly more. </p>
+ <pre>
+repeat 10 [ fd 1 wait 0.5 ]
+</pre> 
+ <p> While the agent is waiting, no other agents can do anything. Everything stops until the agent is done. </p>
+ <p> See also <a href="../dictionary.html#every">every</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

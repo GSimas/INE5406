@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: position</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="position"> 
+ <h3> <a>position<span class="since">1.0</span></a> </h3> 
+ <h4> <span class="prim_example">position <i>item</i> <i>list</i></span> <span class="prim_example">position <i>string1</i> <i>string2</i></span> </h4> 
+ <p> On a list, reports the first position of <i>item</i> in <i>list</i>, or false if it does not appear. </p>
+ <p> On strings, reports the position of the first appearance <i>string1</i> as a substring of <i>string2</i>, or false if it does not appear. </p>
+ <p> Note: The positions are numbered beginning with 0, not with 1. </p>
+ <pre>
+;; suppose mylist is [2 7 4 7 "Bob"]
+show position 7 mylist
+=&gt; 1
+show position 10 mylist
+=&gt; false
+show position "in" "string"
+=&gt; 3
+</pre> 
+ <p> See also <a href="../dictionary.html#member">member?</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

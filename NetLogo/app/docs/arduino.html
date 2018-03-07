@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Arduino Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Arduino Extension</h1>
+<h2><a href="#using" id="using" class="section-anchor">Using</a></h2>
+<p>For a first use without compiling code, do the following:</p>
+<ol>
+<li>
+<p><a href="http://ccl.northwestern.edu/netlogo/download.shtml" target="_blank">Acquire the NetLogo software</a>. The Arduino extension comes pre-installed with NetLogo 5.2.1 and later.</p>
+</li>
+<li>
+<p>Acquire an Arduino board and install the arduino IDE</p>
+</li>
+<li>
+<p>Use the Arduino IDE to edit the Sketch (if desired) and send to the board. (See elaborate comments in the sketch for recommendations about what to comment out/leave in depending on your setup &amp; circuit on the board.)</p>
+</li>
+<li>
+<p>Once the Arduino has the sketch loaded on it, it will run that sketch whenever it is powered on.</p>
+</li>
+<li>
+<p>Open the test &ldquo;Arduino Example&rdquo; model in the NetLogo Models library (it&rsquo;s in the &ldquo;IABM Textbook&rdquo; &gt; &ldquo;Chapter 8&rdquo; folder)</p>
+</li>
+<li>
+<p>Connect the Arduino to a USB port on the computer if it is not still connected from step 3.</p>
+</li>
+<li>
+<p>Press OPEN to choose the port to communicate with and establish the connection.</p>
+</li>
+<li>
+<p>Use the buttons to send byte commands; use the interface to inspect variable value(s) that your sketch is sending.</p>
+</li>
+<li>
+<p>Note that by typing <code>arduino:primitives</code> you can get a list of the available commands in the extension.</p>
+</li>
+</ol>
+<h3><a href="#notes" id="notes" class="section-anchor">Notes</a></h3>
+<p>A NetLogo model using this extension must work in conjunction with an Arduino Sketch.  These two endpoints communicate by way of an application protocol that they define.  For example, if the NetLogo model sends a byte &lsquo;1&rsquo; over the wire this may mean something to the Arduino Sketch, which will respond accordingly.  The Arduino Sketch for its own part may send name-value pairs over the serial port, which then can be looked up asynchronously by the NetLogo model.</p>
+<p>The modeler is free to build as simple or as complex an application protocol on top of this raw communication mechanism.</p>
+<p>The asynchronous nature of the board-to-computer communications has one notable limitation.  If you choose to try to simulate a synchronous, BLOCKING READ communications pattern, (e.g., by sending a byte-based signal to the board, which triggers a response in a known name-value pair), then you are likely to be &lsquo;off by one&rsquo; response.  That is, if you do the following in NetLogo code:</p>
+<pre><code class="language-NetLogo">arduino:write-byte b
+show arduino:get &quot;varname&quot;
+</code></pre>
+<p>You are likely to get the value of <code>varname</code> from the PRIOR command represented by writing the byte <code>b</code>.  This is because the second line of NetLogo code will execute while the Arduino is off generating a new value for <code>varname</code>.</p>
+<p>There are ways of getting around this (simulating a blocking interface by polling on a value to indicate fresh &ldquo;news&rdquo; on <code>varname</code>). But this extension works best in settings where the Arduino Sketch is &ldquo;chatty&rdquo; and the NetLogo model samples this stream when it needs data.</p>
+<h3><a href="#compatibility" id="compatibility" class="section-anchor">Compatibility</a></h3>
+<p>This code has been tested on Windows 7 and 10 with 32-bit NetLogo and on Mac OS X.
+You are likely to encounter issues when running this with 64-bit NetLogo in Windows 8 or Windows 10, so if you have Windows 8 or 10, please download the <em>32-Bit</em> version of NetLogo if you plan on using the Arduino extension.
+We strive for cross-platform compatibility across Mac, Win, and Linux.
+So if you have troubles, please let us know.</p>
+<h3><a href="#questions" id="questions" class="section-anchor">Questions</a></h3>
+<p>If you run into problems or have questions about the extension, please email <a href="mailto:ccl-feedback@ccl.northwestern.edu">ccl-feedback</a> or <a href="mailto:cbrady@inquirelearning.com">cbrady@inquirelearning.com</a>.</p>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#arduino:primitives"><code>arduino:primitives</code></a>
+  <a href="#arduino:ports"><code>arduino:ports</code></a>
+  <a href="#arduino:open"><code>arduino:open</code></a>
+  <a href="#arduino:close"><code>arduino:close</code></a>
+  <a href="#arduino:get"><code>arduino:get</code></a>
+  <a href="#arduino:write-string"><code>arduino:write-string</code></a>
+  <a href="#arduino:write-int"><code>arduino:write-int</code></a>
+  <a href="#arduino:write-byte"><code>arduino:write-byte</code></a>
+  <a href="#arduino:is-open?"><code>arduino:is-open?</code></a>
+</div>
+<div class="dict_entry" id="arduino:primitives">
+  <h3><a>arduino:primitives</a></h3>
+  <h4>
+    <span class="prim_example">arduino:primitives</span>
+  </h4>
+<p>Reports a list of primitives available in the extension, with basic hints about their syntax.</p>
+</div>
+<div class="dict_entry" id="arduino:ports">
+  <h3><a>arduino:ports</a></h3>
+  <h4>
+    <span class="prim_example">arduino:ports</span>
+  </h4>
+<p>Reports a list of port names</p>
+</div>
+<div class="dict_entry" id="arduino:open">
+  <h3><a>arduino:open</a></h3>
+  <h4>
+    <span class="prim_example">arduino:open <i>port-name</i></span>
+  </h4>
+<p>Opens the port named <em>port-name</em>.</p>
+</div>
+<div class="dict_entry" id="arduino:close">
+  <h3><a>arduino:close</a></h3>
+  <h4>
+    <span class="prim_example">arduino:close</span>
+  </h4>
+<p>Closes the currently open port.</p>
+</div>
+<div class="dict_entry" id="arduino:get">
+  <h3><a>arduino:get</a></h3>
+  <h4>
+    <span class="prim_example">arduino:get <i>var-name</i></span>
+  </h4>
+<p>Reads and reports the value associated with <em>var-name</em> on the Arduino board. Note: <em>var-name</em> is case insensitive.</p>
+</div>
+<div class="dict_entry" id="arduino:write-string">
+  <h3><a>arduino:write-string</a></h3>
+  <h4>
+    <span class="prim_example">arduino:write-string <i>string-message</i></span>
+  </h4>
+<p>Writes a string message to the currently open port.</p>
+</div>
+<div class="dict_entry" id="arduino:write-int">
+  <h3><a>arduino:write-int</a></h3>
+  <h4>
+    <span class="prim_example">arduino:write-int <i>int-message</i></span>
+  </h4>
+<p>Writes a integer message to the currently open port.</p>
+</div>
+<div class="dict_entry" id="arduino:write-byte">
+  <h3><a>arduino:write-byte</a></h3>
+  <h4>
+    <span class="prim_example">arduino:write-byte <i>byte-message</i></span>
+  </h4>
+<p>Writes a byte message to the currently open port.</p>
+</div>
+<div class="dict_entry" id="arduino:is-open?">
+  <h3><a>arduino:is-open?</a></h3>
+  <h4>
+    <span class="prim_example">arduino:is-open?</span>
+  </h4>
+<p>Reports a boolean value (<code>true</code> or <code>false</code>) indicating if a port is open.</p>
+</div>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Vid Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Vid Extension</h1>
+<h2><a href="#concepts" id="concepts" class="section-anchor">Concepts</a></h2>
+<h3><a href="#video-source" id="video-source" class="section-anchor">Video Source</a></h3>
+<p>The <code>vid</code> extension has a built-in concept of a video source.
+At the moment, the only video sources available are movies in the directory the model lives in and cameras attached to the computer.
+The <code>vid</code> extension opens a new video source with the <code>vid:&lt;source&gt;-open</code> and <code>vid:&lt;source&gt;-select</code>.
+These primitives change the source to the selected source.
+If a source is already open, it closes it before opening a new one.</p>
+<h3><a href="#source-lifecycle" id="source-lifecycle" class="section-anchor">Source Lifecycle</a></h3>
+<p>Movie sources are &ldquo;stopped&rdquo; after being created by <code>vid:movie-select</code> or <code>vid:movie-open</code>.
+Camera sources start off as &ldquo;playing&rdquo; after being created by <code>vid:camera-select</code> or <code>vid:camera-open</code>.
+If a source is in status &ldquo;stopped&rdquo; it can be started with <code>vid:start</code>.
+Conversely, if the source is &ldquo;playing&rdquo; it can be stopped with <code>vid:stop</code>.
+When a source is &ldquo;stopped&rdquo;, each call to <code>vid:capture-image</code> will return the same image.</p>
+<h3><a href="#video-recorder" id="video-recorder" class="section-anchor">Video Recorder</a></h3>
+<p>The <code>vid</code> extension also has the concept of a recording, a series of frames which can be sewn into an &ldquo;mp4&rdquo; movie.
+The recorder status can be queried using <code>vid:recorder-status</code>.
+The recorder status is &ldquo;inactive&rdquo; until started with <code>vid:start-recorder</code>, which sets it to &ldquo;recording&rdquo;.
+While the recorder is &ldquo;recording&rdquo; the <code>vid:record-view</code>, <code>vid:record-interface</code>, and <code>vid:record-source</code> can be used to save frames to the recording.
+You can choose to save the recording while recording using <code>vid:save-recording</code> which saves the movie to the specified file and reset the recording status to &ldquo;inactive&rdquo;.
+If you would prefer to throw away the recorded frames without saving, use <code>vid:reset-recorder</code>.</p>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#vid:camera-names"><code>vid:camera-names</code></a>
+  <a href="#vid:camera-open"><code>vid:camera-open</code></a>
+  <a href="#vid:camera-select"><code>vid:camera-select</code></a>
+  <a href="#vid:movie-select"><code>vid:movie-select</code></a>
+  <a href="#vid:movie-open"><code>vid:movie-open</code></a>
+  <a href="#vid:movie-open-remote"><code>vid:movie-open-remote</code></a>
+  <a href="#vid:close"><code>vid:close</code></a>
+  <a href="#vid:start"><code>vid:start</code></a>
+  <a href="#vid:stop"><code>vid:stop</code></a>
+  <a href="#vid:status"><code>vid:status</code></a>
+  <a href="#vid:capture-image"><code>vid:capture-image</code></a>
+  <a href="#vid:set-time"><code>vid:set-time</code></a>
+  <a href="#vid:show-player"><code>vid:show-player</code></a>
+  <a href="#vid:hide-player"><code>vid:hide-player</code></a>
+  <a href="#vid:record-view"><code>vid:record-view</code></a>
+  <a href="#vid:record-interface"><code>vid:record-interface</code></a>
+  <a href="#vid:record-source"><code>vid:record-source</code></a>
+  <a href="#vid:recorder-status"><code>vid:recorder-status</code></a>
+  <a href="#vid:start-recorder"><code>vid:start-recorder</code></a>
+  <a href="#vid:save-recording"><code>vid:save-recording</code></a>
+</div>
+<div class="dict_entry" id="vid:camera-names">
+  <h3><a>vid:camera-names</a></h3>
+  <h4>
+    <span class="prim_example">vid:camera-names</span>
+  </h4>
+<p>Provides a list of all available cameras.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:camera-names =&gt; []
+vid:camera-names =&gt; [&quot;Mac Camera&quot;]
+vid:camera-names =&gt; [&quot;Logitech Camera&quot;]
+</code></pre>
+</div>
+<div class="dict_entry" id="vid:camera-open">
+  <h3><a>vid:camera-open</a></h3>
+  <h4>
+    <span class="prim_example">vid:camera-open</span>
+  </h4>
+<p>Opens the named camera as a video source.
+If no name is provided, opens the first camera that would be listed by <code>camera-names</code>.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:camera-open ; opens first camera
+(vid:camera-open &quot;Logitech Camera&quot;)
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: no cameras found&quot;</code>: no cameras are available.</li>
+<li>Message <code>&quot;vid: camera &quot;\&lt;name\&gt;&quot; not found&quot;</code>: if the named camera is not available.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:camera-select">
+  <h3><a>vid:camera-select</a></h3>
+  <h4>
+    <span class="prim_example">vid:camera-select</span>
+  </h4>
+<p>Prompts the user to select a camera as video source. This command does not error if the user cancels. Use <code>vid:status</code> to see if a user selected a camera.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:camera-select
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message &ldquo;vid: no cameras found&rdquo;: no cameras are available.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:movie-select">
+  <h3><a>vid:movie-select</a></h3>
+  <h4>
+    <span class="prim_example">vid:movie-select</span>
+  </h4>
+<p>Prompts the user to select a movie to use as a video source.
+The formats supported are those <a href="https://docs.oracle.com/javafx/2/api/javafx/scene/media/package-summary.html#SupportedMediaTypes" target="_blank">supported by JavaFX2</a>.
+This command does not error if the user cancels.
+Use <code>vid:status</code> to see if the user selected a movie.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:movie-select
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: format not supported&quot;</code>: the user selected a movie with an unsupported format.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:movie-open">
+  <h3><a>vid:movie-open</a></h3>
+  <h4>
+    <span class="prim_example">vid:movie-open <i>filename</i></span>
+  </h4>
+<p>Opens a video from the file system.
+If the provided path is not absolute the extension searches for the given path relative to the current model directory.
+If the provided path is absolute the extension opens the file.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:movie-open &quot;foo.mp4&quot;      ; Opens foo.mp4 in the directory containing the model
+vid:movie-open user-file      ; Opens a dialog for the user to select a movie
+vid:movie-open &quot;/tmp/foo.mp4&quot; ; Opens a movie from the &quot;/tmp&quot; directory
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: no movie found&quot;</code>: the movie could not be found.</li>
+<li>Message <code>&quot;vid: format not supported&quot;</code>: the user selected a movie with an unsupported format.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:movie-open-remote">
+  <h3><a>vid:movie-open-remote</a></h3>
+  <h4>
+    <span class="prim_example">vid:movie-open-remote <i>url</i></span>
+  </h4>
+<p>Opens a remote video from a website or ftp server.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:movie-open-remote &quot;http://example.org/foo.mp4&quot;
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: no movie found&quot;</code>: The specified URL could not be loaded or errored while loading.</li>
+<li>Message <code>&quot;vid: format not supported&quot;</code>: The file type of the remote movie is not supported.</li>
+<li>Message <code>&quot;vid: protocol not supported&quot;</code>: The movie was at an unsupported URL protocol. Supported protocols are <code>ftp</code> and <code>http</code>.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:close">
+  <h3><a>vid:close</a></h3>
+  <h4>
+    <span class="prim_example">vid:close</span>
+  </h4>
+<p>Closes the currently selected video source.
+Has no effect if there is no active video source.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:close
+</code></pre>
+</div>
+<div class="dict_entry" id="vid:start">
+  <h3><a>vid:start</a></h3>
+  <h4>
+    <span class="prim_example">vid:start</span>
+  </h4>
+<p>Starts the selected video source.
+A video source must have been selected before calling <code>vid:start</code>.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:start
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: no selected source&quot;</code>: There is no currently selected video source. Select a source with <code>vid:movie-open</code>, <code>vid:movie-select</code>, <code>vid:camera-open</code>, or <code>vid:camera-select</code>.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:stop">
+  <h3><a>vid:stop</a></h3>
+  <h4>
+    <span class="prim_example">vid:stop</span>
+  </h4>
+<p>Stops the currently running video source.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:stop
+</code></pre>
+</div>
+<div class="dict_entry" id="vid:status">
+  <h3><a>vid:status</a></h3>
+  <h4>
+    <span class="prim_example">vid:status</span>
+  </h4>
+<p>Reports the current status of an active video.
+Note that after calling <code>vid:movie-open</code> or <code>vid:movie-select</code> the status will be set to &ldquo;stopped&rdquo;,
+while after calling <code>vid:camera-open</code> or <code>vid:camera-select</code> the status will be &ldquo;playing&rdquo;.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:status     ; =&gt; &quot;inactive&quot;
+
+vid:movie-open &quot;foobar.mp4&quot;
+vid:status      ; =&gt; &quot;stopped&quot;
+
+vid:movie-start
+vid:status       ; =&gt; &quot;playing&quot;
+</code></pre>
+</div>
+<div class="dict_entry" id="vid:capture-image">
+  <h3><a>vid:capture-image</a></h3>
+  <h4>
+    <span class="prim_example">vid:capture-image <i>width</i> <i>height</i></span>
+  </h4>
+<p>Captures an image from the currently selected active source.</p>
+<p>If width and height are not specified, the image is captured at the current source resolution.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">extensions [ vid bitmap ]
+
+to capture
+  ; capture an image if a video source is open,
+  ; have the user select a camera if no video source found
+  carefully [
+    ; when camera open, take an image
+    let image vid:capture-image ; returns image suitable for use with bitmap extension
+    bitmap:copy-to-drawing image 0 0
+  ] [
+    if error-message = &quot;Extension exception: vid: no selected source&quot; [
+      vid:camera-select
+      vid:start
+      let image vid:capture-image
+      bitmap:copy-to-drawing image 0 0
+    ]
+  ]
+end
+</code></pre>
+<p>If you want to capture images at a different resolution, simply replace <code>vid:capture-image</code> with, e.g., <code>(vid:capture-image 640 480)</code>.</p>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: no selected source&quot;</code>: There is no currently selected video source. Select a source with <code>vid:movie-open</code>, <code>vid:movie-select</code>, <code>vid:camera-open</code>, or <code>vid:camera-select</code>.</li>
+<li>Message <code>&quot;vid: invalid dimensions&quot;</code>: The selected dimensions are invalid (one of the dimensions is zero or negative).</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:set-time">
+  <h3><a>vid:set-time</a></h3>
+  <h4>
+    <span class="prim_example">vid:set-time <i>seconds</i></span>
+  </h4>
+<p>Sets the time of the current video source to <code>*seconds*</code>.
+This has no effect when the current video source is a camera.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:set-time 100
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: no selected source&quot;</code>: There is no currently selected video source. Select a source with <code>vid:movie-open</code>, <code>vid:movie-select</code>, <code>vid:camera-open</code>, or <code>vid:camera-select</code>.</li>
+<li>Message <code>&quot;vid: invalid time&quot;</code>: The currently active video does not contain the specified second. The second may be negative, or greater than the length of the video.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:show-player">
+  <h3><a>vid:show-player</a></h3>
+  <h4>
+    <span class="prim_example">vid:show-player <i>width</i> <i>height</i></span>
+  </h4>
+<p>Shows a player in a separate window.
+If there is no video source, the window will be an empty black frame.
+If there is an active video source, it will be displayed in the window with the specified width and height.
+If there is a playing video source, it will be displayed in the window at its specified width and height.
+If width and height are omitted, the video will be displayed in its native resolution.</p>
+<p>Example with native resolution:</p>
+<pre><code class="language-NetLogo">vid:show-player
+</code></pre>
+<p>Example with custom resolution:</p>
+<pre><code class="language-NetLogo">(vid:show-player 640 480)
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: invalid dimensions&quot;</code>: The selected dimensions are invalid (one of the dimensions is zero or negative).</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:hide-player">
+  <h3><a>vid:hide-player</a></h3>
+  <h4>
+    <span class="prim_example">vid:hide-player</span>
+  </h4>
+<p>Hides the player if open. Does nothing if there is no player window.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:hide-player
+</code></pre>
+</div>
+<div class="dict_entry" id="vid:record-view">
+  <h3><a>vid:record-view</a></h3>
+  <h4>
+    <span class="prim_example">vid:record-view</span>
+  </h4>
+<p>Records the current image shown in the NetLogo view to the active recording.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:record-view
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: recorder not started&quot;</code>: The recorder has not been started. Start the recorder with <code>vid:start-recorder</code>.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:record-interface">
+  <h3><a>vid:record-interface</a></h3>
+  <h4>
+    <span class="prim_example">vid:record-interface</span>
+  </h4>
+<p>Records the NetLogo interface view to the active recording.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:record-interface
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: recorder not started&quot;</code>: The recorder has not been started. Start the recorder with <code>vid:start-recorder</code>.</li>
+<li>Message <code>&quot;vid: export interface not supported&quot;</code>: The calling NetLogo version does not support interface exports. This will occur when running NetLogo headlessly.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:record-source">
+  <h3><a>vid:record-source</a></h3>
+  <h4>
+    <span class="prim_example">vid:record-source</span>
+  </h4>
+<p>Records a frame to the active recording from the currently active source.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:record-source
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: recorder not started&quot;</code>: The recorder has not been started. Start the recorder with <code>vid:start-recorder</code>.</li>
+<li>Message <code>&quot;vid: no selected source&quot;</code>: There is no currently selected video source. Select a source with <code>vid:movie-open</code>, <code>vid:movie-select</code>, <code>vid:camera-open</code>, or <code>vid:camera-select</code>.</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:recorder-status">
+  <h3><a>vid:recorder-status</a></h3>
+  <h4>
+    <span class="prim_example">vid:recorder-status</span>
+  </h4>
+<p>Reports the current status of the recorder.
+Initially and after the recorder is saved (via <code>vid:save-recording</code>) or reset (via <code>vid:reset-recorder</code>) the recorder status is &ldquo;inactive&rdquo;.
+After calling <code>vid:start-recorder</code> the status will be &ldquo;recording&rdquo;.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:recorder-status ; =&gt; &quot;inactive&quot;
+
+vid:start-recorder
+vid:recorder-status ; =&gt; &quot;recording&quot;
+
+vid:reset-recorder
+vid:recorder-status ; =&gt; &quot;inactive&quot;
+</code></pre>
+</div>
+<div class="dict_entry" id="vid:start-recorder">
+  <h3><a>vid:start-recorder</a></h3>
+  <h4>
+    <span class="prim_example">vid:start-recorder</span>
+  </h4>
+<p>Starts the recorder.
+If the recorder is already running this will cause an error to be raised.
+If desired, a recording width and height can be supplied.
+If width and height are not supplied, they will be determined from the first frame recorded.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:start-recorder
+(vid:start-recorder 640 480)
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: recorder already started&quot;</code>: The recorder has already been started. The existing recording should be saved or reset before starting the recording.</li>
+<li>Message <code>&quot;vid: invalid dimensions&quot;</code>: The selected dimensions are invalid (one of the dimensions is zero or negative).</li>
+</ul>
+</div>
+<div class="dict_entry" id="vid:save-recording">
+  <h3><a>vid:save-recording</a></h3>
+  <h4>
+    <span class="prim_example">vid:save-recording <i>filename</i></span>
+  </h4>
+<p>Saves the recording to the specified path.
+If the recorder is not running this will cause an error to be raised.
+Note that at present the recording will always be saved in the &ldquo;mp4&rdquo; format.
+If the supplied filename does not end in &ldquo;.mp4&rdquo;, the &ldquo;.mp4&rdquo; suffix will be added.
+Note that <code>vid:save-recording</code> <em>will</em> overwrite existing files of the same name.
+<code>vid:save-recording</code> will error if the recorder has not been started or if the file cannot be written since the containing directory does not exist.</p>
+<p>Example:</p>
+<pre><code class="language-NetLogo">vid:save-recording &quot;foo.mp4&quot;      ; Saves to foo.mp4 in the directory containing the model
+vid:save-recording user-new-file  ; Opens a dialog for the user to select a save path
+vid:save-recording &quot;/tmp/foo.mp4&quot; ; Saves the recording to the &quot;/tmp&quot; directory
+</code></pre>
+<p>Errors:</p>
+<ul>
+<li>Message <code>&quot;vid: recorder not started&quot;</code>: The recorder has not been started. Start the recorder with <code>vid:start-recorder</code>.</li>
+<li>Message <code>&quot;vid: no such directory&quot;</code>: The directory containing the specified save file does not exist.</li>
+<li>Message <code>&quot;vid: no frames recorded&quot;</code>: You tried to save a recording with no frames recorded. Check that you are recording properly or use <code>vid:reset-recording</code> to to change the recording format without saving.</li>
+</ul>
+</div>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Array Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Array Extension</h1>
+<h2><a href="#using" id="using" class="section-anchor">Using</a></h2>
+<p>The array extension is pre-installed in NetLogo.</p>
+<p>To use the array extension in your model, add a line to the top of your Code tab:</p>
+<pre><code>extensions [array]
+</code></pre>
+<p>If your model already uses other extensions, then it already has an
+<code>extensions</code> line in it, so just add <code>array</code> to the list.</p>
+<p>For more information on using NetLogo extensions,
+see the <a href="extensions.html">Extensions Guide</a></p>
+<h3><a href="#when-to-use" id="when-to-use" class="section-anchor">When to Use</a></h3>
+<p>In general, anything you can do with an array in NetLogo, you could
+also just use a list for. But you may want to consider using an array
+instead for speed reasons. Lists and arrays have different performance
+characteristics, so you may be able to make your model run faster by
+selecting the appropriate data structure.</p>
+<p>Arrays are useful when you need a collection of values whose size is
+fixed. You can quickly access or alter any item in an array if you
+know its position.</p>
+<p>Unlike NetLogo&rsquo;s lists and strings, arrays are &ldquo;mutable&rdquo;.
+That means that you can actually modify them directly,
+rather than constructing an altered copy as with lists. If
+the array is used in more than one place in your code, any
+changes you make will show up everywhere. It&rsquo;s tricky to write
+code involving mutable structures and it&rsquo;s easy to make subtle
+errors or get surprising results, so we suggest sticking with lists
+and strings unless you&rsquo;re certain you want and need mutability.</p>
+<h3><a href="#example-use-of-array-extension" id="example-use-of-array-extension" class="section-anchor">Example use of Array Extension</a></h3>
+<pre><code class="language-NetLogo">let a array:from-list n-values 5 [0]
+print a
+=&gt; {{array: 0 0 0 0 0}}
+print array:length a
+=&gt; 5
+foreach n-values 5 [ i -&gt; i ] [ i -&gt; array:set a i i * i ]
+print a
+=&gt; {{array: 0 1 4 9 16}}
+print array:item a 0
+=&gt; 0
+print array:item a 3
+=&gt; 9
+array:set a 3 50
+print a
+=&gt; {{array: 0 1 4 50 16}}
+</code></pre>
+<h2>Primitives</h2>
+<div id="">
+  <a href="#array:from-list"><code>array:from-list</code></a>
+  <a href="#array:item"><code>array:item</code></a>
+  <a href="#array:set"><code>array:set</code></a>
+  <a href="#array:length"><code>array:length</code></a>
+  <a href="#array:to-list"><code>array:to-list</code></a>
+</div>
+<div class="dict_entry" id="array:from-list">
+  <h3><a>array:from-list</a></h3>
+  <h4>
+    <span class="prim_example">array:from-list <i>list</i></span>
+  </h4>
+<p>Reports a new array containing the same items in the same order as the input list.</p>
+</div>
+<div class="dict_entry" id="array:item">
+  <h3><a>array:item</a></h3>
+  <h4>
+    <span class="prim_example">array:item <i>array</i> <i>index</i></span>
+  </h4>
+<p>Reports the item in the given array with the given index (ranging from zero to the length of the array minus one).</p>
+</div>
+<div class="dict_entry" id="array:set">
+  <h3><a>array:set</a></h3>
+  <h4>
+    <span class="prim_example">array:set <i>array</i> <i>index</i> <i>value</i></span>
+  </h4>
+<p>Sets the item in the given array with the given index (ranging from zero to the length of the array minus one) to the given value.</p>
+<p>Note that unlike the <code>replace-item</code> primitive for lists, a new array is not created.
+The given array is actually modified.</p>
+</div>
+<div class="dict_entry" id="array:length">
+  <h3><a>array:length</a></h3>
+  <h4>
+    <span class="prim_example">array:length <i>array</i></span>
+  </h4>
+<p>Reports the length of the given array, that is, the number of items in the array.</p>
+</div>
+<div class="dict_entry" id="array:to-list">
+  <h3><a>array:to-list</a></h3>
+  <h4>
+    <span class="prim_example">array:to-list <i>array</i></span>
+  </h4>
+<p>Reports a new list containing the same items in the same order as the given array.</p>
+</div>

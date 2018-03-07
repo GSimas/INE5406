@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: max-pxcor max-pycor</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="max-pcor"> 
+ <h3> <a>max-pxcor<span class="since">3.1</span></a> <a>max-pycor<span class="since">3.1</span></a> </h3> 
+ <h4> <span class="prim_example">max-pxcor</span> <span class="prim_example">max-pycor</span> </h4> 
+ <p> These reporters give the maximum x-coordinate and maximum y-coordinate, (respectively) for patches, which determines the size of the world. </p>
+ <p> Unlike in older versions of NetLogo the origin does not have to be at the center of the world. However, the maximum x- and y- coordinates must be greater than or equal to zero. </p>
+ <p> Note: You can set the size of the world only by editing the view -- these are reporters which cannot be set. </p>
+ <pre>
+crt 100 [ setxy random-float max-pxcor
+                random-float max-pycor ]
+;; distributes 100 turtles randomly in the
+;; first quadrant
+</pre> 
+ <p> See also <a href="../dictionary.html#min-pcor">min-pxcor</a>, <a href="../dictionary.html#min-pcor">min-pycor</a>, <a href="../dictionary.html#world-dim">world-width</a>, and <a href="../dictionary.html#world-dim">world-height</a> </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: set-current-directory</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="set-current-directory"> 
+ <h3> <a>set-current-directory<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">set-current-directory <i>string</i></span> </h4> 
+ <p> Sets the current directory that is used by the primitives <a href="../dictionary.html#file-delete">file-delete</a>, <a href="../dictionary.html#file-exists">file-exists?</a>, and <a href="../dictionary.html#file-open">file-open</a>. </p>
+ <p> The current directory is not used if the above commands are given an absolute file path. This is defaulted to the user's home directory for new models, and is changed to the model's directory when a model is opened. </p>
+ <p> Note that in Windows file paths the backslash needs to be escaped within a string by using another backslash "C:\\" </p>
+ <p> The change is temporary and is not saved with the model. </p>
+ <pre>
+set-current-directory "C:\\NetLogo"
+;; Assume it is a Windows Machine
+file-open "my-file.txt"
+;; Opens file "C:\\NetLogo\\my-file.txt"
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

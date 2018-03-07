@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: modes</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="modes"> 
+ <h3> <a>modes<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">modes <i>list</i></span> </h4> 
+ <p> Reports a list of the most common item or items in <i>list</i>. </p>
+ <p> The input list may contain any NetLogo values. </p>
+ <p> If the input is an empty list, reports an empty list. </p>
+ <pre>
+show modes [1 2 2 3 4]
+=&gt; [2]
+show modes [1 2 2 3 3 4]
+=&gt; [2 3]
+show modes [ [1 2 [3]] [1 2 [3]] [2 3 4] ]
+=&gt; [[1 2 [3]]]
+show modes [pxcor] of turtles
+;; shows which columns of patches have the most
+;; turtles on them
+</pre> 
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>

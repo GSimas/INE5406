@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<title>
+      NetLogo 6.0.2 User Manual: Ls Extension
+    </title>
+    <link rel="stylesheet" href="netlogo.css" type="text/css">
+    <style type="text/css">
+p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<h1>NetLogo Ls Extension</h1>
+<h2><a href="#levelspace-fundamentals" id="levelspace-fundamentals" class="section-anchor">LevelSpace fundamentals</a></h2>
+<p>LevelSpace must be loaded in a model using <code>extensions [ls]</code> at the top of your model. Once this is done, a model will be able to load up other models using the LevelSpace primitives, run commands and reporters in them, and close them down when they are no longer needed.</p>
+<p>Asking and reporting in LevelSpace is conceptually pretty straight forward: You pass blocks of code to child models, and the child models respond as if you had typed that code into their Command Center. LevelSpace allows you to report strings, numbers, and lists from a child to its parent. It is not possible to directly report turtles, patches, links, or any of their respective sets. Further, it is not possible to push data from a child to its parent - parents must ask their children to report. This mimicks the way in which turtles cannot &ldquo;push&rdquo; data to the observer, but rely on the observer to ask them for it.</p>
+<p>In general, the LevelSpace syntax has been designed to align with existing NetLogo primitives whenever possible.</p>
+<h3><a href="#headless-and-interactive-models" id="headless-and-interactive-models" class="section-anchor">Headless and Interactive Models</a></h3>
+<p>LevelSpace has two different child model types; headless models and interactive models. They each have their strengths and weaknesses:</p>
+<p>Interactive models
+* are full-fledged models that give full access to their interface and widgets,
+* run a bit slower, and use more memory
+* are visible by default</p>
+<p>Headless Models
+* only give you access to their view and command center
+* are faster and use less memory than interactive models.
+* are hidden by default</p>
+<p>Typically you will want to use headless models when you are running a large number of models, or if you simply want to run them faster. Interactive models are good if you run a small amount of models, if you are writing a LevelSpace model and need to be able to debug, or if you need access to widgets during runtime.</p>
+<h3><a href="#keeping-track-of-models" id="keeping-track-of-models" class="section-anchor">Keeping Track of Models</a></h3>
+<p>Child models are kept track of in the extension with an id number, starting with 0, and all communication from parent to child is done by referencing this number, henceforth referred to as <code>model-id</code>.</p>
+<p>The easiest way to work with multiple models is to store their <code>model-id</code> in a list, and use NetLogo&rsquo;s list primitives to sort, filter, etc. them during runtime.</p>
+<p>Keeping track of models is important: Most LevelSpace primitives will fail and cause a runtime interruption if provided a <code>model-id</code> to a non-existing model. You can use <code>ls:model-exists? model-id</code> to check if <code>model-id</code> refers to an existing model.</p>
+<h3><a href="#a-general-use-case-asking-and-reporting" id="a-general-use-case-asking-and-reporting" class="section-anchor">A general use case: Asking and Reporting</a></h3>
+<p>This use case is based on the Model Visualizer and Plotter Example-model from the NetLogo Models Library.</p>
+<p>A simple thing we can do is to open up some models, run them concurrently, and calculate the average of some reporter. Let&rsquo;s say that we are interested in finding the mean number of sheep in a bunch of Wolf Sheep Predation models. First we would open up some of these models, and set them up:</p>
+<pre><code>to setup
+  ls:reset
+  ca
+  ls:create-models 30 &quot;Wolf Sheep Predation.nlogo&quot;
+  ls:ask ls:models [ set grass? true setup ]
+  reset-ticks
+end
+</code></pre>
+<p>We then want to run all our child models, and then find out what the mean number of sheep is:</p>
+<pre><code>to go
+    ls:ask ls:models [ go ]
+    show mean [ count sheep ] ls:of ls:models
+end
+</code></pre>
+<h3><a href="#a-general-use-case-inter-model-interactions" id="a-general-use-case-inter-model-interactions" class="section-anchor">A general use case: Inter-Model Interactions</a></h3>
+<p>This use case is based on the Model Interactions Example-model from the NetLogo Models Library.</p>
+<p>Let&rsquo;s imagine that we have two models: a Wolf Sheep Predation-model called <code>WSP</code>, and a Climate Change model called <code>CC</code>. Now let&rsquo;s imagine that we want the regrowth time in the wSP model to depend on the temperature in the CC model. Using LevelSpace&rsquo;s primitives, we could do something like this:</p>
+<pre><code>  ; save new regrowth time in a temporary LevelSpace let-variable
+  ls:let new-regrowth-time 25 + ( abs [ temperature - 55 ] ls:of CC ) / 2
+
+  ; remove decimals, pass it to the wolf sheep predation model and change the time
+  ls:ask WSP [
+    set grass-regrowth-time round new-regrowth-time
+  ]
+
+  ; finally ask both models to go
+  ls:ask ls:models [ go ]
+</code></pre>
+<h3><a href="#a-general-usecase-tidying-up-dead-child-models" id="a-general-usecase-tidying-up-dead-child-models" class="section-anchor">A general Usecase: Tidying up &ldquo;Dead&rdquo; Child Models</a></h3>
+<p>As previously mentioned, it is important to keep track of &ldquo;living&rdquo; and &ldquo;dead&rdquo; models when you dynamically create and dispose of models. Let us imagine we have some lists of models of different kinds, and we want to make sure that we only keep the models that are alive. After running code that kills child models we can use the <code>ls:model-exists?</code> primitive to clean up our list of models like this:</p>
+<pre><code>to-report remove-dead-models [list-of-models]
+  report filter [ [ model-id ] -&gt; ls:model-exists model-id] list-of-models
+end
+</code></pre>
+<p>We then reassign each list of models with this, e.g.</p>
+<pre><code>
+set a-list-of-models remove-dead-models a-list-of-models
+set another-list-of-models remove-dead-models a-list-of-models
+</code></pre>
+<h2><a href="#citing-levelspace-in-research" id="citing-levelspace-in-research" class="section-anchor">Citing LevelSpace in Research</a></h2>
+<p>If you use LevelSpace in research, we ask that you cite us,</p>
+<p>Hjorth, A.  Head, B. &amp; Wilensky, U. (2015). “LevelSpace NetLogo extension”. <a href="http://ccl.northwestern.edu/rp/levelspace/index.shtml">http://ccl.northwestern.edu/rp/levelspace/index.shtml</a> Evanston, IL: Center for Connected Learning and Computer Based Modeling, Northwestern University.</p>
+<h2>Primitives</h2>
+<h3>Commanding and Reporting</h3>
+<div id="interaction">
+  <a href="#ls:ask"><code>ls:ask</code></a>
+  <a href="#ls:of"><code>ls:of</code></a>
+  <a href="#ls:report"><code>ls:report</code></a>
+  <a href="#ls:with"><code>ls:with</code></a>
+  <a href="#ls:let"><code>ls:let</code></a>
+</div>
+<h3>Logic and Control</h3>
+<div id="logic">
+  <a href="#ls:models"><code>ls:models</code></a>
+  <a href="#ls:show"><code>ls:show</code></a>
+  <a href="#ls:show-all"><code>ls:show-all</code></a>
+  <a href="#ls:hide"><code>ls:hide</code></a>
+  <a href="#ls:hide-all"><code>ls:hide-all</code></a>
+  <a href="#ls:path-of"><code>ls:path-of</code></a>
+  <a href="#ls:name-of"><code>ls:name-of</code></a>
+  <a href="#ls:model-exists?"><code>ls:model-exists?</code></a>
+</div>
+<h3>Opening and Closing Models</h3>
+<div id="opening-closing">
+  <a href="#ls:create-models"><code>ls:create-models</code></a>
+  <a href="#ls:create-interactive-models"><code>ls:create-interactive-models</code></a>
+  <a href="#ls:close"><code>ls:close</code></a>
+  <a href="#ls:reset"><code>ls:reset</code></a>
+</div>
+<div class="dict_entry" id="ls:create-models">
+  <h3><a>ls:create-models</a></h3>
+  <h4>
+    <span class="prim_example">ls:create-models <i>number</i> <i>path</i></span>
+    <span class="prim_example">ls:create-models <i>number</i> <i>path</i> <i>anonymous command</i></span>
+  </h4>
+<p>Create the specified number of instances of the given .nlogo model.  The path can be absolute, or relative to the main model. Compared with <code>ls:create-interactive-models</code>, this primitive creates lightweight models that are hidden by default. You should use this primitive if you plan on having many instances of the given model. The models may be shown using <code>ls:show</code>; when visible, they will have a view and command center, but no other widgets, e.g. plots or monitors.</p>
+<p>If given a command, LevelSpace will call the command after loading each instance of the model with the <code>model-id</code> as the argument. This allows you to easily store model ids in a variable or list when loading models, or do other initialization. For example, to store a model id in a variable, you can do:</p>
+<pre><code class="language-NetLogo">let model-id 0
+(ls:create-models &quot;My-Model.nlogo&quot; [ [id] -&gt; set model-id id ])
+</code></pre>
+</div>
+<div class="dict_entry" id="ls:create-interactive-models">
+  <h3><a>ls:create-interactive-models</a></h3>
+  <h4>
+    <span class="prim_example">ls:create-interactive-models <i>number</i> <i>path</i></span>
+    <span class="prim_example">ls:create-interactive-models <i>number</i> <i>path</i> <i>anonymous command</i></span>
+  </h4>
+<p>Like <code>ls:create-models</code>, creates the specified number of instances of the given .nlogo model. Unlike <code>ls:create-models</code>, <code>ls:create-interactive-models</code> creates models that are visible by default, and have all widgets. You should use this primitive if you plan on having only a handful of instances of the given model, and would like to be able to interact with the instances through their interfaces during runtime.</p>
+</div>
+<div class="dict_entry" id="ls:close">
+  <h3><a>ls:close</a></h3>
+  <h4>
+    <span class="prim_example">ls:close <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Close the model or models with the given <code>model-id</code>.</p>
+</div>
+<div class="dict_entry" id="ls:reset">
+  <h3><a>ls:reset</a></h3>
+  <h4>
+    <span class="prim_example">ls:reset</span>
+  </h4>
+<p>Close down all child models (and, recursively, their child models). You&rsquo;ll often want to call this in your setup procedure.</p>
+<p>Note that <code>clear-all</code> does <em>not</em> close LevelSpace models.</p>
+</div>
+<div class="dict_entry" id="ls:ask">
+  <h3><a>ls:ask</a></h3>
+  <h4>
+    <span class="prim_example">ls:ask <i>model-or-list-of-models</i> <i>command</i> <i>argument</i></span>
+  </h4>
+<p>Ask the given child model or list of child models to run the given command. This is the primary of doing things with child models. For example:</p>
+<pre><code class="language-NetLogo">ls:ask model-id [ create-turtles 5 ]
+</code></pre>
+<p>You can also ask a list of models to all do the same thing:</p>
+<pre><code class="language-NetLogo">ls:ask ls:models [ create-turtles 5 ]
+</code></pre>
+<p>You may supply the command with arguments, just like you would with anonymous commands:</p>
+<pre><code class="language-NetLogo">let turtle-id 0
+let speed 5
+(ls:ask model-id [ [t s] -&gt; ask turtle t [ fd s ] ] turtle-id speed)
+</code></pre>
+<p>Note that the commands cannot access variables in the parent model directly. You must either pass information in through arguments or using <code>ls:let</code>.</p>
+</div>
+<div class="dict_entry" id="ls:of">
+  <h3><a>ls:of</a></h3>
+  <h4>
+    <span class="prim_example"><i>reporter</i> ls:of <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Run the given reporter in the given model and report the result.</p>
+<p><code>ls:of</code> is designed to work like NetLogo&rsquo;s inbuilt <code>of</code>: If you send <code>ls:of</code> a <code>model-id</code>, it will report the value of the reporter from that model. If you send it a list of model-ids, it will report a list of values of the reporter string from all models. You cannot pass arguments to <code>ls:of</code>, but you can use <code>ls:let</code>.</p>
+<pre><code class="language-NetLogo">[ count turtles ] ls:of model-id
+</code></pre>
+</div>
+<div class="dict_entry" id="ls:report">
+  <h3><a>ls:report</a></h3>
+  <h4>
+    <span class="prim_example">ls:report <i>model-or-list-of-models</i> <i>reporter</i> <i>argument</i></span>
+  </h4>
+<p>Run the given reporter in the given model and report the result. This form exists to allow you to pass arguments to the reporter.</p>
+<pre><code class="language-NetLogo">let turtle-id 0
+(ls:report model-id [ [a-turtle] -&gt; [ color ] of turtle a-turtle ] turtle-id)
+</code></pre>
+</div>
+<div class="dict_entry" id="ls:with">
+  <h3><a>ls:with</a></h3>
+  <h4>
+    <span class="prim_example"><i>list-of-models</i> ls:with <i>reporter</i></span>
+  </h4>
+<p>Reports a new list of models containing only those models that report <code>true</code> when they run the reporter block.</p>
+<pre><code class="language-NetLogo">ls:models ls:with [ count turtles &gt; 100 ]
+</code></pre>
+</div>
+<div class="dict_entry" id="ls:let">
+  <h3><a>ls:let</a></h3>
+  <h4>
+    <span class="prim_example">ls:let <i>variable-name</i> <i>value</i></span>
+  </h4>
+<p>Creates a variable containing the given data that can be accessed by the child models.</p>
+<pre><code class="language-NetLogo">ask turtles [
+  ls:let my-color color
+  ls:ask my-model [
+    ask turtles [ set color my-color ]
+  ]
+]
+</code></pre>
+<p><code>ls:let</code> works quite similar to <code>let</code> in that the variable is only locally accessible:</p>
+<pre><code class="language-NetLogo">ask turtles [
+  ls:let my-color color
+]
+;; my-color is innaccessible here
+</code></pre>
+<p><code>ls:let</code> is very similar to <code>let</code>, except in a few cases.</p>
+<ul>
+<li><code>ls:let</code> will overwrite previous values in the variable</li>
+</ul>
+<p>If you do</p>
+<pre><code class="language-NetLogo">ls:let my-var 5
+ls:let my-var 6
+</code></pre>
+<p><code>my-var</code> will be set equal to <code>6</code>. There is no <code>ls:set</code>.</p>
+<ul>
+<li><code>ls:let</code> supports variable shadowing</li>
+</ul>
+<p>If you do</p>
+<pre><code class="language-NetLogo">ls:let my-var 5
+ask turtles [
+  ls:let my-var 6
+  ls:ask child-model [ show my-var ]
+]
+ls:ask child-model [ show my-var ]
+</code></pre>
+<p><code>child-model</code> will show <code>6</code> and then <code>5</code>. This is known as <a href="https://en.wikipedia.org/wiki/Variable_shadowing" target="_blank">variable shadowing</a>.</p>
+<ul>
+<li>The parent model cannot directly read the value of an ls variable</li>
+</ul>
+<p>For example, this does <em>not</em> work.</p>
+<pre><code class="language-NetLogo">ls:let my-var 5
+show my-var
+</code></pre>
+<p>This is intentional. ls variables are meant to be used for sharing data with child models. The parent model already has access to the data.</p>
+<p>Furthermore, changing the value of an ls let variable in a child model will not affect it in any other model. For example:</p>
+<pre><code class="language-NetLogo">ls:let my-var 0
+ls:ask ls:models [
+  set my-var my-var + 1
+  show my-var
+]
+</code></pre>
+<p>All models will print <code>1</code>.</p>
+<ul>
+<li><code>ls:let</code> does not respect the scope of <code>if</code>, <code>when</code>, and <code>repeat</code></li>
+</ul>
+<p>This behavior should be considered a bug and not relied upon. It is an unfortunate consequence of the way the NetLogo engine works. Hopefully, we&rsquo;ll be able to correct this in a future version of NetLogo.</p>
+<p>For example, this is allowable:</p>
+<pre><code class="language-NetLogo">if true [
+  ls:let my-var 5
+]
+ls:ask child-model [ create-turtles my-var ]
+</code></pre>
+<p>The scope of <code>ask</code> is respected, however.</p>
+</div>
+<div class="dict_entry" id="ls:models">
+  <h3><a>ls:models</a></h3>
+  <h4>
+    <span class="prim_example">ls:models</span>
+  </h4>
+<p>Report a list of model-ids for all existing models.</p>
+</div>
+<div class="dict_entry" id="ls:show">
+  <h3><a>ls:show</a></h3>
+  <h4>
+    <span class="prim_example">ls:show <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Makes all of the given models visible.</p>
+</div>
+<div class="dict_entry" id="ls:show-all">
+  <h3><a>ls:show-all</a></h3>
+  <h4>
+    <span class="prim_example">ls:show-all <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Makes all of the given models <em>and their descendents</em> visible.</p>
+</div>
+<div class="dict_entry" id="ls:hide">
+  <h3><a>ls:hide</a></h3>
+  <h4>
+    <span class="prim_example">ls:hide <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Hide all of the given models. Hiding models is a good way of making your simulation run faster.</p>
+</div>
+<div class="dict_entry" id="ls:hide-all">
+  <h3><a>ls:hide-all</a></h3>
+  <h4>
+    <span class="prim_example">ls:hide-all <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Hide all of the given models <em>and their descendents</em>. Hiding models is a good way of making your simulation run faster.</p>
+</div>
+<div class="dict_entry" id="ls:path-of">
+  <h3><a>ls:path-of</a></h3>
+  <h4>
+    <span class="prim_example">ls:path-of <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Report the full path, including the .nlogo file name, of the model. If a list of models is given, a list of paths is reported.</p>
+</div>
+<div class="dict_entry" id="ls:name-of">
+  <h3><a>ls:name-of</a></h3>
+  <h4>
+    <span class="prim_example">ls:name-of <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Reports the name of the .nlogo file of the model. This is the name of the window in which the model appears when visible. If a list of models is given, a list of names is reported.</p>
+</div>
+<div class="dict_entry" id="ls:model-exists?">
+  <h3><a>ls:model-exists?</a></h3>
+  <h4>
+    <span class="prim_example">ls:model-exists? <i>model-or-list-of-models</i></span>
+  </h4>
+<p>Report a boolean value for whether there is a model with that model-id. This is often useful when you are dynamically generating models, and want to ensure that you are not asking models that no longer exist to do stuff.</p>
+</div>

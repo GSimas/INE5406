@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <title>NetLogo Help: file-open</title>
+
+  <link rel="stylesheet" href="../netlogo.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <style type="text/css">
+    p { margin-left: 1.5em ; }
+    h3 { font-size: 115% ; }
+    h4 { font-size: 100% ; margin-left: 1.5em ; background: white ; }
+  </style>
+</head>
+<body>
+  <div class="dict_entry" id="file-open"> 
+ <h3> <a>file-open<span class="since">2.0</span></a> </h3> 
+ <h4> <span class="prim_example">file-open <i>string</i></span> </h4> 
+ <p> This command will interpret <i>string</i> as a path name to a file and open the file. You may then use the reporters <a href="../dictionary.html#file-read">file-read</a>, <a href="../dictionary.html#file-read-line">file-read-line</a>, and <a href="../dictionary.html#file-read-characters">file-read-characters</a> to read in from the file, or <a href="../dictionary.html#file-write">file-write</a>, <a href="../dictionary.html#file-print">file-print</a>, <a href="../dictionary.html#file-type">file-type</a>, or <a href="../dictionary.html#file-show">file-show</a> to write out to the file. </p>
+ <p> Note that you can only open a file for reading or writing but not both. The next file i/o primitive you use after this command dictates which mode the file is opened in. To switch modes, you need to close the file using <a href="../dictionary.html#file-close">file-close</a>. </p>
+ <p> Also, the file must already exist if opening a file in reading mode. </p>
+ <p> When opening a file in writing mode, all new data will be appended to the end of the original file. If there is no original file, a new blank file will be created in its place. (You must have write permission in the file's directory.) (If you don't want to append, but want to replace the file's existing contents, use <a href="../dictionary.html#file-delete">file-delete</a> to delete it first, perhaps inside a <a href="../dictionary.html#carefully">carefully</a> if you're not sure whether it already exists.) </p>
+ <p> Note that the string can either be a file name or an absolute file path. If it is a file name, it looks in whatever the current directory is. This can be changed using the command <a href="../dictionary.html#set-current-directory">set-current-directory</a>. It is defaulted to the model's directory. </p>
+ <pre>
+file-open "my-file-in.txt"
+print file-read-line
+=&gt; First line in file ;; File is in reading mode
+file-open "C:\\NetLogo\\my-file-out.txt"
+;; assuming Windows machine
+file-print "Hello World" ;; File is in writing mode
+</pre> 
+ <p> Opening a file does not close previously opened files. You can use <code>file-open</code> to switch back and forth between multiple open files. </p>
+ <p> See also <a href="../dictionary.html#file-close">file-close</a> See also <a href="../dictionary.html#file-close-all">file-close-all</a>. </p>
+</div>
+  <p>
+    Take me to the full <a href="../index2.html">NetLogo Dictionary</a>
+</body>
+</html>
