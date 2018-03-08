@@ -1,4 +1,4 @@
-# INE5406 - Sistemas Digitais
+# 📚INE5406 - Sistemas Digitais
 
 > "Eu acredito que, às vezes, são as pessoas que ninguém espera nada que fazem as coisas que ninguém consegue imaginar." - **Alan Turing**
 
@@ -28,7 +28,7 @@ $ git clone git@github.com:GSimas/EEL7045.git
 ```
 
 Fique livre para adicionar issues *relevantes*, acrescentar resoluções de exercícios, desenvolvimento de projetos, aperfeiçoamento de conteúdo, entre outros materiais adicionais. Caso utilize material de terceiros, referencie da devida forma, dando os créditos para os autores.
-Leia o arquivo CONTRIBUTING.md para maiores especificações.
+Leia o arquivo [CONTRIBUTING.md](https://github.com/GSimas/INE5406/blob/master/CONTRIBUTING.md) para maiores especificações.
 
 ## Referências:
 
