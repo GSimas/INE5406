@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, /home/100000000820483/Documentos/INE5406/somador1bit.vhd
+source_file = 1, /home/100000000820483/Documentos/INE5406/db/somador1bit.cbx.xml
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = somador1bit
+instance = comp, \cin~I\, cin, somador1bit, 1
+instance = comp, \b~I\, b, somador1bit, 1
+instance = comp, \a~I\, a, somador1bit, 1
+instance = comp, \s~0\, s~0, somador1bit, 1
+instance = comp, \cout~0\, cout~0, somador1bit, 1
+instance = comp, \s~I\, s, somador1bit, 1
+instance = comp, \cout~I\, cout, somador1bit, 1

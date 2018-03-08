@@ -1,0 +1,35 @@
+|somador4bits
+cin => s.IN1
+cin => c.IN0
+cin => c.IN0
+a[0] => s.IN0
+a[0] => c.IN0
+a[0] => c.IN1
+a[1] => s.IN0
+a[1] => c.IN0
+a[1] => c.IN1
+a[2] => s.IN0
+a[2] => c.IN0
+a[2] => c.IN1
+a[3] => s.IN0
+a[3] => cout.IN0
+a[3] => cout.IN1
+b[0] => s.IN1
+b[0] => c.IN1
+b[0] => c.IN1
+b[1] => s.IN1
+b[1] => c.IN1
+b[1] => c.IN1
+b[2] => s.IN1
+b[2] => c.IN1
+b[2] => c.IN1
+b[3] => s.IN1
+b[3] => cout.IN1
+b[3] => cout.IN1
+s[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

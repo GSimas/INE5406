@@ -1,0 +1,80 @@
+# do somador4bits_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {somador4bits.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity somador4bits
+# -- Compiling architecture structure of somador4bits
+# 
+# Load canceled
+vsim work.somador4bits
+# vsim work.somador4bits 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.somador4bits(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+add wave  \
+sim:/somador4bits/cin \
+sim:/somador4bits/a3 \
+sim:/somador4bits/a2 \
+sim:/somador4bits/a1 \
+sim:/somador4bits/a0 \
+sim:/somador4bits/b3 \
+sim:/somador4bits/b2 \
+sim:/somador4bits/b1 \
+sim:/somador4bits/b0 \
+sim:/somador4bits/s3 \
+sim:/somador4bits/s2 \
+sim:/somador4bits/s1 \
+sim:/somador4bits/s0 \
+sim:/somador4bits/cout
+do /home/100000000820483/Documentos/Tipo1/simulation/modelsim/estimulo1.do
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro /home/100000000820483/Documentos/Tipo1/simulation/modelsim/estimulo1.do line 7
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force /b1 0 0 ns 1 40 ns -r 80 ns"
+run
+run
+restart
+do /home/100000000820483/Documentos/Tipo1/simulation/modelsim/estimulo1.do
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro /home/100000000820483/Documentos/Tipo1/simulation/modelsim/estimulo1.do line 7
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force /b1 0 0 ns 1 40 ns -r 80 ns"
+run
+run
+restart
+do /home/100000000820483/Documentos/Tipo1/simulation/modelsim/estimulo1.do
+run
+run

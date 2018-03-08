@@ -1,0 +1,9 @@
+force /cin 0 0 ns, 1 80 ns -r 160 ns
+force /a3 0 0 ns
+force /b3 0 0 ns, 1 60 ns -r 80 ns
+force /a2 1 0 ns
+force /b2 0 0 ns, 1 20 ns, 0 60 ns -r 80 ns
+force /a1 0 0 ns
+force /b1 0 0 ns 1 40 ns -r 80 ns
+force /a0 0 0 ns
+force /b0 1 0 ns
