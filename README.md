@@ -24,7 +24,7 @@ CPU vista como um sistema digital (datapath e unidade de controle). Unidade de c
 Se você tem interesse em contribuir, faça o clone do repositório da seguinte forma:
 
 ```
-$ git clone git@github.com:GSimas/EEL7045.git
+$ git clone git@github.com:GSimas/INE5406.git
 ```
 
 Fique livre para adicionar issues *relevantes*, acrescentar resoluções de exercícios, desenvolvimento de projetos, aperfeiçoamento de conteúdo, entre outros materiais adicionais. Caso utilize material de terceiros, referencie da devida forma, dando os créditos para os autores.
