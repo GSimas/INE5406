@@ -1,0 +1,114 @@
+# do muxselect_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {muxselect.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity muxselect
+# -- Compiling architecture structure of muxselect
+# 
+vsim -do muxselect_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo work.muxselect
+# vsim -do muxselect_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo work.muxselect 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.muxselect(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading instances from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /muxselect File: muxselect.vho
+# do muxselect_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {muxselect.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity muxselect
+# -- Compiling architecture structure of muxselect
+# 
+add wave  \
+sim:/muxselect/sel \
+sim:/muxselect/a \
+sim:/muxselect/b \
+sim:/muxselect/y
+do /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/stimulus-muxselect.do
+# ** Error: (vsim-3464) Period of -repeat must not be less than the waveform length.
+# Error in macro /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/stimulus-muxselect.do line 2
+# ** Error: (vsim-3464) Period of -repeat must not be less than the waveform length.
+# 
+#     while executing
+# "force /a 01101110 0 ns, 10111111 40 ns, 10000000 55 ns, 00000000 80 ns, 00101010 95 ns -r 110"
+run
+run
+restart -f
+# Loading work.muxselect(structure)
+# Loading instances from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /muxselect File: muxselect.vho
+do /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/stimulus-muxselect.do
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /muxselect File: muxselect.vho
+do /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/stimulus-muxselect.do
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /muxselect File: muxselect.vho
+do /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/stimulus-muxselect.do
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/stimulus-muxselect.do line 2
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force /a 01101110 0 ns, 01101110 20 ns, 01100000 70 ns. 00000000 150 ns"
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/muxselect_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /muxselect File: muxselect.vho
+do /home/100000000820483/Documentos/INE5406/muxselect/simulation/modelsim/stimulus-muxselect.do
+run
+run

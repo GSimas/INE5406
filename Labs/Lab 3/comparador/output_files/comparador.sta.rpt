@@ -1,0 +1,576 @@
+TimeQuest Timing Analyzer report for comparador
+Thu Mar 15 09:29:36 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; comparador                                                        ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; A[0]       ; AigualB     ; 7.557  ; 7.557  ; 7.557  ; 7.557  ;
+; A[0]       ; AmaiorB     ; 7.514  ;        ;        ; 7.514  ;
+; A[0]       ; AmenorB     ;        ; 7.635  ; 7.635  ;        ;
+; A[1]       ; AigualB     ; 7.073  ; 7.073  ; 7.073  ; 7.073  ;
+; A[1]       ; AmaiorB     ; 7.413  ;        ;        ; 7.413  ;
+; A[1]       ; AmenorB     ;        ; 7.527  ; 7.527  ;        ;
+; A[2]       ; AigualB     ; 10.805 ; 10.805 ; 10.805 ; 10.805 ;
+; A[2]       ; AmaiorB     ; 11.191 ;        ;        ; 11.191 ;
+; A[2]       ; AmenorB     ;        ; 11.311 ; 11.311 ;        ;
+; A[3]       ; AigualB     ; 10.907 ; 10.907 ; 10.907 ; 10.907 ;
+; A[3]       ; AmaiorB     ; 10.928 ;        ;        ; 10.928 ;
+; A[3]       ; AmenorB     ;        ; 11.049 ; 11.049 ;        ;
+; A[4]       ; AigualB     ; 10.733 ; 10.733 ; 10.733 ; 10.733 ;
+; A[4]       ; AmaiorB     ; 10.779 ;        ;        ; 10.779 ;
+; A[4]       ; AmenorB     ;        ; 10.896 ; 10.896 ;        ;
+; A[5]       ; AigualB     ; 11.110 ; 11.110 ; 11.110 ; 11.110 ;
+; A[5]       ; AmaiorB     ; 10.909 ;        ;        ; 10.909 ;
+; A[5]       ; AmenorB     ;        ; 11.024 ; 11.024 ;        ;
+; A[6]       ; AigualB     ; 10.471 ; 10.471 ; 10.471 ; 10.471 ;
+; A[6]       ; AmaiorB     ; 10.613 ;        ;        ; 10.613 ;
+; A[6]       ; AmenorB     ;        ; 10.728 ; 10.728 ;        ;
+; A[7]       ; AigualB     ; 10.131 ; 10.131 ; 10.131 ; 10.131 ;
+; A[7]       ; AmaiorB     ; 10.035 ;        ;        ; 10.035 ;
+; A[7]       ; AmenorB     ;        ; 10.153 ; 10.153 ;        ;
+; B[0]       ; AigualB     ; 10.949 ; 10.949 ; 10.949 ; 10.949 ;
+; B[0]       ; AmaiorB     ;        ; 11.076 ; 11.076 ;        ;
+; B[0]       ; AmenorB     ; 11.189 ;        ;        ; 11.189 ;
+; B[1]       ; AigualB     ; 10.751 ; 10.751 ; 10.751 ; 10.751 ;
+; B[1]       ; AmaiorB     ;        ; 11.036 ; 11.036 ;        ;
+; B[1]       ; AmenorB     ; 11.157 ;        ;        ; 11.157 ;
+; B[2]       ; AigualB     ; 10.678 ; 10.678 ; 10.678 ; 10.678 ;
+; B[2]       ; AmaiorB     ;        ; 10.902 ; 10.902 ;        ;
+; B[2]       ; AmenorB     ; 11.022 ;        ;        ; 11.022 ;
+; B[3]       ; AigualB     ; 10.959 ; 10.959 ; 10.959 ; 10.959 ;
+; B[3]       ; AmaiorB     ;        ; 10.892 ; 10.892 ;        ;
+; B[3]       ; AmenorB     ; 11.008 ;        ;        ; 11.008 ;
+; B[4]       ; AigualB     ; 10.844 ; 10.844 ; 10.844 ; 10.844 ;
+; B[4]       ; AmaiorB     ;        ; 10.775 ; 10.775 ;        ;
+; B[4]       ; AmenorB     ; 10.888 ;        ;        ; 10.888 ;
+; B[5]       ; AigualB     ; 10.608 ; 10.608 ; 10.608 ; 10.608 ;
+; B[5]       ; AmaiorB     ;        ; 10.920 ; 10.920 ;        ;
+; B[5]       ; AmenorB     ; 11.039 ;        ;        ; 11.039 ;
+; B[6]       ; AigualB     ; 10.619 ; 10.619 ; 10.619 ; 10.619 ;
+; B[6]       ; AmaiorB     ;        ; 10.560 ; 10.560 ;        ;
+; B[6]       ; AmenorB     ; 10.678 ;        ;        ; 10.678 ;
+; B[7]       ; AigualB     ; 10.456 ; 10.456 ; 10.456 ; 10.456 ;
+; B[7]       ; AmaiorB     ;        ; 10.262 ; 10.262 ;        ;
+; B[7]       ; AmenorB     ; 10.403 ;        ;        ; 10.403 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; A[0]       ; AigualB     ; 7.557  ; 7.557  ; 7.557  ; 7.557  ;
+; A[0]       ; AmaiorB     ; 7.514  ;        ;        ; 7.514  ;
+; A[0]       ; AmenorB     ;        ; 7.635  ; 7.635  ;        ;
+; A[1]       ; AigualB     ; 7.073  ; 7.073  ; 7.073  ; 7.073  ;
+; A[1]       ; AmaiorB     ; 7.413  ;        ;        ; 7.413  ;
+; A[1]       ; AmenorB     ;        ; 7.527  ; 7.527  ;        ;
+; A[2]       ; AigualB     ; 10.805 ; 10.805 ; 10.805 ; 10.805 ;
+; A[2]       ; AmaiorB     ; 11.191 ;        ;        ; 11.191 ;
+; A[2]       ; AmenorB     ;        ; 11.311 ; 11.311 ;        ;
+; A[3]       ; AigualB     ; 10.907 ; 10.907 ; 10.907 ; 10.907 ;
+; A[3]       ; AmaiorB     ; 10.928 ;        ;        ; 10.928 ;
+; A[3]       ; AmenorB     ;        ; 11.049 ; 11.049 ;        ;
+; A[4]       ; AigualB     ; 10.733 ; 10.733 ; 10.733 ; 10.733 ;
+; A[4]       ; AmaiorB     ; 10.779 ;        ;        ; 10.779 ;
+; A[4]       ; AmenorB     ;        ; 10.896 ; 10.896 ;        ;
+; A[5]       ; AigualB     ; 11.110 ; 11.110 ; 11.110 ; 11.110 ;
+; A[5]       ; AmaiorB     ; 10.909 ;        ;        ; 10.909 ;
+; A[5]       ; AmenorB     ;        ; 11.024 ; 11.024 ;        ;
+; A[6]       ; AigualB     ; 10.471 ; 10.471 ; 10.471 ; 10.471 ;
+; A[6]       ; AmaiorB     ; 10.613 ;        ;        ; 10.613 ;
+; A[6]       ; AmenorB     ;        ; 10.728 ; 10.728 ;        ;
+; A[7]       ; AigualB     ; 10.131 ; 10.131 ; 10.131 ; 10.131 ;
+; A[7]       ; AmaiorB     ; 10.035 ;        ;        ; 10.035 ;
+; A[7]       ; AmenorB     ;        ; 10.153 ; 10.153 ;        ;
+; B[0]       ; AigualB     ; 10.949 ; 10.949 ; 10.949 ; 10.949 ;
+; B[0]       ; AmaiorB     ;        ; 11.076 ; 11.076 ;        ;
+; B[0]       ; AmenorB     ; 11.189 ;        ;        ; 11.189 ;
+; B[1]       ; AigualB     ; 10.751 ; 10.751 ; 10.751 ; 10.751 ;
+; B[1]       ; AmaiorB     ;        ; 11.036 ; 11.036 ;        ;
+; B[1]       ; AmenorB     ; 11.157 ;        ;        ; 11.157 ;
+; B[2]       ; AigualB     ; 10.678 ; 10.678 ; 10.678 ; 10.678 ;
+; B[2]       ; AmaiorB     ;        ; 10.902 ; 10.902 ;        ;
+; B[2]       ; AmenorB     ; 11.022 ;        ;        ; 11.022 ;
+; B[3]       ; AigualB     ; 10.959 ; 10.959 ; 10.959 ; 10.959 ;
+; B[3]       ; AmaiorB     ;        ; 10.892 ; 10.892 ;        ;
+; B[3]       ; AmenorB     ; 11.008 ;        ;        ; 11.008 ;
+; B[4]       ; AigualB     ; 10.844 ; 10.844 ; 10.844 ; 10.844 ;
+; B[4]       ; AmaiorB     ;        ; 10.775 ; 10.775 ;        ;
+; B[4]       ; AmenorB     ; 10.888 ;        ;        ; 10.888 ;
+; B[5]       ; AigualB     ; 10.608 ; 10.608 ; 10.608 ; 10.608 ;
+; B[5]       ; AmaiorB     ;        ; 10.920 ; 10.920 ;        ;
+; B[5]       ; AmenorB     ; 11.039 ;        ;        ; 11.039 ;
+; B[6]       ; AigualB     ; 10.619 ; 10.619 ; 10.619 ; 10.619 ;
+; B[6]       ; AmaiorB     ;        ; 10.560 ; 10.560 ;        ;
+; B[6]       ; AmenorB     ; 10.678 ;        ;        ; 10.678 ;
+; B[7]       ; AigualB     ; 10.456 ; 10.456 ; 10.456 ; 10.456 ;
+; B[7]       ; AmaiorB     ;        ; 10.262 ; 10.262 ;        ;
+; B[7]       ; AmenorB     ; 10.403 ;        ;        ; 10.403 ;
++------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; A[0]       ; AigualB     ; 3.797 ; 3.797 ; 3.797 ; 3.797 ;
+; A[0]       ; AmaiorB     ; 3.769 ;       ;       ; 3.769 ;
+; A[0]       ; AmenorB     ;       ; 3.878 ; 3.878 ;       ;
+; A[1]       ; AigualB     ; 3.583 ; 3.583 ; 3.583 ; 3.583 ;
+; A[1]       ; AmaiorB     ; 3.723 ;       ;       ; 3.723 ;
+; A[1]       ; AmenorB     ;       ; 3.825 ; 3.825 ;       ;
+; A[2]       ; AigualB     ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; A[2]       ; AmaiorB     ; 6.051 ;       ;       ; 6.051 ;
+; A[2]       ; AmenorB     ;       ; 6.159 ; 6.159 ;       ;
+; A[3]       ; AigualB     ; 5.918 ; 5.918 ; 5.918 ; 5.918 ;
+; A[3]       ; AmaiorB     ; 5.920 ;       ;       ; 5.920 ;
+; A[3]       ; AmenorB     ;       ; 6.029 ; 6.029 ;       ;
+; A[4]       ; AigualB     ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
+; A[4]       ; AmaiorB     ; 5.865 ;       ;       ; 5.865 ;
+; A[4]       ; AmenorB     ;       ; 5.969 ; 5.969 ;       ;
+; A[5]       ; AigualB     ; 6.029 ; 6.029 ; 6.029 ; 6.029 ;
+; A[5]       ; AmaiorB     ; 5.911 ;       ;       ; 5.911 ;
+; A[5]       ; AmenorB     ;       ; 6.014 ; 6.014 ;       ;
+; A[6]       ; AigualB     ; 5.691 ; 5.691 ; 5.691 ; 5.691 ;
+; A[6]       ; AmaiorB     ; 5.744 ;       ;       ; 5.744 ;
+; A[6]       ; AmenorB     ;       ; 5.850 ; 5.850 ;       ;
+; A[7]       ; AigualB     ; 5.544 ; 5.544 ; 5.544 ; 5.544 ;
+; A[7]       ; AmaiorB     ; 5.524 ;       ;       ; 5.524 ;
+; A[7]       ; AmenorB     ;       ; 5.628 ; 5.628 ;       ;
+; B[0]       ; AigualB     ; 5.964 ; 5.964 ; 5.964 ; 5.964 ;
+; B[0]       ; AmaiorB     ;       ; 6.015 ; 6.015 ;       ;
+; B[0]       ; AmenorB     ; 6.117 ;       ;       ; 6.117 ;
+; B[1]       ; AigualB     ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; B[1]       ; AmaiorB     ;       ; 5.984 ; 5.984 ;       ;
+; B[1]       ; AmenorB     ; 6.092 ;       ;       ; 6.092 ;
+; B[2]       ; AigualB     ; 5.820 ; 5.820 ; 5.820 ; 5.820 ;
+; B[2]       ; AmaiorB     ;       ; 5.895 ; 5.895 ;       ;
+; B[2]       ; AmenorB     ; 6.003 ;       ;       ; 6.003 ;
+; B[3]       ; AigualB     ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; B[3]       ; AmaiorB     ;       ; 5.940 ; 5.940 ;       ;
+; B[3]       ; AmenorB     ; 6.043 ;       ;       ; 6.043 ;
+; B[4]       ; AigualB     ; 5.887 ; 5.887 ; 5.887 ; 5.887 ;
+; B[4]       ; AmaiorB     ;       ; 5.834 ; 5.834 ;       ;
+; B[4]       ; AmenorB     ; 5.934 ;       ;       ; 5.934 ;
+; B[5]       ; AigualB     ; 5.770 ; 5.770 ; 5.770 ; 5.770 ;
+; B[5]       ; AmaiorB     ;       ; 5.878 ; 5.878 ;       ;
+; B[5]       ; AmenorB     ; 5.985 ;       ;       ; 5.985 ;
+; B[6]       ; AigualB     ; 5.773 ; 5.773 ; 5.773 ; 5.773 ;
+; B[6]       ; AmaiorB     ;       ; 5.745 ; 5.745 ;       ;
+; B[6]       ; AmenorB     ; 5.851 ;       ;       ; 5.851 ;
+; B[7]       ; AigualB     ; 5.713 ; 5.713 ; 5.713 ; 5.713 ;
+; B[7]       ; AmaiorB     ;       ; 5.666 ; 5.666 ;       ;
+; B[7]       ; AmenorB     ; 5.778 ;       ;       ; 5.778 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; A[0]       ; AigualB     ; 3.797 ; 3.797 ; 3.797 ; 3.797 ;
+; A[0]       ; AmaiorB     ; 3.769 ;       ;       ; 3.769 ;
+; A[0]       ; AmenorB     ;       ; 3.878 ; 3.878 ;       ;
+; A[1]       ; AigualB     ; 3.583 ; 3.583 ; 3.583 ; 3.583 ;
+; A[1]       ; AmaiorB     ; 3.723 ;       ;       ; 3.723 ;
+; A[1]       ; AmenorB     ;       ; 3.825 ; 3.825 ;       ;
+; A[2]       ; AigualB     ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; A[2]       ; AmaiorB     ; 6.051 ;       ;       ; 6.051 ;
+; A[2]       ; AmenorB     ;       ; 6.159 ; 6.159 ;       ;
+; A[3]       ; AigualB     ; 5.918 ; 5.918 ; 5.918 ; 5.918 ;
+; A[3]       ; AmaiorB     ; 5.920 ;       ;       ; 5.920 ;
+; A[3]       ; AmenorB     ;       ; 6.029 ; 6.029 ;       ;
+; A[4]       ; AigualB     ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
+; A[4]       ; AmaiorB     ; 5.865 ;       ;       ; 5.865 ;
+; A[4]       ; AmenorB     ;       ; 5.969 ; 5.969 ;       ;
+; A[5]       ; AigualB     ; 6.029 ; 6.029 ; 6.029 ; 6.029 ;
+; A[5]       ; AmaiorB     ; 5.911 ;       ;       ; 5.911 ;
+; A[5]       ; AmenorB     ;       ; 6.014 ; 6.014 ;       ;
+; A[6]       ; AigualB     ; 5.691 ; 5.691 ; 5.691 ; 5.691 ;
+; A[6]       ; AmaiorB     ; 5.744 ;       ;       ; 5.744 ;
+; A[6]       ; AmenorB     ;       ; 5.850 ; 5.850 ;       ;
+; A[7]       ; AigualB     ; 5.544 ; 5.544 ; 5.544 ; 5.544 ;
+; A[7]       ; AmaiorB     ; 5.524 ;       ;       ; 5.524 ;
+; A[7]       ; AmenorB     ;       ; 5.628 ; 5.628 ;       ;
+; B[0]       ; AigualB     ; 5.964 ; 5.964 ; 5.964 ; 5.964 ;
+; B[0]       ; AmaiorB     ;       ; 6.015 ; 6.015 ;       ;
+; B[0]       ; AmenorB     ; 6.117 ;       ;       ; 6.117 ;
+; B[1]       ; AigualB     ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; B[1]       ; AmaiorB     ;       ; 5.984 ; 5.984 ;       ;
+; B[1]       ; AmenorB     ; 6.092 ;       ;       ; 6.092 ;
+; B[2]       ; AigualB     ; 5.820 ; 5.820 ; 5.820 ; 5.820 ;
+; B[2]       ; AmaiorB     ;       ; 5.895 ; 5.895 ;       ;
+; B[2]       ; AmenorB     ; 6.003 ;       ;       ; 6.003 ;
+; B[3]       ; AigualB     ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; B[3]       ; AmaiorB     ;       ; 5.940 ; 5.940 ;       ;
+; B[3]       ; AmenorB     ; 6.043 ;       ;       ; 6.043 ;
+; B[4]       ; AigualB     ; 5.887 ; 5.887 ; 5.887 ; 5.887 ;
+; B[4]       ; AmaiorB     ;       ; 5.834 ; 5.834 ;       ;
+; B[4]       ; AmenorB     ; 5.934 ;       ;       ; 5.934 ;
+; B[5]       ; AigualB     ; 5.770 ; 5.770 ; 5.770 ; 5.770 ;
+; B[5]       ; AmaiorB     ;       ; 5.878 ; 5.878 ;       ;
+; B[5]       ; AmenorB     ; 5.985 ;       ;       ; 5.985 ;
+; B[6]       ; AigualB     ; 5.773 ; 5.773 ; 5.773 ; 5.773 ;
+; B[6]       ; AmaiorB     ;       ; 5.745 ; 5.745 ;       ;
+; B[6]       ; AmenorB     ; 5.851 ;       ;       ; 5.851 ;
+; B[7]       ; AigualB     ; 5.713 ; 5.713 ; 5.713 ; 5.713 ;
+; B[7]       ; AmaiorB     ;       ; 5.666 ; 5.666 ;       ;
+; B[7]       ; AmenorB     ; 5.778 ;       ;       ; 5.778 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; A[0]       ; AigualB     ; 7.557  ; 7.557  ; 7.557  ; 7.557  ;
+; A[0]       ; AmaiorB     ; 7.514  ;        ;        ; 7.514  ;
+; A[0]       ; AmenorB     ;        ; 7.635  ; 7.635  ;        ;
+; A[1]       ; AigualB     ; 7.073  ; 7.073  ; 7.073  ; 7.073  ;
+; A[1]       ; AmaiorB     ; 7.413  ;        ;        ; 7.413  ;
+; A[1]       ; AmenorB     ;        ; 7.527  ; 7.527  ;        ;
+; A[2]       ; AigualB     ; 10.805 ; 10.805 ; 10.805 ; 10.805 ;
+; A[2]       ; AmaiorB     ; 11.191 ;        ;        ; 11.191 ;
+; A[2]       ; AmenorB     ;        ; 11.311 ; 11.311 ;        ;
+; A[3]       ; AigualB     ; 10.907 ; 10.907 ; 10.907 ; 10.907 ;
+; A[3]       ; AmaiorB     ; 10.928 ;        ;        ; 10.928 ;
+; A[3]       ; AmenorB     ;        ; 11.049 ; 11.049 ;        ;
+; A[4]       ; AigualB     ; 10.733 ; 10.733 ; 10.733 ; 10.733 ;
+; A[4]       ; AmaiorB     ; 10.779 ;        ;        ; 10.779 ;
+; A[4]       ; AmenorB     ;        ; 10.896 ; 10.896 ;        ;
+; A[5]       ; AigualB     ; 11.110 ; 11.110 ; 11.110 ; 11.110 ;
+; A[5]       ; AmaiorB     ; 10.909 ;        ;        ; 10.909 ;
+; A[5]       ; AmenorB     ;        ; 11.024 ; 11.024 ;        ;
+; A[6]       ; AigualB     ; 10.471 ; 10.471 ; 10.471 ; 10.471 ;
+; A[6]       ; AmaiorB     ; 10.613 ;        ;        ; 10.613 ;
+; A[6]       ; AmenorB     ;        ; 10.728 ; 10.728 ;        ;
+; A[7]       ; AigualB     ; 10.131 ; 10.131 ; 10.131 ; 10.131 ;
+; A[7]       ; AmaiorB     ; 10.035 ;        ;        ; 10.035 ;
+; A[7]       ; AmenorB     ;        ; 10.153 ; 10.153 ;        ;
+; B[0]       ; AigualB     ; 10.949 ; 10.949 ; 10.949 ; 10.949 ;
+; B[0]       ; AmaiorB     ;        ; 11.076 ; 11.076 ;        ;
+; B[0]       ; AmenorB     ; 11.189 ;        ;        ; 11.189 ;
+; B[1]       ; AigualB     ; 10.751 ; 10.751 ; 10.751 ; 10.751 ;
+; B[1]       ; AmaiorB     ;        ; 11.036 ; 11.036 ;        ;
+; B[1]       ; AmenorB     ; 11.157 ;        ;        ; 11.157 ;
+; B[2]       ; AigualB     ; 10.678 ; 10.678 ; 10.678 ; 10.678 ;
+; B[2]       ; AmaiorB     ;        ; 10.902 ; 10.902 ;        ;
+; B[2]       ; AmenorB     ; 11.022 ;        ;        ; 11.022 ;
+; B[3]       ; AigualB     ; 10.959 ; 10.959 ; 10.959 ; 10.959 ;
+; B[3]       ; AmaiorB     ;        ; 10.892 ; 10.892 ;        ;
+; B[3]       ; AmenorB     ; 11.008 ;        ;        ; 11.008 ;
+; B[4]       ; AigualB     ; 10.844 ; 10.844 ; 10.844 ; 10.844 ;
+; B[4]       ; AmaiorB     ;        ; 10.775 ; 10.775 ;        ;
+; B[4]       ; AmenorB     ; 10.888 ;        ;        ; 10.888 ;
+; B[5]       ; AigualB     ; 10.608 ; 10.608 ; 10.608 ; 10.608 ;
+; B[5]       ; AmaiorB     ;        ; 10.920 ; 10.920 ;        ;
+; B[5]       ; AmenorB     ; 11.039 ;        ;        ; 11.039 ;
+; B[6]       ; AigualB     ; 10.619 ; 10.619 ; 10.619 ; 10.619 ;
+; B[6]       ; AmaiorB     ;        ; 10.560 ; 10.560 ;        ;
+; B[6]       ; AmenorB     ; 10.678 ;        ;        ; 10.678 ;
+; B[7]       ; AigualB     ; 10.456 ; 10.456 ; 10.456 ; 10.456 ;
+; B[7]       ; AmaiorB     ;        ; 10.262 ; 10.262 ;        ;
+; B[7]       ; AmenorB     ; 10.403 ;        ;        ; 10.403 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; A[0]       ; AigualB     ; 3.797 ; 3.797 ; 3.797 ; 3.797 ;
+; A[0]       ; AmaiorB     ; 3.769 ;       ;       ; 3.769 ;
+; A[0]       ; AmenorB     ;       ; 3.878 ; 3.878 ;       ;
+; A[1]       ; AigualB     ; 3.583 ; 3.583 ; 3.583 ; 3.583 ;
+; A[1]       ; AmaiorB     ; 3.723 ;       ;       ; 3.723 ;
+; A[1]       ; AmenorB     ;       ; 3.825 ; 3.825 ;       ;
+; A[2]       ; AigualB     ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; A[2]       ; AmaiorB     ; 6.051 ;       ;       ; 6.051 ;
+; A[2]       ; AmenorB     ;       ; 6.159 ; 6.159 ;       ;
+; A[3]       ; AigualB     ; 5.918 ; 5.918 ; 5.918 ; 5.918 ;
+; A[3]       ; AmaiorB     ; 5.920 ;       ;       ; 5.920 ;
+; A[3]       ; AmenorB     ;       ; 6.029 ; 6.029 ;       ;
+; A[4]       ; AigualB     ; 5.847 ; 5.847 ; 5.847 ; 5.847 ;
+; A[4]       ; AmaiorB     ; 5.865 ;       ;       ; 5.865 ;
+; A[4]       ; AmenorB     ;       ; 5.969 ; 5.969 ;       ;
+; A[5]       ; AigualB     ; 6.029 ; 6.029 ; 6.029 ; 6.029 ;
+; A[5]       ; AmaiorB     ; 5.911 ;       ;       ; 5.911 ;
+; A[5]       ; AmenorB     ;       ; 6.014 ; 6.014 ;       ;
+; A[6]       ; AigualB     ; 5.691 ; 5.691 ; 5.691 ; 5.691 ;
+; A[6]       ; AmaiorB     ; 5.744 ;       ;       ; 5.744 ;
+; A[6]       ; AmenorB     ;       ; 5.850 ; 5.850 ;       ;
+; A[7]       ; AigualB     ; 5.544 ; 5.544 ; 5.544 ; 5.544 ;
+; A[7]       ; AmaiorB     ; 5.524 ;       ;       ; 5.524 ;
+; A[7]       ; AmenorB     ;       ; 5.628 ; 5.628 ;       ;
+; B[0]       ; AigualB     ; 5.964 ; 5.964 ; 5.964 ; 5.964 ;
+; B[0]       ; AmaiorB     ;       ; 6.015 ; 6.015 ;       ;
+; B[0]       ; AmenorB     ; 6.117 ;       ;       ; 6.117 ;
+; B[1]       ; AigualB     ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; B[1]       ; AmaiorB     ;       ; 5.984 ; 5.984 ;       ;
+; B[1]       ; AmenorB     ; 6.092 ;       ;       ; 6.092 ;
+; B[2]       ; AigualB     ; 5.820 ; 5.820 ; 5.820 ; 5.820 ;
+; B[2]       ; AmaiorB     ;       ; 5.895 ; 5.895 ;       ;
+; B[2]       ; AmenorB     ; 6.003 ;       ;       ; 6.003 ;
+; B[3]       ; AigualB     ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; B[3]       ; AmaiorB     ;       ; 5.940 ; 5.940 ;       ;
+; B[3]       ; AmenorB     ; 6.043 ;       ;       ; 6.043 ;
+; B[4]       ; AigualB     ; 5.887 ; 5.887 ; 5.887 ; 5.887 ;
+; B[4]       ; AmaiorB     ;       ; 5.834 ; 5.834 ;       ;
+; B[4]       ; AmenorB     ; 5.934 ;       ;       ; 5.934 ;
+; B[5]       ; AigualB     ; 5.770 ; 5.770 ; 5.770 ; 5.770 ;
+; B[5]       ; AmaiorB     ;       ; 5.878 ; 5.878 ;       ;
+; B[5]       ; AmenorB     ; 5.985 ;       ;       ; 5.985 ;
+; B[6]       ; AigualB     ; 5.773 ; 5.773 ; 5.773 ; 5.773 ;
+; B[6]       ; AmaiorB     ;       ; 5.745 ; 5.745 ;       ;
+; B[6]       ; AmenorB     ; 5.851 ;       ;       ; 5.851 ;
+; B[7]       ; AigualB     ; 5.713 ; 5.713 ; 5.713 ; 5.713 ;
+; B[7]       ; AmaiorB     ;       ; 5.666 ; 5.666 ;       ;
+; B[7]       ; AmenorB     ; 5.778 ;       ;       ; 5.778 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 16    ; 16   ;
+; Unconstrained Input Port Paths  ; 48    ; 48   ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 48    ; 48   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Mar 15 09:29:36 2018
+Info: Command: quartus_sta comparador -c comparador
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'comparador.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 531 megabytes
+    Info: Processing ended: Thu Mar 15 09:29:36 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

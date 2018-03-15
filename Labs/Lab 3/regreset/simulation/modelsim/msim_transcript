@@ -1,0 +1,199 @@
+# do regreset_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {regreset.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity regreset
+# -- Compiling architecture structure of regreset
+# 
+vsim -do regreset_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo work.regreset
+# vsim -do regreset_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo work.regreset 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.regreset(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+# do regreset_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {regreset.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity regreset
+# -- Compiling architecture structure of regreset
+# 
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 2
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 1 0 ns, 1 85 ns, 0 100 ns"
+run
+run
+restart -f
+# Loading work.regreset(structure)
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+add wave  \
+sim:/regreset/clk \
+sim:/regreset/reset \
+sim:/regreset/D \
+sim:/regreset/Q
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 2
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 1 0 ns, 1 85 ns, 0 100 ns"
+run
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 2
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 1 0 ns, 1 85 ns, 0 100 ns"
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 2
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 1 0 ns, 1 85 ns, 0 100 ns"
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 2
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 1 0 ns, 0 30 ns, 1 85 ns"
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 2
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 0 0 ns, 1 30 ns, 1 85 ns"
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 3
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 0 0 ns, 1 30 ns, 1 85 ns"
+run
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 3
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 0 10 ns, 1 30 ns, 1 85 ns"
+run
+restart -f
+# Loading instances from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/regreset_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /regreset File: regreset.vho
+do /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do
+# ** Error: (vish-4008) Object 'eset' not found.
+# Error in macro /home/100000000820483/Documentos/INE5406/regreset/simulation/modelsim/stimulus-regreset.do line 3
+# ** Error: (vish-4008) Object 'eset' not found.
+# 
+#     while executing
+# "force \reset 1 0 ns"
+run
+# ** Warning: (vish-103) Extended identifier "\reset 1 0 ns" terminates at a newline character (0x0a).
+# ** Warning: (vish-103) Extended identifier "\reset 1 0 ns" terminates at a newline character (0x0a).
+# ** Warning: (vish-103) Extended identifier "\reset 1 0 ns" terminates at a newline character (0x0a).

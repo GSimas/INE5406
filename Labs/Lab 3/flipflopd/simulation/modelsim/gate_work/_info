@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/100000000820483/Documentos/INE5406/flipflopd/simulation/modelsim
+Eflipflopd
+Z1 w1521117418
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 d/home/100000000820483/Documentos/INE5406/flipflopd/simulation/modelsim
+Z9 8flipflopd.vho
+Z10 Fflipflopd.vho
+l0
+L34
+VH3LfEz6azX5Z=0cDN?[[91
+!s100 g4BkBb1`Ock3zC3e:H8R81
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1521117435.629846
+Z13 !s90 -reportprogress|300|-93|-work|work|flipflopd.vho|
+Z14 !s107 flipflopd.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 flipflopd 0 22 H3LfEz6azX5Z=0cDN?[[91
+l78
+L54
+VaefB?0``8L7>d:Bh9b@UO3
+!s100 0_798K>fFm6Kc@;X=Z?301
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16
