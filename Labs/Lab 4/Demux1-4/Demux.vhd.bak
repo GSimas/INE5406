@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.STD_Logic_1164.all;
+
+entity demux is
+	port(
+	
+	F: in STD_Logic;
+	S0,S1: in STD_Logic;
+	A,B,C,D: out STD_Logic
+	);
+end demux;
+
+architecture bhv of demux is
+begin
+	process(F,S0,S1) is
+	begin
+	
+	if(F = '0') then
+	A <= '0';
+	B <= '0';
+	C <= '0';
+	D <= '0';
+	
+	if(S0 = '0' AND S1 = '0' AND F1 = '1') then
+	A <= '1';
+	
+	if(S0 = '0' AND S1 = '1' AND F1 = '1') then
+	

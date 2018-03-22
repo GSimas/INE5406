@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, /home/100000000820483/Documentos/INE5406/Mux4-1/mux.vhd
+source_file = 1, /home/100000000820483/Documentos/INE5406/Mux4-1/db/mux.cbx.xml
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = mux
+instance = comp, \S0~I\, S0, mux, 1
+instance = comp, \D~I\, D, mux, 1
+instance = comp, \B~I\, B, mux, 1
+instance = comp, \A~I\, A, mux, 1
+instance = comp, \S1~I\, S1, mux, 1
+instance = comp, \Z~0\, Z~0, mux, 1
+instance = comp, \C~I\, C, mux, 1
+instance = comp, \Z~1\, Z~1, mux, 1
+instance = comp, \Z~I\, Z, mux, 1

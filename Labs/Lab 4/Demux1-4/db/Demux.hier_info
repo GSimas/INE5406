@@ -1,0 +1,19 @@
+|Demux
+F => A.OUTPUTSELECT
+F => B.OUTPUTSELECT
+F => C.OUTPUTSELECT
+F => D.OUTPUTSELECT
+S0 => process_0.IN0
+S0 => process_0.IN0
+S0 => process_0.IN0
+S0 => process_0.IN0
+S1 => process_0.IN1
+S1 => process_0.IN1
+S1 => process_0.IN1
+S1 => process_0.IN1
+A <= A.DB_MAX_OUTPUT_PORT_TYPE
+B <= B.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+
+
