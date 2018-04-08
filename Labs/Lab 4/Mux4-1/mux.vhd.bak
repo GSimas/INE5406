@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.STD_Logic_1164.all;
+
+entity demux is
+	port(
+	
+	F: in STD_Logic;
+	S0,S1: in STD_Logic;
+	A,B,C,D: out STD_Logic
+	);
+end demux;

@@ -1,0 +1,35 @@
+--UFSC - CTC - Eng Eletronica
+--INE5406 - Sistemas Digitais 2018.1
+--Gustavo Simas da Silva
+
+library IEEE;
+use IEEE.STD_Logic_1164.all;
+
+entity bcd1 is
+	port(
+	
+	A,B,C,D,E,F,G: out STD_Logic;
+	B0,B1,B2,B3: in STD_Logic
+	);
+end bcd1;
+
+architecture bhv of bcd1 is
+begin
+	process(A,B,C,D,S0,S1) is
+	begin
+	
+	if(S0 = '0' AND S1 = '0') then
+		Z <= A;
+			
+	elsif(S0 = '1' AND S1 = '0') then
+		Z <= B;
+		
+	elsif(S0 = '0' AND S1 = '1') then
+		Z <= C;
+		
+	elsif(S0 = '1' AND S1 = '1') then
+		Z <= D;
+		
+	end if;
+	end process;
+end bhv;

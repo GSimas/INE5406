@@ -1,0 +1,39 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+USE ieee.std_logic_arith.all;
+
+ENTITY ULA is 
+port
+	(
+		A: IN SIGNED STD_LOGIC_VECTOR(15 DOWNTO 0);
+		B: IN SIGNED STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SEL: IN STD_LOGIC;
+		OF1: OUT STD_LOGIC;
+		S: OUT SIGNED STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END ULA;
+
+ARCHITECTURE estrutura OF ULA IS
+SIGNAL OUTPUT: STD_LOGIC_VECTOR(16 DOWNTO 0);
+SIGNAL BCOMP: STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+BEGIN
+	PROCESS(SEL, A, B) IS
+		BEGIN
+			
+			IF SEL = '0' THEN
+				OUTPUT <= A + B;
+				S <= OUTPUT(15 DOWNTO 0);
+				A <= S;
+				
+			ELSE SEL = '1'
+				BCOMP <= (B XOR B) + 1;
+				S <= A + BCOMP;
+				A <= S;
+				
+			END IF;
+			OF1 <= OUTPUT(16);
+	END PROCESS;
+
+END estrutura;

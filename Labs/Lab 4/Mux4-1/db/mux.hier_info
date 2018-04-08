@@ -1,0 +1,16 @@
+|mux
+Z <= Z$latch.DB_MAX_OUTPUT_PORT_TYPE
+S0 => process_0.IN0
+S0 => process_0.IN0
+S0 => process_0.IN0
+S0 => process_0.IN0
+S1 => process_0.IN1
+S1 => process_0.IN1
+S1 => process_0.IN1
+S1 => process_0.IN1
+A => Z.DATAB
+B => Z.DATAB
+C => Z.DATAB
+D => Z.DATAA
+
+
