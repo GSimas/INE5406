@@ -1,0 +1,23 @@
+|contnb
+R[0] => Q.DATAB
+R[1] => Q.DATAB
+R[2] => Q.DATAB
+R[3] => Q.DATAB
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+limpa => Q[0]~reg0.ACLR
+limpa => Q[1]~reg0.ACLR
+limpa => Q[2]~reg0.ACLR
+limpa => Q[3]~reg0.ACLR
+carga => Q.OUTPUTSELECT
+carga => Q.OUTPUTSELECT
+carga => Q.OUTPUTSELECT
+carga => Q.OUTPUTSELECT
+Q[0] << Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] << Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] << Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] << Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

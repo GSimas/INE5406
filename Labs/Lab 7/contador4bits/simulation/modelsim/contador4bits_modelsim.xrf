@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, /home/100000000820483/Documentos/contador4bits/contador4bits.vhd
+source_file = 1, /home/100000000820483/Documentos/contador4bits/db/contador4bits.cbx.xml
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /opt/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = contador4bits
+instance = comp, \clk~I\, clk, contador4bits, 1
+instance = comp, \limpa~I\, limpa, contador4bits, 1
+instance = comp, \carga~I\, carga, contador4bits, 1
+instance = comp, \Q[0]~I\, Q[0], contador4bits, 1
+instance = comp, \Q[1]~I\, Q[1], contador4bits, 1
+instance = comp, \Q[2]~I\, Q[2], contador4bits, 1
+instance = comp, \Q[3]~I\, Q[3], contador4bits, 1

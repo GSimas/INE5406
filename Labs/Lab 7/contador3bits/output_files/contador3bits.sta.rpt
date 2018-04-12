@@ -1,0 +1,705 @@
+TimeQuest Timing Analyzer report for contador3bits
+Thu Apr 12 09:08:35 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'ffDv2:ffD1|NQ'
+ 12. Slow Model Setup: 'ffDv2:ffD0|NQ'
+ 13. Slow Model Setup: 'clk'
+ 14. Slow Model Hold: 'clk'
+ 15. Slow Model Hold: 'ffDv2:ffD0|NQ'
+ 16. Slow Model Hold: 'ffDv2:ffD1|NQ'
+ 17. Slow Model Minimum Pulse Width: 'clk'
+ 18. Slow Model Minimum Pulse Width: 'ffDv2:ffD0|NQ'
+ 19. Slow Model Minimum Pulse Width: 'ffDv2:ffD1|NQ'
+ 20. Clock to Output Times
+ 21. Minimum Clock to Output Times
+ 22. Fast Model Setup Summary
+ 23. Fast Model Hold Summary
+ 24. Fast Model Recovery Summary
+ 25. Fast Model Removal Summary
+ 26. Fast Model Minimum Pulse Width Summary
+ 27. Fast Model Setup: 'ffDv2:ffD1|NQ'
+ 28. Fast Model Setup: 'ffDv2:ffD0|NQ'
+ 29. Fast Model Setup: 'clk'
+ 30. Fast Model Hold: 'clk'
+ 31. Fast Model Hold: 'ffDv2:ffD0|NQ'
+ 32. Fast Model Hold: 'ffDv2:ffD1|NQ'
+ 33. Fast Model Minimum Pulse Width: 'clk'
+ 34. Fast Model Minimum Pulse Width: 'ffDv2:ffD0|NQ'
+ 35. Fast Model Minimum Pulse Width: 'ffDv2:ffD1|NQ'
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Multicorner Timing Analysis Summary
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; contador3bits                                                     ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                       ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+; Clock Name    ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets           ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+; clk           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }           ;
+; ffDv2:ffD0|NQ ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ffDv2:ffD0|NQ } ;
+; ffDv2:ffD1|NQ ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ffDv2:ffD1|NQ } ;
++---------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                              ;
++-------------+-----------------+---------------+------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name    ; Note                                                 ;
++-------------+-----------------+---------------+------------------------------------------------------+
+; 1340.48 MHz ; 500.0 MHz       ; ffDv2:ffD1|NQ ; limit due to low minimum pulse width violation (tcl) ;
++-------------+-----------------+---------------+------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------+
+; Slow Model Setup Summary              ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; ffDv2:ffD1|NQ ; 0.254 ; 0.000         ;
+; ffDv2:ffD0|NQ ; 2.319 ; 0.000         ;
+; clk           ; 2.544 ; 0.000         ;
++---------------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Hold Summary                ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; clk           ; -2.540 ; -4.814        ;
+; ffDv2:ffD0|NQ ; -2.181 ; -4.230        ;
+; ffDv2:ffD1|NQ ; 0.391  ; 0.000         ;
++---------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; clk           ; -1.380 ; -3.380        ;
+; ffDv2:ffD0|NQ ; -0.500 ; -2.000        ;
+; ffDv2:ffD1|NQ ; -0.500 ; -2.000        ;
++---------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'ffDv2:ffD1|NQ'                                                                              ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; 0.254 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 1.000        ; 0.000      ; 0.782      ;
+; 0.379 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 1.000        ; 0.000      ; 0.657      ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'ffDv2:ffD0|NQ'                                                                              ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; 2.319 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.500        ; 2.322      ; 0.789      ;
+; 2.451 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.500        ; 2.322      ; 0.657      ;
+; 2.819 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 1.000        ; 2.322      ; 0.789      ;
+; 2.951 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 1.000        ; 2.322      ; 0.657      ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                      ;
++-------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; 2.544 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; 0.500        ; 2.681      ; 0.923      ;
+; 2.810 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; 0.500        ; 2.681      ; 0.657      ;
+; 3.044 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; 1.000        ; 2.681      ; 0.923      ;
+; 3.310 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; 1.000        ; 2.681      ; 0.657      ;
++-------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                        ;
++--------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; -2.540 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; 0.000        ; 2.681      ; 0.657      ;
+; -2.274 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; 0.000        ; 2.681      ; 0.923      ;
+; -2.040 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; -0.500       ; 2.681      ; 0.657      ;
+; -1.774 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; -0.500       ; 2.681      ; 0.923      ;
++--------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'ffDv2:ffD0|NQ'                                                                                ;
++--------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; -2.181 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.000        ; 2.322      ; 0.657      ;
+; -2.049 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.000        ; 2.322      ; 0.789      ;
+; -1.681 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; -0.500       ; 2.322      ; 0.657      ;
+; -1.549 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; -0.500       ; 2.322      ; 0.789      ;
++--------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'ffDv2:ffD1|NQ'                                                                               ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; 0.391 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 0.000        ; 0.000      ; 0.657      ;
+; 0.516 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 0.000        ; 0.000      ; 0.782      ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ffDv2:ffD0|NQ        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ffDv2:ffD0|NQ        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ffDv2:ffD0|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ffDv2:ffD0|Q         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ffD0|NQ|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ffD0|NQ|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ffD0|Q|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ffD0|Q|clk           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'ffDv2:ffD0|NQ'                                                                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock         ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|Q             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|Q             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD1|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD1|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD1|Q|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD1|Q|clk               ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'ffDv2:ffD1|NQ'                                                                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock         ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|Q             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|Q             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD2|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD2|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD2|Q|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD2|Q|clk               ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Aout[*]   ; clk           ; 6.518 ; 6.518 ; Rise       ; clk             ;
+;  Aout[0]  ; clk           ; 6.518 ; 6.518 ; Rise       ; clk             ;
+; Aout[*]   ; ffDv2:ffD0|NQ ; 5.956 ; 5.956 ; Fall       ; ffDv2:ffD0|NQ   ;
+;  Aout[1]  ; ffDv2:ffD0|NQ ; 5.956 ; 5.956 ; Fall       ; ffDv2:ffD0|NQ   ;
+; Aout[*]   ; ffDv2:ffD1|NQ ; 5.836 ; 5.836 ; Fall       ; ffDv2:ffD1|NQ   ;
+;  Aout[2]  ; ffDv2:ffD1|NQ ; 5.836 ; 5.836 ; Fall       ; ffDv2:ffD1|NQ   ;
++-----------+---------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Aout[*]   ; clk           ; 6.518 ; 6.518 ; Rise       ; clk             ;
+;  Aout[0]  ; clk           ; 6.518 ; 6.518 ; Rise       ; clk             ;
+; Aout[*]   ; ffDv2:ffD0|NQ ; 5.956 ; 5.956 ; Fall       ; ffDv2:ffD0|NQ   ;
+;  Aout[1]  ; ffDv2:ffD0|NQ ; 5.956 ; 5.956 ; Fall       ; ffDv2:ffD0|NQ   ;
+; Aout[*]   ; ffDv2:ffD1|NQ ; 5.836 ; 5.836 ; Fall       ; ffDv2:ffD1|NQ   ;
+;  Aout[2]  ; ffDv2:ffD1|NQ ; 5.836 ; 5.836 ; Fall       ; ffDv2:ffD1|NQ   ;
++-----------+---------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------+
+; Fast Model Setup Summary              ;
++---------------+-------+---------------+
+; Clock         ; Slack ; End Point TNS ;
++---------------+-------+---------------+
+; ffDv2:ffD1|NQ ; 0.623 ; 0.000         ;
+; ffDv2:ffD0|NQ ; 1.671 ; 0.000         ;
+; clk           ; 1.890 ; 0.000         ;
++---------------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Hold Summary                ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; clk           ; -1.584 ; -3.094        ;
+; ffDv2:ffD0|NQ ; -1.335 ; -2.626        ;
+; ffDv2:ffD1|NQ ; 0.215  ; 0.000         ;
++---------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++---------------+--------+---------------+
+; Clock         ; Slack  ; End Point TNS ;
++---------------+--------+---------------+
+; clk           ; -1.380 ; -3.380        ;
+; ffDv2:ffD0|NQ ; -0.500 ; -2.000        ;
+; ffDv2:ffD1|NQ ; -0.500 ; -2.000        ;
++---------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'ffDv2:ffD1|NQ'                                                                              ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; 0.623 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 1.000        ; 0.000      ; 0.409      ;
+; 0.665 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 1.000        ; 0.000      ; 0.367      ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'ffDv2:ffD0|NQ'                                                                              ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; 1.671 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.500        ; 1.409      ; 0.411      ;
+; 1.715 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.500        ; 1.409      ; 0.367      ;
+; 2.171 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 1.000        ; 1.409      ; 0.411      ;
+; 2.215 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 1.000        ; 1.409      ; 0.367      ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                      ;
++-------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; 1.890 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; 0.500        ; 1.658      ; 0.441      ;
+; 1.964 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; 0.500        ; 1.658      ; 0.367      ;
+; 2.390 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; 1.000        ; 1.658      ; 0.441      ;
+; 2.464 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; 1.000        ; 1.658      ; 0.367      ;
++-------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                        ;
++--------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock  ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+; -1.584 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; 0.000        ; 1.658      ; 0.367      ;
+; -1.510 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; 0.000        ; 1.658      ; 0.441      ;
+; -1.084 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; ffDv2:ffD0|NQ ; clk         ; -0.500       ; 1.658      ; 0.367      ;
+; -1.010 ; ffDv2:ffD0|NQ ; ffDv2:ffD0|Q  ; ffDv2:ffD0|NQ ; clk         ; -0.500       ; 1.658      ; 0.441      ;
++--------+---------------+---------------+---------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'ffDv2:ffD0|NQ'                                                                                ;
++--------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; -1.335 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.000        ; 1.409      ; 0.367      ;
+; -1.291 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0.000        ; 1.409      ; 0.411      ;
+; -0.835 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; -0.500       ; 1.409      ; 0.367      ;
+; -0.791 ; ffDv2:ffD1|NQ ; ffDv2:ffD1|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; -0.500       ; 1.409      ; 0.411      ;
++--------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'ffDv2:ffD1|NQ'                                                                               ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node       ; Launch Clock  ; Latch Clock   ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+; 0.215 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|NQ ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 0.000        ; 0.000      ; 0.367      ;
+; 0.257 ; ffDv2:ffD2|NQ ; ffDv2:ffD2|Q  ; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 0.000        ; 0.000      ; 0.409      ;
++-------+---------------+---------------+---------------+---------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ffDv2:ffD0|NQ        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ffDv2:ffD0|NQ        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; ffDv2:ffD0|Q         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; ffDv2:ffD0|Q         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ffD0|NQ|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ffD0|NQ|clk          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; ffD0|Q|clk           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; ffD0|Q|clk           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'ffDv2:ffD0|NQ'                                                                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock         ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|Q             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Fall       ; ffDv2:ffD1|Q             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD0|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD1|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD1|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD0|NQ ; Rise       ; ffD1|Q|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD0|NQ ; Rise       ; ffD1|Q|clk               ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'ffDv2:ffD1|NQ'                                                                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock         ; Clock Edge ; Target                   ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|NQ            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|Q             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Fall       ; ffDv2:ffD2|Q             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD1|NQ~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD2|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD2|NQ|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; ffDv2:ffD1|NQ ; Rise       ; ffD2|Q|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; ffDv2:ffD1|NQ ; Rise       ; ffD2|Q|clk               ;
++--------+--------------+----------------+------------------+---------------+------------+--------------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Aout[*]   ; clk           ; 3.733 ; 3.733 ; Rise       ; clk             ;
+;  Aout[0]  ; clk           ; 3.733 ; 3.733 ; Rise       ; clk             ;
+; Aout[*]   ; ffDv2:ffD0|NQ ; 3.324 ; 3.324 ; Fall       ; ffDv2:ffD0|NQ   ;
+;  Aout[1]  ; ffDv2:ffD0|NQ ; 3.324 ; 3.324 ; Fall       ; ffDv2:ffD0|NQ   ;
+; Aout[*]   ; ffDv2:ffD1|NQ ; 3.327 ; 3.327 ; Fall       ; ffDv2:ffD1|NQ   ;
+;  Aout[2]  ; ffDv2:ffD1|NQ ; 3.327 ; 3.327 ; Fall       ; ffDv2:ffD1|NQ   ;
++-----------+---------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Aout[*]   ; clk           ; 3.733 ; 3.733 ; Rise       ; clk             ;
+;  Aout[0]  ; clk           ; 3.733 ; 3.733 ; Rise       ; clk             ;
+; Aout[*]   ; ffDv2:ffD0|NQ ; 3.324 ; 3.324 ; Fall       ; ffDv2:ffD0|NQ   ;
+;  Aout[1]  ; ffDv2:ffD0|NQ ; 3.324 ; 3.324 ; Fall       ; ffDv2:ffD0|NQ   ;
+; Aout[*]   ; ffDv2:ffD1|NQ ; 3.327 ; 3.327 ; Fall       ; ffDv2:ffD1|NQ   ;
+;  Aout[2]  ; ffDv2:ffD1|NQ ; 3.327 ; 3.327 ; Fall       ; ffDv2:ffD1|NQ   ;
++-----------+---------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+-------+--------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+--------+----------+---------+---------------------+
+; Worst-case Slack ; 0.254 ; -2.540 ; N/A      ; N/A     ; -1.380              ;
+;  clk             ; 1.890 ; -2.540 ; N/A      ; N/A     ; -1.380              ;
+;  ffDv2:ffD0|NQ   ; 1.671 ; -2.181 ; N/A      ; N/A     ; -0.500              ;
+;  ffDv2:ffD1|NQ   ; 0.254 ; 0.215  ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS  ; 0.0   ; -9.044 ; 0.0      ; 0.0     ; -7.38               ;
+;  clk             ; 0.000 ; -4.814 ; N/A      ; N/A     ; -3.380              ;
+;  ffDv2:ffD0|NQ   ; 0.000 ; -4.230 ; N/A      ; N/A     ; -2.000              ;
+;  ffDv2:ffD1|NQ   ; 0.000 ; 0.000  ; N/A      ; N/A     ; -2.000              ;
++------------------+-------+--------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Aout[*]   ; clk           ; 6.518 ; 6.518 ; Rise       ; clk             ;
+;  Aout[0]  ; clk           ; 6.518 ; 6.518 ; Rise       ; clk             ;
+; Aout[*]   ; ffDv2:ffD0|NQ ; 5.956 ; 5.956 ; Fall       ; ffDv2:ffD0|NQ   ;
+;  Aout[1]  ; ffDv2:ffD0|NQ ; 5.956 ; 5.956 ; Fall       ; ffDv2:ffD0|NQ   ;
+; Aout[*]   ; ffDv2:ffD1|NQ ; 5.836 ; 5.836 ; Fall       ; ffDv2:ffD1|NQ   ;
+;  Aout[2]  ; ffDv2:ffD1|NQ ; 5.836 ; 5.836 ; Fall       ; ffDv2:ffD1|NQ   ;
++-----------+---------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port    ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+---------------+-------+-------+------------+-----------------+
+; Aout[*]   ; clk           ; 3.733 ; 3.733 ; Rise       ; clk             ;
+;  Aout[0]  ; clk           ; 3.733 ; 3.733 ; Rise       ; clk             ;
+; Aout[*]   ; ffDv2:ffD0|NQ ; 3.324 ; 3.324 ; Fall       ; ffDv2:ffD0|NQ   ;
+;  Aout[1]  ; ffDv2:ffD0|NQ ; 3.324 ; 3.324 ; Fall       ; ffDv2:ffD0|NQ   ;
+; Aout[*]   ; ffDv2:ffD1|NQ ; 3.327 ; 3.327 ; Fall       ; ffDv2:ffD1|NQ   ;
+;  Aout[2]  ; ffDv2:ffD1|NQ ; 3.327 ; 3.327 ; Fall       ; ffDv2:ffD1|NQ   ;
++-----------+---------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Transfers                                                           ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; ffDv2:ffD0|NQ ; clk           ; 2        ; 2        ; 0        ; 0        ;
+; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0        ; 0        ; 2        ; 2        ;
+; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 0        ; 0        ; 0        ; 2        ;
++---------------+---------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------+
+; Hold Transfers                                                            ;
++---------------+---------------+----------+----------+----------+----------+
+; From Clock    ; To Clock      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------+---------------+----------+----------+----------+----------+
+; ffDv2:ffD0|NQ ; clk           ; 2        ; 2        ; 0        ; 0        ;
+; ffDv2:ffD1|NQ ; ffDv2:ffD0|NQ ; 0        ; 0        ; 2        ; 2        ;
+; ffDv2:ffD1|NQ ; ffDv2:ffD1|NQ ; 0        ; 0        ; 0        ; 2        ;
++---------------+---------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 6     ; 6    ;
+; Unconstrained Output Ports      ; 3     ; 3    ;
+; Unconstrained Output Port Paths ; 3     ; 3    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Apr 12 09:08:35 2018
+Info: Command: quartus_sta contador3bits -c contador3bits
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'contador3bits.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name ffDv2:ffD0|NQ ffDv2:ffD0|NQ
+    Info (332105): create_clock -period 1.000 -name ffDv2:ffD1|NQ ffDv2:ffD1|NQ
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 0.254
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.254         0.000 ffDv2:ffD1|NQ 
+    Info (332119):     2.319         0.000 ffDv2:ffD0|NQ 
+    Info (332119):     2.544         0.000 clk 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -2.540
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.540        -4.814 clk 
+    Info (332119):    -2.181        -4.230 ffDv2:ffD0|NQ 
+    Info (332119):     0.391         0.000 ffDv2:ffD1|NQ 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -3.380 clk 
+    Info (332119):    -0.500        -2.000 ffDv2:ffD0|NQ 
+    Info (332119):    -0.500        -2.000 ffDv2:ffD1|NQ 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.623
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.623         0.000 ffDv2:ffD1|NQ 
+    Info (332119):     1.671         0.000 ffDv2:ffD0|NQ 
+    Info (332119):     1.890         0.000 clk 
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case hold slack is -1.584
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.584        -3.094 clk 
+    Info (332119):    -1.335        -2.626 ffDv2:ffD0|NQ 
+    Info (332119):     0.215         0.000 ffDv2:ffD1|NQ 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -3.380 clk 
+    Info (332119):    -0.500        -2.000 ffDv2:ffD0|NQ 
+    Info (332119):    -0.500        -2.000 ffDv2:ffD1|NQ 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 520 megabytes
+    Info: Processing ended: Thu Apr 12 09:08:35 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

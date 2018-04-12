@@ -1,0 +1,43 @@
+|contador3bits
+clk => ffDv2:ffD0.clk
+limpa => ffDv2:ffD0.limpa
+limpa => ffDv2:ffD1.limpa
+limpa => ffDv2:ffD2.limpa
+Aout[0] <= ffDv2:ffD0.Q
+Aout[1] <= ffDv2:ffD1.Q
+Aout[2] <= ffDv2:ffD2.Q
+
+
+|contador3bits|ffDv2:ffD0
+D => Q~reg0.DATAIN
+D => NQ~reg0.DATAIN
+clk => NQ~reg0.CLK
+clk => Q~reg0.CLK
+limpa => NQ~reg0.PRESET
+limpa => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+NQ <= NQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador3bits|ffDv2:ffD1
+D => Q~reg0.DATAIN
+D => NQ~reg0.DATAIN
+clk => NQ~reg0.CLK
+clk => Q~reg0.CLK
+limpa => NQ~reg0.PRESET
+limpa => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+NQ <= NQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador3bits|ffDv2:ffD2
+D => Q~reg0.DATAIN
+D => NQ~reg0.DATAIN
+clk => NQ~reg0.CLK
+clk => Q~reg0.CLK
+limpa => NQ~reg0.PRESET
+limpa => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+NQ <= NQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

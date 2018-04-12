@@ -1,0 +1,10 @@
+|contador4bits
+clk => ~NO_FANOUT~
+limpa => ~NO_FANOUT~
+carga => ~NO_FANOUT~
+Q[0] <= <GND>
+Q[1] <= <GND>
+Q[2] <= <GND>
+Q[3] <= <GND>
+
+

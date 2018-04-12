@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'ffDv2:ffD1|NQ'
+Slack : 0.254
+TNS   : 0.000
+
+Type  : Slow Model Setup 'ffDv2:ffD0|NQ'
+Slack : 2.319
+TNS   : 0.000
+
+Type  : Slow Model Setup 'clk'
+Slack : 2.544
+TNS   : 0.000
+
+Type  : Slow Model Hold 'clk'
+Slack : -2.540
+TNS   : -4.814
+
+Type  : Slow Model Hold 'ffDv2:ffD0|NQ'
+Slack : -2.181
+TNS   : -4.230
+
+Type  : Slow Model Hold 'ffDv2:ffD1|NQ'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -3.380
+
+Type  : Slow Model Minimum Pulse Width 'ffDv2:ffD0|NQ'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Slow Model Minimum Pulse Width 'ffDv2:ffD1|NQ'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Fast Model Setup 'ffDv2:ffD1|NQ'
+Slack : 0.623
+TNS   : 0.000
+
+Type  : Fast Model Setup 'ffDv2:ffD0|NQ'
+Slack : 1.671
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clk'
+Slack : 1.890
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.584
+TNS   : -3.094
+
+Type  : Fast Model Hold 'ffDv2:ffD0|NQ'
+Slack : -1.335
+TNS   : -2.626
+
+Type  : Fast Model Hold 'ffDv2:ffD1|NQ'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -3.380
+
+Type  : Fast Model Minimum Pulse Width 'ffDv2:ffD0|NQ'
+Slack : -0.500
+TNS   : -2.000
+
+Type  : Fast Model Minimum Pulse Width 'ffDv2:ffD1|NQ'
+Slack : -0.500
+TNS   : -2.000
+
+------------------------------------------------------------

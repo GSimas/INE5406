@@ -1,0 +1,36 @@
+|shiftregbeh2
+R[0] => Q.DATAB
+R[1] => Q.DATAB
+R[2] => Q.DATAB
+R[3] => Q.DATAB
+R[4] => Q.DATAB
+R[5] => Q.DATAB
+R[6] => Q.DATAB
+R[7] => Q.DATAB
+sel => Q.OUTPUTSELECT
+sel => Q.OUTPUTSELECT
+sel => Q.OUTPUTSELECT
+sel => Q.OUTPUTSELECT
+sel => Q.OUTPUTSELECT
+sel => Q.OUTPUTSELECT
+sel => Q.OUTPUTSELECT
+sel => Q.OUTPUTSELECT
+serial => Q.DATAA
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+clk => Q[4]~reg0.CLK
+clk => Q[5]~reg0.CLK
+clk => Q[6]~reg0.CLK
+clk => Q[7]~reg0.CLK
+Q[0] << Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] << Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] << Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] << Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] << Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] << Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] << Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] << Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

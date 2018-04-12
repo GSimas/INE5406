@@ -1,0 +1,52 @@
+|shiftreg
+R[0] => muxffd:estagio0.D1
+R[1] => muxffd:estagio1.D1
+R[2] => muxffd:estagio2.D1
+R[3] => muxffd:estagio3.D1
+carga => muxffd:estagio3.sel
+carga => muxffd:estagio2.sel
+carga => muxffd:estagio1.sel
+carga => muxffd:estagio0.sel
+serial => muxffd:estagio3.D0
+clk => muxffd:estagio3.clk
+clk => muxffd:estagio2.clk
+clk => muxffd:estagio1.clk
+clk => muxffd:estagio0.clk
+Q[0] << muxffd:estagio0.Q
+Q[1] << muxffd:estagio1.Q
+Q[2] << muxffd:estagio2.Q
+Q[3] << muxffd:estagio3.Q
+
+
+|shiftreg|muxffd:estagio3
+D0 => Q.DATAA
+D1 => Q.DATAB
+sel => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg|muxffd:estagio2
+D0 => Q.DATAA
+D1 => Q.DATAB
+sel => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg|muxffd:estagio1
+D0 => Q.DATAA
+D1 => Q.DATAB
+sel => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|shiftreg|muxffd:estagio0
+D0 => Q.DATAA
+D1 => Q.DATAB
+sel => Q.OUTPUTSELECT
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
