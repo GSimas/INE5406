@@ -1,0 +1,7 @@
+
+State Machine - |maquina|bc:bloco_ctr|estado
+Name estado.LIBERA estado.ACUM estado.ESPERA estado.INICIO 
+estado.INICIO 0 0 0 0 
+estado.ESPERA 0 0 1 1 
+estado.ACUM 0 1 0 1 
+estado.LIBERA 1 0 0 1 

@@ -1,0 +1,153 @@
+|maquina
+Reset => bc:bloco_ctr.Reset
+clk => bo:bloco_op.clk
+clk => bc:bloco_ctr.clk
+c => bc:bloco_ctr.c
+s[0] => bo:bloco_op.s[0]
+s[1] => bo:bloco_op.s[1]
+s[2] => bo:bloco_op.s[2]
+s[3] => bo:bloco_op.s[3]
+s[4] => bo:bloco_op.s[4]
+s[5] => bo:bloco_op.s[5]
+s[6] => bo:bloco_op.s[6]
+s[7] => bo:bloco_op.s[7]
+a[0] => bo:bloco_op.a[0]
+a[1] => bo:bloco_op.a[1]
+a[2] => bo:bloco_op.a[2]
+a[3] => bo:bloco_op.a[3]
+a[4] => bo:bloco_op.a[4]
+a[5] => bo:bloco_op.a[5]
+a[6] => bo:bloco_op.a[6]
+a[7] => bo:bloco_op.a[7]
+d <= bc:bloco_ctr.d
+
+
+|maquina|bo:bloco_op
+clk => registrador:reg.clk
+Ctotal => registrador:reg.carga
+Rtotal => registrador:reg.reset
+s[0] => menor_que:men.b[0]
+s[1] => menor_que:men.b[1]
+s[2] => menor_que:men.b[2]
+s[3] => menor_que:men.b[3]
+s[4] => menor_que:men.b[4]
+s[5] => menor_que:men.b[5]
+s[6] => menor_que:men.b[6]
+s[7] => menor_que:men.b[7]
+a[0] => somador:som.b[0]
+a[1] => somador:som.b[1]
+a[2] => somador:som.b[2]
+a[3] => somador:som.b[3]
+a[4] => somador:som.b[4]
+a[5] => somador:som.b[5]
+a[6] => somador:som.b[6]
+a[7] => somador:som.b[7]
+menor <= menor_que:men.menor
+
+
+|maquina|bo:bloco_op|registrador:reg
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+clk => q[6]~reg0.CLK
+clk => q[7]~reg0.CLK
+carga => q[0]~reg0.ENA
+carga => q[1]~reg0.ENA
+carga => q[2]~reg0.ENA
+carga => q[3]~reg0.ENA
+carga => q[4]~reg0.ENA
+carga => q[5]~reg0.ENA
+carga => q[6]~reg0.ENA
+carga => q[7]~reg0.ENA
+reset => q[0]~reg0.ACLR
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.ACLR
+reset => q[4]~reg0.ACLR
+reset => q[5]~reg0.ACLR
+reset => q[6]~reg0.ACLR
+reset => q[7]~reg0.ACLR
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+d[4] => q[4]~reg0.DATAIN
+d[5] => q[5]~reg0.DATAIN
+d[6] => q[6]~reg0.DATAIN
+d[7] => q[7]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|maquina|bo:bloco_op|somador:som
+a[0] => Add0.IN8
+a[1] => Add0.IN7
+a[2] => Add0.IN6
+a[3] => Add0.IN5
+a[4] => Add0.IN4
+a[5] => Add0.IN3
+a[6] => Add0.IN2
+a[7] => Add0.IN1
+b[0] => Add0.IN16
+b[1] => Add0.IN15
+b[2] => Add0.IN14
+b[3] => Add0.IN13
+b[4] => Add0.IN12
+b[5] => Add0.IN11
+b[6] => Add0.IN10
+b[7] => Add0.IN9
+s[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|maquina|bo:bloco_op|menor_que:men
+a[0] => LessThan0.IN8
+a[1] => LessThan0.IN7
+a[2] => LessThan0.IN6
+a[3] => LessThan0.IN5
+a[4] => LessThan0.IN4
+a[5] => LessThan0.IN3
+a[6] => LessThan0.IN2
+a[7] => LessThan0.IN1
+b[0] => LessThan0.IN16
+b[1] => LessThan0.IN15
+b[2] => LessThan0.IN14
+b[3] => LessThan0.IN13
+b[4] => LessThan0.IN12
+b[5] => LessThan0.IN11
+b[6] => LessThan0.IN10
+b[7] => LessThan0.IN9
+menor <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|maquina|bc:bloco_ctr
+Reset => estado~7.DATAIN
+clk => estado~5.DATAIN
+c => estado.OUTPUTSELECT
+c => estado.OUTPUTSELECT
+c => estado.OUTPUTSELECT
+c => estado.OUTPUTSELECT
+c => process_0.IN0
+c => process_0.IN0
+menor => process_0.IN1
+menor => process_0.IN1
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+Ctotal <= Ctotal.DB_MAX_OUTPUT_PORT_TYPE
+Rtotal <= Rtotal.DB_MAX_OUTPUT_PORT_TYPE
+
+
