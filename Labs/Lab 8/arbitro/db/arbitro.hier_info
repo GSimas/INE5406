@@ -1,0 +1,20 @@
+|arbitro
+Clock => y[0].CLK
+Clock => y[1].CLK
+Reset => y[0].ACLR
+Reset => y[1].ACLR
+r[3] => y.DATAA
+r[3] => y.DATAA
+r[3] => Mux0.IN3
+r[3] => Mux1.IN3
+r[2] => y.OUTPUTSELECT
+r[2] => y.OUTPUTSELECT
+r[2] => Mux0.IN2
+r[1] => y.OUTPUTSELECT
+r[1] => y.OUTPUTSELECT
+r[1] => Mux1.IN2
+c[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+c[2] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+c[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+
+

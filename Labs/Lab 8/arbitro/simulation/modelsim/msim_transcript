@@ -1,0 +1,75 @@
+# do arbitro_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {arbitro.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity arbitro
+# -- Compiling architecture structure of arbitro
+# 
+vsim -do arbitro_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/LAB8/arbitro/simulation/modelsim/arbitro_vhd.sdo work.arbitro
+# vsim -do arbitro_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/LAB8/arbitro/simulation/modelsim/arbitro_vhd.sdo work.arbitro 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.arbitro(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading instances from /home/100000000820483/Documentos/LAB8/arbitro/simulation/modelsim/arbitro_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB8/arbitro/simulation/modelsim/arbitro_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /arbitro File: arbitro.vho
+# do arbitro_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {arbitro.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity arbitro
+# -- Compiling architecture structure of arbitro
+# 
+add wave  \
+sim:/arbitro/Clock \
+sim:/arbitro/Reset \
+sim:/arbitro/r \
+sim:/arbitro/c
+do /home/100000000820483/Documentos/LAB8/arbitro/simulation/modelsim/estimulos.do
+run

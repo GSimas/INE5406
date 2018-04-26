@@ -1,0 +1,7 @@
+
+State Machine - |arbitro|y
+Name y.D3 y.D2 y.D1 y.BD 
+y.BD 0 0 0 0 
+y.D1 0 0 1 1 
+y.D2 0 1 0 1 
+y.D3 1 0 0 1 
