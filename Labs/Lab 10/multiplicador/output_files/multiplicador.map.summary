@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu May  3 09:31:31 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : multiplicador
+Top-level Entity Name : multiplicador
+Family : Cyclone II
+Total logic elements : 29
+    Total combinational functions : 24
+    Dedicated logic registers : 18
+Total registers : 18
+Total pins : 16
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,81 @@
+# do BC_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {BC.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity bc
+# -- Compiling architecture structure of bc
+# 
+vsim -do BC_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/LAB10/BC/simulation/modelsim/BC_vhd.sdo work.bc
+# vsim -do BC_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/LAB10/BC/simulation/modelsim/BC_vhd.sdo work.bc 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.bc(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading instances from /home/100000000820483/Documentos/LAB10/BC/simulation/modelsim/BC_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB10/BC/simulation/modelsim/BC_vhd.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /bc File: BC.vho
+# do BC_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {BC.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity bc
+# -- Compiling architecture structure of bc
+# 
+add wave  \
+sim:/bc/Reset \
+sim:/bc/clk \
+sim:/bc/inicio \
+sim:/bc/Az \
+sim:/bc/Bz \
+sim:/bc/pronto \
+sim:/bc/ini \
+sim:/bc/CA \
+sim:/bc/dec \
+sim:/bc/CP
+do /home/100000000820483/Documentos/LAB10/BC/estimulosbc.do
+run

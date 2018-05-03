@@ -1,0 +1,14 @@
+|BC
+Reset => state~3.DATAIN
+clk => state~1.DATAIN
+inicio => state.DATAB
+inicio => Selector0.IN2
+Az => process_0.IN0
+Bz => process_0.IN1
+pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
+ini <= ini.DB_MAX_OUTPUT_PORT_TYPE
+CA <= CA.DB_MAX_OUTPUT_PORT_TYPE
+dec <= dec.DB_MAX_OUTPUT_PORT_TYPE
+CP <= CP.DB_MAX_OUTPUT_PORT_TYPE
+
+
