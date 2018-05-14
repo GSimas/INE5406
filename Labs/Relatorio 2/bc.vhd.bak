@@ -1,0 +1,38 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY bc IS
+PORT (Reset, clk, inicio, zero: IN STD_LOGIC;
+pronto, Cco, Dco, Cac, Rac : OUT STD_LOGIC);
+END bc;
+
+ARCHITECTURE estrutura OF bc IS
+   TYPE state_type IS (S0, S1, S2, S3);
+   SIGNAL estado: state_type;
+
+BEGIN
+	-- Logica de proximo estado com registrador de estado (A COMPLETAR)
+	PROCESS (-- completar)
+BEGIN
+		-- completar
+				WHEN S3 =>
+					estado <= S0;
+			END CASE;
+		END IF;
+	END PROCESS;
+	
+	-- Logica de saida (A COMPLETAR)
+	PROCESS (--completar)
+	BEGIN
+		CASE estado IS
+			WHEN S0 =>
+			   pronto <= '1';
+				Cco <= '1';
+				Dco <= '0';
+				Cac <= '0';
+				Rac <=  '1';
+				
+			-- completar
+		END CASE;
+	END PROCESS;
+END estrutura;

@@ -1,0 +1,266 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/100000000820483/Documentos/RELATORIO2/simulation/modelsim
+Ebc
+Z1 w1525952789
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 d/home/100000000820483/Documentos/RELATORIO2/simulation/modelsim
+Z5 8/home/100000000820483/Documentos/RELATORIO2/bc.vhd
+Z6 F/home/100000000820483/Documentos/RELATORIO2/bc.vhd
+l0
+L4
+VAiekWM[kc]>R@:ii0A2421
+!s100 HMGVCkXVScRoYQcG7aied0
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1525953008.497558
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/100000000820483/Documentos/RELATORIO2/bc.vhd|
+Z10 !s107 /home/100000000820483/Documentos/RELATORIO2/bc.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Aestrutura
+R2
+R3
+DEx4 work 2 bc 0 22 AiekWM[kc]>R@:ii0A2421
+l13
+L9
+V6bI9eI0jNiV5h[V5AjFU72
+!s100 h56?H;YUjz<AcJ1F:FOl41
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12
+Ebo
+Z13 w1525951081
+Z14 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+Z16 8/home/100000000820483/Documentos/RELATORIO2/bo.vhd
+Z17 F/home/100000000820483/Documentos/RELATORIO2/bo.vhd
+l0
+L5
+VzZOQOL>[K8iY3a>Q:U;T51
+R7
+31
+Z18 !s108 1525953008.473323
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/100000000820483/Documentos/RELATORIO2/bo.vhd|
+Z20 !s107 /home/100000000820483/Documentos/RELATORIO2/bo.vhd|
+R11
+R12
+!s100 NlmJI`b>Y[2<l8QHSP21H0
+!i10b 1
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 2 bo 0 22 zZOQOL>[K8iY3a>Q:U;T51
+l43
+L13
+V>nQCGl9E=QRFfGggg<gW01
+R7
+31
+R18
+R19
+R20
+R11
+R12
+!s100 ^m=KOQXIaRn?_DdoPhPJ>2
+!i10b 1
+Eigual_zero
+Z21 w1525951088
+R14
+R15
+R2
+R3
+R4
+Z22 8/home/100000000820483/Documentos/RELATORIO2/igual_zero.vhd
+Z23 F/home/100000000820483/Documentos/RELATORIO2/igual_zero.vhd
+l0
+L5
+VEeMnPTjEn>e]LT@UAP<4?0
+R7
+31
+Z24 !s108 1525953008.449981
+Z25 !s90 -reportprogress|300|-93|-work|work|/home/100000000820483/Documentos/RELATORIO2/igual_zero.vhd|
+Z26 !s107 /home/100000000820483/Documentos/RELATORIO2/igual_zero.vhd|
+R11
+R12
+!s100 kcdDGc:_8_42B:lneLj]o2
+!i10b 1
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 10 igual_zero 0 22 EeMnPTjEn>e]LT@UAP<4?0
+l12
+L11
+V1:WOG:Hk5fLGeKVDzcTT?1
+R7
+31
+R24
+R25
+R26
+R11
+R12
+!s100 C79?`RVoI[38NNH^M^hLm3
+!i10b 1
+Ereg_dec
+Z27 w1525951090
+R14
+R15
+R2
+R3
+R4
+Z28 8/home/100000000820483/Documentos/RELATORIO2/reg_dec.vhd
+Z29 F/home/100000000820483/Documentos/RELATORIO2/reg_dec.vhd
+l0
+L5
+VT;9N9^bL4Dndf8bG??_EY2
+R7
+31
+Z30 !s108 1525953008.426415
+Z31 !s90 -reportprogress|300|-93|-work|work|/home/100000000820483/Documentos/RELATORIO2/reg_dec.vhd|
+Z32 !s107 /home/100000000820483/Documentos/RELATORIO2/reg_dec.vhd|
+R11
+R12
+!s100 hoJ`D:ziGZWH=CHQhFcBM3
+!i10b 1
+Acomportamento
+R14
+R15
+R2
+R3
+DEx4 work 7 reg_dec 0 22 T;9N9^bL4Dndf8bG??_EY2
+l13
+L12
+VY;@DEGD6W^1QgX=SnX6dT2
+R7
+31
+R30
+R31
+R32
+R11
+R12
+!s100 62JbHZf?g`PJ9l<[I9hB40
+!i10b 1
+Eregistrador
+Z33 w1525951091
+R2
+R3
+R4
+Z34 8/home/100000000820483/Documentos/RELATORIO2/registrador.vhd
+Z35 F/home/100000000820483/Documentos/RELATORIO2/registrador.vhd
+l0
+L4
+VbPnzX_:@`zcELV;gT];IM0
+R7
+31
+Z36 !s108 1525953008.407315
+Z37 !s90 -reportprogress|300|-93|-work|work|/home/100000000820483/Documentos/RELATORIO2/registrador.vhd|
+Z38 !s107 /home/100000000820483/Documentos/RELATORIO2/registrador.vhd|
+R11
+R12
+!s100 TY<ejFYkHc;:Kg7<U@OmF3
+!i10b 1
+Acomportamento
+R2
+R3
+DEx4 work 11 registrador 0 22 bPnzX_:@`zcELV;gT];IM0
+l12
+L11
+VW[lo_Z2P_4PQg5^6X;I<91
+R7
+31
+R36
+R37
+R38
+R11
+R12
+!s100 0XAQeMh7caO<]^]Fj4;k=0
+!i10b 1
+Esomador
+Z39 w1525951093
+R14
+R15
+R2
+R3
+R4
+Z40 8/home/100000000820483/Documentos/RELATORIO2/somador.vhd
+Z41 F/home/100000000820483/Documentos/RELATORIO2/somador.vhd
+l0
+L5
+V@^jLdMSC3n=4ki3?XNh3o2
+R7
+31
+Z42 !s108 1525953008.377456
+Z43 !s90 -reportprogress|300|-93|-work|work|/home/100000000820483/Documentos/RELATORIO2/somador.vhd|
+Z44 !s107 /home/100000000820483/Documentos/RELATORIO2/somador.vhd|
+R11
+R12
+!s100 caM[o`4mWk`Hd`XA^KJ:S0
+!i10b 1
+Aestrutura
+R14
+R15
+R2
+R3
+DEx4 work 7 somador 0 22 @^jLdMSC3n=4ki3?XNh3o2
+l12
+L11
+VMU`6NI9O7;2`MzNzeRTbV2
+R7
+31
+R42
+R43
+R44
+R11
+R12
+!s100 _5?3KU4W5SVBO:M>Yo2JD3
+!i10b 1
+Esomatorio
+Z45 w1525952809
+R2
+R3
+R4
+Z46 8/home/100000000820483/Documentos/RELATORIO2/somatorio.vhd
+Z47 F/home/100000000820483/Documentos/RELATORIO2/somatorio.vhd
+l0
+L4
+VTBNhTASUdZ8VSa>3SOKdl3
+R7
+31
+Z48 !s108 1525953008.290266
+Z49 !s90 -reportprogress|300|-93|-work|work|/home/100000000820483/Documentos/RELATORIO2/somatorio.vhd|
+Z50 !s107 /home/100000000820483/Documentos/RELATORIO2/somatorio.vhd|
+R11
+R12
+!s100 [Tamo>inTnSo];7^HVFYP3
+!i10b 1
+Aestrutura
+R2
+R3
+DEx4 work 9 somatorio 0 22 TBNhTASUdZ8VSa>3SOKdl3
+l29
+L12
+V@OV<dZkL^]^M5WQcPgGff3
+R7
+31
+R48
+R49
+R50
+R11
+R12
+!s100 :`i]2CWTUYa9z8Tkj?lRQ2
+!i10b 1

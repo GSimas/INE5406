@@ -1,0 +1,7 @@
+
+State Machine - |somatorio|bc:boc|estado
+Name estado.S3 estado.S2 estado.S1 estado.S0 
+estado.S0 0 0 0 0 
+estado.S1 0 0 1 1 
+estado.S2 0 1 0 1 
+estado.S3 1 0 0 1 
