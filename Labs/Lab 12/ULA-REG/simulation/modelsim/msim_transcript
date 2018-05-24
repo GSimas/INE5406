@@ -1,0 +1,88 @@
+# do Top_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {Top.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top
+# -- Compiling architecture structure of top
+# 
+vsim -do Top_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/ULA-REG/simulation/modelsim/Top_vhd.sdo work.top
+# vsim -do Top_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/ULA-REG/simulation/modelsim/Top_vhd.sdo work.top 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading ieee.numeric_std(body)
+# Loading work.top(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading instances from /home/100000000820483/Documentos/ULA-REG/simulation/modelsim/Top_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/ULA-REG/simulation/modelsim/Top_vhd.sdo
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /top File: Top.vho
+# do Top_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Top.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top
+# -- Compiling architecture structure of top
+# 
+add wave  \
+sim:/top/clk \
+sim:/top/load_en \
+sim:/top/loadValue \
+sim:/top/i_we3 \
+sim:/top/i_rAddr1 \
+sim:/top/i_rAddr2 \
+sim:/top/i_wAddr3 \
+sim:/top/ulaOp \
+sim:/top/funct \
+sim:/top/read1 \
+sim:/top/read2 \
+sim:/top/written1
+do /home/100000000820483/Documentos/ULA-REG/simulation/stimulus.do
+run

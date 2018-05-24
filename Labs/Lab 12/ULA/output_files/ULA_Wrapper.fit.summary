@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu May 24 08:50:56 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : ULA_Wrapper
+Top-level Entity Name : ULA_Wrapper
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 176 / 33,216 ( < 1 % )
+    Total combinational functions : 176 / 33,216 ( < 1 % )
+    Dedicated logic registers : 0 / 33,216 ( 0 % )
+Total registers : 0
+Total pins : 104 / 475 ( 22 % )
+Total virtual pins : 0
+Total memory bits : 0 / 483,840 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

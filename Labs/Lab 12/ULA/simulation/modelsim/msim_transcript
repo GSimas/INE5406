@@ -1,0 +1,147 @@
+# do ULA_Wrapper_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {ULA_Wrapper.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity ULA_Wrapper
+# -- Compiling architecture structure of ULA_Wrapper
+# 
+vsim -do ULA_Wrapper_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo work.ula_wrapper
+# vsim -do ULA_Wrapper_run_msim_gate_vhdl.do -l msim_transcript -i -sdftyp /=/home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo work.ula_wrapper 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.ula_wrapper(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading instances from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ula_wrapper File: ULA_Wrapper.vho
+# do ULA_Wrapper_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {ULA_Wrapper.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity ULA_Wrapper
+# -- Compiling architecture structure of ULA_Wrapper
+# 
+add wave  \
+sim:/ula_wrapper/a \
+sim:/ula_wrapper/b \
+sim:/ula_wrapper/ulaOp \
+sim:/ula_wrapper/funct \
+sim:/ula_wrapper/s
+do /home/100000000820483/Documentos/LAB12/simulation/stimulus.do
+# ** Error: Value length (8) does not equal array index length (32).
+# 
+# ** Error: (vsim-4011) Invalid force value: 01100100 0 ns, 11111111111111110000000000000000 140ns.
+# Error in macro /home/100000000820483/Documentos/LAB12/simulation/stimulus.do line 1
+# Value length (8) does not equal array index length (32).
+# 
+# ** Error: (vsim-4011) Invalid force value: 01100100 0 ns, 11111111111111110000000000000000 140ns.
+# 
+#     while executing
+# "force /a   "01100100" 0 ns, "11111111111111110000000000000000" 140ns"
+run
+restart
+# Loading work.ula_wrapper(structure)
+# Loading instances from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ula_wrapper File: ULA_Wrapper.vho
+restart
+# Loading instances from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ula_wrapper File: ULA_Wrapper.vho
+do /home/100000000820483/Documentos/LAB12/simulation/stimulus.do
+run
+restart
+# Loading instances from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ula_wrapper File: ULA_Wrapper.vho
+do /home/100000000820483/Documentos/LAB12/simulation/stimulus.do
+run
+restart
+# Loading instances from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ula_wrapper File: ULA_Wrapper.vho
+do /home/100000000820483/Documentos/LAB12/simulation/stimulus.do
+run
+restart
+# Loading instances from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ula_wrapper File: ULA_Wrapper.vho
+do /home/100000000820483/Documentos/LAB12/simulation/stimulus.do
+run
+restart
+# Loading instances from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# Loading timing data from /home/100000000820483/Documentos/LAB12/simulation/modelsim/ULA_Wrapper_vhd.sdo
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ula_wrapper File: ULA_Wrapper.vho
+do /home/100000000820483/Documentos/LAB12/simulation/stimulus.do
+run
+run
