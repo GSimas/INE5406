@@ -1,0 +1,4 @@
+# Compile of top.vho was successful.
+# Compile of top.vht was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -do top_run_msim_gate_vhdl.do -l msim_transcript -i work_test.top_vhd_tst

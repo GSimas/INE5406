@@ -1,0 +1,47 @@
+# vsim -do ULA_Wrapper_run_msim_gate_vhdl.do -l msim_transcript -i work_test.ula_wrapper_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work_test.ula_wrapper_vhd_tst(ula_wrapper_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work_test.ula_wrapper(structure)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# do ULA_Wrapper_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying /home/100000000820483/Documentos/ULA_Wrapper/simulation/modelsim/testebench.mpf
+# 
+# vcom -93 -work work {ULA_Wrapper.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity ULA_Wrapper
+# -- Compiling architecture structure of ULA_Wrapper
+# 
+run -all
+run -all
+add wave  \
+sim:/ula_wrapper_vhd_tst/i1/a \
+sim:/ula_wrapper_vhd_tst/i1/b \
+sim:/ula_wrapper_vhd_tst/i1/ulaOp \
+sim:/ula_wrapper_vhd_tst/i1/funct \
+sim:/ula_wrapper_vhd_tst/i1/s

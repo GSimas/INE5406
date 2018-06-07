@@ -1,0 +1,6 @@
+# Compile of ULA_Wrapper.vho was successful.
+# Compile of ULA_Wrapper.vht was successful.
+# 2 compiles, 0 failed with no errors. 
+run -all
+# No Design Loaded!
+vsim -do ULA_Wrapper_run_msim_gate_vhdl.do -l msim_transcript -i work_test.ula_wrapper_vhd_tst

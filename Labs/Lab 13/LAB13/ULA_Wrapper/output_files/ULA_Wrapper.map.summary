@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jun  7 08:43:17 2018
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : ULA_Wrapper
+Top-level Entity Name : ULA_Wrapper
+Family : Cyclone II
+Total logic elements : 172
+    Total combinational functions : 172
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 104
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
