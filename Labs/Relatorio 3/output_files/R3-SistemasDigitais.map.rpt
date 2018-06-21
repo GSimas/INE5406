@@ -1,0 +1,774 @@
+Analysis & Synthesis report for R3-SistemasDigitais
+Thu Jun 21 08:20:45 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: datapath:databath_b
+ 13. Parameter Settings for User Entity Instance: datapath:databath_b|pc_counter:pc
+ 14. Parameter Settings for User Entity Instance: datapath:databath_b|mux2x1:mux_wAddr_b
+ 15. Parameter Settings for User Entity Instance: datapath:databath_b|mux2x1:mux_wData3_b
+ 16. Parameter Settings for User Entity Instance: datapath:databath_b|signal_extender:extender_b
+ 17. Parameter Settings for User Entity Instance: datapath:databath_b|mux2x1:mux_toUla_b
+ 18. Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b
+ 19. Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1
+ 20. Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|sum_sub:ss0
+ 21. Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|and_or:ao0
+ 22. Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|mux2x1:mu0
+ 23. Parameter Settings for User Entity Instance: datapath:databath_b|reg_file:register_file
+ 24. Port Connectivity Checks: "datapath:databath_b|pc_counter:pc"
+ 25. Port Connectivity Checks: "datapath:databath_b"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 21 08:20:45 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; R3-SistemasDigitais                             ;
+; Top-level Entity Name              ; mips                                            ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 5,906                                           ;
+;     Total combinational functions  ; 4,914                                           ;
+;     Dedicated logic registers      ; 2,054                                           ;
+; Total registers                    ; 2054                                            ;
+; Total pins                         ; 265                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                         ;
++----------------------------------------------------------------------------+--------------------+---------------------+
+; Option                                                                     ; Setting            ; Default Value       ;
++----------------------------------------------------------------------------+--------------------+---------------------+
+; Device                                                                     ; EP2C35F672C6       ;                     ;
+; Top-level entity name                                                      ; mips               ; R3-SistemasDigitais ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX       ;
+; Use smart compilation                                                      ; Off                ; Off                 ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                  ;
+; Enable compact report table                                                ; Off                ; Off                 ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                 ;
+; Preserve fewer node names                                                  ; On                 ; On                  ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                 ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001        ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993           ;
+; State Machine Processing                                                   ; Auto               ; Auto                ;
+; Safe State Machine                                                         ; Off                ; Off                 ;
+; Extract Verilog State Machines                                             ; On                 ; On                  ;
+; Extract VHDL State Machines                                                ; On                 ; On                  ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                 ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                  ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                  ;
+; Parallel Synthesis                                                         ; On                 ; On                  ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                ;
+; NOT Gate Push-Back                                                         ; On                 ; On                  ;
+; Power-Up Don't Care                                                        ; On                 ; On                  ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                 ;
+; Remove Duplicate Registers                                                 ; On                 ; On                  ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                 ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                 ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                 ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                 ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                  ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                 ;
+; Optimization Technique                                                     ; Balanced           ; Balanced            ;
+; Carry Chain Length                                                         ; 70                 ; 70                  ;
+; Auto Carry Chains                                                          ; On                 ; On                  ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                 ;
+; Auto ROM Replacement                                                       ; On                 ; On                  ;
+; Auto RAM Replacement                                                       ; On                 ; On                  ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                  ;
+; Strict RAM Replacement                                                     ; Off                ; Off                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                  ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                 ;
+; Auto Resource Sharing                                                      ; Off                ; Off                 ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                 ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                 ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                  ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                 ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                 ;
+; Report Parameter Settings                                                  ; On                 ; On                  ;
+; Report Source Assignments                                                  ; On                 ; On                  ;
+; Report Connectivity Checks                                                 ; On                 ; On                  ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                 ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                   ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation  ;
+; HDL message level                                                          ; Level2             ; Level2              ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                 ;
+; Clock MUX Protection                                                       ; On                 ; On                  ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                 ;
+; Block Design Naming                                                        ; Auto               ; Auto                ;
+; SDC constraint protection                                                  ; Off                ; Off                 ;
+; Synthesis Effort                                                           ; Auto               ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                  ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium              ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                  ;
+; Synthesis Seed                                                             ; 1                  ; 1                   ;
++----------------------------------------------------------------------------+--------------------+---------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++-------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                     ; Library ;
++-------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
+; mips_decoder.vhd                                ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_decoder.vhd                                ;         ;
+; mips_monocycle_lw_sw/ULA_Wrapper.vhd            ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/ULA_Wrapper.vhd            ;         ;
+; mips_monocycle_lw_sw/ula_control.vhd            ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/ula_control.vhd            ;         ;
+; mips_monocycle_lw_sw/ULA.vhd                    ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/ULA.vhd                    ;         ;
+; mips_monocycle_lw_sw/sum_sub.vhd                ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/sum_sub.vhd                ;         ;
+; mips_monocycle_lw_sw/signal_extender.vhd        ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/signal_extender.vhd        ;         ;
+; mips_monocycle_lw_sw/reg_file.vhd               ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/reg_file.vhd               ;         ;
+; mips_monocycle_lw_sw/pc_counter.vhd             ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/pc_counter.vhd             ;         ;
+; mips_monocycle_lw_sw/mux2x1.vhd                 ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/mux2x1.vhd                 ;         ;
+; mips_monocycle_lw_sw/mips.vhd                   ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/mips.vhd                   ;         ;
+; mips_monocycle_lw_sw/instruction_memory_reg.v   ; yes             ; User Verilog HDL File                  ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/instruction_memory_reg.v   ;         ;
+; mips_monocycle_lw_sw/datapath.vhd               ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/datapath.vhd               ;         ;
+; mips_monocycle_lw_sw/data_memory_reg.v          ; yes             ; User Verilog HDL File                  ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/data_memory_reg.v          ;         ;
+; mips_monocycle_lw_sw/and_or.vhd                 ; yes             ; User VHDL File                         ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/and_or.vhd                 ;         ;
+; mips_monocycle_lw_sw/instruction_memory_reg.mif ; yes             ; Auto-Found Memory Initialization File  ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/instruction_memory_reg.mif ;         ;
+; mips_monocycle_lw_sw/data_memory_reg.mif        ; yes             ; Auto-Found Memory Initialization File  ; /home/100000000820483/Documentos/mips_monocycle_lw_sw/data_memory_reg.mif        ;         ;
++-------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 5,906 ;
+;                                             ;       ;
+; Total combinational functions               ; 4914  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 4422  ;
+;     -- 3 input functions                    ; 367   ;
+;     -- <=2 input functions                  ; 125   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 4847  ;
+;     -- arithmetic mode                      ; 67    ;
+;                                             ;       ;
+; Total registers                             ; 2054  ;
+;     -- Dedicated logic registers            ; 2054  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 265   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 2054  ;
+; Total fan-out                               ; 25507 ;
+; Average fan-out                             ; 3.53  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node           ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Library Name ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
+; |mips                                ; 4914 (0)          ; 2054 (0)     ; 0           ; 0            ; 0       ; 0         ; 265  ; 0            ; |mips                                                              ; work         ;
+;    |data_memory_reg:data_mem|        ; 3382 (3382)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|data_memory_reg:data_mem                                     ; work         ;
+;    |datapath:databath_b|             ; 1480 (0)          ; 1030 (0)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b                                          ; work         ;
+;       |mux2x1:mux_toUla_b|           ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|mux2x1:mux_toUla_b                       ; work         ;
+;       |mux2x1:mux_wAddr_b|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|mux2x1:mux_wAddr_b                       ; work         ;
+;       |mux2x1:mux_wData3_b|          ; 152 (152)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|mux2x1:mux_wData3_b                      ; work         ;
+;       |pc_counter:pc|                ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|pc_counter:pc                            ; work         ;
+;       |reg_file:register_file|       ; 1098 (1098)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|reg_file:register_file                   ; work         ;
+;       |ula_wrapper:ula_b|            ; 186 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|ula_wrapper:ula_b                        ; work         ;
+;          |ula:ula_1|                 ; 181 (98)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|ula_wrapper:ula_b|ula:ula_1              ; work         ;
+;             |mux2x1:mu0|             ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|mux2x1:mu0   ; work         ;
+;             |sum_sub:ss0|            ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|sum_sub:ss0  ; work         ;
+;          |ula_control:ula_ctrl_1|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|datapath:databath_b|ula_wrapper:ula_b|ula_control:ula_ctrl_1 ; work         ;
+;    |instruction_memory_reg:inst_mem| ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|instruction_memory_reg:inst_mem                              ; work         ;
+;    |mips_decoder:decoder_i|          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mips|mips_decoder:decoder_i                                       ; work         ;
++--------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; datapath:databath_b|pc_counter:pc|cnt[0,1] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2      ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2054  ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2048  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; data_memory_reg:data_mem|ram[126][0]    ; 1       ;
+; data_memory_reg:data_mem|ram[14][0]     ; 1       ;
+; data_memory_reg:data_mem|ram[6][0]      ; 1       ;
+; data_memory_reg:data_mem|ram[4][0]      ; 1       ;
+; data_memory_reg:data_mem|ram[124][0]    ; 1       ;
+; data_memory_reg:data_mem|ram[8][0]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][0]    ; 1       ;
+; data_memory_reg:data_mem|ram[5][0]      ; 1       ;
+; data_memory_reg:data_mem|ram[9][0]      ; 1       ;
+; data_memory_reg:data_mem|ram[15][0]     ; 1       ;
+; data_memory_reg:data_mem|ram[127][0]    ; 1       ;
+; data_memory_reg:data_mem|ram[5][1]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][1]    ; 1       ;
+; data_memory_reg:data_mem|ram[9][1]      ; 1       ;
+; data_memory_reg:data_mem|ram[15][1]     ; 1       ;
+; data_memory_reg:data_mem|ram[127][1]    ; 1       ;
+; data_memory_reg:data_mem|ram[14][1]     ; 1       ;
+; data_memory_reg:data_mem|ram[6][1]      ; 1       ;
+; data_memory_reg:data_mem|ram[126][1]    ; 1       ;
+; data_memory_reg:data_mem|ram[124][1]    ; 1       ;
+; data_memory_reg:data_mem|ram[4][1]      ; 1       ;
+; data_memory_reg:data_mem|ram[8][1]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][2]    ; 1       ;
+; data_memory_reg:data_mem|ram[5][2]      ; 1       ;
+; data_memory_reg:data_mem|ram[9][2]      ; 1       ;
+; data_memory_reg:data_mem|ram[7][2]      ; 1       ;
+; data_memory_reg:data_mem|ram[15][2]     ; 1       ;
+; data_memory_reg:data_mem|ram[127][2]    ; 1       ;
+; data_memory_reg:data_mem|ram[3][2]      ; 1       ;
+; data_memory_reg:data_mem|ram[126][2]    ; 1       ;
+; data_memory_reg:data_mem|ram[14][2]     ; 1       ;
+; data_memory_reg:data_mem|ram[6][2]      ; 1       ;
+; data_memory_reg:data_mem|ram[4][2]      ; 1       ;
+; data_memory_reg:data_mem|ram[124][2]    ; 1       ;
+; data_memory_reg:data_mem|ram[8][2]      ; 1       ;
+; data_memory_reg:data_mem|ram[5][3]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][3]    ; 1       ;
+; data_memory_reg:data_mem|ram[9][3]      ; 1       ;
+; data_memory_reg:data_mem|ram[7][3]      ; 1       ;
+; data_memory_reg:data_mem|ram[15][3]     ; 1       ;
+; data_memory_reg:data_mem|ram[127][3]    ; 1       ;
+; data_memory_reg:data_mem|ram[14][3]     ; 1       ;
+; data_memory_reg:data_mem|ram[6][3]      ; 1       ;
+; data_memory_reg:data_mem|ram[126][3]    ; 1       ;
+; data_memory_reg:data_mem|ram[124][3]    ; 1       ;
+; data_memory_reg:data_mem|ram[4][3]      ; 1       ;
+; data_memory_reg:data_mem|ram[8][3]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][4]    ; 1       ;
+; data_memory_reg:data_mem|ram[5][4]      ; 1       ;
+; data_memory_reg:data_mem|ram[9][4]      ; 1       ;
+; data_memory_reg:data_mem|ram[7][4]      ; 1       ;
+; data_memory_reg:data_mem|ram[15][4]     ; 1       ;
+; data_memory_reg:data_mem|ram[127][4]    ; 1       ;
+; data_memory_reg:data_mem|ram[126][4]    ; 1       ;
+; data_memory_reg:data_mem|ram[14][4]     ; 1       ;
+; data_memory_reg:data_mem|ram[6][4]      ; 1       ;
+; data_memory_reg:data_mem|ram[4][4]      ; 1       ;
+; data_memory_reg:data_mem|ram[124][4]    ; 1       ;
+; data_memory_reg:data_mem|ram[8][4]      ; 1       ;
+; data_memory_reg:data_mem|ram[5][5]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][5]    ; 1       ;
+; data_memory_reg:data_mem|ram[9][5]      ; 1       ;
+; data_memory_reg:data_mem|ram[127][5]    ; 1       ;
+; data_memory_reg:data_mem|ram[15][5]     ; 1       ;
+; data_memory_reg:data_mem|ram[3][5]      ; 1       ;
+; data_memory_reg:data_mem|ram[126][5]    ; 1       ;
+; data_memory_reg:data_mem|ram[14][5]     ; 1       ;
+; data_memory_reg:data_mem|ram[6][5]      ; 1       ;
+; data_memory_reg:data_mem|ram[4][5]      ; 1       ;
+; data_memory_reg:data_mem|ram[124][5]    ; 1       ;
+; data_memory_reg:data_mem|ram[8][5]      ; 1       ;
+; data_memory_reg:data_mem|ram[5][6]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][6]    ; 1       ;
+; data_memory_reg:data_mem|ram[9][6]      ; 1       ;
+; data_memory_reg:data_mem|ram[127][6]    ; 1       ;
+; data_memory_reg:data_mem|ram[15][6]     ; 1       ;
+; data_memory_reg:data_mem|ram[3][6]      ; 1       ;
+; data_memory_reg:data_mem|ram[6][6]      ; 1       ;
+; data_memory_reg:data_mem|ram[14][6]     ; 1       ;
+; data_memory_reg:data_mem|ram[126][6]    ; 1       ;
+; data_memory_reg:data_mem|ram[124][6]    ; 1       ;
+; data_memory_reg:data_mem|ram[4][6]      ; 1       ;
+; data_memory_reg:data_mem|ram[8][6]      ; 1       ;
+; data_memory_reg:data_mem|ram[125][7]    ; 1       ;
+; data_memory_reg:data_mem|ram[5][7]      ; 1       ;
+; data_memory_reg:data_mem|ram[9][7]      ; 1       ;
+; data_memory_reg:data_mem|ram[7][7]      ; 1       ;
+; data_memory_reg:data_mem|ram[15][7]     ; 1       ;
+; data_memory_reg:data_mem|ram[127][7]    ; 1       ;
+; data_memory_reg:data_mem|ram[126][7]    ; 1       ;
+; data_memory_reg:data_mem|ram[14][7]     ; 1       ;
+; data_memory_reg:data_mem|ram[6][7]      ; 1       ;
+; data_memory_reg:data_mem|ram[4][7]      ; 1       ;
+; data_memory_reg:data_mem|ram[124][7]    ; 1       ;
+; data_memory_reg:data_mem|ram[8][7]      ; 1       ;
+; Total number of inverted registers = 95 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[1][3]                              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[2][5]                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[123][1]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[122][5]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[121][5]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[120][5]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[119][4]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[118][2]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[117][4]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[116][1]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[115][5]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[114][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[113][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[112][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[111][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[110][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[109][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[108][2]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[107][6]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[106][4]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[105][4]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[104][4]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[103][4]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[102][2]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[101][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[100][6]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[99][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[98][7]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[97][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[96][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[95][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[94][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[93][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[92][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[91][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[90][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[89][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[88][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[87][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[86][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[85][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[84][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[83][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[82][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[81][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[80][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[79][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[78][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[77][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[76][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[75][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[74][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[73][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[72][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[71][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[70][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[69][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[68][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[67][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[66][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[65][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[64][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[63][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[62][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[61][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[60][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[59][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[58][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[57][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[56][7]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[55][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[54][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[53][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[52][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[51][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[50][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[49][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[48][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[47][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[46][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[45][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[44][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[43][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[42][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[41][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[40][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[39][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[38][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[37][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[36][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[35][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[34][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[33][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[32][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[31][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[30][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[29][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[28][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[27][1]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[26][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[25][4]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[24][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[23][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[22][0]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[21][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[20][5]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[19][3]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[18][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[17][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[16][2]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[13][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[12][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[11][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[10][5]                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[7][5]                              ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[3][4]                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[127][1]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[126][4]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[125][0]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[124][3]                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[15][7]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[14][6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[9][2]                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[8][2]                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[7][2]                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[6][5]                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[5][4]                              ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[4][5]                              ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |mips|data_memory_reg:data_mem|ram[3][2]                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips|datapath:databath_b|mux2x1:mux_wData3_b|s[12]                   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |mips|datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|mux2x1:mu0|s[3] ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux31                                  ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |mips|datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|result[28]      ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux29                                  ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux31                                  ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux31                                  ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux31                                  ;
+; 8:1                ; 24 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux30                                  ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |mips|datapath:databath_b|mux2x1:mux_wData3_b|s[26]                   ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |mips|datapath:databath_b|mux2x1:mux_wData3_b|s[3]                    ;
+; 16:1               ; 24 bits   ; 240 LEs       ; 240 LEs              ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux27                                  ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 168 LEs              ; 0 LEs                  ; No         ; |mips|data_memory_reg:data_mem|Mux31                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; data_s         ; 32    ; Signed Integer                          ;
+; instruct_s     ; 26    ; Signed Integer                          ;
+; addr_s         ; 5     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|pc_counter:pc ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; min_count      ; 0     ; Signed Integer                                        ;
+; max_count      ; 255   ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|mux2x1:mux_wAddr_b ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 5     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|mux2x1:mux_wData3_b ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|signal_extender:extender_b ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n_in           ; 16    ; Signed Integer                                                     ;
+; n_out          ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|mux2x1:mux_toUla_b ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_s         ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; data_s         ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|sum_sub:ss0 ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; data_s         ; 32    ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|and_or:ao0 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; data_s         ; 32    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|mux2x1:mu0 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:databath_b|reg_file:register_file ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; data_s         ; 32    ; Signed Integer                                                 ;
+; n_regs         ; 32    ; Signed Integer                                                 ;
+; addr_s         ; 5     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:databath_b|pc_counter:pc" ;
++--------+-------+----------+-----------------------------------+
+; Port   ; Type  ; Severity ; Details                           ;
++--------+-------+----------+-----------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                      ;
++--------+-------+----------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:databath_b"                                                                               ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_ula_result[31..7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:23     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jun 21 08:20:19 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off R3-SistemasDigitais -c R3-SistemasDigitais
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file mips_decoder.vhd
+    Info (12022): Found design unit 1: mips_decoder-behavior
+    Info (12023): Found entity 1: mips_decoder
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/ULA_Wrapper.vhd
+    Info (12022): Found design unit 1: ula_wrapper-behavior
+    Info (12023): Found entity 1: ula_wrapper
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/ula_control.vhd
+    Info (12022): Found design unit 1: ula_control-behavior
+    Info (12023): Found entity 1: ula_control
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/ULA.vhd
+    Info (12022): Found design unit 1: ula-estrutura
+    Info (12023): Found entity 1: ula
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/sum_sub.vhd
+    Info (12022): Found design unit 1: sum_sub-behavior
+    Info (12023): Found entity 1: sum_sub
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/signal_extender.vhd
+    Info (12022): Found design unit 1: signal_extender-behavior
+    Info (12023): Found entity 1: signal_extender
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/reg_file.vhd
+    Info (12022): Found design unit 1: reg_file-behave
+    Info (12023): Found entity 1: reg_file
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/pc_counter.vhd
+    Info (12022): Found design unit 1: pc_counter-rtl
+    Info (12023): Found entity 1: pc_counter
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/mux2x1.vhd
+    Info (12022): Found design unit 1: mux2x1-behavior
+    Info (12023): Found entity 1: mux2x1
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/mips.vhd
+    Info (12022): Found design unit 1: mips-behavior
+    Info (12023): Found entity 1: mips
+Info (12021): Found 1 design units, including 1 entities, in source file mips_monocycle_lw_sw/instruction_memory_reg.v
+    Info (12023): Found entity 1: instruction_memory_reg
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/datapath.vhd
+    Info (12022): Found design unit 1: datapath-behavior
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 1 design units, including 1 entities, in source file mips_monocycle_lw_sw/data_memory_reg.v
+    Info (12023): Found entity 1: data_memory_reg
+Info (12021): Found 2 design units, including 1 entities, in source file mips_monocycle_lw_sw/and_or.vhd
+    Info (12022): Found design unit 1: and_or-behavior
+    Info (12023): Found entity 1: and_or
+Info (12127): Elaborating entity "mips" for the top level hierarchy
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:databath_b"
+Info (12128): Elaborating entity "pc_counter" for hierarchy "datapath:databath_b|pc_counter:pc"
+Info (12128): Elaborating entity "mux2x1" for hierarchy "datapath:databath_b|mux2x1:mux_wAddr_b"
+Info (12128): Elaborating entity "mux2x1" for hierarchy "datapath:databath_b|mux2x1:mux_wData3_b"
+Info (12128): Elaborating entity "signal_extender" for hierarchy "datapath:databath_b|signal_extender:extender_b"
+Info (12128): Elaborating entity "ula_wrapper" for hierarchy "datapath:databath_b|ula_wrapper:ula_b"
+Info (12128): Elaborating entity "ula" for hierarchy "datapath:databath_b|ula_wrapper:ula_b|ula:ula_1"
+Info (12128): Elaborating entity "sum_sub" for hierarchy "datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|sum_sub:ss0"
+Info (12128): Elaborating entity "and_or" for hierarchy "datapath:databath_b|ula_wrapper:ula_b|ula:ula_1|and_or:ao0"
+Info (12128): Elaborating entity "ula_control" for hierarchy "datapath:databath_b|ula_wrapper:ula_b|ula_control:ula_ctrl_1"
+Warning (10492): VHDL Process Statement warning at ula_control.vhd(25): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "reg_file" for hierarchy "datapath:databath_b|reg_file:register_file"
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(31): signal "i_rAddr1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(34): signal "s_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(34): signal "i_rAddr1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(37): signal "i_rAddr2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(40): signal "s_file" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at reg_file.vhd(40): signal "i_rAddr2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "data_memory_reg" for hierarchy "data_memory_reg:data_mem"
+Info (12128): Elaborating entity "instruction_memory_reg" for hierarchy "instruction_memory_reg:inst_mem"
+Info (12128): Elaborating entity "mips_decoder" for hierarchy "mips_decoder:decoder_i"
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "datapath:databath_b|reg_file:register_file|s_file" is uninferred due to asynchronous read logic
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dbg_pc[0]" is stuck at GND
+    Warning (13410): Pin "dbg_pc[1]" is stuck at GND
+    Warning (13410): Pin "dbg_ula_OpFunct[6]" is stuck at GND
+    Warning (13410): Pin "dbg_control[0]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 6219 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 263 output pins
+    Info (21061): Implemented 5954 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 661 megabytes
+    Info: Processing ended: Thu Jun 21 08:20:45 2018
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:26
+
+

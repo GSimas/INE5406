@@ -1,0 +1,15 @@
+Relatório 3 - INE5406 Sistemas Digitais
+
+Gustavo Simas e Alexandre Hoffmann
+
+a) Total combinational functions (LEs):
+4,914 / 33,216 ( 15 % )
+
+b) dedicated logic registers:
+2,054 / 33,216 ( 6 % )
+
+c) Número de Pinos:
+265 / 475 ( 56 % )
+
+d) Minimum clock to output time / Data Port:
+13.876 

@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {R3-SistemasDigitais.vho R3-SistemasDigitais_vhd.sdo}}
+	{{"Fast Model"} {R3-SistemasDigitais_fast.vho R3-SistemasDigitais_vhd_fast.sdo}}
+}

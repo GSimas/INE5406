@@ -1,0 +1,79 @@
+-- Copyright (C) 1991-2013 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=256;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+-- (1): lw $s0, 0 ($zero)
+-- (2): lw $s1, 4 ($zero)
+-- (3): lw $s2, 8 ($zero)
+-- (4): lw $s3, 12 ($zero)
+
+-- (5): add $t0, $s0, $s1
+-- (6): sub $t1, $s0, $s1
+-- (7): and $t2, $s0, $s1
+-- (8): or  $t3, $s0, $s1
+-- (9): slt $t4, $s0, $s1
+
+-- (10): sw $t0, 16 ($zero)
+-- (11): sw $t1, 20 ($zero)
+-- (12): sw $t2, 24 ($zero)
+-- (13): sw $t3, 28 ($zero)
+-- (14): sw $t4, 32 ($zero)
+
+-- (15): add $t0, $s2, $s3
+-- (16): sub $t1, $s2, $s3
+-- (17): and $t2, $s2, $s3
+-- (18): or  $t3, $s2, $s3
+-- (19): slt $t4, $s2, $s3
+
+-- (20): sw $t0, 36 ($zero)
+-- (21): sw $t1, 40 ($zero)
+-- (22): sw $t2, 44 ($zero)
+-- (23): sw $t3, 48 ($zero)
+-- (24): sw $t4, 52 ($zero)
+
+CONTENT BEGIN
+    0    :   8c100000;
+    1    :   8c110001;
+    2    :   8c120002;
+    3    :   8c130003;
+    4    :   02114020;
+    5    :   02114822;
+    6    :   02115024;
+    7    :   02115825;
+    8    :   0211602a;
+    9    :   ac080004;
+    10    :   ac090005;
+    11    :   ac0a0006;
+    12    :   ac0b0007;
+    13    :   ac0c0008;
+    14    :   02534020;
+    15    :   02534822;
+    16    :   02535024;
+    17    :   02535825;
+    18    :   0253602a;
+    19    :   ac080009;
+    20    :   ac09000a;
+    21    :   ac0a000b;
+    22    :   ac0b000c;
+    23    :   ac0c000d;
+    [24..254]  :   0;
+    255    :   cafecafe;
+END;
